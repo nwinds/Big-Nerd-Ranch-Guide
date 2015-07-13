@@ -63,6 +63,9 @@
     self.circleColor = randomColor;
 }
 
+
+// Can only be seen inside the class
+// Not like c++, but lookes like an extension of c
 - (void)setCircleColor:(UIColor *)circleColor
 {
     _circleColor = circleColor;
