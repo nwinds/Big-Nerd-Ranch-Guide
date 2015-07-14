@@ -11,7 +11,7 @@
 #import "BNRHypnosisView.h"
 #import "BNRHypnosisViewController.h"
 #import "BNRReminderViewController.h"
-
+#import "BNRQuizViewController.h"
 
 @implementation BNRAppDelegate
 
@@ -34,9 +34,10 @@
     // Tab and paging
     BNRHypnosisViewController *hvc = [[BNRHypnosisViewController alloc] init];
     BNRReminderViewController *rvc = [[BNRReminderViewController alloc] init];
-    
+    BNRQuizViewController     *qvc = [[BNRQuizViewController     alloc] init];
+
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    tabBarController.viewControllers = @[hvc, rvc];
+    tabBarController.viewControllers = @[hvc, rvc, qvc];
     
 
     self.window.rootViewController = tabBarController;
