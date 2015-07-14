@@ -28,21 +28,12 @@
     
     return self;
 }
-//
-//
-//- (void)setRootViewController:(UIViewController *)viewController
-//{
-//    UIView *rootView = viewController.view;
-//
-//    CGRect viewFrame = self.bounds;
-//    rootView.frame = viewFrame;
-//
-//    [self addSubview:rootView];
-//
-//    _rootViewController = viewController;
-//
-//
-//}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    NSLog(@"BNRHypnosisViewController loaded its view.");
+}
 
 
 @end

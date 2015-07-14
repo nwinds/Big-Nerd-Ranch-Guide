@@ -7,18 +7,17 @@
 //
 
 
-// this demo can be used only under iOS 8 or later
-#define IS_OS_8_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
-
 #import "BNRAppDelegate.h"
 #import "BNRHypnosisView.h"
 #import "BNRHypnosisViewController.h"
 #import "BNRReminderViewController.h"
+
+
 @implementation BNRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    //ios8  regist local notifier
+    //iOS8  regist local notifier
     if(([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)) {
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:
                                                 (UIRemoteNotificationTypeBadge |UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert) categories:nil];
@@ -32,11 +31,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    // Intitialization after app started
+    // Tab and paging
     BNRHypnosisViewController *hvc = [[BNRHypnosisViewController alloc] init];
-
-//    NSBundle *appBundle = [NSBundle mainBundle];
-    
     BNRReminderViewController *rvc = [[BNRReminderViewController alloc] init];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
@@ -44,55 +40,8 @@
     
 
     self.window.rootViewController = tabBarController;
-    
-//    // Create two CGRect structs, for UIScrollView and BNRHypnosisView
-//    CGRect screenRect = self.window.bounds;
-//    CGRect bigRect = screenRect;
-//    bigRect.size.width *= 2.0;
-////    bigRect.size.height *= 2.0;
-//    
-//    
-//    
-//    // Create an UIScrollView object, set its size as window size
-//    // Simply code is not easy to manage!
-//    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:screenRect];
-//    [scrollView setPagingEnabled:YES];
-//    [self.window addSubview:scrollView];
-//    
-//    
-////    // Paging
-////    BNRHypnosisView *hypnosisView = [[BNRHypnosisView alloc] initWithFrame:screenRect];
-////    [scrollView addSubview:hypnosisView];
-////    
-////    // Create another BNRHypnosisView object and add it to UIScrollView' right side, making it exactly moved outside the screen
-////    screenRect.origin.x += screenRect.size.width;                       // Move it JUST outside
-////    BNRHypnosisView *anotherView = [[BNRHypnosisView alloc] initWithFrame:screenRect];
-////    [scrollView addSubview:anotherView];
-////    
-//    
-//    // Play time
-//    // Paging: make three
-//    NSMutableArray *pagesView = [[NSMutableArray alloc] init];
-//    for (int i = 0; i < 3; i++) {
-//        BNRHypnosisView *item = [[BNRHypnosisView alloc] initWithFrame:screenRect];
-//        [pagesView addObject:item];
-//        screenRect.origin.x += screenRect.size.width;
-//    }
-//    for (BNRHypnosisView *item in pagesView) {
-//        [scrollView addSubview:item];
-//    }
-//    
-//    // Reset bigRect, otherwise the 3rd page cannot be focused to the camera
-//    bigRect = screenRect;
-//    bigRect.size.width *= 3.0;
-//    
-//    
-//    
-//    
-//    scrollView.contentSize = bigRect.size;
-//    
-//    
-    
+
+
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
@@ -125,6 +74,8 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+
+
 #ifdef __IPHONE_8_0
 - (void)application:(UIApplication *)application didRegisterUserNotificationSettings:   (UIUserNotificationSettings *)notificationSettings
 {
@@ -140,6 +91,7 @@
     else if ([identifier isEqualToString:@"answerAction"]){
     }
 }
+
 #endif
 
 
