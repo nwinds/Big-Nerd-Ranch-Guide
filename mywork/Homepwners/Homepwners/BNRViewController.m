@@ -1,18 +1,18 @@
 //
 //  ViewController.m
-//  HomePwner
+//  Homepwners
 //
 //  Created by jyl on 15/7/15.
 //  Copyright (c) 2015年 zmy. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "BNRViewController.h"
 
-@interface ViewController ()
+@interface BNRViewController ()
 
 @end
 
-@implementation ViewController
+@implementation BNRViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
