@@ -1,18 +1,18 @@
 //
 //  AppDelegate.m
-//  Homepwner
+//  HomePwner
 //
 //  Created by jyl on 15/7/15.
 //  Copyright (c) 2015年 zmy. All rights reserved.
 //
 
-#import "BNRAppDelegate.h"
+#import "AppDelegate.h"
 
-@interface BNRAppDelegate ()
+@interface AppDelegate ()
 
 @end
 
-@implementation BNRAppDelegate
+@implementation AppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {

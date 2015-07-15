@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "267BDC621B562F4800E1A5C1"
+               BlueprintIdentifier = "520AA47A187C4EC00048F174"
                BuildableName = "HomePwner.app"
                BlueprintName = "HomePwner"
                ReferencedContainer = "container:HomePwner.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "267BDC7B1B562F4800E1A5C1"
+               BlueprintIdentifier = "520AA495187C4EC00048F174"
                BuildableName = "HomePwnerTests.xctest"
                BlueprintName = "HomePwnerTests"
                ReferencedContainer = "container:HomePwner.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "267BDC7B1B562F4800E1A5C1"
+               BlueprintIdentifier = "520AA495187C4EC00048F174"
                BuildableName = "HomePwnerTests.xctest"
                BlueprintName = "HomePwnerTests"
                ReferencedContainer = "container:HomePwner.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "267BDC621B562F4800E1A5C1"
+            BlueprintIdentifier = "520AA47A187C4EC00048F174"
             BuildableName = "HomePwner.app"
             BlueprintName = "HomePwner"
             ReferencedContainer = "container:HomePwner.xcodeproj">
@@ -76,7 +76,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "267BDC621B562F4800E1A5C1"
+            BlueprintIdentifier = "520AA47A187C4EC00048F174"
             BuildableName = "HomePwner.app"
             BlueprintName = "HomePwner"
             ReferencedContainer = "container:HomePwner.xcodeproj">
@@ -95,7 +95,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "267BDC621B562F4800E1A5C1"
+            BlueprintIdentifier = "520AA47A187C4EC00048F174"
             BuildableName = "HomePwner.app"
             BlueprintName = "HomePwner"
             ReferencedContainer = "container:HomePwner.xcodeproj">
