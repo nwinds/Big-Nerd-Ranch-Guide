@@ -13,6 +13,14 @@
 #import "BNRReminderViewController.h"
 #import "BNRQuizViewController.h"
 
+
+// Pinch to Zoom
+//@interface BNRAppDelegate() <UIScrollViewDelegate>
+//@property (nonatomic, copy) BNRHypnosisView *hypnosisView;
+//
+//@end
+
+
 @implementation BNRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -28,6 +36,11 @@
         UIRemoteNotificationType myTypes = UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound;
         [[UIApplication sharedApplication] registerForRemoteNotificationTypes:myTypes];
     }
+    
+//    // Pinch to Zoom setting
+//    UIScrollView *scrollView = [[UIScrollView alloc] init];
+//    scrollView.delegate = self;
+//    
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
