@@ -10,10 +10,10 @@
 #import "BNRItem.h"
 
 @interface BNRItemStore()
-
 @property (nonatomic) NSMutableArray *privateItems;
-
 @end
+
+
 
 @implementation BNRItemStore
 
@@ -26,6 +26,8 @@
     
     return sharedStore;
 }
+
+
 
 - (instancetype)init
 {
@@ -51,7 +53,6 @@
     return self.privateItems;
 }
 
-
 - (BNRItem *)createItem
 {
     BNRItem *item = [BNRItem randomItem];
@@ -64,7 +65,6 @@
 {
     [self.privateItems removeObjectIdenticalTo:item];
 }
-
 
 // Change location of an item at array
 - (void)moveItemAtIndex:(NSUInteger)fromIndex

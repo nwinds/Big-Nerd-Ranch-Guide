@@ -9,23 +9,18 @@
 #import "BNRItem.h"
 
 @interface BNRItem ()
-
 @property (nonatomic, strong) NSDate *dateCreated;
-
 @end
+
+
 
 @implementation BNRItem
 
 + (id)randomItem
 {
-    // Create an array of three adjectives
     NSArray *randomAdjectiveList = @[@"Fluffy", @"Rusty", @"Shiny"];
-    // Create an array of three nouns
     NSArray *randomNounList = @[@"Bear", @"Spork", @"Mac"];
-    // Get the index of a random adjective/noun from the lists
-    // Note: The % operator, called the modulo operator, gives
-    // you the remainder. So adjectiveIndex is a random number
-    // from 0 to 2 inclusive.
+
     NSInteger adjectiveIndex = rand() % [randomAdjectiveList count];
     NSInteger nounIndex = rand() % [randomNounList count];
     // Note that NSInteger is not an object, but a type definition
@@ -47,22 +42,19 @@
     return newItem;
 }
 
+
 - (id)initWithItemName:(NSString *)name
         valueInDollars:(int)value
           serialNumber:(NSString *)sNumber
 {
-    // Call the superclass's designated initializer
     self = [super init];
-    // Did the superclass's designated initializer succeed?
     if (self) {
-        // Give the instance variables initial values
         self.itemName = name;
         self.serialNumber = sNumber;
         self.valueInDollars = value;
         self.dateCreated = [[NSDate alloc] init];
     }
     
-    // Return the address of the newly initialized object
     return self;
 }
 

@@ -12,15 +12,19 @@
 
 @end
 
-@implementation BNRAppDelegate
 
+@implementation BNRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc] init];
     
-    self.window.rootViewController = itemsViewController;
+    // Create UINavigationController object
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:itemsViewController];
+
+    // Add UINavigationController onto the screen
+    self.window.rootViewController = navController;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

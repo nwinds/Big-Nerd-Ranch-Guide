@@ -9,6 +9,7 @@
 #import "BNRItemsViewController.h"
 #import "BNRItemStore.h"
 #import "BNRItem.h"
+#import "BNRDetailViewController.h"
 
 @interface BNRItemsViewController ()
 @property (nonatomic, strong) IBOutlet UIView *headerView;
@@ -37,7 +38,6 @@
     return [[[BNRItemStore sharedStore] allItems] count];
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -53,8 +53,8 @@
 }
 
 - (void)tableView:(UITableView *)tableView
-    commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-    forRowAtIndexPath:(NSIndexPath *)indexPath
+        commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+        forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         NSArray *items = [[BNRItemStore sharedStore] allItems];
@@ -66,12 +66,27 @@
     }
 }
 
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+- (void)tableView:(UITableView *)tableView
+        moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+        toIndexPath:(NSIndexPath *)destinationIndexPath
 {
     [[BNRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row
                                         toIndex:destinationIndexPath.row];
 }
 
+- (void)tableView:(UITableView *)tableView
+    didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    BNRDetailViewController *detailViewController = [[BNRDetailViewController alloc] init];
+    
+    NSArray *items = [[BNRItemStore sharedStore] allItems];
+    BNRItem *selectedItem = items[indexPath.row];
+    
+    // Set BNRItem object
+    detailViewController.item = selectedItem;
+    
+    [self.navigationController pushViewController:detailViewController animated:YES];
+}
 
 
 - (IBAction)addNewItem:(id)sender
@@ -88,7 +103,6 @@
                           withRowAnimation:UITableViewRowAnimationTop];
 }
 
-
 - (IBAction)toggleEditingMode:(id)sender
 {
     if (self.isEditing) {
@@ -101,11 +115,10 @@
     
 }
 
-
-// Lazy instantiation
 - (UIView *)headerView
 {
     if (!_headerView) {
+        // Lazy instantiation
         [[NSBundle mainBundle] loadNibNamed:@"HeaderView"
                                       owner:self
                                     options:nil];
@@ -123,10 +136,5 @@
     UIView *header = self.headerView;
     [self.tableView setTableHeaderView:header];
 }
-
-//- (void)didReceiveMemoryWarning {
-//    [super didReceiveMemoryWarning];
-//    // Dispose of any resources that can be recreated.
-//}
 
 @end
