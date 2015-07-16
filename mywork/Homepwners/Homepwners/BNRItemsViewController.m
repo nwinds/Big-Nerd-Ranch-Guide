@@ -77,9 +77,7 @@
 - (IBAction)addNewItem:(id)sender
 {
     // First TableView, last row
-//    NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
     BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
-    
     NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
     
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
