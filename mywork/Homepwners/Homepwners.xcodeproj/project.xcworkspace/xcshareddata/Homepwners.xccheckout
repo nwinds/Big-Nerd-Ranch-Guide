@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1E7826AF-4A85-468A-9AB5-064EA1746AFE</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>Homepwners</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D7AAD9A4430BF2FE91238712B4809D01B612882A</key>
 		<string>https://github.com/nwinds/Big-Nerd-Ranch-Guide.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>mywork/Homepwners/Homepwners.xcodeproj/project.xcworkspace</string>
+	<string>mywork/Homepwners/Homepwners.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D7AAD9A4430BF2FE91238712B4809D01B612882A</key>

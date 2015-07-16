@@ -11,7 +11,7 @@
 #import "BNRItem.h"
 
 @interface BNRItemsViewController ()
-
+@property (nonatomic, strong) IBOutlet UIView *headerView;
 @end
 
 @implementation BNRItemsViewController
@@ -21,9 +21,6 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
-        for (int i = 0; i < 5; i++) {
-            [[BNRItemStore sharedStore] createItem];
-        }
     }
     return self;
 }
@@ -34,11 +31,101 @@
 }
 
 
-//- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view, typically from a nib.
-//}
-//
+- (NSInteger)tableView:(UITableView *)tableView
+        numberOfRowsInSection:(NSInteger)section
+{
+    return [[[BNRItemStore sharedStore] allItems] count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+                                                            forIndexPath:indexPath];
+    
+    NSArray *items = [[BNRItemStore sharedStore] allItems];
+    BNRItem *item = items[indexPath.row];
+    
+    cell.textLabel.text = [item description];
+    
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView
+    commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+    forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        NSArray *items = [[BNRItemStore sharedStore] allItems];
+        BNRItem *item = items[indexPath.row];
+        [[BNRItemStore sharedStore] removeItem:item];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath]
+                         withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [[BNRItemStore sharedStore] moveItemAtIndex:sourceIndexPath.row
+                                        toIndex:destinationIndexPath.row];
+}
+
+
+
+- (IBAction)addNewItem:(id)sender
+{
+    // First TableView, last row
+//    NSInteger lastRow = [self.tableView numberOfRowsInSection:0];
+    BNRItem *newItem = [[BNRItemStore sharedStore] createItem];
+    
+    NSInteger lastRow = [[[BNRItemStore sharedStore] allItems] indexOfObject:newItem];
+    
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:0];
+    
+    // Inserting new UITableView in to line
+    // Total line currently should equal to line provided by dataSource
+    [self.tableView insertRowsAtIndexPaths:@[indexPath]
+                          withRowAnimation:UITableViewRowAnimationTop];
+}
+
+
+- (IBAction)toggleEditingMode:(id)sender
+{
+    if (self.isEditing) {
+        [sender setTitle:@"Edit" forState:UIControlStateNormal];
+        [self setEditing:NO animated:YES];
+    } else {
+        [sender setTitle:@"Done" forState:UIControlStateNormal];
+        [self setEditing:YES animated:YES];
+    }
+    
+}
+
+
+// Lazy instantiation
+- (UIView *)headerView
+{
+    if (!_headerView) {
+        [[NSBundle mainBundle] loadNibNamed:@"HeaderView"
+                                      owner:self
+                                    options:nil];
+    }
+    
+    return _headerView;
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [self.tableView registerClass:[UITableViewCell class]
+           forCellReuseIdentifier:@"UITableViewCell"];
+
+    UIView *header = self.headerView;
+    [self.tableView setTableHeaderView:header];
+}
+
 //- (void)didReceiveMemoryWarning {
 //    [super didReceiveMemoryWarning];
 //    // Dispose of any resources that can be recreated.
