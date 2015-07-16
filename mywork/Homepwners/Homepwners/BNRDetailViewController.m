@@ -14,8 +14,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNameField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
-
 @property (weak, nonatomic) IBOutlet UILabel *dateLable;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end
 
@@ -23,6 +24,27 @@
 
 
 @implementation BNRDetailViewController
+
+- (IBAction)takePicture:(id)sender
+{
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
+        // If device support camera, enable photo
+        imagePicker.sourceType = UIImagePickerControllerSourceTypeCamera;
+    } else {
+        // Otherwise, select from local
+        imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    }
+    
+    imagePicker.delegate = self;
+    
+    // Modal: output UIImagePickerController
+    [self presentViewController:imagePicker animated: YES completion:nil];
+}
+
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -64,5 +86,6 @@
     _item = item;
     self.navigationItem.title = _item.itemName;
 }
+
 
 @end
