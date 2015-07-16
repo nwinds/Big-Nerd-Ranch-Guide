@@ -45,4 +45,24 @@
     self.dateLable.text = [dateFormater stringFromDate:item.dateCreated];
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    // Cancel the first reacted object
+    [self.view endEditing:YES];
+    
+    // "Save" the edited to BNRItem objects
+    BNRItem *item = self.item;
+    item.itemName  = self.nameField.text;
+    item.serialNumber = self.serialNameField.text;
+    item.valueInDollars = [self.valueField.text intValue];
+}
+
+- (void)setItem:(BNRItem *)item
+{
+    _item = item;
+    self.navigationItem.title = _item.itemName;
+}
+
 @end

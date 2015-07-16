@@ -22,6 +22,21 @@
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
+        // Set app title
+        UINavigationItem *navItem = self.navigationItem;
+        navItem.title = @"Homepwners";
+        
+        // Create new UIBarButtonItem object
+        // Set its target as current object, and set its action as addNewItem
+        UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                                             target:self
+                                                                             action:@selector(addNewItem:)];
+        // Set value to UINavigation's object: rightBarButtonItem
+        navItem.rightBarButtonItem = bbi;
+        
+        // Edit: caution: naming rule of button matters
+        navItem.leftBarButtonItem = self.editButtonItem;
+        
     }
     return self;
 }
@@ -135,6 +150,13 @@
 
     UIView *header = self.headerView;
     [self.tableView setTableHeaderView:header];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
 
 @end
