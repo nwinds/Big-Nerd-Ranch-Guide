@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 zmy. All rights reserved.
 //
 
+// Focus: 事务处理
 #import <UIKit/UIKit.h>
 #import "BNRAppDelegate.h"
 
