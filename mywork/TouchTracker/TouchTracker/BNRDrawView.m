@@ -122,5 +122,19 @@
     [self setNeedsDisplay];
 }
 
+// Cancel if app break
+- (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    // Debug info
+    NSLog(@"%@", NSStringFromSelector(_cmd));
+    
+    // Support multiple touch
+    for (UITouch *tch in touches) {
+        NSValue *key = [NSValue valueWithNonretainedObject:tch];
+        [self.linesInProgress removeObjectForKey:key];
+    }
+    
+    [self setNeedsDisplay];
+}
 
 @end
