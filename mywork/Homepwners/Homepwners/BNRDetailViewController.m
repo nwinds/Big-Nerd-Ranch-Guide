@@ -8,6 +8,7 @@
 
 #import "BNRDetailViewController.h"
 #import "BNRItem.h"
+#import "BNRImageStore.h"
 
 @interface BNRDetailViewController ()
 
@@ -44,7 +45,22 @@
     [self presentViewController:imagePicker animated: YES completion:nil];
 }
 
-
+- (void)imagePickerController:(UIImagePickerController *)picker
+        didFinishPickingMediaWithInfo:(NSDictionary *)info
+{
+    // Fetch selected photo through ditionar 'info'
+    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    
+    // Use itemKey as key, store photo into BNRImageStore object
+    [[BNRImageStore sharedStore] setImage:image
+                                   forKey:self.item.itemKey];
+    
+    // Put photo into UIImage object
+    self.imageView.image = image;
+    
+    // Close UIImagePickerController
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {

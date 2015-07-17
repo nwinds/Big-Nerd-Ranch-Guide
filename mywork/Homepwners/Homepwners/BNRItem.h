@@ -15,6 +15,8 @@
 @property (nonatomic) int valueInDollars;
 @property (nonatomic, readonly, strong) NSDate *dateCreated;
 
+// Save photo stored using key-value type
+@property (nonatomic, copy) NSString *itemKey;
 
 + (instancetype)randomItem;
 - (instancetype)initWithItemName:(NSString *)name

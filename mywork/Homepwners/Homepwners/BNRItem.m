@@ -52,7 +52,13 @@
         self.itemName = name;
         self.serialNumber = sNumber;
         self.valueInDollars = value;
+        // Set time as system time
         self.dateCreated = [[NSDate alloc] init];
+        
+        // Create a NSUUID objectm then fetch its NSString value
+        NSUUID *uuid = [[NSUUID alloc] init];
+        NSString *key = [uuid UUIDString];
+        _itemKey = key;
     }
     
     return self;
