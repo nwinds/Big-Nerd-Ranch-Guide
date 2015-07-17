@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>FBCC47E3-3AD9-4677-8AB5-999F50A62715</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>TouchTracker</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D7AAD9A4430BF2FE91238712B4809D01B612882A</key>
 		<string>https://github.com/nwinds/Big-Nerd-Ranch-Guide.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>mywork/TouchTracker/TouchTracker.xcodeproj/project.xcworkspace</string>
+	<string>mywork/TouchTracker/TouchTracker.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D7AAD9A4430BF2FE91238712B4809D01B612882A</key>

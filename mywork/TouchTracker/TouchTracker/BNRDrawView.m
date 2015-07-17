@@ -32,10 +32,29 @@
         
         // Enable multiple touch
         self.multipleTouchEnabled = YES;
+        
+        // Enable gesture
+        UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
+        // Set gesture as double tap
+        doubleTapRecognizer.numberOfTapsRequired = 2;
+        
+        [self addGestureRecognizer:doubleTapRecognizer];
     }
     
     return self;
 }
+
+
+- (void)doubleTap:(UIGestureRecognizer *)gr
+{
+    NSLog(@"Recognized Double Tap");
+    
+    [self.linesInProgress removeAllObjects];
+    [self.finishedLines removeAllObjects];
+    [self setNeedsDisplay];
+}
+
+
 
 // Q: Is it nessesary setting color and type EVERY TIME?
 // In OpenGL we needn't(stack)
