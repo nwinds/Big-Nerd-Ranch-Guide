@@ -12,6 +12,9 @@
 		26CF21611B58C54F00855822 /* BNRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF21601B58C54F00855822 /* BNRViewController.m */; };
 		26CF21661B58C54F00855822 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26CF21651B58C54F00855822 /* Images.xcassets */; };
 		26CF21751B58C54F00855822 /* TouchTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF21741B58C54F00855822 /* TouchTrackerTests.m */; };
+		26CF21811B58C71D00855822 /* BNRLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF21801B58C71D00855822 /* BNRLine.m */; };
+		26CF21841B58C76600855822 /* BNRDrawView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF21831B58C76600855822 /* BNRDrawView.m */; };
+		26CF21871B58C7AD00855822 /* BNRDrawViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CF21861B58C7AD00855822 /* BNRDrawViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,12 @@
 		26CF21731B58C54F00855822 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26CF21741B58C54F00855822 /* TouchTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TouchTrackerTests.m; sourceTree = "<group>"; };
 		26CF217E1B58C58A00855822 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		26CF217F1B58C71D00855822 /* BNRLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRLine.h; sourceTree = "<group>"; };
+		26CF21801B58C71D00855822 /* BNRLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRLine.m; sourceTree = "<group>"; };
+		26CF21821B58C76600855822 /* BNRDrawView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDrawView.h; sourceTree = "<group>"; };
+		26CF21831B58C76600855822 /* BNRDrawView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDrawView.m; sourceTree = "<group>"; };
+		26CF21851B58C7AD00855822 /* BNRDrawViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDrawViewController.h; sourceTree = "<group>"; };
+		26CF21861B58C7AD00855822 /* BNRDrawViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDrawViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +87,12 @@
 		26CF21571B58C54E00855822 /* TouchTracker */ = {
 			isa = PBXGroup;
 			children = (
+				26CF217F1B58C71D00855822 /* BNRLine.h */,
+				26CF21801B58C71D00855822 /* BNRLine.m */,
+				26CF21821B58C76600855822 /* BNRDrawView.h */,
+				26CF21831B58C76600855822 /* BNRDrawView.m */,
+				26CF21851B58C7AD00855822 /* BNRDrawViewController.h */,
+				26CF21861B58C7AD00855822 /* BNRDrawViewController.m */,
 				26CF215C1B58C54F00855822 /* BNRAppDelegate.h */,
 				26CF215D1B58C54F00855822 /* BNRAppDelegate.m */,
 				26CF215F1B58C54F00855822 /* BNRViewController.h */,
@@ -214,8 +229,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CF21841B58C76600855822 /* BNRDrawView.m in Sources */,
+				26CF21871B58C7AD00855822 /* BNRDrawViewController.m in Sources */,
 				26CF21611B58C54F00855822 /* BNRViewController.m in Sources */,
 				26CF215E1B58C54F00855822 /* BNRAppDelegate.m in Sources */,
+				26CF21811B58C71D00855822 /* BNRLine.m in Sources */,
 				26CF215B1B58C54F00855822 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
