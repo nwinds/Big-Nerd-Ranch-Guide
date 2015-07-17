@@ -14,8 +14,11 @@
 // For this class, allItems is changeable, to other classes, allItems is unchangable
 @property (nonatomic, readonly) NSArray *allItems;
 
+#pragma mark - Class method
 + (instancetype)sharedStore;
 
+
+#pragma mark - Actions
 - (BNRItem *)createItem;
 - (void)removeItem:(BNRItem *)item;
 - (void)moveItemAtIndex:(NSUInteger)fromIndex
