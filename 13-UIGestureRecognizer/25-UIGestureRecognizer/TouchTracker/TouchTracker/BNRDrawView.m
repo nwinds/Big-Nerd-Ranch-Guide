@@ -92,6 +92,11 @@
     if (!self.selectedLine) {
         return;
     }
+    
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible == YES) {
+        return;
+    }
 
     // When the pan recognizer changes its position...
     if (gr.state == UIGestureRecognizerStateChanged) {

@@ -8,7 +8,10 @@
 
 #import "BNRDrawView.h"
 #import "BNRLine.h"
-@interface BNRDrawView ()
+@interface BNRDrawView () <UIGestureRecognizerDelegate>
+
+#pragma mark -Gesture Recognizer
+@property (nonatomic, strong) UIPanGestureRecognizer *moveRecognizer;
 
 #pragma mark -Lines
 //@property (nonatomic, strong) BNRLine *currentLine;
@@ -17,7 +20,8 @@
 
 @property (nonatomic, weak) BNRLine *selectedLine;
 
-//#pragma mark -
+//#pragma mark -Menu options
+//@property (nonatomic) BOOL deleteLinePressed;
 
 @end
 
@@ -57,6 +61,16 @@
         UILongPressGestureRecognizer *pressRecognizer = [[UILongPressGestureRecognizer alloc]
                                                          initWithTarget:self action:@selector(longPress:)];
         [self addGestureRecognizer:pressRecognizer];
+        
+        // Pan recognizer: begin =>(judge) => remain => end => changed
+        self.moveRecognizer = [[UIPanGestureRecognizer alloc]
+                               initWithTarget:self action:@selector(moveLine:)];
+        self.moveRecognizer.delegate = self;    // Set self as pan gesture's recognizer
+        self.moveRecognizer.cancelsTouchesInView = NO;  // YES will cancle every UITouch gesture after pan gesture recognized
+        [self addGestureRecognizer:self.moveRecognizer];
+        
+        // Signal if delete command received from menu
+//        self.deleteLinePressed = NO;
     }
     
     return self;
@@ -94,12 +108,6 @@
         [self strokeLine:self.selectedLine];
     }
 
-}
-
-- (void)deleteLine:(id)sender
-{
-    [self.finishedLines removeObject:self.selectedLine];
-    [self setNeedsDisplay];
 }
 
 #pragma mark -Turing touches into lines
@@ -217,7 +225,16 @@
     NSLog(@"Recognized tap");
     
     CGPoint point = [gr locationInView:self];
-    self.selectedLine = [self lineAtPoint:point];
+    
+    // If selected same line, don't redraw menu
+    BNRLine *currSelectedLine = [self lineAtPoint:point];
+    if (currSelectedLine == self.selectedLine) {
+        return;
+    } else {
+        self.selectedLine = currSelectedLine;
+//        self.deleteLinePressed = YES;
+    }
+//    self.selectedLine = [self lineAtPoint:point];
     
     if (self.selectedLine) {
         // Set UIView as UIMenuItem's message target
@@ -243,6 +260,15 @@
 }
 
 
+
+- (void)deleteLine:(id)sender
+{
+    [self.finishedLines removeObject:self.selectedLine];
+    [self setNeedsDisplay];
+//    self.deleteLinePressed = NO;
+}
+
+
 - (void)longPress:(UIGestureRecognizer *)gr
 {
     if (gr.state == UIGestureRecognizerStateBegan) {
@@ -261,6 +287,59 @@
     [self setNeedsDisplay];
 }
 
+// If other gesture recognized after long press,
+// then the currently UIGestureRecognizer's sub class share the UITouch
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
+    shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    if (gestureRecognizer == self.moveRecognizer) {
+        return YES;
+    }
+    return NO;
+}
+
+
+- (void)moveLine:(UIPanGestureRecognizer *)gr
+{
+    // If no selected line: return
+    if (!self.selectedLine) {
+        return;
+    }
+    
+    
+    // If tapped another line, then the selected line's menu bar should be hidden
+//    if (self.deleteLinePressed == YES) {
+////        [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+////        self.deleteLinePressed = NO;
+////        return;
+//    }
+
+
+    
+    // If UIPanGestureRecognizer at *changed* state
+    if (gr.state == UIGestureRecognizerStateChanged) {
+        // Fetch moved distance
+        CGPoint translation = [gr translationInView:self];
+        
+        // Add paned distance to line's begin and end
+        CGPoint begin = self.selectedLine.begin;
+        CGPoint end = self.selectedLine.end;
+        begin.x += translation.x;
+        begin.y += translation.y;
+        end.x += translation.x;
+        end.y += translation.y;
+        
+        // Set new begin and start for selected line
+        self.selectedLine.begin = begin;
+        self.selectedLine.end = end;
+        
+        // Redraw UIView
+        [self setNeedsDisplay];
+        
+        // Report translation: update begin state
+        [gr setTranslation:CGPointZero inView:self];
+    }
+}
 #pragma mark -Set first resonder
 - (BOOL)canBecomeFirstResponder
 {
