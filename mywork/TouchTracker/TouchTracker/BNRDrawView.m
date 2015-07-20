@@ -79,6 +79,26 @@
     CGPoint point = [gr locationInView:self];
     self.selectedLine = [self lineAtPoint:point];
     
+    if (self.selectedLine) {
+        // Set UIView as UIMenuItem's message target
+        [self becomeFirstResponder];
+        
+        // Fetch UIMenuController object
+        UIMenuController *menu = [UIMenuController sharedMenuController];
+        
+        // Create new UIMenueItem object
+        UIMenuItem *deleteItem = [[UIMenuItem alloc] initWithTitle:@"Delete" action:@selector(deleteLine:)];
+        menu.menuItems = @[deleteItem];
+        
+        // Set show area and set it as visible
+        [menu setTargetRect:CGRectMake(point.x, point.y, 2, 2) inView:self];
+        [menu setMenuVisible:YES animated:YES];
+    } else {
+        // If no line selected, then hide UIMenuController object
+        [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+    }
+    
+
     [self setNeedsDisplay];
 }
 
@@ -113,6 +133,12 @@
         [self strokeLine:self.selectedLine];
     }
 
+}
+
+- (void)deleteLine:(id)sender
+{
+    [self.finishedLines removeObject:self.selectedLine];
+    [self setNeedsDisplay];
 }
 
 #pragma mark -Turing touches into lines
@@ -211,6 +237,12 @@
     }
     
     return nil;
+}
+
+#pragma mark -Set first resonder
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
 }
 
 @end
