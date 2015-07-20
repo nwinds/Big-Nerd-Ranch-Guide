@@ -38,6 +38,10 @@
         // Set gesture as double tap
         doubleTapRecognizer.numberOfTapsRequired = 2;
         
+        // To remove red point response while touching
+        // By avoiding sending signal to UIView before recongnizing the gesture
+        doubleTapRecognizer.delaysTouchesBegan = YES;
+        
         [self addGestureRecognizer:doubleTapRecognizer];
     }
     
@@ -57,7 +61,7 @@
 
 
 // Q: Is it nessesary setting color and type EVERY TIME?
-// In OpenGL we needn't(stack)
+// In OpenGL we needn't (stack)
 - (void)strokeLine:(BNRLine *)line
 {
     UIBezierPath *bp = [UIBezierPath bezierPath];
