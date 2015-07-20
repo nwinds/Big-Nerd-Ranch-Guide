@@ -49,6 +49,13 @@
 - (IBAction)backgroundTapped:(id)sender
 {
     [self.view endEditing:YES];
+    
+//    // Check out ambiguous
+//    for (UIView *subview in self.view.subviews) {
+//        if ([subview hasAmbiguousLayout]) {
+//            [subview exerciseAmbiguityInLayout];
+//        }
+//    }
 }
 
 
@@ -116,6 +123,16 @@
     item.serialNumber = self.serialNameField.text;
     item.valueInDollars = [self.valueField.text intValue];
 }
+
+//// Auto layout debug
+//- (void)viewDidLayoutSubviews
+//{
+//    for (UIView *subview in self.view.subviews) {
+//        if ([subview hasAmbiguousLayout]) {
+//            NSLog(@"AMBIGUOUS: %@", subview);
+//        }
+//    }
+//}
 
 - (void)setItem:(BNRItem *)item
 {
