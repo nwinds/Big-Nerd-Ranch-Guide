@@ -36,71 +36,32 @@
         // Enable multiple touch
         self.multipleTouchEnabled = YES;
         
-        // Enable gesture
+        // Double tap gesture
         UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTap:)];
         // Set gesture as double tap
         doubleTapRecognizer.numberOfTapsRequired = 2;
-        
         // To remove red point response while touching
         // By avoiding sending signal to UIView before recognizing the gesture
         doubleTapRecognizer.delaysTouchesBegan = YES;
-        
         [self addGestureRecognizer:doubleTapRecognizer];
         
         // Multiple gesture recognizer
         UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
-        
         tapRecognizer.delaysTouchesBegan = YES;
-        
         // To destinguish tap and double tap
         [tapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
-        
         [self addGestureRecognizer:tapRecognizer];
+        
+        // Long press recognizer: begin =>(judge) => remain => end
+        // Initially consider long press as > 0.5 secs
+        UILongPressGestureRecognizer *pressRecognizer = [[UILongPressGestureRecognizer alloc]
+                                                         initWithTarget:self action:@selector(longPress:)];
+        [self addGestureRecognizer:pressRecognizer];
     }
     
     return self;
 }
 
-
-- (void)doubleTap:(UIGestureRecognizer *)gr
-{
-    NSLog(@"Recognized Double Tap");
-    
-    [self.linesInProgress removeAllObjects];
-    [self.finishedLines removeAllObjects];
-    [self setNeedsDisplay];
-}
-
-// First, locate gesture in view; second, set selectedLine with the BNRLine
-- (void)tap:(UIGestureRecognizer *)gr
-{
-    NSLog(@"Recognized tap");
-    
-    CGPoint point = [gr locationInView:self];
-    self.selectedLine = [self lineAtPoint:point];
-    
-    if (self.selectedLine) {
-        // Set UIView as UIMenuItem's message target
-        [self becomeFirstResponder];
-        
-        // Fetch UIMenuController object
-        UIMenuController *menu = [UIMenuController sharedMenuController];
-        
-        // Create new UIMenueItem object
-        UIMenuItem *deleteItem = [[UIMenuItem alloc] initWithTitle:@"Delete" action:@selector(deleteLine:)];
-        menu.menuItems = @[deleteItem];
-        
-        // Set show area and set it as visible
-        [menu setTargetRect:CGRectMake(point.x, point.y, 2, 2) inView:self];
-        [menu setMenuVisible:YES animated:YES];
-    } else {
-        // If no line selected, then hide UIMenuController object
-        [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
-    }
-    
-
-    [self setNeedsDisplay];
-}
 
 // Q: Is it nessesary setting color and type EVERY TIME?
 // In OpenGL we needn't (stack)
@@ -237,6 +198,67 @@
     }
     
     return nil;
+}
+
+#pragma mark -Gesture handle
+
+- (void)doubleTap:(UIGestureRecognizer *)gr
+{
+    NSLog(@"Recognized Double Tap");
+    
+    [self.linesInProgress removeAllObjects];
+    [self.finishedLines removeAllObjects];
+    [self setNeedsDisplay];
+}
+
+// First, locate gesture in view; second, set selectedLine with the BNRLine
+- (void)tap:(UIGestureRecognizer *)gr
+{
+    NSLog(@"Recognized tap");
+    
+    CGPoint point = [gr locationInView:self];
+    self.selectedLine = [self lineAtPoint:point];
+    
+    if (self.selectedLine) {
+        // Set UIView as UIMenuItem's message target
+        [self becomeFirstResponder];
+        
+        // Fetch UIMenuController object
+        UIMenuController *menu = [UIMenuController sharedMenuController];
+        
+        // Create new UIMenueItem object
+        UIMenuItem *deleteItem = [[UIMenuItem alloc] initWithTitle:@"Delete" action:@selector(deleteLine:)];
+        menu.menuItems = @[deleteItem];
+        
+        // Set show area and set it as visible
+        [menu setTargetRect:CGRectMake(point.x, point.y, 2, 2) inView:self];
+        [menu setMenuVisible:YES animated:YES];
+    } else {
+        // If no line selected, then hide UIMenuController object
+        [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
+    }
+    
+    
+    [self setNeedsDisplay];
+}
+
+
+- (void)longPress:(UIGestureRecognizer *)gr
+{
+    if (gr.state == UIGestureRecognizerStateBegan) {
+            NSLog(@"Recognized long press: begin");
+        CGPoint point = [gr locationInView:self];
+        self.selectedLine = [self lineAtPoint:point];
+        
+        if (self.selectedLine) {
+            [self.linesInProgress removeAllObjects];
+        }
+    } else if (gr.state == UIGestureRecognizerStateEnded) {
+        NSLog(@"Recognized long press: end");
+        self.selectedLine = nil;
+    }
+    
+    [self setNeedsDisplay];
 }
 
 #pragma mark -Set first resonder
