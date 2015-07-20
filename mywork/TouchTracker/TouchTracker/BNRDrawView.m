@@ -15,6 +15,9 @@
 @property (nonatomic, strong) NSMutableDictionary *linesInProgress;
 @property (nonatomic, strong) NSMutableArray *finishedLines;
 
+@property (nonatomic, weak) BNRLine *selectedLine;
+
+//#pragma mark -
 
 @end
 
@@ -39,10 +42,20 @@
         doubleTapRecognizer.numberOfTapsRequired = 2;
         
         // To remove red point response while touching
-        // By avoiding sending signal to UIView before recongnizing the gesture
+        // By avoiding sending signal to UIView before recognizing the gesture
         doubleTapRecognizer.delaysTouchesBegan = YES;
         
         [self addGestureRecognizer:doubleTapRecognizer];
+        
+        // Multiple gesture recognizer
+        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+        
+        tapRecognizer.delaysTouchesBegan = YES;
+        
+        // To destinguish tap and double tap
+        [tapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];
+        
+        [self addGestureRecognizer:tapRecognizer];
     }
     
     return self;
@@ -58,7 +71,16 @@
     [self setNeedsDisplay];
 }
 
-
+// First, locate gesture in view; second, set selectedLine with the BNRLine
+- (void)tap:(UIGestureRecognizer *)gr
+{
+    NSLog(@"Recognized tap");
+    
+    CGPoint point = [gr locationInView:self];
+    self.selectedLine = [self lineAtPoint:point];
+    
+    [self setNeedsDisplay];
+}
 
 // Q: Is it nessesary setting color and type EVERY TIME?
 // In OpenGL we needn't (stack)
@@ -83,6 +105,12 @@
     [[UIColor redColor] set];
     for (NSValue *key in self.linesInProgress) {
         [self strokeLine:self.linesInProgress[key]];
+    }
+    
+    // Draw selected lines in green
+    if (self.selectedLine) {
+        [[UIColor greenColor] set];
+        [self strokeLine:self.selectedLine];
     }
 
 }
@@ -158,6 +186,31 @@
     }
     
     [self setNeedsDisplay];
+}
+
+#pragma mark -Line locating
+
+- (BNRLine *)lineAtPoint:(CGPoint)p
+{
+    // Find out BNRLine most close to point p
+    for (BNRLine *l in self.finishedLines) {
+        CGPoint start = l.begin;
+        CGPoint end = l.end;
+        
+        // Check out points
+        for (float t = 0.0; t <= 1.0; t += 0.05) {
+            float x = start.x + t * (end.x - start.x);
+            float y = start.y + t * (end.y - start.y);
+            
+            // If distance within 20, return BNRLine object
+            if (hypot(x - p.x, y - p.y) < 20.0) {
+                return l;
+            }
+            
+        }
+    }
+    
+    return nil;
 }
 
 @end
