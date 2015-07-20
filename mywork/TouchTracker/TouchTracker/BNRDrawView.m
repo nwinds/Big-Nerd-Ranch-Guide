@@ -306,13 +306,11 @@
         return;
     }
     
-    
-    // If tapped another line, then the selected line's menu bar should be hidden
-//    if (self.deleteLinePressed == YES) {
-////        [[UIMenuController sharedMenuController] setMenuVisible:NO animated:YES];
-////        self.deleteLinePressed = NO;
-////        return;
-//    }
+
+    UIMenuController *menu = [UIMenuController sharedMenuController];
+    if (menu.isMenuVisible == YES) {
+        return;
+    }
 
 
     
