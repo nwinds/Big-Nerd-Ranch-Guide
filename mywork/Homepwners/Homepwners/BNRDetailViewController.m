@@ -9,9 +9,13 @@
 #import "BNRDetailViewController.h"
 #import "BNRItem.h"
 #import "BNRImageStore.h"
+#import "BNRItemStore.h"
 
-@interface BNRDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
+@interface BNRDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate, UIPopoverControllerDelegate>
 
+@property (strong, nonatomic) UIPopoverController *imagePickerPopover;
+
+//#pragma mark -View outlet
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNameField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
@@ -27,8 +31,66 @@
 
 @implementation BNRDetailViewController
 
+
+#pragma mark -Modal handling
+
+- (instancetype)initForNewItem:(BOOL)isNew
+{
+    self = [super initWithNibName:nil bundle:nil];
+    
+    if (self) {
+        if (isNew) {
+            UIBarButtonItem *doneItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                      target:self
+                                                                                      action:@selector(save:)];
+            self.navigationItem.rightBarButtonItem = doneItem;
+            
+            UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                        target:self
+                                                                                        action:@selector(cancel:)];
+            self.navigationItem.leftBarButtonItem = cancelItem;
+        }
+    }
+    
+    return self;
+}
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    @throw [NSException exceptionWithName:@"Wrong initializer"
+                                   reason:@"Use initForNewItem:"
+                                 userInfo:nil];
+    return nil;
+}
+
+
+- (IBAction)save:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES
+                                                      completion:self.dismissBlock];
+}
+
+- (void)cancel:(id)sender
+{
+    // If user press down Cancel button, then remove BNRItem from BNRItemStore object
+    [[BNRItemStore sharedStore] removeItem:self.item];
+    
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+#pragma mark -Previous
+
 - (IBAction)takePicture:(id)sender
 {
+    if ([self.imagePickerPopover isPopoverVisible]) {
+        // If imagePickerPopover pointing to effective UIPopoverController object
+        // And its object's UIView is visible, then close it and set nil
+        [self.imagePickerPopover dismissPopoverAnimated:YES];
+        self.imagePickerPopover = nil;
+        return;
+    }
+    
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     
     
@@ -43,9 +105,31 @@
     imagePicker.delegate = self;
     
     // Modal: output UIImagePickerController
-    [self presentViewController:imagePicker animated: YES completion:nil];
+//    [self presentViewController:imagePicker animated: YES completion:nil];
+    
+    // Show UIImagePickerController objects
+    // Check if currenr device is iPad
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        // Create UIPopoverController object, for showing UIImagePickerController object
+        self.imagePickerPopover = [[UIPopoverController alloc] initWithContentViewController:imagePicker];
+        
+        self.imagePickerPopover.delegate = self;
+        
+        // Show UIPopover controller
+        // sender pointing UIBarButtonItem object
+        [self.imagePickerPopover presentPopoverFromBarButtonItem:sender
+                                        permittedArrowDirections:UIPopoverArrowDirectionAny
+                                                        animated:YES];
+    } else {
+        [self presentViewController:imagePicker animated:YES completion:nil];
+    }
 }
 
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    NSLog(@"User dismissed popover");
+    self.imagePickerPopover = nil;
+}
 
 - (IBAction)backgroundTapped:(id)sender
 {
@@ -75,7 +159,17 @@
     self.imageView.image = image;
     
     // Close UIImagePickerController
-    [self dismissViewControllerAnimated:YES completion:nil];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    // Judge UIPopoverController object exists or not
+    if (self.imagePickerPopover) {
+        // Close UIPopoverController object
+        [self.imagePickerPopover dismissPopoverAnimated:YES];
+        self.imagePickerPopover = nil;
+    } else {
+        // Close UIImagePickerController object showned in modal
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -184,15 +278,12 @@
     // Add constraints array to BNRDetailViewController's view
     [self.view addConstraints:horizontalConstraints];
     [self.view addConstraints:verticalConstraints];
-    
-//    // Set imageView's vertical priority lower then others
-//    [self.imageView setContentHuggingPriority:200
-//                                      forAxis:UILayoutConstraintAxisVertical];
-//    [self.imageView setContentCompressionResistancePriority:700
-//                                                    forAxis:UILayoutConstraintAxisVertical];
+
 }
 
 #pragma mark -View controlling
+
+// You can add animation effect here
 - (void)prepareViewsForOrientation:(UIInterfaceOrientation)orientation
 {
     // Ignore iPad
