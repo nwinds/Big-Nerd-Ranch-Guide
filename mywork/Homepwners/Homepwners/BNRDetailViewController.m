@@ -140,5 +140,52 @@
     self.navigationItem.title = _item.itemName;
 }
 
+#pragma mark -Auto layout constraints
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    UIImageView *iv = [[UIImageView alloc] initWithImage:nil];
+    
+    // Set UIImageView object's scaling mode
+    iv.contentMode = UIViewContentModeScaleAspectFit;
+    
+    // Inform auto layout system not to translate to constraints
+    iv.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    // Add UIImageView to view
+    [self.view addSubview:iv];
+    
+    // Ste UIImageView object's value to imageView
+    self.imageView = iv;
+    
+    // Create NSDictionary
+    // Making name-value binding more readable
+    NSDictionary *nameMap = @{ @"imageView" : self.imageView,
+                               @"dateLable" : self.dateLable,
+                               @"toolbar"   : self.toolbar};
+    
+    // imageView's left and right distance to parent viewis 0
+    NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-0-[imageView]-0-|"
+                                                                             options:0
+                                                                             metrics:nil
+                                                                               views:nameMap];
+    
+    // imageView's top distance to dateLable is 8, bottom is 8
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[dateLable]-[imageView]-[toolbar]"
+                                                                           options:0
+                                                                           metrics:nil
+                                                                             views:nameMap];
+    
+    // Add constraints array to BNRDetailViewController's view
+    [self.view addConstraints:horizontalConstraints];
+    [self.view addConstraints:verticalConstraints];
+    
+//    // Set imageView's vertical priority lower then others
+//    [self.imageView setContentHuggingPriority:200
+//                                      forAxis:UILayoutConstraintAxisVertical];
+//    [self.imageView setContentCompressionResistancePriority:700
+//                                                    forAxis:UILayoutConstraintAxisVertical];
+}
+
 
 @end
