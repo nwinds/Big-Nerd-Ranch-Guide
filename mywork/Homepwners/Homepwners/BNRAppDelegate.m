@@ -8,6 +8,8 @@
 
 #import "BNRAppDelegate.h"
 #import "BNRItemsViewController.h"
+#import "BNRItemStore.h"
+
 @interface BNRAppDelegate ()
 
 @end
@@ -15,7 +17,8 @@
 
 @implementation BNRAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc] init];
@@ -36,9 +39,14 @@
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    BOOL success = [[BNRItemStore sharedStore] saveChanges];
+    if (success) {
+        NSLog(@"Saved all of the BNRItems");
+    } else {
+        NSLog(@"Could not save any of the BNRItems");
+    }
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

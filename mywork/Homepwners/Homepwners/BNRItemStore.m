@@ -54,6 +54,25 @@
 }
 
 
+- (BOOL)saveChanges
+{
+    NSString *path = [self itemArchivePath];
+    
+    // If success return YES
+    return [NSKeyedArchiver archiveRootObject:self.privateItems toFile:path];
+}
+
+
+- (NSString *)itemArchivePath
+{
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    NSString *documentDirectory = [documentDirectories firstObject];
+    
+    return [documentDirectory stringByAppendingPathComponent:@"items.archive"];
+}
+
+
 // Override allItems' getter
 - (NSArray *)allItems
 {
