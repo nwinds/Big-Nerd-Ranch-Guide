@@ -157,10 +157,7 @@
     
     // Put photo into UIImage object
     self.imageView.image = image;
-    
-    // Close UIImagePickerController
-//    [self dismissViewControllerAnimated:YES completion:nil];
-    
+       
     // Judge UIPopoverController object exists or not
     if (self.imagePickerPopover) {
         // Close UIPopoverController object

@@ -21,9 +21,6 @@
 + (instancetype)sharedStore
 {
     static BNRItemStore *sharedStore = nil;
-//    if (!sharedStore) {
-//        sharedStore = [[self alloc] initPrivate];
-//    }
 
     // Thread-safe singleton
     static dispatch_once_t onceToken;
@@ -52,6 +49,7 @@
         
         NSString *path = [self itemArchivePath];
         _privateItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
+        
         // If no previouse saved file exists
         if (!_privateItems) {
             _privateItems = [[NSMutableArray alloc] init];
@@ -89,7 +87,12 @@
 
 - (BNRItem *)createItem
 {
-    BNRItem *item = [BNRItem randomItem];
+    // Create randomized BNRItem
+//    BNRItem *item = [BNRItem randomItem];
+
+    // Create empty BNRItem
+    // Issue: cannot support Chiness input
+    BNRItem *item = [[BNRItem alloc] init];
     [self.privateItems addObject:item];
     
     return item;

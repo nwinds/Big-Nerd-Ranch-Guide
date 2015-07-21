@@ -18,4 +18,8 @@
 - (UIImage *)imageForKey:(NSString *)key;
 - (void)deleteImageForKey:(NSString *)key;
 
+
+#pragma mark -Wrting back
+- (NSString *)imagePathForKey:(NSString *)key;
+
 @end
