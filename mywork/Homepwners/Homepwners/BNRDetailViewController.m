@@ -151,6 +151,9 @@
     // Fetch selected photo through ditionar 'info'
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     
+    // Create thumbnail from full size image 
+    [self.item setThumbnailFromImage:image];
+    
     // Use itemKey as key, store photo into BNRImageStore object
     [[BNRImageStore sharedStore] setImage:image
                                    forKey:self.item.itemKey];

@@ -59,7 +59,7 @@
 
 - (void)clearCache:(NSNotification *)note
 {
-    NSLog(@"flushing %d images out of the cache", [self.dictionary count]);
+    NSLog(@"flushing %lu images out of the cache", (unsigned long)[self.dictionary count]);
     [self.dictionary removeAllObjects];
 }
 
@@ -80,7 +80,6 @@
 
 - (UIImage *)imageForKey:(NSString *)key
 {
-//    return self.dictionary[key];
     // First attempt fetch image through dictionary
     UIImage *result = self.dictionary[key];
     

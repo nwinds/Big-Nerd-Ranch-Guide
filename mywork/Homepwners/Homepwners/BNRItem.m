@@ -51,6 +51,8 @@
         _serialNumber = [aDecoder decodeObjectForKey:@"serialNumber"];
         _dateCreated = [aDecoder decodeObjectForKey:@"dateCreated"];
         _itemKey = [aDecoder decodeObjectForKey:@"itemKey"];
+        _thumbnail = [aDecoder decodeObjectForKey:@"thumbnail"];
+        
         _valueInDollars = [aDecoder decodeIntForKey:@"valueInDollars"];
     }
     
@@ -79,8 +81,9 @@
     return self;
 }
 
-- (id)init {
-    return [self initWithItemName:@"Item"
+- (id)init
+{
+    return [self initWithItemName:@""
                    valueInDollars:0
                      serialNumber:@""];
 }
@@ -110,7 +113,48 @@
     [aCoder encodeObject:self.serialNumber forKey:@"serialNumber"];
     [aCoder encodeObject:self.dateCreated forKey:@"dateCreated"];
     [aCoder encodeObject:self.itemKey forKey:@"itemKey"];
+    [aCoder encodeObject:self.thumbnail forKey:@"thumbnail"];
     [aCoder encodeInt:self.valueInDollars forKey:@"valueInDollars"];
 }
+
+
+
+- (void)setThumbnailFromImage:(UIImage *)image
+{
+    CGSize origImageSize = image.size;
+    
+    // Set thumbnail size
+    CGRect newRect = CGRectMake(0, 0, 40, 40);
+    
+    // Set scale size and lock up width:height
+    float ratio = MAX(newRect.size.width / origImageSize.width, newRect.size.height / origImageSize.height);
+    
+    // Set image context according to current device's scaling factor
+    UIGraphicsBeginImageContextWithOptions(newRect.size, NO, 0.0);
+    
+    // Create UIBazierPath object
+    UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:newRect cornerRadius:5.0];
+    
+    // Cut image context
+    [path addClip];
+    
+    // Align center
+    CGRect projectRect;
+    projectRect.size.width = ratio * origImageSize.width;
+    projectRect.size.height = ratio * origImageSize.height;
+    projectRect.origin.x = (newRect.size.width - projectRect.size.width) / 2.0;
+    projectRect.origin.y = (newRect.size.height - projectRect.size.height) / 2.0;
+    
+    // Draw image in context
+    [image drawInRect:projectRect];
+    
+    // Get UIImage object from image context, and aline it to thumbnail
+    UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
+    self.thumbnail = smallImage;
+    
+    // Clean image context
+    UIGraphicsEndImageContext();
+}
+
 
 @end

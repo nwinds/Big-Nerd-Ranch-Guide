@@ -45,8 +45,6 @@
 {
     self = [super init];
     if (self) {
-//        _privateItems = [[NSMutableArray alloc] init];
-        
         NSString *path = [self itemArchivePath];
         _privateItems = [NSKeyedUnarchiver unarchiveObjectWithFile:path];
         
@@ -87,9 +85,6 @@
 
 - (BNRItem *)createItem
 {
-    // Create randomized BNRItem
-//    BNRItem *item = [BNRItem randomItem];
-
     // Create empty BNRItem
     // Issue: cannot support Chiness input
     BNRItem *item = [[BNRItem alloc] init];

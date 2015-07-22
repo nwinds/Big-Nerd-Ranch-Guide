@@ -17,6 +17,13 @@
 
 // Save photo stored using key-value type
 @property (nonatomic, copy) NSString *itemKey;
+@property (nonatomic, strong) UIImage *thumbnail;
+
+#pragma mark -Thumbnail
+- (void)setThumbnailFromImage:(UIImage *)image;
+
+#pragma mark -Initialization
+
 
 + (instancetype)randomItem;
 - (instancetype)initWithItemName:(NSString *)name
