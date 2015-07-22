@@ -15,13 +15,18 @@
 
 @property (strong, nonatomic) UIPopoverController *imagePickerPopover;
 
-//#pragma mark -View outlet
+#pragma mark -View outlet
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNameField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
 @property (weak, nonatomic) IBOutlet UILabel *dateLable;
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
 @end
@@ -207,6 +212,8 @@
     UIImage *imageToDisplay = [[BNRImageStore sharedStore] imageForKey:itemKey];
     
     self.imageView.image = imageToDisplay;
+    
+    [self updateFonts];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -237,6 +244,20 @@
 {
     _item = item;
     self.navigationItem.title = _item.itemName;
+}
+
+- (void)updateFonts
+{
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    self.nameLabel.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueLabel.font = font;
+    self.dateLable.font = font;
+    
+    self.nameField.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueField.font = font;
 }
 
 #pragma mark -Auto layout constraints
