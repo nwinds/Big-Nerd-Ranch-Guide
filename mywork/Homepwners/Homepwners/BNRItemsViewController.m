@@ -63,7 +63,8 @@
     // Fetch BNRItemCell object, returning will be old object or new created ones
     BNRItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BNRItemCell" forIndexPath:indexPath];
 
-    BNRItem *item = [[BNRItemStore sharedStore] allItems][indexPath.row];
+    NSArray *items = [[BNRItemStore sharedStore] allItems];
+    BNRItem *item = items[indexPath.row];
     
     // Setting BNRItemCell object through BNRItem
     cell.nameLabel.text = item.itemName;
@@ -90,8 +91,6 @@
             
             // Make a rectangle for the frame of the thumbnail relative to
             // our table view
-//            CGRect rect = [self.view convertRect:cell.thumbnailView.bounds
-//                                        fromView:cell.thumbnailView];
             CGRect rect = [self.view convertRect:strongCell.thumbnailView.bounds
                                         fromView:strongCell.thumbnailView];
             
@@ -175,24 +174,20 @@
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:detailViewController];
        
     navController.modalPresentationStyle = UIModalPresentationFormSheet;
-    [self presentViewController:navController animated:YES completion:nil];
+    [self presentViewController:navController animated:YES completion:NULL];
 }
 
 
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
-//    [self.tableView registerClass:[UITableViewCell class]
-//           forCellReuseIdentifier:@"UITableViewCell"];
-
-    // Create UINib object, which includes BNRItemCell's NIB file
+    // Load the NIB file
     UINib *nib = [UINib nibWithNibName:@"BNRItemCell" bundle:nil];
     
     // Regist UINib object by relating NIB file
     [self.tableView registerNib:nib forCellReuseIdentifier:@"BNRItemCell"];
-//    UIView *header = self.headerView;
-//    [self.tableView setTableHeaderView:header];
 }
 
 - (void)viewWillAppear:(BOOL)animated

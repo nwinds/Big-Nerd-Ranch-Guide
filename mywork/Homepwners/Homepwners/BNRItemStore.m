@@ -97,7 +97,10 @@
 {
     NSString *key = item.itemKey;
     
-    [[BNRImageStore sharedStore] deleteImageForKey:key];
+    if (key) {
+         [[BNRImageStore sharedStore] deleteImageForKey:key];
+    }
+   
     [self.privateItems removeObjectIdenticalTo:item];
 }
 
