@@ -10,6 +10,12 @@
 
 @implementation BNRItemCell
 
-
-
+- (IBAction)showImage:(id)sender
+{
+    // Check it block exists before calling
+    if (self.actionBlock) {
+        self.actionBlock();
+    }
+    
+}
 @end

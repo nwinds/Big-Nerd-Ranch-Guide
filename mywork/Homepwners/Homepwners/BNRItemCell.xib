@@ -44,8 +44,18 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0v-ad-FT1">
+                        <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="showImage:" destination="YhT-6Q-W7R" eventType="touchUpInside" id="Gyr-ob-6zl"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="j0v-ad-FT1" firstAttribute="top" secondItem="Rpy-c9-VPJ" secondAttribute="top" id="1zP-FI-WPG"/>
                     <constraint firstItem="bBf-ib-BOM" firstAttribute="leading" secondItem="Rpy-c9-VPJ" secondAttribute="trailing" constant="15" id="2IH-a3-71q"/>
                     <constraint firstItem="3Cb-3o-3s2" firstAttribute="leading" secondItem="NaQ-V4-YDS" secondAttribute="trailing" constant="170" id="4Kd-Oq-SaI"/>
                     <constraint firstAttribute="centerY" secondItem="3Cb-3o-3s2" secondAttribute="centerY" id="54r-s7-TEq"/>
@@ -53,8 +63,11 @@
                     <constraint firstItem="NaQ-V4-YDS" firstAttribute="top" secondItem="bBf-ib-BOM" secondAttribute="bottom" constant="1" id="8bs-Rf-fsD"/>
                     <constraint firstAttribute="centerY" secondItem="Rpy-c9-VPJ" secondAttribute="centerY" id="CRg-Th-lA2"/>
                     <constraint firstItem="3Cb-3o-3s2" firstAttribute="leading" secondItem="bBf-ib-BOM" secondAttribute="trailing" constant="135" id="JA6-8m-Lgt"/>
+                    <constraint firstItem="j0v-ad-FT1" firstAttribute="leading" secondItem="Rpy-c9-VPJ" secondAttribute="leading" id="Mgx-TM-KhG"/>
                     <constraint firstItem="Rpy-c9-VPJ" firstAttribute="leading" secondItem="RXX-EP-joH" secondAttribute="leadingMargin" constant="-8" id="WtW-qc-c3s"/>
+                    <constraint firstItem="j0v-ad-FT1" firstAttribute="bottom" secondItem="Rpy-c9-VPJ" secondAttribute="bottom" id="YVC-dj-EIz"/>
                     <constraint firstItem="3Cb-3o-3s2" firstAttribute="trailing" secondItem="RXX-EP-joH" secondAttribute="trailingMargin" id="aSc-db-GRs"/>
+                    <constraint firstItem="j0v-ad-FT1" firstAttribute="trailing" secondItem="Rpy-c9-VPJ" secondAttribute="trailing" id="bpo-mC-UnC"/>
                     <constraint firstItem="bBf-ib-BOM" firstAttribute="top" secondItem="RXX-EP-joH" secondAttribute="topMargin" constant="-8" id="gPf-qc-fbZ"/>
                     <constraint firstItem="NaQ-V4-YDS" firstAttribute="leading" secondItem="Rpy-c9-VPJ" secondAttribute="trailing" constant="15" id="iFQ-1F-MaJ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="NaQ-V4-YDS" secondAttribute="bottom" constant="-8" id="yLF-Ab-ksM"/>
