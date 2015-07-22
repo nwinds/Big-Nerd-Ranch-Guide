@@ -10,6 +10,8 @@
 #import "BNRItemStore.h"
 #import "BNRItem.h"
 #import "BNRDetailViewController.h"
+#import "BNRItemCell.h"
+
 
 @interface BNRItemsViewController ()
 @property (nonatomic, strong) IBOutlet UIView *headerView;
@@ -56,13 +58,20 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
-                                                            forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell"
+//                                                            forIndexPath:indexPath];
+    // Fetch BNRItemCell object, returning will be old object or new created ones
+    BNRItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"BNRItemCell" forIndexPath:indexPath];
     
     NSArray *items = [[BNRItemStore sharedStore] allItems];
     BNRItem *item = items[indexPath.row];
     
-    cell.textLabel.text = [item description];
+//    cell.textLabel.text = [item description];
+    
+    // Setting BNRItemCell object through BNRItem
+    cell.nameLabel.text = item.itemName;
+    cell.serialNumberLabel.text = item.serialNumber;
+    cell.valueLabel.text = [NSString stringWithFormat:@"$%d", item.valueInDollars];
     
     return cell;
 }
@@ -130,11 +139,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerClass:[UITableViewCell class]
-           forCellReuseIdentifier:@"UITableViewCell"];
+//    [self.tableView registerClass:[UITableViewCell class]
+//           forCellReuseIdentifier:@"UITableViewCell"];
 
-    UIView *header = self.headerView;
-    [self.tableView setTableHeaderView:header];
+    // Create UINib object, which includes BNRItemCell's NIB file
+    UINib *nib = [UINib nibWithNibName:@"BNRItemCell" bundle:nil];
+    
+    // Regist UINib object by relating NIB file
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"BNRItemCell"];
+//    UIView *header = self.headerView;
+//    [self.tableView setTableHeaderView:header];
 }
 
 - (void)viewWillAppear:(BOOL)animated
