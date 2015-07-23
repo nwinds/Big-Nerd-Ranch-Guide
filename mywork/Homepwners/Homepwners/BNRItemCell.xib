@@ -13,8 +13,8 @@
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YhT-6Q-W7R" id="RXX-EP-joH">
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rpy-c9-VPJ">
-                        <rect key="frame" x="2" y="2" width="40" height="40"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rpy-c9-VPJ">
+                        <rect key="frame" x="0.0" y="2" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="BiT-6o-QKz"/>
                             <constraint firstAttribute="width" constant="40" id="wOs-Dt-JGH"/>
@@ -26,26 +26,20 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-V4-YDS">
-                        <rect key="frame" x="55" y="22" width="45" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="iBW-iW-x0C"/>
-                        </constraints>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NaQ-V4-YDS">
+                        <rect key="frame" x="55" y="23" width="45" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bBf-ib-BOM">
-                        <rect key="frame" x="55" y="0.0" width="80" height="21"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="21" id="Fqe-vR-CZs"/>
-                        </constraints>
+                        <rect key="frame" x="55" y="0.0" width="80" height="22"/>
                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0v-ad-FT1">
-                        <rect key="frame" x="2" y="2" width="40" height="40"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j0v-ad-FT1">
+                        <rect key="frame" x="0.0" y="2" width="40" height="40"/>
                         <state key="normal">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -74,6 +68,8 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="imageViewHeightConstraint" destination="BiT-6o-QKz" id="hOx-Nd-7ro"/>
+                <outlet property="imageViewWidthConstraint" destination="wOs-Dt-JGH" id="sq1-FP-O2F"/>
                 <outlet property="nameLabel" destination="bBf-ib-BOM" id="n0R-CR-MPu"/>
                 <outlet property="serialNumberLabel" destination="NaQ-V4-YDS" id="i8S-he-n54"/>
                 <outlet property="thumbnailView" destination="Rpy-c9-VPJ" id="sjr-7v-7PY"/>

@@ -321,7 +321,7 @@
     [self prepareViewsForOrientation:toInterfaceOrientation];
 }
 
-#pragma mark -Fonts handling
+#pragma mark -Fonts setting
 
 - (void)updateFonts
 {

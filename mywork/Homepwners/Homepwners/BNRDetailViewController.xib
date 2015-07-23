@@ -107,9 +107,11 @@
             <constraints>
                 <constraint firstItem="Smq-4n-FYS" firstAttribute="leading" secondItem="e2o-96-BuY" secondAttribute="trailing" constant="14" id="2l3-tE-yfc"/>
                 <constraint firstItem="5rC-Mz-YZg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="77" id="39A-uT-aSF"/>
+                <constraint firstItem="e2o-96-BuY" firstAttribute="width" secondItem="Cbk-ES-0wu" secondAttribute="width" id="4qQ-8G-her"/>
                 <constraint firstAttribute="trailing" secondItem="Sl6-QK-uPY" secondAttribute="trailing" constant="99" id="8Si-S3-VA2"/>
                 <constraint firstAttribute="trailing" secondItem="Smq-4n-FYS" secondAttribute="trailing" constant="53" id="D5A-65-2tF"/>
                 <constraint firstItem="Cbk-ES-0wu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="DfZ-1a-mUc"/>
+                <constraint firstItem="e2o-96-BuY" firstAttribute="width" secondItem="tdC-wy-ia9" secondAttribute="width" id="EFm-Sy-XVV"/>
                 <constraint firstAttribute="trailing" secondItem="9go-mi-r3C" secondAttribute="trailing" constant="53" id="IC8-OF-DN9"/>
                 <constraint firstItem="4Xg-iS-GDM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="INU-gK-FxW"/>
                 <constraint firstItem="e2o-96-BuY" firstAttribute="baseline" secondItem="Smq-4n-FYS" secondAttribute="baseline" constant="2" id="LDe-SJ-zDY"/>
