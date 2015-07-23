@@ -55,6 +55,13 @@
                                                                                         action:@selector(cancel:)];
             self.navigationItem.leftBarButtonItem = cancelItem;
         }
+        
+        NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+        [defaultCenter addObserver:self
+                          selector:@selector(updateFonts)
+                              name:UIContentSizeCategoryDidChangeNotification
+                            object:nil];
+        
     }
     
     return self;
@@ -246,19 +253,7 @@
     self.navigationItem.title = _item.itemName;
 }
 
-- (void)updateFonts
-{
-    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
-    
-    self.nameLabel.font = font;
-    self.serialNumberLabel.font = font;
-    self.valueLabel.font = font;
-    self.dateLable.font = font;
-    
-    self.nameField.font = font;
-    self.serialNumberLabel.font = font;
-    self.valueField.font = font;
-}
+
 
 #pragma mark -Auto layout constraints
 - (void)viewDidLoad
@@ -324,6 +319,29 @@
 - (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
 {
     [self prepareViewsForOrientation:toInterfaceOrientation];
+}
+
+#pragma mark -Fonts handling
+
+- (void)updateFonts
+{
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    self.nameLabel.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueLabel.font = font;
+    self.dateLable.font = font;
+    
+    self.nameField.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueField.font = font;
+}
+
+
+- (void)dealloc
+{
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter removeObserver:self];
 }
 
 
