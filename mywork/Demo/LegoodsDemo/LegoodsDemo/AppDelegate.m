@@ -1,35 +1,22 @@
 //
 //  AppDelegate.m
-//  Legoods
+//  LegoodsDemo
 //
 //  Created by jyl on 15/7/23.
 //  Copyright (c) 2015年 zmy. All rights reserved.
 //
 
-#import "WebAppDelegate.h"
-#import "ProductsViewController.h"
+#import "AppDelegate.h"
 
-@interface WebAppDelegate ()
+@interface AppDelegate ()
 
 @end
 
-@implementation WebAppDelegate
+@implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
-    ProductsViewController *productViewController = [[ProductsViewController alloc] initWithStyle:UITableViewStylePlain];
-    
-    UINavigationController *masterNavigationController = [[UINavigationController alloc] initWithRootViewController:productViewController];
-    self.window.rootViewController = masterNavigationController;
-    
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
     return YES;
 }
 

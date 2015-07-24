@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		26995C331B60DE930000DEED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C321B60DE930000DEED /* main.m */; };
+		26995C361B60DE930000DEED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C351B60DE930000DEED /* AppDelegate.m */; };
+		26995C391B60DE930000DEED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C381B60DE930000DEED /* MainViewController.m */; };
+		26995C3C1B60DE930000DEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3A1B60DE930000DEED /* Main.storyboard */; };
+		26995C3E1B60DE930000DEED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3D1B60DE930000DEED /* Images.xcassets */; };
+		26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3F1B60DE930000DEED /* LaunchScreen.xib */; };
+		26995C4D1B60DE930000DEED /* LegoodsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C4C1B60DE930000DEED /* LegoodsDemoTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26995C471B60DE930000DEED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26995C251B60DE930000DEED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26995C2C1B60DE930000DEED;
+			remoteInfo = LegoodsDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		26995C2D1B60DE930000DEED /* LegoodsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoodsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26995C311B60DE930000DEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26995C321B60DE930000DEED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26995C341B60DE930000DEED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		26995C351B60DE930000DEED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		26995C371B60DE930000DEED /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		26995C381B60DE930000DEED /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		26995C3B1B60DE930000DEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26995C3D1B60DE930000DEED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		26995C401B60DE930000DEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		26995C461B60DE930000DEED /* LegoodsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoodsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26995C4B1B60DE930000DEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26995C4C1B60DE930000DEED /* LegoodsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LegoodsDemoTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26995C2A1B60DE930000DEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26995C431B60DE930000DEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		26995C241B60DE930000DEED = {
+			isa = PBXGroup;
+			children = (
+				26995C2F1B60DE930000DEED /* LegoodsDemo */,
+				26995C491B60DE930000DEED /* LegoodsDemoTests */,
+				26995C2E1B60DE930000DEED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26995C2E1B60DE930000DEED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26995C2D1B60DE930000DEED /* LegoodsDemo.app */,
+				26995C461B60DE930000DEED /* LegoodsDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26995C2F1B60DE930000DEED /* LegoodsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				26995C341B60DE930000DEED /* AppDelegate.h */,
+				26995C351B60DE930000DEED /* AppDelegate.m */,
+				26995C371B60DE930000DEED /* MainViewController.h */,
+				26995C381B60DE930000DEED /* MainViewController.m */,
+				26995C3A1B60DE930000DEED /* Main.storyboard */,
+				26995C3D1B60DE930000DEED /* Images.xcassets */,
+				26995C3F1B60DE930000DEED /* LaunchScreen.xib */,
+				26995C301B60DE930000DEED /* Supporting Files */,
+			);
+			path = LegoodsDemo;
+			sourceTree = "<group>";
+		};
+		26995C301B60DE930000DEED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26995C311B60DE930000DEED /* Info.plist */,
+				26995C321B60DE930000DEED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26995C491B60DE930000DEED /* LegoodsDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				26995C4C1B60DE930000DEED /* LegoodsDemoTests.m */,
+				26995C4A1B60DE930000DEED /* Supporting Files */,
+			);
+			path = LegoodsDemoTests;
+			sourceTree = "<group>";
+		};
+		26995C4A1B60DE930000DEED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26995C4B1B60DE930000DEED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26995C2C1B60DE930000DEED /* LegoodsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26995C501B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemo" */;
+			buildPhases = (
+				26995C291B60DE930000DEED /* Sources */,
+				26995C2A1B60DE930000DEED /* Frameworks */,
+				26995C2B1B60DE930000DEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LegoodsDemo;
+			productName = LegoodsDemo;
+			productReference = 26995C2D1B60DE930000DEED /* LegoodsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26995C451B60DE930000DEED /* LegoodsDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26995C531B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemoTests" */;
+			buildPhases = (
+				26995C421B60DE930000DEED /* Sources */,
+				26995C431B60DE930000DEED /* Frameworks */,
+				26995C441B60DE930000DEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26995C481B60DE930000DEED /* PBXTargetDependency */,
+			);
+			name = LegoodsDemoTests;
+			productName = LegoodsDemoTests;
+			productReference = 26995C461B60DE930000DEED /* LegoodsDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26995C251B60DE930000DEED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = zmy;
+				TargetAttributes = {
+					26995C2C1B60DE930000DEED = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					26995C451B60DE930000DEED = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 26995C2C1B60DE930000DEED;
+					};
+				};
+			};
+			buildConfigurationList = 26995C281B60DE930000DEED /* Build configuration list for PBXProject "LegoodsDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26995C241B60DE930000DEED;
+			productRefGroup = 26995C2E1B60DE930000DEED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26995C2C1B60DE930000DEED /* LegoodsDemo */,
+				26995C451B60DE930000DEED /* LegoodsDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26995C2B1B60DE930000DEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26995C3C1B60DE930000DEED /* Main.storyboard in Resources */,
+				26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */,
+				26995C3E1B60DE930000DEED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26995C441B60DE930000DEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26995C291B60DE930000DEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26995C391B60DE930000DEED /* MainViewController.m in Sources */,
+				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
+				26995C331B60DE930000DEED /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26995C421B60DE930000DEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26995C4D1B60DE930000DEED /* LegoodsDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26995C481B60DE930000DEED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26995C2C1B60DE930000DEED /* LegoodsDemo */;
+			targetProxy = 26995C471B60DE930000DEED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26995C3A1B60DE930000DEED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26995C3B1B60DE930000DEED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26995C3F1B60DE930000DEED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26995C401B60DE930000DEED /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26995C4E1B60DE930000DEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26995C4F1B60DE930000DEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26995C511B60DE930000DEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LegoodsDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		26995C521B60DE930000DEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LegoodsDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		26995C541B60DE930000DEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LegoodsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LegoodsDemo.app/LegoodsDemo";
+			};
+			name = Debug;
+		};
+		26995C551B60DE930000DEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LegoodsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LegoodsDemo.app/LegoodsDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26995C281B60DE930000DEED /* Build configuration list for PBXProject "LegoodsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26995C4E1B60DE930000DEED /* Debug */,
+				26995C4F1B60DE930000DEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26995C501B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26995C511B60DE930000DEED /* Debug */,
+				26995C521B60DE930000DEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		26995C531B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26995C541B60DE930000DEED /* Debug */,
+				26995C551B60DE930000DEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26995C251B60DE930000DEED /* Project object */;
+}
