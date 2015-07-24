@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268EBE821B61DAA20052FDCB /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268EBE811B61DAA20052FDCB /* IndexViewController.m */; };
 		26995C331B60DE930000DEED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C321B60DE930000DEED /* main.m */; };
 		26995C361B60DE930000DEED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C351B60DE930000DEED /* AppDelegate.m */; };
-		26995C391B60DE930000DEED /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C381B60DE930000DEED /* MainViewController.m */; };
 		26995C3C1B60DE930000DEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3A1B60DE930000DEED /* Main.storyboard */; };
 		26995C3E1B60DE930000DEED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3D1B60DE930000DEED /* Images.xcassets */; };
 		26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3F1B60DE930000DEED /* LaunchScreen.xib */; };
 		26995C4D1B60DE930000DEED /* LegoodsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C4C1B60DE930000DEED /* LegoodsDemoTests.m */; };
+		269D409A1B621914003D63BD /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D40991B621914003D63BD /* LoginWithAmazon.framework */; };
+		269D409C1B6219FD003D63BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D409B1B6219FD003D63BD /* Security.framework */; };
+		269D409F1B622A8D003D63BD /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269D409E1B622A8D003D63BD /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +30,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		268EBE801B61DAA20052FDCB /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
+		268EBE811B61DAA20052FDCB /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
 		26995C2D1B60DE930000DEED /* LegoodsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoodsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26995C311B60DE930000DEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26995C321B60DE930000DEED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		26995C341B60DE930000DEED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		26995C351B60DE930000DEED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		26995C371B60DE930000DEED /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		26995C381B60DE930000DEED /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		26995C3B1B60DE930000DEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		26995C3D1B60DE930000DEED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		26995C401B60DE930000DEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		26995C461B60DE930000DEED /* LegoodsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoodsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26995C4B1B60DE930000DEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26995C4C1B60DE930000DEED /* LegoodsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LegoodsDemoTests.m; sourceTree = "<group>"; };
+		269D40991B621914003D63BD /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithAmazon.framework; sourceTree = "<group>"; };
+		269D409B1B6219FD003D63BD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		269D409D1B622A8D003D63BD /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		269D409E1B622A8D003D63BD /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269D409C1B6219FD003D63BD /* Security.framework in Frameworks */,
+				269D409A1B621914003D63BD /* LoginWithAmazon.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +72,8 @@
 		26995C241B60DE930000DEED = {
 			isa = PBXGroup;
 			children = (
+				269D409B1B6219FD003D63BD /* Security.framework */,
+				269D40991B621914003D63BD /* LoginWithAmazon.framework */,
 				26995C2F1B60DE930000DEED /* LegoodsDemo */,
 				26995C491B60DE930000DEED /* LegoodsDemoTests */,
 				26995C2E1B60DE930000DEED /* Products */,
@@ -83,8 +94,10 @@
 			children = (
 				26995C341B60DE930000DEED /* AppDelegate.h */,
 				26995C351B60DE930000DEED /* AppDelegate.m */,
-				26995C371B60DE930000DEED /* MainViewController.h */,
-				26995C381B60DE930000DEED /* MainViewController.m */,
+				269D409D1B622A8D003D63BD /* LoginViewController.h */,
+				269D409E1B622A8D003D63BD /* LoginViewController.m */,
+				268EBE801B61DAA20052FDCB /* IndexViewController.h */,
+				268EBE811B61DAA20052FDCB /* IndexViewController.m */,
 				26995C3A1B60DE930000DEED /* Main.storyboard */,
 				26995C3D1B60DE930000DEED /* Images.xcassets */,
 				26995C3F1B60DE930000DEED /* LaunchScreen.xib */,
@@ -219,9 +232,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26995C391B60DE930000DEED /* MainViewController.m in Sources */,
+				269D409F1B622A8D003D63BD /* LoginViewController.m in Sources */,
 				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
 				26995C331B60DE930000DEED /* main.m in Sources */,
+				268EBE821B61DAA20052FDCB /* IndexViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,9 +363,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LegoodsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -359,9 +378,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = LegoodsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -418,6 +442,7 @@
 				26995C521B60DE930000DEED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		26995C531B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +451,7 @@
 				26995C551B60DE930000DEED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

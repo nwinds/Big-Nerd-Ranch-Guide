@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface BNRWebViewController : UIViewController
-
+#pragma mark -Detail
 @property (nonatomic, strong) NSURL *URL;
 
+#pragma mark -Init
 @end
