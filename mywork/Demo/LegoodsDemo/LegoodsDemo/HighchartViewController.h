@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LoginViewController : UIViewController
+@interface HighchartViewController : UIViewController
+- (IBAction)highchart:(id)sender;
 
 @end

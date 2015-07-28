@@ -6,13 +6,15 @@
 //  Copyright (c) 2015年 zmy. All rights reserved.
 //
 
-#import "LoginViewController.h"
+#import "HighchartViewController.h"
+#import "HighchartsWebViewController.h"
+#import <JavaScriptCore/JavaScriptCore.h>
 
-@interface LoginViewController ()
+@interface HighchartViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation HighchartViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,4 +36,9 @@
 }
 */
 
+- (IBAction)highchart:(id)sender
+{
+    HighchartsWebViewController *highchartsWeb =[[HighchartsWebViewController alloc]init];
+    [self.navigationController pushViewController:highchartsWeb animated:YES];
+}
 @end
