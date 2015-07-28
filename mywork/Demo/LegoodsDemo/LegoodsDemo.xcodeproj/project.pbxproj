@@ -19,6 +19,7 @@
 		269BBD2D1B673E5700D58040 /* HighchartsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD291B673E5700D58040 /* HighchartsWebViewController.m */; };
 		269BBD311B673E8200D58040 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 269BBD301B673E8200D58040 /* jquery-1.11.0.min.js */; };
 		269BBD331B67470E00D58040 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BBD321B67470E00D58040 /* JavaScriptCore.framework */; };
+		269BBD351B67624E00D58040 /* HighchartsWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269BBD341B67624E00D58040 /* HighchartsWebViewController.xib */; };
 		269D409A1B621914003D63BD /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D40991B621914003D63BD /* LoginWithAmazon.framework */; };
 		269D409C1B6219FD003D63BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D409B1B6219FD003D63BD /* Security.framework */; };
 		269D409F1B622A8D003D63BD /* HighchartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269D409E1B622A8D003D63BD /* HighchartViewController.m */; };
@@ -59,6 +60,7 @@
 		269BBD291B673E5700D58040 /* HighchartsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighchartsWebViewController.m; path = LegoodsDemo/HighchartsWebViewController.m; sourceTree = "<group>"; };
 		269BBD301B673E8200D58040 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-1.11.0.min.js"; path = "LegoodsDemo/jquery-1.11.0.min.js"; sourceTree = "<group>"; };
 		269BBD321B67470E00D58040 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		269BBD341B67624E00D58040 /* HighchartsWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HighchartsWebViewController.xib; path = LegoodsDemo/HighchartsWebViewController.xib; sourceTree = "<group>"; };
 		269D40991B621914003D63BD /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithAmazon.framework; sourceTree = "<group>"; };
 		269D409B1B6219FD003D63BD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		269D409D1B622A8D003D63BD /* HighchartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighchartViewController.h; sourceTree = "<group>"; };
@@ -99,7 +101,6 @@
 		26995C241B60DE930000DEED = {
 			isa = PBXGroup;
 			children = (
-				269BBD2F1B673E6000D58040 /* Highcharts */,
 				26CE22551B662223006CC97E /* Frameworks */,
 				26995C2F1B60DE930000DEED /* LegoodsDemo */,
 				26995C491B60DE930000DEED /* LegoodsDemoTests */,
@@ -119,6 +120,7 @@
 		26995C2F1B60DE930000DEED /* LegoodsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				269BBD2F1B673E6000D58040 /* Highcharts */,
 				26CE22421B66217B006CC97E /* Amazon Login */,
 				26995C341B60DE930000DEED /* AppDelegate.h */,
 				26995C351B60DE930000DEED /* AppDelegate.m */,
@@ -168,8 +170,10 @@
 				269BBD271B673E5700D58040 /* HighchartsView.html */,
 				269BBD281B673E5700D58040 /* HighchartsWebViewController.h */,
 				269BBD291B673E5700D58040 /* HighchartsWebViewController.m */,
+				269BBD341B67624E00D58040 /* HighchartsWebViewController.xib */,
 			);
 			name = Highcharts;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		26CE22421B66217B006CC97E /* Amazon Login */ = {
@@ -281,6 +285,7 @@
 			files = (
 				26995C3C1B60DE930000DEED /* Main.storyboard in Resources */,
 				269BBD2B1B673E5700D58040 /* highcharts.js in Resources */,
+				269BBD351B67624E00D58040 /* HighchartsWebViewController.xib in Resources */,
 				26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */,
 				269BBD311B673E8200D58040 /* jquery-1.11.0.min.js in Resources */,
 				269BBD2C1B673E5700D58040 /* HighchartsView.html in Resources */,
