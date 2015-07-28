@@ -10,11 +10,10 @@
 		269BBD451B676CD700D58040 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD441B676CD700D58040 /* main.m */; };
 		269BBD481B676CD700D58040 /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD471B676CD700D58040 /* BNRAppDelegate.m */; };
 		269BBD4B1B676CD700D58040 /* BNRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD4A1B676CD700D58040 /* BNRViewController.m */; };
-		269BBD4E1B676CD700D58040 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 269BBD4C1B676CD700D58040 /* Main.storyboard */; };
 		269BBD501B676CD700D58040 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269BBD4F1B676CD700D58040 /* Images.xcassets */; };
-		269BBD531B676CD700D58040 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 269BBD511B676CD700D58040 /* LaunchScreen.xib */; };
 		269BBD5F1B676CD700D58040 /* JSCoreByExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD5E1B676CD700D58040 /* JSCoreByExampleTests.m */; };
 		269BBD6B1B676DD000D58040 /* BNRContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD6A1B676DD000D58040 /* BNRContact.m */; };
+		269BBD6E1B67715100D58040 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BBD6D1B67715100D58040 /* JavaScriptCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,15 +34,14 @@
 		269BBD471B676CD700D58040 /* BNRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRAppDelegate.m; sourceTree = "<group>"; };
 		269BBD491B676CD700D58040 /* BNRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRViewController.h; sourceTree = "<group>"; };
 		269BBD4A1B676CD700D58040 /* BNRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRViewController.m; sourceTree = "<group>"; };
-		269BBD4D1B676CD700D58040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		269BBD4F1B676CD700D58040 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		269BBD521B676CD700D58040 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		269BBD581B676CD700D58040 /* JSCoreByExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSCoreByExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		269BBD5D1B676CD700D58040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		269BBD5E1B676CD700D58040 /* JSCoreByExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSCoreByExampleTests.m; sourceTree = "<group>"; };
 		269BBD681B676CF500D58040 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		269BBD691B676DD000D58040 /* BNRContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRContact.h; sourceTree = "<group>"; };
 		269BBD6A1B676DD000D58040 /* BNRContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRContact.m; sourceTree = "<group>"; };
+		269BBD6D1B67715100D58040 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269BBD6E1B67715100D58040 /* JavaScriptCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +66,7 @@
 		269BBD361B676CD700D58040 = {
 			isa = PBXGroup;
 			children = (
+				269BBD6C1B67713C00D58040 /* Frameworks */,
 				269BBD411B676CD700D58040 /* JSCoreByExample */,
 				269BBD5B1B676CD700D58040 /* JSCoreByExampleTests */,
 				269BBD401B676CD700D58040 /* Products */,
@@ -85,15 +85,14 @@
 		269BBD411B676CD700D58040 /* JSCoreByExample */ = {
 			isa = PBXGroup;
 			children = (
+				269BBD711B67728900D58040 /* Controller */,
+				269BBD701B67728200D58040 /* View */,
+				269BBD6F1B67727A00D58040 /* Model */,
 				269BBD461B676CD700D58040 /* BNRAppDelegate.h */,
 				269BBD471B676CD700D58040 /* BNRAppDelegate.m */,
 				269BBD491B676CD700D58040 /* BNRViewController.h */,
 				269BBD4A1B676CD700D58040 /* BNRViewController.m */,
-				269BBD691B676DD000D58040 /* BNRContact.h */,
-				269BBD6A1B676DD000D58040 /* BNRContact.m */,
-				269BBD4C1B676CD700D58040 /* Main.storyboard */,
 				269BBD4F1B676CD700D58040 /* Images.xcassets */,
-				269BBD511B676CD700D58040 /* LaunchScreen.xib */,
 				269BBD421B676CD700D58040 /* Supporting Files */,
 			);
 			path = JSCoreByExample;
@@ -124,6 +123,37 @@
 				269BBD5D1B676CD700D58040 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		269BBD6C1B67713C00D58040 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				269BBD6D1B67715100D58040 /* JavaScriptCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		269BBD6F1B67727A00D58040 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				269BBD691B676DD000D58040 /* BNRContact.h */,
+				269BBD6A1B676DD000D58040 /* BNRContact.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		269BBD701B67728200D58040 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		269BBD711B67728900D58040 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,8 +237,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				269BBD4E1B676CD700D58040 /* Main.storyboard in Resources */,
-				269BBD531B676CD700D58040 /* LaunchScreen.xib in Resources */,
 				269BBD501B676CD700D58040 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,25 +279,6 @@
 			targetProxy = 269BBD591B676CD700D58040 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		269BBD4C1B676CD700D58040 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				269BBD4D1B676CD700D58040 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		269BBD511B676CD700D58040 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				269BBD521B676CD700D58040 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		269BBD601B676CD700D58040 /* Debug */ = {

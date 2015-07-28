@@ -6,7 +6,11 @@
 //  Copyright (c) 2015年 zmy. All rights reserved.
 //
 
+@import JavaScriptCore;
+
 #import <Foundation/Foundation.h>
+
+
 @interface BNRContact : NSObject
 
 @property (nonatomic, readonly) NSString *name;

@@ -7,17 +7,45 @@
 //
 
 #import "BNRAppDelegate.h"
+#import "BNRContact.h"
 
-@interface BNRAppDelegate ()
+@interface BNRAppDelegate()
+
+//@property (nonatomic) BNRContactApp *app;
 
 @end
+
 
 @implementation BNRAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    // create a new contact app
+//    self.app = [BNRContactApp new];
+//    
+//    // add some dummy data
+//    [self.app addContact:[BNRContact contactWithName:@"Philip J. Fry" phone:@"999 555-1999" address:@"Robot Arms Apt 00100100, Earth"]];
+//    [self.app addContact:[BNRContact contactWithName:@"Bender B. Rodriguez" phone:@"010 110-0101" address:@"Robot Arms Apt 00100100, Earth"]];
+//    [self.app addContact:[BNRContact contactWithName:@"Turanga Leela" phone:@"999 555-5309" address:@"132 Sewer Street, Earth"]];
+//    [self.app addContact:[BNRContact contactWithName:@"Amy Wong" phone:@"999 555-2811" address:@"1 Wong Way, Mars"]];
+//    [self.app addContact:[BNRContact contactWithName:@"Zapp Brannigan" phone:@"3" address:@"D.O.O.P. HQ, Earth"]];
+//    [self.app addContact:[BNRContact contactWithName:@"Lrrr" phone:@"999 555-8888" address:@"1 Palace Circle, Omicron Persei 8"]];
+//    
+//    NSLog(@"%@", self.app);
+//    
+//    // create list VC
+//    BNRContactListVC *listVC = [[BNRContactListVC alloc] initWithApp:self.app];
+//    
+//    // create navigation VC
+//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:listVC];
+//    
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
     return YES;
+
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
