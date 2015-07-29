@@ -21,6 +21,10 @@
 
 @implementation BNRContact
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"%@ <%@, %@>", self.name, self.phone, self.address];
+}
 
 + (instancetype)contactWithName:(NSString *)name phone:(NSString *)phone address:(NSString *)address
 {
@@ -41,12 +45,17 @@
     // Getting a JSContext
     JSContext *context = [JSContext new];
     
+    // Enable exception handling
+    [context setExceptionHandler:^(JSContext *context, JSValue *value) {
+        NSLog(@"%@", value);
+    }];
+    
     // Defining a JavaScript function
     NSString *jsFunctionText =
-    @"var isValidNumber = function(phone) {"
-    "   var phonePattern = /^[0-9]{3}[ ][0-9]{3}[-][0-9]{4}$/;"
-    "   return phone.match)phonePattern) ? true : false;"
-    "}";
+        @"var isValidNumber = function(phone) {"
+        "   var phonePattern = /^[0-9]{3}[ ][0-9]{3}[-][0-9]{4}$/;"
+        "   return phone.match(phonePattern) ? true : false;"
+        "}";
     [context evaluateScript:jsFunctionText];
     
     // Calling a JavaScript function

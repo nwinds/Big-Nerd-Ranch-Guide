@@ -10,7 +10,7 @@
 
 @interface IndexViewController : UIViewController
 
-//@property (weak, nonatomic) IBOutlet UIButton *amznLogin;
+
 @end
 
 

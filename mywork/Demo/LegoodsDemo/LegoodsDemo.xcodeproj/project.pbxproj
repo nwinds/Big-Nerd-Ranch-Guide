@@ -28,6 +28,11 @@
 		26CE22521B6621CF006CC97E /* AMZNGetProfileDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CE224A1B6621CF006CC97E /* AMZNGetProfileDelegate.m */; };
 		26CE22531B6621CF006CC97E /* AMZNLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CE224C1B6621CF006CC97E /* AMZNLoginController.m */; };
 		26CE22541B6621CF006CC97E /* AMZNLogoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CE224E1B6621CF006CC97E /* AMZNLogoutDelegate.m */; };
+		26CEAFE01B68B4A100DA40DD /* ContextMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFDE1B68B4A100DA40DD /* ContextMenuCell.m */; };
+		26CEAFE11B68B4A100DA40DD /* ContextMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CEAFDF1B68B4A100DA40DD /* ContextMenuCell.xib */; };
+		26CEAFEA1B68C3C800DA40DD /* UIView+YALConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFE41B68C3C800DA40DD /* UIView+YALConstraints.m */; };
+		26CEAFEB1B68C3C800DA40DD /* YALContextMenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFE71B68C3C800DA40DD /* YALContextMenuTableView.m */; };
+		26CEAFEC1B68C3C800DA40DD /* YALNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFE91B68C3C800DA40DD /* YALNavigationBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,16 @@
 		26CE224C1B6621CF006CC97E /* AMZNLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMZNLoginController.m; sourceTree = "<group>"; };
 		26CE224D1B6621CF006CC97E /* AMZNLogoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMZNLogoutDelegate.h; sourceTree = "<group>"; };
 		26CE224E1B6621CF006CC97E /* AMZNLogoutDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMZNLogoutDelegate.m; sourceTree = "<group>"; };
+		26CEAFDD1B68B4A100DA40DD /* ContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextMenuCell.h; sourceTree = "<group>"; };
+		26CEAFDE1B68B4A100DA40DD /* ContextMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextMenuCell.m; sourceTree = "<group>"; };
+		26CEAFDF1B68B4A100DA40DD /* ContextMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContextMenuCell.xib; sourceTree = "<group>"; };
+		26CEAFE31B68C3C800DA40DD /* UIView+YALConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+YALConstraints.h"; path = "LegoodsDemo/YALContextMenu/UIView+YALConstraints.h"; sourceTree = "<group>"; };
+		26CEAFE41B68C3C800DA40DD /* UIView+YALConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+YALConstraints.m"; path = "LegoodsDemo/YALContextMenu/UIView+YALConstraints.m"; sourceTree = "<group>"; };
+		26CEAFE51B68C3C800DA40DD /* YALContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YALContextMenuCell.h; path = LegoodsDemo/YALContextMenu/YALContextMenuCell.h; sourceTree = "<group>"; };
+		26CEAFE61B68C3C800DA40DD /* YALContextMenuTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YALContextMenuTableView.h; path = LegoodsDemo/YALContextMenu/YALContextMenuTableView.h; sourceTree = "<group>"; };
+		26CEAFE71B68C3C800DA40DD /* YALContextMenuTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YALContextMenuTableView.m; path = LegoodsDemo/YALContextMenu/YALContextMenuTableView.m; sourceTree = "<group>"; };
+		26CEAFE81B68C3C800DA40DD /* YALNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YALNavigationBar.h; path = LegoodsDemo/YALContextMenu/YALNavigationBar.h; sourceTree = "<group>"; };
+		26CEAFE91B68C3C800DA40DD /* YALNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YALNavigationBar.m; path = LegoodsDemo/YALContextMenu/YALNavigationBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,9 +116,10 @@
 		26995C241B60DE930000DEED = {
 			isa = PBXGroup;
 			children = (
-				26CE22551B662223006CC97E /* Frameworks */,
 				26995C2F1B60DE930000DEED /* LegoodsDemo */,
+				26CEAFE21B68C3B400DA40DD /* YALContextMenu */,
 				26995C491B60DE930000DEED /* LegoodsDemoTests */,
+				26CE22551B662223006CC97E /* Frameworks */,
 				26995C2E1B60DE930000DEED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -120,6 +136,7 @@
 		26995C2F1B60DE930000DEED /* LegoodsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				26CEAFDC1B68B45800DA40DD /* ContextMenuCell  */,
 				269BBD2F1B673E6000D58040 /* Highcharts */,
 				26CE22421B66217B006CC97E /* Amazon Login */,
 				26995C341B60DE930000DEED /* AppDelegate.h */,
@@ -201,6 +218,30 @@
 				269D40991B621914003D63BD /* LoginWithAmazon.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		26CEAFDC1B68B45800DA40DD /* ContextMenuCell  */ = {
+			isa = PBXGroup;
+			children = (
+				26CEAFDD1B68B4A100DA40DD /* ContextMenuCell.h */,
+				26CEAFDE1B68B4A100DA40DD /* ContextMenuCell.m */,
+				26CEAFDF1B68B4A100DA40DD /* ContextMenuCell.xib */,
+			);
+			name = "ContextMenuCell ";
+			sourceTree = "<group>";
+		};
+		26CEAFE21B68C3B400DA40DD /* YALContextMenu */ = {
+			isa = PBXGroup;
+			children = (
+				26CEAFE31B68C3C800DA40DD /* UIView+YALConstraints.h */,
+				26CEAFE41B68C3C800DA40DD /* UIView+YALConstraints.m */,
+				26CEAFE51B68C3C800DA40DD /* YALContextMenuCell.h */,
+				26CEAFE61B68C3C800DA40DD /* YALContextMenuTableView.h */,
+				26CEAFE71B68C3C800DA40DD /* YALContextMenuTableView.m */,
+				26CEAFE81B68C3C800DA40DD /* YALNavigationBar.h */,
+				26CEAFE91B68C3C800DA40DD /* YALNavigationBar.m */,
+			);
+			name = YALContextMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -287,6 +328,7 @@
 				269BBD2B1B673E5700D58040 /* highcharts.js in Resources */,
 				269BBD351B67624E00D58040 /* HighchartsWebViewController.xib in Resources */,
 				26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */,
+				26CEAFE11B68B4A100DA40DD /* ContextMenuCell.xib in Resources */,
 				269BBD311B673E8200D58040 /* jquery-1.11.0.min.js in Resources */,
 				269BBD2C1B673E5700D58040 /* HighchartsView.html in Resources */,
 				26995C3E1B60DE930000DEED /* Images.xcassets in Resources */,
@@ -307,14 +349,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26CEAFEC1B68C3C800DA40DD /* YALNavigationBar.m in Sources */,
+				26CEAFEA1B68C3C800DA40DD /* UIView+YALConstraints.m in Sources */,
 				269D409F1B622A8D003D63BD /* HighchartViewController.m in Sources */,
 				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
 				269BBD2D1B673E5700D58040 /* HighchartsWebViewController.m in Sources */,
 				26CE22541B6621CF006CC97E /* AMZNLogoutDelegate.m in Sources */,
 				26CE22511B6621CF006CC97E /* AMZNGetAccessTokenDelegate.m in Sources */,
+				26CEAFEB1B68C3C800DA40DD /* YALContextMenuTableView.m in Sources */,
 				26CE22531B6621CF006CC97E /* AMZNLoginController.m in Sources */,
 				26CE22501B6621CF006CC97E /* AMZNAuthorizeUserDelegate.m in Sources */,
 				26CE22521B6621CF006CC97E /* AMZNGetProfileDelegate.m in Sources */,
+				26CEAFE01B68B4A100DA40DD /* ContextMenuCell.m in Sources */,
 				26995C331B60DE930000DEED /* main.m in Sources */,
 				268EBE821B61DAA20052FDCB /* IndexViewController.m in Sources */,
 			);

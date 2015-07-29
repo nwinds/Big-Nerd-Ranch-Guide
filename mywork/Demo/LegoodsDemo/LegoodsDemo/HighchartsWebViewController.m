@@ -41,12 +41,9 @@
     self.context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
     
     // 打印异常
-    self.context.exceptionHandler =
-    ^(JSContext *context, JSValue *exceptionValue)
-    {
-        context.exception = exceptionValue;
-        NSLog(@"%@", exceptionValue);
-    };
+    [self.context setExceptionHandler:^(JSContext *context, JSValue *value) {
+        NSLog(@"%@", value);
+    }];
     
     
     // 装载数据

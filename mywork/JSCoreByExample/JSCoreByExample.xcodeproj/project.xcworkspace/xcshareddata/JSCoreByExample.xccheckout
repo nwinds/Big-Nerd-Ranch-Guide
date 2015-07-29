@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>202C064E-6D6C-4B75-AA26-675143112F1D</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>JSCoreByExample</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D7AAD9A4430BF2FE91238712B4809D01B612882A</key>
 		<string>https://github.com/nwinds/Big-Nerd-Ranch-Guide.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>mywork/JSCoreByExample/JSCoreByExample.xcodeproj/project.xcworkspace</string>
+	<string>mywork/JSCoreByExample/JSCoreByExample.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D7AAD9A4430BF2FE91238712B4809D01B612882A</key>

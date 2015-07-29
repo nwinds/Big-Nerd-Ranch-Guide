@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BNRViewController : UIViewController
+@class BNRContactApp;
 
+@interface BNRContactListVC : UITableViewController
+
+- (instancetype)initWithApp:(BNRContactApp *)app;
 
 @end
-

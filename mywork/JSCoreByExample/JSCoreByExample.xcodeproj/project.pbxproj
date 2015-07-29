@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		269BBD451B676CD700D58040 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD441B676CD700D58040 /* main.m */; };
 		269BBD481B676CD700D58040 /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD471B676CD700D58040 /* BNRAppDelegate.m */; };
-		269BBD4B1B676CD700D58040 /* BNRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD4A1B676CD700D58040 /* BNRViewController.m */; };
+		269BBD4B1B676CD700D58040 /* BNRContactListVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD4A1B676CD700D58040 /* BNRContactListVC.m */; };
 		269BBD501B676CD700D58040 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 269BBD4F1B676CD700D58040 /* Images.xcassets */; };
 		269BBD5F1B676CD700D58040 /* JSCoreByExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD5E1B676CD700D58040 /* JSCoreByExampleTests.m */; };
 		269BBD6B1B676DD000D58040 /* BNRContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 269BBD6A1B676DD000D58040 /* BNRContact.m */; };
 		269BBD6E1B67715100D58040 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BBD6D1B67715100D58040 /* JavaScriptCore.framework */; };
+		26CEAFD01B6861BE00DA40DD /* BNRContactApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFCF1B6861BE00DA40DD /* BNRContactApp.m */; };
+		26CEAFD31B68652000DA40DD /* BNRAddContactWebVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFD21B68652000DA40DD /* BNRAddContactWebVC.m */; };
+		26CEAFD71B6878DE00DA40DD /* BNRContactCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFD51B6878DE00DA40DD /* BNRContactCell.m */; };
+		26CEAFD81B6878DE00DA40DD /* BNRContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CEAFD61B6878DE00DA40DD /* BNRContactCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,8 +36,8 @@
 		269BBD441B676CD700D58040 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		269BBD461B676CD700D58040 /* BNRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRAppDelegate.h; sourceTree = "<group>"; };
 		269BBD471B676CD700D58040 /* BNRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRAppDelegate.m; sourceTree = "<group>"; };
-		269BBD491B676CD700D58040 /* BNRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRViewController.h; sourceTree = "<group>"; };
-		269BBD4A1B676CD700D58040 /* BNRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRViewController.m; sourceTree = "<group>"; };
+		269BBD491B676CD700D58040 /* BNRContactListVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BNRContactListVC.h; sourceTree = "<group>"; };
+		269BBD4A1B676CD700D58040 /* BNRContactListVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BNRContactListVC.m; sourceTree = "<group>"; };
 		269BBD4F1B676CD700D58040 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		269BBD581B676CD700D58040 /* JSCoreByExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JSCoreByExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		269BBD5D1B676CD700D58040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -42,6 +46,13 @@
 		269BBD691B676DD000D58040 /* BNRContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRContact.h; sourceTree = "<group>"; };
 		269BBD6A1B676DD000D58040 /* BNRContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRContact.m; sourceTree = "<group>"; };
 		269BBD6D1B67715100D58040 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		26CEAFCE1B6861BE00DA40DD /* BNRContactApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRContactApp.h; sourceTree = "<group>"; };
+		26CEAFCF1B6861BE00DA40DD /* BNRContactApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRContactApp.m; sourceTree = "<group>"; };
+		26CEAFD11B68652000DA40DD /* BNRAddContactWebVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAddContactWebVC.h; sourceTree = "<group>"; };
+		26CEAFD21B68652000DA40DD /* BNRAddContactWebVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRAddContactWebVC.m; sourceTree = "<group>"; };
+		26CEAFD41B6878DE00DA40DD /* BNRContactCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRContactCell.h; sourceTree = "<group>"; };
+		26CEAFD51B6878DE00DA40DD /* BNRContactCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRContactCell.m; sourceTree = "<group>"; };
+		26CEAFD61B6878DE00DA40DD /* BNRContactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRContactCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,13 +96,12 @@
 		269BBD411B676CD700D58040 /* JSCoreByExample */ = {
 			isa = PBXGroup;
 			children = (
+				26CEAFD91B687C3900DA40DD /* this is my app */,
+				269BBD6F1B67727A00D58040 /* Model */,
 				269BBD711B67728900D58040 /* Controller */,
 				269BBD701B67728200D58040 /* View */,
-				269BBD6F1B67727A00D58040 /* Model */,
 				269BBD461B676CD700D58040 /* BNRAppDelegate.h */,
 				269BBD471B676CD700D58040 /* BNRAppDelegate.m */,
-				269BBD491B676CD700D58040 /* BNRViewController.h */,
-				269BBD4A1B676CD700D58040 /* BNRViewController.m */,
 				269BBD4F1B676CD700D58040 /* Images.xcassets */,
 				269BBD421B676CD700D58040 /* Supporting Files */,
 			);
@@ -145,6 +155,9 @@
 		269BBD701B67728200D58040 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				26CEAFD41B6878DE00DA40DD /* BNRContactCell.h */,
+				26CEAFD51B6878DE00DA40DD /* BNRContactCell.m */,
+				26CEAFD61B6878DE00DA40DD /* BNRContactCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -152,8 +165,21 @@
 		269BBD711B67728900D58040 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				269BBD491B676CD700D58040 /* BNRContactListVC.h */,
+				269BBD4A1B676CD700D58040 /* BNRContactListVC.m */,
+				26CEAFCE1B6861BE00DA40DD /* BNRContactApp.h */,
+				26CEAFCF1B6861BE00DA40DD /* BNRContactApp.m */,
+				26CEAFD11B68652000DA40DD /* BNRAddContactWebVC.h */,
+				26CEAFD21B68652000DA40DD /* BNRAddContactWebVC.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		26CEAFD91B687C3900DA40DD /* this is my app */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "this is my app";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				269BBD501B676CD700D58040 /* Images.xcassets in Resources */,
+				26CEAFD81B6878DE00DA40DD /* BNRContactCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,10 +282,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				269BBD4B1B676CD700D58040 /* BNRViewController.m in Sources */,
+				26CEAFD31B68652000DA40DD /* BNRAddContactWebVC.m in Sources */,
+				269BBD4B1B676CD700D58040 /* BNRContactListVC.m in Sources */,
 				269BBD6B1B676DD000D58040 /* BNRContact.m in Sources */,
+				26CEAFD01B6861BE00DA40DD /* BNRContactApp.m in Sources */,
 				269BBD481B676CD700D58040 /* BNRAppDelegate.m in Sources */,
 				269BBD451B676CD700D58040 /* main.m in Sources */,
+				26CEAFD71B6878DE00DA40DD /* BNRContactCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +470,7 @@
 				269BBD641B676CD700D58040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		269BBD651B676CD700D58040 /* Build configuration list for PBXNativeTarget "JSCoreByExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -448,6 +479,7 @@
 				269BBD671B676CD700D58040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
