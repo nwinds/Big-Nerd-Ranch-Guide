@@ -38,7 +38,7 @@ BOOL isUserSignedIn;
 }
 
 - (IBAction)logoutButtonClicked:(id)sender {
-    AMZNLogoutDelegate* delegate = [[[AMZNLogoutDelegate alloc] initWithParentController:self] autorelease];
+    AMZNLogoutDelegate* delegate = [[AMZNLogoutDelegate alloc] initWithParentController:self];
     
     [AIMobileLib clearAuthorizationState:delegate];
 }
@@ -49,7 +49,7 @@ BOOL isUserSignedIn;
 
 #pragma mark View controller specific functions
 - (void)checkIsUserSignedIn {
-    AMZNGetAccessTokenDelegate* delegate = [[[AMZNGetAccessTokenDelegate alloc] initWithParentController:self] autorelease];
+    AMZNGetAccessTokenDelegate* delegate = [[AMZNGetAccessTokenDelegate alloc] initWithParentController:self];
     [AIMobileLib getAccessTokenForScopes:[NSArray arrayWithObject:@"profile"] withOverrideParams:nil delegate:delegate];
 }
 
@@ -87,14 +87,14 @@ BOOL isUserSignedIn;
     }
 }
 
-- (void)dealloc {
-    self.navigationItem = nil;
-    self.infoField = nil;
-    self.loginButton = nil;
-    self.logoutButton = nil;
-    self.userProfile = nil;
-    
-    [super dealloc];
-}
+//- (void)dealloc {
+//    self.navigationItem = nil;
+//    self.infoField = nil;
+//    self.loginButton = nil;
+//    self.logoutButton = nil;
+//    self.userProfile = nil;
+//    
+//    [super dealloc];
+//}
 
 @end

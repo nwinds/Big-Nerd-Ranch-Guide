@@ -19,7 +19,7 @@
 
 - (id)initWithParentController:(AMZNLoginController*)aViewController {
     if(self = [super init]) {
-        parentViewController = [aViewController retain];
+        parentViewController = [aViewController init];
     }
     
     return self;
@@ -30,7 +30,7 @@
     // Your code to use access token goes here.
 
     // Since the application has authorization for "profile" scope, we can get the user profile.
-    AMZNGetProfileDelegate* delegate = [[[AMZNGetProfileDelegate alloc] initWithParentController:parentViewController] autorelease];
+    AMZNGetProfileDelegate* delegate = [[AMZNGetProfileDelegate alloc] initWithParentController:parentViewController];
     
     [AIMobileLib getProfile:delegate];
 }
@@ -45,13 +45,13 @@
     }
     else {
         // Handle other errors
-        [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] autorelease] show];
+        [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] init] show];
     }
 }
-
-- (void)dealloc {
-    [parentViewController release];
-    [super dealloc];
-}
+//
+//- (void)dealloc {
+//    [parentViewController release];
+//    [super dealloc];
+//}
 
 @end

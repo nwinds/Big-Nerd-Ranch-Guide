@@ -16,7 +16,7 @@
 
 - (id)initWithParentController:(AMZNLoginController*)aViewController {
     if(self = [super init]) {
-        parentViewController = [aViewController retain];
+        parentViewController = [aViewController init];
     }
     
     return self;
@@ -40,13 +40,13 @@
     }
     else {
         // Handle other errors
-        [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] autorelease] show];
+        [[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] show];
     }
 }
-
--(void)dealloc {
-    [parentViewController release];
-    [super dealloc];
-    
-}
+//
+//-(void)dealloc {
+//    [parentViewController release];
+//    [super dealloc];
+//    
+//}
 @end
