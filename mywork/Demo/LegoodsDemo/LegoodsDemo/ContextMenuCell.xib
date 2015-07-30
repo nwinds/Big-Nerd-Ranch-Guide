@@ -24,7 +24,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rpe-6T-VhJ">
-                        <rect key="frame" x="37" y="13" width="117" height="18"/>
+                        <rect key="frame" x="74" y="13" width="117" height="18"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -33,10 +33,10 @@
                 <constraints>
                     <constraint firstItem="rpe-6T-VhJ" firstAttribute="centerY" secondItem="i5c-kb-1do" secondAttribute="centerY" id="DmP-lh-DVi"/>
                     <constraint firstAttribute="bottom" secondItem="i5c-kb-1do" secondAttribute="bottom" id="Dnm-dY-Pux"/>
-                    <constraint firstAttribute="centerX" secondItem="rpe-6T-VhJ" secondAttribute="centerX" constant="64.5" id="SdF-AR-xXK"/>
+                    <constraint firstAttribute="centerX" secondItem="rpe-6T-VhJ" secondAttribute="centerX" constant="27.5" id="SdF-AR-xXK"/>
                     <constraint firstAttribute="centerX" secondItem="i5c-kb-1do" secondAttribute="centerX" constant="-138.5" id="UaG-e1-yRI"/>
                     <constraint firstAttribute="centerY" secondItem="i5c-kb-1do" secondAttribute="centerY" id="jVT-lM-Xip"/>
-                    <constraint firstItem="rpe-6T-VhJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="29" id="q4t-kF-P0n"/>
+                    <constraint firstItem="rpe-6T-VhJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="66" id="q4t-kF-P0n"/>
                     <constraint firstItem="i5c-kb-1do" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="269" id="y83-kP-kXu"/>
                     <constraint firstItem="i5c-kb-1do" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="yEe-fG-FCb"/>
                 </constraints>

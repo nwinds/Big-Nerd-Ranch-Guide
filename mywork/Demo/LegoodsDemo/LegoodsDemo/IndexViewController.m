@@ -37,10 +37,10 @@ static NSString *const menuCellIdentifier = @"rotationCell";
     [super viewDidLoad];
     
     // Initialize menu
-//    [self initiateMenuOptions];
-//    // Set custom nabigation bar with a bigger height
-//    [self.navigationController setValue:[[YALNavigationBar alloc] init] forKeyPath:@"navigationBar"];
-//
+    [self initiateMenuOptions];
+    // Set custom nabigation bar with a bigger height
+    [self.navigationController setValue:[[YALNavigationBar alloc] init] forKeyPath:@"navigationBar"];
+
     NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
