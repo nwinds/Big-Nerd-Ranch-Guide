@@ -29,7 +29,7 @@
 
 @interface YALContextMenuTableView : UITableView
 
-@property (nonatomic, assign) id<YALContextMenuTableViewDelegate>yalDelegate;
+@property (nonatomic, weak) id<YALContextMenuTableViewDelegate>yalDelegate;
 
 /*! @abstract animationDuration time for animation in seconds*/
 @property (nonatomic) CGFloat animationDuration;

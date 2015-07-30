@@ -10,6 +10,6 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 
 @interface HighchartsWebViewController : UIViewController<UIWebViewDelegate>
-@property (retain, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong, nonatomic) JSContext *context;
 @end

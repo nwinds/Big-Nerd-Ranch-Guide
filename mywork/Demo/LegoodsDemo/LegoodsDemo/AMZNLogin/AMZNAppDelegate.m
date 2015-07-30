@@ -16,12 +16,12 @@
 #import "AMZNGetAccessTokenDelegate.h"
 
 @implementation AMZNAppDelegate
-
-- (void)dealloc
-{
-    [_window release];
-    [super dealloc];
-}
+//
+//- (void)dealloc
+//{
+//    [_window release];
+//    [super dealloc];
+//}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {    
