@@ -34,6 +34,11 @@
 		26DFD5691B69D17C008EF478 /* HighchartsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5641B69D17C008EF478 /* HighchartsWebViewController.m */; };
 		26DFD56A1B69D17C008EF478 /* HighchartsWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DFD5651B69D17C008EF478 /* HighchartsWebViewController.xib */; };
 		26DFD56B1B69D17C008EF478 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 26DFD5661B69D17C008EF478 /* jquery-1.11.0.min.js */; };
+		26DFD5761B69D2D4008EF478 /* WXGContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD56D1B69D2D4008EF478 /* WXGContainerViewController.m */; };
+		26DFD5771B69D2D4008EF478 /* WXGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD56F1B69D2D4008EF478 /* WXGDetailViewController.m */; };
+		26DFD5781B69D2D4008EF478 /* WXGMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5711B69D2D4008EF478 /* WXGMenuCell.m */; };
+		26DFD5791B69D2D4008EF478 /* WXGMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5731B69D2D4008EF478 /* WXGMenuItem.m */; };
+		26DFD57A1B69D2D4008EF478 /* WXGMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5751B69D2D4008EF478 /* WXGMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +98,16 @@
 		26DFD5641B69D17C008EF478 /* HighchartsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighchartsWebViewController.m; path = LegoodsDemo/JSInteract/HighchartsWebViewController.m; sourceTree = "<group>"; };
 		26DFD5651B69D17C008EF478 /* HighchartsWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HighchartsWebViewController.xib; path = LegoodsDemo/JSInteract/HighchartsWebViewController.xib; sourceTree = "<group>"; };
 		26DFD5661B69D17C008EF478 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-1.11.0.min.js"; path = "LegoodsDemo/JSInteract/jquery-1.11.0.min.js"; sourceTree = "<group>"; };
+		26DFD56C1B69D2D4008EF478 /* WXGContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGContainerViewController.h; path = WXGSlideMenu/WXGContainerViewController.h; sourceTree = "<group>"; };
+		26DFD56D1B69D2D4008EF478 /* WXGContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGContainerViewController.m; path = WXGSlideMenu/WXGContainerViewController.m; sourceTree = "<group>"; };
+		26DFD56E1B69D2D4008EF478 /* WXGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGDetailViewController.h; path = WXGSlideMenu/WXGDetailViewController.h; sourceTree = "<group>"; };
+		26DFD56F1B69D2D4008EF478 /* WXGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGDetailViewController.m; path = WXGSlideMenu/WXGDetailViewController.m; sourceTree = "<group>"; };
+		26DFD5701B69D2D4008EF478 /* WXGMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuCell.h; path = WXGSlideMenu/WXGMenuCell.h; sourceTree = "<group>"; };
+		26DFD5711B69D2D4008EF478 /* WXGMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuCell.m; path = WXGSlideMenu/WXGMenuCell.m; sourceTree = "<group>"; };
+		26DFD5721B69D2D4008EF478 /* WXGMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuItem.h; path = WXGSlideMenu/WXGMenuItem.h; sourceTree = "<group>"; };
+		26DFD5731B69D2D4008EF478 /* WXGMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuItem.m; path = WXGSlideMenu/WXGMenuItem.m; sourceTree = "<group>"; };
+		26DFD5741B69D2D4008EF478 /* WXGMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuViewController.h; path = WXGSlideMenu/WXGMenuViewController.h; sourceTree = "<group>"; };
+		26DFD5751B69D2D4008EF478 /* WXGMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuViewController.m; path = WXGSlideMenu/WXGMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +269,16 @@
 		26DFD54C1B69CF8A008EF478 /* WXGSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				26DFD56C1B69D2D4008EF478 /* WXGContainerViewController.h */,
+				26DFD56D1B69D2D4008EF478 /* WXGContainerViewController.m */,
+				26DFD56E1B69D2D4008EF478 /* WXGDetailViewController.h */,
+				26DFD56F1B69D2D4008EF478 /* WXGDetailViewController.m */,
+				26DFD5701B69D2D4008EF478 /* WXGMenuCell.h */,
+				26DFD5711B69D2D4008EF478 /* WXGMenuCell.m */,
+				26DFD5721B69D2D4008EF478 /* WXGMenuItem.h */,
+				26DFD5731B69D2D4008EF478 /* WXGMenuItem.m */,
+				26DFD5741B69D2D4008EF478 /* WXGMenuViewController.h */,
+				26DFD5751B69D2D4008EF478 /* WXGMenuViewController.m */,
 			);
 			name = WXGSlideMenu;
 			sourceTree = "<group>";
@@ -363,21 +388,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26DFD57A1B69D2D4008EF478 /* WXGMenuViewController.m in Sources */,
 				26CEAFEC1B68C3C800DA40DD /* YALNavigationBar.m in Sources */,
 				26DFD55C1B69D042008EF478 /* AMZNAuthorizeUserDelegate.m in Sources */,
 				26DFD5601B69D042008EF478 /* AMZNLogoutDelegate.m in Sources */,
 				26CEAFEA1B68C3C800DA40DD /* UIView+YALConstraints.m in Sources */,
 				269D409F1B622A8D003D63BD /* HighchartViewController.m in Sources */,
+				26DFD5781B69D2D4008EF478 /* WXGMenuCell.m in Sources */,
 				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
 				26DFD55D1B69D042008EF478 /* AMZNGetAccessTokenDelegate.m in Sources */,
 				26DFD55B1B69D042008EF478 /* AMZNAppDelegate.m in Sources */,
 				26CEAFEB1B68C3C800DA40DD /* YALContextMenuTableView.m in Sources */,
 				26DFD5691B69D17C008EF478 /* HighchartsWebViewController.m in Sources */,
+				26DFD5771B69D2D4008EF478 /* WXGDetailViewController.m in Sources */,
 				26DFD55F1B69D042008EF478 /* AMZNLoginController.m in Sources */,
+				26DFD5791B69D2D4008EF478 /* WXGMenuItem.m in Sources */,
 				26CEAFE01B68B4A100DA40DD /* ContextMenuCell.m in Sources */,
 				26995C331B60DE930000DEED /* main.m in Sources */,
 				268EBE821B61DAA20052FDCB /* IndexViewController.m in Sources */,
 				26DFD55E1B69D042008EF478 /* AMZNGetProfileDelegate.m in Sources */,
+				26DFD5761B69D2D4008EF478 /* WXGContainerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
