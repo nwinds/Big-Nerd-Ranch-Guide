@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>9E8D75EC-6FE0-4871-BADE-7689C912CF59</string>
 	<key>IDESourceControlProjectName</key>
-	<string>LegoodsDemo</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>D7AAD9A4430BF2FE91238712B4809D01B612882A</key>
 		<string>https://github.com/nwinds/Big-Nerd-Ranch-Guide.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>mywork/Demo/LegoodsDemo/LegoodsDemo.xcodeproj</string>
+	<string>mywork/Demo/LegoodsDemo/LegoodsDemo.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>D7AAD9A4430BF2FE91238712B4809D01B612882A</key>

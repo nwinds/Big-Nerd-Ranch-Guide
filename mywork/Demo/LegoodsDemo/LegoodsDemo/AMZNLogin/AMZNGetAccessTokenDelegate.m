@@ -27,6 +27,7 @@
 
 #pragma mark Implementation of getAccessTokenForScopes:withOverrideParams:delegate: delegates.
 - (void)requestDidSucceed:(APIResult *)apiResult {
+    NSLog(@"AMZNGetAccessTokenDelegate: requestDidSucceed");
     // Your code to use access token goes here.
 
     // Since the application has authorization for "profile" scope, we can get the user profile.
@@ -36,6 +37,7 @@
 }
 
 - (void)requestDidFail:(APIError *)errorResponse {
+    NSLog(@"AMZNGetAccessTokenDelegate: requestDidFail");
     // Your code to handle failed retrieval of access token.
     
     // If error code = kAIApplicationNotAuthorized, allow user to log in again.
@@ -45,7 +47,7 @@
     }
     else {
         // Handle other errors
-        [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] init] show];
+        [[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] show];
     }
 }
 //

@@ -11,6 +11,7 @@
  */
 
 #import "AMZNGetProfileDelegate.h"
+#import <LoginWithAmazon/LoginWithAmazon.h>
 
 @implementation AMZNGetProfileDelegate
 
@@ -23,7 +24,25 @@
 }
 
 #pragma mark Implementation of getProfile: delegates.
+
+
+
+
 - (void)requestDidSucceed:(APIResult *)apiResult {
+    // Get profile request succeded. Unpack the profile information
+    // and pass it to the parent view controller
+    NSString* name = [(NSDictionary*)apiResult.result
+                      objectForKey:@"name"];
+    NSString* email = [(NSDictionary*)apiResult.result
+                       objectForKey:@"email"];
+    NSString* user_id = [(NSDictionary*)apiResult.result
+                         objectForKey:@"user_id"];
+    NSString* postal_code = [(NSDictionary*)apiResult.result
+                             objectForKey:@"postal_code"];
+    
+    // Pass data to view controller
+    
+    
     // Get profile request succeded. Use the profile information to achieve various use cases like showing a simple welcome message.
 
     parentViewController.userProfile = (NSDictionary*)apiResult.result;

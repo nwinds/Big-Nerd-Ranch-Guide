@@ -15,7 +15,8 @@
 
 #import "AMZNLoginController.h"
 
-@interface AMZNAuthorizeUserDelegate : NSObject<AIAuthenticationDelegate> {
+@interface AMZNAuthorizeUserDelegate : NSObject<AIAuthenticationDelegate>
+{
     AMZNLoginController* parentViewController;
 }
 

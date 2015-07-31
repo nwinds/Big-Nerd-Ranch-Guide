@@ -26,31 +26,38 @@ NSString* userLoggedOutMessage = @"Welcome to Login with Amazon!\nIf this is you
 NSString* userLoggedInMessage = @"Welcome, %@ \n Your email is %@.";
 BOOL isUserSignedIn;
 
-- (IBAction)onLogInButtonClicked:(id)sender {
+- (IBAction)onLogInButtonClicked:(id)sender
+{
     // Make authorize call to SDK to get authorization from the user. While making the call you can specify the scopes for which the user authorization is needed.
     
     // Requesting 'profile' scopes for the current user.
-    NSArray *requestScopes = [NSArray arrayWithObject:@"profile"];
+    NSArray *requestScopes = [NSArray arrayWithObjects:@"profile", @"postal_code", nil];
     
     AMZNAuthorizeUserDelegate* delegate = [[AMZNAuthorizeUserDelegate alloc] initWithParentController:self];
     
     [AIMobileLib authorizeUserForScopes:requestScopes delegate:delegate];
 }
 
-- (IBAction)logoutButtonClicked:(id)sender {
+- (IBAction)logoutButtonClicked:(id)sender
+{
     AMZNLogoutDelegate* delegate = [[AMZNLogoutDelegate alloc] initWithParentController:self];
     
     [AIMobileLib clearAuthorizationState:delegate];
 }
 
-- (BOOL)shouldAutorotate {
+- (BOOL)shouldAutorotate
+{
     return NO;
 }
 
 #pragma mark View controller specific functions
-- (void)checkIsUserSignedIn {
+- (void)checkIsUserSignedIn
+{
+    NSLog(@"CheckIsUserSignedIn:\n\tcall getAccessTokenForScopes:withOverrideParams:delegate: to see if the application is still authorized.");
     AMZNGetAccessTokenDelegate* delegate = [[AMZNGetAccessTokenDelegate alloc] initWithParentController:self];
-    [AIMobileLib getAccessTokenForScopes:[NSArray arrayWithObject:@"profile"] withOverrideParams:nil delegate:delegate];
+    
+    NSArray *requestScopes = [NSArray arrayWithObjects:@"profile", @"postal_code", nil];
+    [AIMobileLib getAccessTokenForScopes:requestScopes withOverrideParams:nil delegate:delegate];
 }
 
 - (void)loadSignedInUser {
