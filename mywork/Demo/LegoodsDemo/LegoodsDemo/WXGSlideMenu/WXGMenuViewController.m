@@ -38,7 +38,7 @@
     self.navigationController.navigationBar.clipsToBounds = YES;
     
     // 加载后默认点击第一行，让detailView显示第一行的内容
-    self.menuDidClick(self.menuItems[0], NO);
+//    self.menuDidClick(self.menuItems[0], NO);
     
     // 为菜单的旋转设置锚点
     self.view.layer.anchorPoint = CGPointMake(1, 0.5);

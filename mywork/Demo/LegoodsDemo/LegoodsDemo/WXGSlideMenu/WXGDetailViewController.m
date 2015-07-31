@@ -11,6 +11,10 @@
 
 @interface WXGDetailViewController ()
 
+#pragma mark -UIWebView
+@property (retain, nonatomic) IBOutlet UIWebView *webView;
+
+#pragma mark -UIImageView
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 
 @property (nonatomic, weak) UIImageView *leftBarIcon;
@@ -38,6 +42,12 @@
     [wrapView addSubview:leftBarIcon];
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:wrapView];
+    
+    // Load Web page
+    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
+    
 }
 
 // 顶部按钮点击事件
