@@ -34,8 +34,12 @@
     
     // You can now load new view controller with user identifying information as the user is now successfully signed in or simple get the user profile information if the authorization was for "profile" scope.
     
+    NSLog(@"Amazon login: login request success - user authorized");
     AMZNGetProfileDelegate* delegate = [[AMZNGetProfileDelegate alloc] initWithParentController:parentViewController];
+    
+    // Use this method to get the profile of the current authorized user.
     [AIMobileLib getProfile:delegate];
+    NSLog(@"Amazon login: user profile get in hand");
 }
 
 /*

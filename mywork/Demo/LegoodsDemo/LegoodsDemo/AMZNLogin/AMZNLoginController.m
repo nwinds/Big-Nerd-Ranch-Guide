@@ -31,11 +31,17 @@ BOOL isUserSignedIn;
     // Make authorize call to SDK to get authorization from the user. While making the call you can specify the scopes for which the user authorization is needed.
     
     // Requesting 'profile' scopes for the current user.
+    
+    // research test
+    NSLog(@"Amazon login: login button clicked");
+    
     NSArray *requestScopes = [NSArray arrayWithObjects:@"profile", @"postal_code", nil];
     
     AMZNAuthorizeUserDelegate* delegate = [[AMZNAuthorizeUserDelegate alloc] initWithParentController:self];
     
+    // Allows the user to login and, if necessary, authorize the app for the requested scopes.
     [AIMobileLib authorizeUserForScopes:requestScopes delegate:delegate];
+    NSLog(@"Amazon login: user login authorized");
 }
 
 - (IBAction)logoutButtonClicked:(id)sender
@@ -53,11 +59,12 @@ BOOL isUserSignedIn;
 #pragma mark View controller specific functions
 - (void)checkIsUserSignedIn
 {
-    NSLog(@"CheckIsUserSignedIn:\n\tcall getAccessTokenForScopes:withOverrideParams:delegate: to see if the application is still authorized.");
+    NSLog(@"Amazon login: check if user is login");
     AMZNGetAccessTokenDelegate* delegate = [[AMZNGetAccessTokenDelegate alloc] initWithParentController:self];
     
     NSArray *requestScopes = [NSArray arrayWithObjects:@"profile", @"postal_code", nil];
     [AIMobileLib getAccessTokenForScopes:requestScopes withOverrideParams:nil delegate:delegate];
+    NSLog(@"Amazon login: getAccessTokenForScopes: %@", requestScopes);
 }
 
 - (void)loadSignedInUser {

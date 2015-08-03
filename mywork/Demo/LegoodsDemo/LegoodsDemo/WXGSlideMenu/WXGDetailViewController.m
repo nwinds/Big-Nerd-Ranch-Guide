@@ -47,6 +47,7 @@
     NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
+    // so how to do with login(As I remenber many companies didn;t fixed this problem!!!
     
 }
 

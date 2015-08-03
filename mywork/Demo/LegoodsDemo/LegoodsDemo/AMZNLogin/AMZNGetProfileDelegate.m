@@ -23,10 +23,8 @@
     return self;
 }
 
+
 #pragma mark Implementation of getProfile: delegates.
-
-
-
 
 - (void)requestDidSucceed:(APIResult *)apiResult {
     // Get profile request succeded. Unpack the profile information
@@ -40,13 +38,16 @@
     NSString* postal_code = [(NSDictionary*)apiResult.result
                              objectForKey:@"postal_code"];
     
+    NSLog(@"%@(%@): uid[%@] postal_code[%@]", name, email, user_id, postal_code);
+    
     // Pass data to view controller
     
     
     // Get profile request succeded. Use the profile information to achieve various use cases like showing a simple welcome message.
-
+    NSLog(@"Amazon login: getProfile apiRequest succeed");
     parentViewController.userProfile = (NSDictionary*)apiResult.result;
     [parentViewController loadSignedInUser];
+    NSLog(@"Amazon login: signed in user info loaded");
 }
 
 - (void)requestDidFail:(APIError *)errorResponse {
