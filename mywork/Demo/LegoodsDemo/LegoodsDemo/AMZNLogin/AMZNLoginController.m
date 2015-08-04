@@ -46,9 +46,18 @@ BOOL isUserSignedIn;
 
 - (IBAction)logoutButtonClicked:(id)sender
 {
+    // For tracing
+    NSLog(@"Amazon logged checking...");
+    [self checkIsUserSignedIn];
+    NSLog(@"Amazon logged check success");
+    
     AMZNLogoutDelegate* delegate = [[AMZNLogoutDelegate alloc] initWithParentController:self];
     
     [AIMobileLib clearAuthorizationState:delegate];
+}
+- (IBAction)unwindSegue:(UIStoryboardSegue *)sender
+{
+    NSLog(@"unwindSegue %@", sender);
 }
 
 - (BOOL)shouldAutorotate
@@ -64,8 +73,13 @@ BOOL isUserSignedIn;
     
     NSArray *requestScopes = [NSArray arrayWithObjects:@"profile", @"postal_code", nil];
     [AIMobileLib getAccessTokenForScopes:requestScopes withOverrideParams:nil delegate:delegate];
-    NSLog(@"Amazon login: getAccessTokenForScopes: %@", requestScopes);
+    NSLog(@"Amazon login: AccessToken in delegate: %@", delegate.description);
 }
+
+//- (void)setWebView:
+//{
+
+//}
 
 - (void)loadSignedInUser {
     isUserSignedIn = true;
@@ -86,6 +100,7 @@ BOOL isUserSignedIn;
 - (void)viewDidLoad {
     if (isUserSignedIn)
         [self loadSignedInUser];
+    
     else
         [self showLogInPage];
     float systemVersion=[[[UIDevice currentDevice] systemVersion] floatValue];

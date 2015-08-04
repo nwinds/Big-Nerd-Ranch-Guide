@@ -11,8 +11,8 @@
 
 @interface WXGDetailViewController ()
 
-#pragma mark -UIWebView
-@property (retain, nonatomic) IBOutlet UIWebView *webView;
+#pragma mark -Web HTML5
+@property (assign, nonatomic) IBOutlet UIWebView *webView;
 
 #pragma mark -UIImageView
 @property (weak, nonatomic) IBOutlet UIImageView *detailImage;
@@ -44,7 +44,8 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:wrapView];
     
     // Load Web page
-    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
+//    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
+    NSURL *url = [NSURL URLWithString:@"https://www.legoods.com:2443/handle_login.php"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
     // so how to do with login(As I remenber many companies didn;t fixed this problem!!!
@@ -73,5 +74,8 @@
     CGFloat b = [item.colors[2] doubleValue];
     self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
 }
+
+#pragma mark -User login
+
 
 @end

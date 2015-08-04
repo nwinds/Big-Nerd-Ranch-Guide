@@ -48,6 +48,9 @@
     parentViewController.userProfile = (NSDictionary*)apiResult.result;
     [parentViewController loadSignedInUser];
     NSLog(@"Amazon login: signed in user info loaded");
+    
+
+    
 }
 
 - (void)requestDidFail:(APIError *)errorResponse {
