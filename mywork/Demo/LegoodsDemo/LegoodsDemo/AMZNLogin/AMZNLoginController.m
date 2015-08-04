@@ -55,10 +55,8 @@ BOOL isUserSignedIn;
     
     [AIMobileLib clearAuthorizationState:delegate];
 }
-- (IBAction)unwindSegue:(UIStoryboardSegue *)sender
-{
-    NSLog(@"unwindSegue %@", sender);
-}
+
+
 
 - (BOOL)shouldAutorotate
 {
@@ -98,6 +96,7 @@ BOOL isUserSignedIn;
 }
 
 - (void)viewDidLoad {
+    self.navigationItem.leftBarButtonItem = self.backButton;
     if (isUserSignedIn)
         [self loadSignedInUser];
     
@@ -115,6 +114,11 @@ BOOL isUserSignedIn;
         }
     }
 }
+
+//- (IBAction)unwindSegue1:(UIStoryboardSegue *)sender
+//{
+//    NSLog(@"unwindSegue1");
+//}
 
 //- (void)dealloc {
 //    self.navigationItem = nil;

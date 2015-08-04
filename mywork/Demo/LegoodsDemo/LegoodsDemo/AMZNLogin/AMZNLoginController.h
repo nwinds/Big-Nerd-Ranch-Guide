@@ -20,6 +20,7 @@
 @property (retain, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 @property (retain, nonatomic) IBOutlet UINavigationItem *navigationItem;
 
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property(retain) NSDictionary* userProfile;
 
 - (void)showLogInPage;

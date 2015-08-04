@@ -177,17 +177,10 @@ static NSString *const menuCellIdentifier = @"rotationCell";
 }
 
 #pragma mark - Slide menu
-
-
-
 //@interface WXGContainerViewController () <UIScrollViewDelegate>
 
 
 static const CGFloat kMenuWidth = 80;
-
-
-
-
 
 // 控制菜单视图显示与隐藏
 - (void)showOrHideMenu:(BOOL)showOrHide animated:(BOOL)animated {
@@ -234,6 +227,15 @@ static const CGFloat kMenuWidth = 80;
 // 更改状态栏样式
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+
+#pragma mark -Navigation Item login subview
+
+// backButton
+- (IBAction)unwindSegue:(UIStoryboardSegue *)sender
+{
+    NSLog(@"unwindSegue");
 }
 
 @end

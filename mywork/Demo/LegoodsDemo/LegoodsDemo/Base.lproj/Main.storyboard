@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RQv-O9-EHQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="-456"/>
+            <point key="canvasLocation" x="-643" y="-586"/>
         </scene>
         <!--Highchart View Controller-->
         <scene sceneID="0Ke-ty-arI">
@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p7P-zb-0GX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="-456"/>
+            <point key="canvasLocation" x="-271" y="-586"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="bUu-wa-V3e">
@@ -117,12 +117,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S5V-IM-Qbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="271" y="833"/>
+            <point key="canvasLocation" x="-389" y="897"/>
         </scene>
-        <!--Login Controller-->
+        <!--loginViewController-->
         <scene sceneID="WHK-6B-mfi">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" modalPresentationStyle="currentContext" id="6mO-SH-7Ls" customClass="AMZNLoginController" sceneMemberID="viewController">
+                <viewController title="loginViewController" extendedLayoutIncludesOpaqueBars="YES" modalPresentationStyle="currentContext" id="6mO-SH-7Ls" customClass="AMZNLoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qa4-TA-uDd"/>
                         <viewControllerLayoutGuide type="bottom" id="0l0-6O-Zrd"/>
@@ -131,7 +131,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" text="info" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvI-b6-MtB">
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" scrollEnabled="NO" editable="NO" text="info" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvI-b6-MtB">
                                 <rect key="frame" x="33" y="144" width="254" height="147"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -143,7 +143,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVm-uc-kZO">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVm-uc-kZO">
                                 <rect key="frame" x="94" y="400" width="132" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="btnLWA_gold_157x36"/>
@@ -156,14 +156,18 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="e8B-NB-U02"/>
                                 </constraints>
+                                <textAttributes key="titleTextAttributes">
+                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
+                                </textAttributes>
                                 <items>
-                                    <navigationItem id="Krc-r2-7XF">
-                                        <barButtonItem key="leftBarButtonItem" title="back" id="hs7-kd-Jh8">
+                                    <navigationItem title="账号登陆" id="Krc-r2-7XF">
+                                        <barButtonItem key="backBarButtonItem" title="返回" id="v8c-aZ-KNT">
                                             <connections>
-                                                <segue destination="Caw-dL-Wgz" kind="unwind" unwindAction="unwindSegue:" id="Z0H-m3-Dm9"/>
+                                                <action selector="unwindSegue1:" destination="6mO-SH-7Ls" id="Mbv-Pj-M56"/>
+                                                <segue destination="cb2-6N-t4l" kind="unwind" unwindAction="unwindSegue:" id="4LZ-m2-PNk"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="hMb-jy-GfM">
+                                        <barButtonItem key="rightBarButtonItem" title="登出" id="hMb-jy-GfM">
                                             <connections>
                                                 <action selector="logoutButtonClicked:" destination="6mO-SH-7Ls" id="7H9-48-KJ8"/>
                                             </connections>
@@ -194,7 +198,9 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="backButton" destination="v8c-aZ-KNT" id="xId-7x-9vJ"/>
                         <outlet property="infoField" destination="HvI-b6-MtB" id="a78-99-0Qx"/>
                         <outlet property="loginButton" destination="SVm-uc-kZO" id="eCn-7c-aSr"/>
                         <outlet property="logoutButton" destination="hMb-jy-GfM" id="8i1-eo-Scx"/>
@@ -202,6 +208,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ijb-GH-EtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="cb2-6N-t4l" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1043" y="399"/>
         </scene>
@@ -220,7 +227,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpf-82-uiF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-159" y="833"/>
+            <point key="canvasLocation" x="-737" y="897"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="15h-jv-YxL">
@@ -274,7 +281,7 @@
         <!--Home View Controller-->
         <scene sceneID="vYH-rc-udS">
             <objects>
-                <viewController id="Qcc-5e-zea" userLabel="Home View Controller" customClass="IndexViewController" sceneMemberID="viewController">
+                <viewController title="HomeContainer" id="Qcc-5e-zea" userLabel="Home View Controller" customClass="IndexViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="zuP-2g-W7R"/>
                         <viewControllerLayoutGuide type="bottom" id="VvR-Ln-dui"/>
@@ -359,14 +366,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="toA-Ae-1mA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Caw-dL-Wgz" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="286" y="197"/>
+            <point key="canvasLocation" x="178" y="148"/>
         </scene>
         <!--Home Navigation Controller-->
         <scene sceneID="ez0-Ts-TYk">
             <objects>
-                <navigationController id="uS3-5D-R0j" userLabel="Home Navigation Controller" sceneMemberID="viewController">
+                <navigationController title="homeNav" id="uS3-5D-R0j" userLabel="Home Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Home" image="Hypno" id="vHf-nT-pub"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H6b-t3-1Ij">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -381,7 +387,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9FK-Us-5K2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-166" y="204"/>
+            <point key="canvasLocation" x="-216" y="148"/>
         </scene>
         <!--Legoods-->
         <scene sceneID="ely-fG-YiC">
