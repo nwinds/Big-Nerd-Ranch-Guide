@@ -122,7 +122,7 @@
         <!--loginViewController-->
         <scene sceneID="WHK-6B-mfi">
             <objects>
-                <viewController title="loginViewController" extendedLayoutIncludesOpaqueBars="YES" modalPresentationStyle="currentContext" id="6mO-SH-7Ls" customClass="AMZNLoginController" sceneMemberID="viewController">
+                <viewController autoresizesArchivedViewToFullSize="NO" title="loginViewController" extendedLayoutIncludesOpaqueBars="YES" modalPresentationStyle="currentContext" id="6mO-SH-7Ls" customClass="AMZNLoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qa4-TA-uDd"/>
                         <viewControllerLayoutGuide type="bottom" id="0l0-6O-Zrd"/>
@@ -131,20 +131,13 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" scrollEnabled="NO" editable="NO" text="info" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvI-b6-MtB">
-                                <rect key="frame" x="33" y="144" width="254" height="147"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g9h-X3-euZ">
                                 <rect key="frame" x="33" y="122" width="254" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVm-uc-kZO">
-                                <rect key="frame" x="94" y="400" width="132" height="36"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVm-uc-kZO">
+                                <rect key="frame" x="94" y="356" width="132" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <state key="normal" image="btnLWA_gold_157x36"/>
                                 <connections>
@@ -175,23 +168,28 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" text="info" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HvI-b6-MtB">
+                                <rect key="frame" x="33" y="152" width="254" height="139"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="g9h-X3-euZ" firstAttribute="leading" secondItem="4gz-4R-T85" secondAttribute="leadingMargin" constant="17" id="0de-5e-II5"/>
                             <constraint firstItem="SVm-uc-kZO" firstAttribute="leading" secondItem="4gz-4R-T85" secondAttribute="leadingMargin" constant="78" id="731-Zu-7GB"/>
-                            <constraint firstItem="HvI-b6-MtB" firstAttribute="top" secondItem="g9h-X3-euZ" secondAttribute="bottom" id="MOn-TD-8Pf"/>
-                            <constraint firstItem="SVm-uc-kZO" firstAttribute="top" secondItem="HvI-b6-MtB" secondAttribute="bottom" constant="109" id="Qt5-Bq-dH4"/>
+                            <constraint firstItem="SVm-uc-kZO" firstAttribute="top" secondItem="HvI-b6-MtB" secondAttribute="bottom" constant="65" id="Fa2-3R-HUJ"/>
+                            <constraint firstItem="HvI-b6-MtB" firstAttribute="leading" secondItem="g9h-X3-euZ" secondAttribute="leading" id="JZk-ZQ-fD1"/>
+                            <constraint firstItem="HvI-b6-MtB" firstAttribute="trailing" secondItem="g9h-X3-euZ" secondAttribute="trailing" id="JcZ-9Q-Oiw"/>
                             <constraint firstItem="g9h-X3-euZ" firstAttribute="leading" secondItem="4gz-4R-T85" secondAttribute="leadingMargin" constant="17" id="SAf-dX-gsa"/>
                             <constraint firstItem="0l0-6O-Zrd" firstAttribute="top" secondItem="SVm-uc-kZO" secondAttribute="bottom" constant="132" id="a0V-bU-Jz1"/>
                             <constraint firstItem="qDO-fV-nbh" firstAttribute="centerX" secondItem="SVm-uc-kZO" secondAttribute="centerX" id="aFk-zP-V9l"/>
-                            <constraint firstItem="g9h-X3-euZ" firstAttribute="leading" secondItem="HvI-b6-MtB" secondAttribute="leading" id="bv7-bH-H27"/>
-                            <constraint firstItem="SVm-uc-kZO" firstAttribute="top" secondItem="HvI-b6-MtB" secondAttribute="bottom" constant="109" id="bze-IO-DN4"/>
                             <constraint firstItem="qDO-fV-nbh" firstAttribute="centerX" secondItem="g9h-X3-euZ" secondAttribute="centerX" id="flK-d0-d2O"/>
-                            <constraint firstItem="HvI-b6-MtB" firstAttribute="width" secondItem="g9h-X3-euZ" secondAttribute="width" id="fqO-Gg-0z5"/>
                             <constraint firstItem="qDO-fV-nbh" firstAttribute="leading" secondItem="4gz-4R-T85" secondAttribute="leading" id="hs7-H0-Sdb"/>
                             <constraint firstItem="qDO-fV-nbh" firstAttribute="top" secondItem="4gz-4R-T85" secondAttribute="top" id="l7U-Jh-d6y"/>
-                            <constraint firstItem="HvI-b6-MtB" firstAttribute="leading" secondItem="g9h-X3-euZ" secondAttribute="leading" id="nrF-gs-ezP"/>
+                            <constraint firstItem="HvI-b6-MtB" firstAttribute="top" secondItem="g9h-X3-euZ" secondAttribute="bottom" constant="8" symbolic="YES" id="uSc-JD-xTX"/>
                             <constraint firstItem="g9h-X3-euZ" firstAttribute="leading" secondItem="4gz-4R-T85" secondAttribute="leadingMargin" constant="17" id="vfL-A8-wx1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="g9h-X3-euZ" secondAttribute="trailing" constant="17" id="vkV-9H-Fs0"/>
                             <constraint firstItem="g9h-X3-euZ" firstAttribute="top" secondItem="qDO-fV-nbh" secondAttribute="bottom" constant="58" id="yaL-ye-Q2u"/>
@@ -245,32 +243,21 @@
                                 <rect key="frame" x="0.0" y="0.0" width="202" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aQ9-P1-Upx">
-                                <rect key="frame" x="159" y="0.0" width="43" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="43" id="ao9-nm-cQL"/>
-                                    <constraint firstAttribute="height" constant="43" id="dNo-bV-JpE"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="VHX-bP-U8w" firstAttribute="height" secondItem="36t-Cy-9ro" secondAttribute="height" id="8hL-Ie-x4W"/>
-                            <constraint firstItem="aQ9-P1-Upx" firstAttribute="top" secondItem="Stk-qj-EN4" secondAttribute="bottom" id="BIS-15-6we"/>
                             <constraint firstItem="VHX-bP-U8w" firstAttribute="height" secondItem="36t-Cy-9ro" secondAttribute="height" id="RLL-QW-skH"/>
                             <constraint firstItem="VHX-bP-U8w" firstAttribute="width" secondItem="36t-Cy-9ro" secondAttribute="width" id="SMe-We-0xg"/>
-                            <constraint firstItem="VHX-bP-U8w" firstAttribute="top" secondItem="aQ9-P1-Upx" secondAttribute="top" id="TBl-iT-Cm0"/>
                             <constraint firstItem="VHX-bP-U8w" firstAttribute="width" secondItem="36t-Cy-9ro" secondAttribute="width" id="c14-rL-Mvf"/>
                             <constraint firstAttribute="centerX" secondItem="VHX-bP-U8w" secondAttribute="centerX" id="nJy-k9-Xq5"/>
                             <constraint firstAttribute="centerY" secondItem="VHX-bP-U8w" secondAttribute="centerY" id="qKl-r9-Gls"/>
-                            <constraint firstItem="aQ9-P1-Upx" firstAttribute="trailing" secondItem="VHX-bP-U8w" secondAttribute="trailing" id="veJ-UO-if9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="kZc-1K-FiR">
                         <nil key="title"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="detailImage" destination="aQ9-P1-Upx" id="RBC-XT-E61"/>
                         <outlet property="webView" destination="VHX-bP-U8w" id="EK4-6r-7uq"/>
                     </connections>
                 </viewController>
@@ -348,15 +335,15 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="Hypno" id="gz1-Mi-kGj"/>
-                    <navigationItem key="navigationItem" id="5wK-is-XB7">
-                        <barButtonItem key="leftBarButtonItem" title="Login" id="E8w-6V-iTc">
+                    <navigationItem key="navigationItem" id="vnJ-8Z-sq8">
+                        <barButtonItem key="leftBarButtonItem" title="登陆" id="GYo-GP-ciP">
                             <connections>
-                                <segue destination="6mO-SH-7Ls" kind="modal" modalPresentationStyle="currentContext" modalTransitionStyle="flipHorizontal" id="1TL-Qe-Tmd"/>
+                                <segue destination="6mO-SH-7Ls" kind="modal" identifier="MainToCheck" modalPresentationStyle="currentContext" modalTransitionStyle="flipHorizontal" id="SLO-Or-bd8"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="uTr-jN-Cdo">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mdk-l2-sKS">
                             <connections>
-                                <action selector="presentMenuButtonTapped:" destination="Qcc-5e-zea" id="Ce4-91-cUh"/>
+                                <action selector="presentMenuButtonTapped:" destination="Qcc-5e-zea" id="7Fd-pr-7xQ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

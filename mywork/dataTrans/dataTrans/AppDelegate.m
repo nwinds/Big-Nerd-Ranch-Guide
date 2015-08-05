@@ -1,13 +1,12 @@
 //
 //  AppDelegate.m
-//  LegoodsDemo
+//  dataTrans
 //
-//  Created by jyl on 15/7/23.
+//  Created by jyl on 15/8/4.
 //  Copyright (c) 2015年 zmy. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <LoginWithAmazon/LoginWithAmazon.h>
 
 @interface AppDelegate ()
 
@@ -43,25 +42,4 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
-
-
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    // Pass on the url to the SDK to parse authorization code
-    // from the url.
-    BOOL isValidRedirectSignInURL =
-    [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
-    
-    // For tracing
-    NSLog(@"url:%@", url);
-    if(!isValidRedirectSignInURL)
-        return NO;
-    
-    // App may also want to handle url
-    return YES;
-}
 @end

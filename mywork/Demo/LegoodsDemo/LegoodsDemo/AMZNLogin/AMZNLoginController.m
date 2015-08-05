@@ -115,6 +115,12 @@ BOOL isUserSignedIn;
     }
 }
 
+//#pragma mark -Data delegate handle
+//- (void)callParentViewControllerData
+//{
+//    [self.delegate IndexDataViewController:self didFinishLoadData:testArray];
+//}
+
 //- (IBAction)unwindSegue1:(UIStoryboardSegue *)sender
 //{
 //    NSLog(@"unwindSegue1");

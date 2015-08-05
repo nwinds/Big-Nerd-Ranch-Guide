@@ -16,6 +16,8 @@
 #import "WXGDetailViewController.h"
 #import "WXGMenuItem.h"
 
+#import "AMZNLoginController.h"
+
 static NSString *const menuCellIdentifier = @"rotationCell";
 
 @interface IndexViewController () <UITabBarDelegate, UITableViewDataSource, YALContextMenuTableViewDelegate>
@@ -219,9 +221,16 @@ static const CGFloat kMenuWidth = 80;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"MenuViewControllerSegue"]) {
         self.menuViewController = (WXGMenuViewController *)[segue.destinationViewController topViewController];
-    } else if ([segue.identifier isEqualToString:@"DetailViewControllerSegue"]) {
+    }
+    else if ([segue.identifier isEqualToString:@"DetailViewControllerSegue"]) {
         self.detailViewController = (WXGDetailViewController *)[segue.destinationViewController topViewController];
     }
+//    else if ([[segue identifier] isEqualToString:@"MainToCheck"]){
+//        AMZNLoginController *amazonVC = [segue destinationViewController];
+//        amazonVC.showArray = [[NSArray alloc] initWithArray:_currentAction];
+//        
+//        amazonVC.delegate = self;
+//    }
 }
 
 // 更改状态栏样式
@@ -235,7 +244,11 @@ static const CGFloat kMenuWidth = 80;
 // backButton
 - (IBAction)unwindSegue:(UIStoryboardSegue *)sender
 {
-    NSLog(@"unwindSegue");
+    NSLog(@"unwindSegue: backButton pressed down");
 }
-
+//#pragma mark -Data delegate handle
+//- (void)IndexDataViewController:(AMZNLoginController *)controller didFinishLoadData:(NSMutableArray *)loadedArray
+//{
+//    self.currentArray = loadedArray;
+//}
 @end
