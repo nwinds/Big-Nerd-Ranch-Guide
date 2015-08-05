@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
+@property (strong, nonatomic) id firstViewController;
 @property (strong, nonatomic) IBOutlet UITextField *secondPageData;
 @property (strong, nonatomic) NSString *param;
+
+
 - (IBAction)closeWin:(id)sender;
 @end

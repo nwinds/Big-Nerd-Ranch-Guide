@@ -13,9 +13,19 @@
 @end
 
 @implementation SecondViewController
+@synthesize firstViewController;
 @synthesize param;
 @synthesize secondPageData;
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    if ([firstViewController respondsToSelector:@selector(setEditedData:)]) {
+        [secondPageData endEditing:YES];
+        [firstViewController setValue:secondPageData.text forKey:@"editedData"];
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

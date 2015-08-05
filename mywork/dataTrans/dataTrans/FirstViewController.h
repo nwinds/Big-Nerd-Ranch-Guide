@@ -9,6 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface FirstViewController : UIViewController
+#pragma mark -Recieve data from child
+@property (strong, nonatomic) NSString *editedData;
+
+#pragma mark -Data display
 @property (strong, nonatomic) IBOutlet UITextField *firstPageData;
 
 @end
