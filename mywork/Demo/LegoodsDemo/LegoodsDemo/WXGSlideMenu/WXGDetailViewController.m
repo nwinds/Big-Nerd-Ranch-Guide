@@ -22,7 +22,30 @@
 @end
 
 @implementation WXGDetailViewController
+#pragma mark -Data trans
+@synthesize page1Data;
+@synthesize editData;
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSString *data = page1Data.text;
+    UIViewController *view = segue.destinationViewController;
+    if ([view respondsToSelector:@selector(setParam:)]) {
+        [view setValue:data forKey:@"param"];
+    }
+    // Note: namiming with lower or upper letter MATTERS here!
+    if ([view respondsToSelector:@selector(setDetailViewController:)]) {
+        [view setValue:self forKey:@"detailViewController"];
+    }
+}
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"viewWillAppear");
+    [super viewWillAppear:animated];
+    page1Data.text = editData;
+}
+
+#pragma mark -View liifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     

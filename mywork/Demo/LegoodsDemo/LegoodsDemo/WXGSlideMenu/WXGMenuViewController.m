@@ -18,6 +18,9 @@
 
 @implementation WXGMenuViewController
 
+
+
+#pragma mark -Menu
 - (NSArray *)menuItems {
     if (!_menuItems) {
         NSArray *dicts = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MenuItems" ofType:@"plist"]];

@@ -21,9 +21,16 @@
 //@end
 
 @interface AMZNLoginController : UIViewController
+#pragma mark -Data trans
+@property (strong, nonatomic) NSString *param;
+
+@property (strong, nonatomic) id detailViewController;
+- (IBAction)closeButton:(id)sender;
+
 #pragma mark -Navigation Item
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
-@property (strong, nonatomic) IBOutlet UITextView *infoField;
+@property (strong, nonatomic) IBOutlet UITextView *infoField; // alie: page2Data
+@property (strong, nonatomic) IBOutlet UITextField *page2Data;
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navigationItem;
 

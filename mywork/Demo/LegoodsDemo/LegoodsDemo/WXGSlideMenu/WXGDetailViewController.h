@@ -11,6 +11,11 @@
 
 @interface WXGDetailViewController : UIViewController
 
+#pragma mark -Data trans
+@property (strong, nonatomic) IBOutlet UITextField *page1Data;
+@property (strong, nonatomic) NSString *editData;
+#pragma mark -Button clicked
+
 @property (nonatomic, strong) WXGMenuItem *item;
 
 /**

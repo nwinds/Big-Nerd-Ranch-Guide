@@ -19,8 +19,17 @@
 #import "AMZNLogoutDelegate.h"
 
 @implementation AMZNLoginController
+#pragma mark -Data trans
+@synthesize param;
+@synthesize page2Data;
 
-@synthesize userProfile, navigationItem, logoutButton, loginButton, infoField;
+@synthesize detailViewController;
+
+
+#pragma mark -Navigation Item
+@synthesize infoField; // page2Data
+
+@synthesize userProfile, navigationItem, logoutButton, loginButton;
 
 NSString* userLoggedOutMessage = @"Welcome to Login with Amazon!\nIf this is your first time logging in, you will be asked to give permission for this application to access your profile data.";
 NSString* userLoggedInMessage = @"Welcome, %@ \n Your email is %@.";
@@ -92,16 +101,22 @@ BOOL isUserSignedIn;
     self.loginButton.hidden = false;
     self.navigationItem.rightBarButtonItem = nil;
     self.infoField.text = userLoggedOutMessage;
+//    self.param = userLoggedOutMessage;
     self.infoField.hidden = false;
 }
 
 - (void)viewDidLoad {
     self.navigationItem.leftBarButtonItem = self.backButton;
+    
+    // test for data trans
+    self.page2Data.text = param;
+    
     if (isUserSignedIn)
         [self loadSignedInUser];
     
-    else
+    else {
         [self showLogInPage];
+    }
     float systemVersion=[[[UIDevice currentDevice] systemVersion] floatValue];
     if(systemVersion>=7.0f)
     {
@@ -115,25 +130,19 @@ BOOL isUserSignedIn;
     }
 }
 
-//#pragma mark -Data delegate handle
-//- (void)callParentViewControllerData
-//{
-//    [self.delegate IndexDataViewController:self didFinishLoadData:testArray];
-//}
+#pragma mark -Data trans
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    if ([detailViewController respondsToSelector:@selector(setEditData:)]) {
+        [page2Data endEditing:YES];
+        [detailViewController setValue:page2Data.text forKey:@"editData"];
+    }
+}
 
-//- (IBAction)unwindSegue1:(UIStoryboardSegue *)sender
-//{
-//    NSLog(@"unwindSegue1");
-//}
-
-//- (void)dealloc {
-//    self.navigationItem = nil;
-//    self.infoField = nil;
-//    self.loginButton = nil;
-//    self.logoutButton = nil;
-//    self.userProfile = nil;
-//    
-//    [super dealloc];
-//}
-
+- (IBAction)closeButton:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 @end
