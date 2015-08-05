@@ -94,6 +94,7 @@ BOOL isUserSignedIn;
     self.navigationItem.rightBarButtonItem = self.logoutButton;
     self.infoField.text = [NSString stringWithFormat:@"Welcome, %@ \n Your email is %@.", [userProfile objectForKey:@"name"], [userProfile objectForKey:@"email"]];
     self.infoField.hidden = false;
+    self.param = [NSString stringWithFormat:@"%@", [userProfile objectForKey:@"name"]];
 }
 
 - (void)showLogInPage {
@@ -103,6 +104,7 @@ BOOL isUserSignedIn;
     self.infoField.text = userLoggedOutMessage;
 //    self.param = userLoggedOutMessage;
     self.infoField.hidden = false;
+//    self.param = 
 }
 
 - (void)viewDidLoad {
