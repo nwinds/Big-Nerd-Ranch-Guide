@@ -45,8 +45,6 @@
     [parentViewController showLogInPage];
 }
 
-//- (void)dealloc {
-//    [parentViewController release];
-//    [super dealloc];
-//}
+
+
 @end

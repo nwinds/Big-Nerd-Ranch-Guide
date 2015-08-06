@@ -6,6 +6,7 @@
 //  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
 
+//  Edite by zmy on 15/8/3
 #import <UIKit/UIKit.h>
 @class WXGMenuItem;
 

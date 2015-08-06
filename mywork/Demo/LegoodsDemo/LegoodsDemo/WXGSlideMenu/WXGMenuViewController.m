@@ -18,21 +18,7 @@
 
 @implementation WXGMenuViewController
 
-
-
-#pragma mark -Menu
-- (NSArray *)menuItems {
-    if (!_menuItems) {
-        NSArray *dicts = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MenuItems" ofType:@"plist"]];
-        NSMutableArray *array = @[].mutableCopy;
-        for (NSDictionary *dict in dicts) {
-            WXGMenuItem *item = [WXGMenuItem itemWithDict:dict];
-            [array addObject:item];
-        }
-        _menuItems = array.copy;
-    }
-    return _menuItems;
-}
+#pragma mark -View lifecycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,6 +33,23 @@
     self.view.layer.anchorPoint = CGPointMake(1, 0.5);
 }
 
+
+#pragma mark -Menu
+// bug need fixed later by zmy 8/6/15
+- (NSArray *)menuItems {
+    if (!_menuItems) {
+        NSArray *dicts = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MenuItems" ofType:@"plist"]];
+        NSMutableArray *array = @[].mutableCopy;
+        for (NSDictionary *dict in dicts) {
+            WXGMenuItem *item = [WXGMenuItem itemWithDict:dict];
+            [array addObject:item];
+        }
+        _menuItems = array.copy;
+    }
+    return _menuItems;
+}
+
+#pragma mark -Table view
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.menuItems.count;
 }

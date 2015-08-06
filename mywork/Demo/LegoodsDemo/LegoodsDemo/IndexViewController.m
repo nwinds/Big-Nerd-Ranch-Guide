@@ -51,11 +51,7 @@ static NSString *const menuCellIdentifier = @"rotationCell";
     [self initiateMenuOptions];
     // Set custom nabigation bar with a bigger height
     [self.navigationController setValue:[[YALNavigationBar alloc] init] forKeyPath:@"navigationBar"];
-
-//    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    [self.webView loadRequest:request];
-//    
+    
  
     // 注册菜单视图的点击事件
     self.menuViewController.menuDidClick = ^(WXGMenuItem *item, BOOL animated) {
@@ -69,11 +65,7 @@ static NSString *const menuCellIdentifier = @"rotationCell";
     };
 
 }
-//
-//- (BOOL)prefersStatusBarHidden
-//{
-//    return YES;
-//}
+
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
@@ -99,7 +91,7 @@ static NSString *const menuCellIdentifier = @"rotationCell";
 }
 
 
-#pragma mark -IBAction
+#pragma mark -Menu
 - (IBAction)presentMenuButtonTapped:(UIBarButtonItem *)sender
 {
     // Init YALContextMenuTableView tableView
@@ -122,7 +114,7 @@ static NSString *const menuCellIdentifier = @"rotationCell";
 
 
 
-#pragma mark -local methods
+#pragma mark -Menu helper
 - (void)initiateMenuOptions
 {
     self.menuTitles = @[@"",
@@ -141,13 +133,13 @@ static NSString *const menuCellIdentifier = @"rotationCell";
 }
 
 
-#pragma mark -YALContextMenuTableViewDelegate
+// YALContextMenuTableViewDelegate
 - (void)contextMenuTableView:(YALContextMenuTableView *)contextMenuTableView didDismissWithIndexPath:(NSIndexPath *)indexPath
 {
     NSLog(@"Menu dismissed with indexpath = %@", indexPath);
 }
 
-#pragma mark -UITableViewDataSource, UITableViewDelegate
+#pragma mark -Table view
 - (void)tableView:(YALContextMenuTableView *)tableView
         didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -178,9 +170,7 @@ static NSString *const menuCellIdentifier = @"rotationCell";
     return cell;
 }
 
-#pragma mark - Slide menu
-//@interface WXGContainerViewController () <UIScrollViewDelegate>
-
+#pragma mark -Slide menu
 
 static const CGFloat kMenuWidth = 80;
 
@@ -225,12 +215,6 @@ static const CGFloat kMenuWidth = 80;
     else if ([segue.identifier isEqualToString:@"DetailViewControllerSegue"]) {
         self.detailViewController = (WXGDetailViewController *)[segue.destinationViewController topViewController];
     }
-//    else if ([[segue identifier] isEqualToString:@"MainToCheck"]){
-//        AMZNLoginController *amazonVC = [segue destinationViewController];
-//        amazonVC.showArray = [[NSArray alloc] initWithArray:_currentAction];
-//        
-//        amazonVC.delegate = self;
-//    }
 }
 
 // 更改状态栏样式
@@ -241,14 +225,10 @@ static const CGFloat kMenuWidth = 80;
 
 #pragma mark -Navigation Item login subview
 
-// backButton
+// backButton(don't plug in this funtion(had already done with another way
 - (IBAction)unwindSegue:(UIStoryboardSegue *)sender
 {
     NSLog(@"unwindSegue: backButton pressed down");
 }
-//#pragma mark -Data delegate handle
-//- (void)IndexDataViewController:(AMZNLoginController *)controller didFinishLoadData:(NSMutableArray *)loadedArray
-//{
-//    self.currentArray = loadedArray;
-//}
+
 @end

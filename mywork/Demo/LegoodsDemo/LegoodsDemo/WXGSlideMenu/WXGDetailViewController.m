@@ -15,7 +15,7 @@
 @property (assign, nonatomic) IBOutlet UIWebView *webView;
 
 #pragma mark -UIImageView
-@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
+//@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 
 @property (nonatomic, weak) UIImageView *leftBarIcon;
 
@@ -27,11 +27,11 @@
 @synthesize editData;
 
 #pragma mark -Login access token
-//transision between parent and sub views
+// transision between parent and sub views
 @synthesize parentPageData;
 
 
-
+#pragma mark -Storyboard handler
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSString *data = page1Data.text;
@@ -50,21 +50,22 @@
         [view setValue:dataAccessToken forKey:@"paramAccessToken"];
     }
 }
+
+#pragma mark -View lifecycle
+
 - (void)viewWillAppear:(BOOL)animated
 {
-//    NSLog(@"viewWillAppear");
     [super viewWillAppear:animated];
     page1Data.text = editData;
     
     // Init test 1
     parentPageData.text = @"access token";// Test 1 through!
-    
 }
 
-#pragma mark -View liifecycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // Navigation Item handler
     // 去掉导航条下面的阴影效果的那条线
     self.navigationController.navigationBar.clipsToBounds = YES;
     
@@ -75,20 +76,23 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(leftBarButtonClick)];
     [wrapView addGestureRecognizer:tap];
     
+    // leftBar and rightBar
     UIImageView *leftBarIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Hamburger"]];
     self.leftBarIcon = leftBarIcon;
-    
     [wrapView addSubview:leftBarIcon];
-    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:wrapView];
+    // rightBar code here
+    // ...
     
-    // Load Web page
+    
+    // Webview handler
 //    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
     NSURL *url = [NSURL URLWithString:@"https://www.legoods.com:2443/handle_login.php"];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
 }
 
+#pragma mark -Navigation Item helper
 // 顶部按钮点击事件
 - (void)leftBarButtonClick {
     if (self.leftBarButtonDidClick) {
@@ -104,8 +108,12 @@
 
 - (void)setItem:(WXGMenuItem *)item {
     _item = item;
+
+    // Sub view icon
+    // Should thumbnail sized image added later on?
+//    self.detailImage.image = [UIImage imageNamed:item.bigImage];
     
-    self.detailImage.image = [UIImage imageNamed:item.bigImage];
+    // Background color
     CGFloat r = [item.colors[0] doubleValue];
     CGFloat g = [item.colors[1] doubleValue];
     CGFloat b = [item.colors[2] doubleValue];

@@ -50,10 +50,6 @@
         [[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] show];
     }
 }
-//
-//- (void)dealloc {
-//    [parentViewController release];
-//    [super dealloc];
-//}
+
 
 @end

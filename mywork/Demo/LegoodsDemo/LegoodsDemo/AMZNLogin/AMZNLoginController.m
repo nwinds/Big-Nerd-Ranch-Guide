@@ -19,24 +19,37 @@
 #import "AMZNLogoutDelegate.h"
 
 @implementation AMZNLoginController
+
 #pragma mark -Data trans
 @synthesize param;
 @synthesize page2Data;
-
 @synthesize detailViewController;
+
+
 #pragma mark -Login access token
 @synthesize paramAccessToken;
 @synthesize subPageData;
 
+
 #pragma mark -Navigation Item
-@synthesize infoField; // page2Data
+@synthesize navigationItem, logoutButton, loginButton;
 
-@synthesize userProfile, navigationItem, logoutButton, loginButton;
+#pragma mark -Text View for user info
+@synthesize infoField;
 
-NSString* userLoggedOutMessage = @"Welcome to Login with Amazon!\nIf this is your first time logging in, you will be asked to give permission for this application to access your profile data.";
-NSString* userLoggedInMessage = @"Welcome, %@ \n Your email is %@.";
+#pragma mark -Amazon user profile
+@synthesize userProfile;
+
+
+NSString* userLoggedOutMessage =
+            @"Welcome to Login with Amazon!\nIf this is your first time logging in, you will be asked to give permission for this application to access your profile data.";
+NSString* userLoggedInMessage =
+            @"Welcome, %@ \n Your email is %@.";
+
+// public var? should config later
 BOOL isUserSignedIn;
 
+#pragma mark -View show helper
 - (IBAction)onLogInButtonClicked:(id)sender
 {
     // Make authorize call to SDK to get authorization from the user. While making the call you can specify the scopes for which the user authorization is needed.
@@ -74,7 +87,7 @@ BOOL isUserSignedIn;
     return NO;
 }
 
-#pragma mark View controller specific functions
+#pragma mark -Amazon user login handler
 - (void)checkIsUserSignedIn
 {
     NSLog(@"Amazon login: check if user is login");
@@ -92,6 +105,8 @@ BOOL isUserSignedIn;
     self.navigationItem.rightBarButtonItem = self.logoutButton;
     self.infoField.text = [NSString stringWithFormat:@"Welcome, %@ \n Your email is %@.", [userProfile objectForKey:@"name"], [userProfile objectForKey:@"email"]];
     self.infoField.hidden = false;
+    
+    // test code
     self.param = [NSString stringWithFormat:@"%@", [userProfile objectForKey:@"name"]];
 }
 
@@ -100,19 +115,24 @@ BOOL isUserSignedIn;
     self.loginButton.hidden = false;
     self.navigationItem.rightBarButtonItem = nil;
     self.infoField.text = userLoggedOutMessage;
-//    self.param = userLoggedOutMessage;
     self.infoField.hidden = false;
-//    self.param = 
 }
 
+
+#pragma mark -View lifecycle
 - (void)viewDidLoad {
     self.navigationItem.leftBarButtonItem = self.backButton;
+    
+    
     
     // test for data trans
     self.page2Data.text = param;
     
     // Amazon login data
     self.subPageData.text = paramAccessToken;
+    
+    
+    
     
     if (isUserSignedIn)
         [self loadSignedInUser];
@@ -133,7 +153,6 @@ BOOL isUserSignedIn;
     }
 }
 
-#pragma mark -Data trans
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];

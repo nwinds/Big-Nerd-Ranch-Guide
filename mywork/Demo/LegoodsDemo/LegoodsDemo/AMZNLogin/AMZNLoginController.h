@@ -14,13 +14,9 @@
 #import <Foundation/Foundation.h>
 @class AMZNLoginController;
 
-//@protocol AMZNLoginDelegate <NSObject>
-//
-//- (void)IndexDataViewController:(AMZNLoginController *)controller didFinishLoadData:(NSMutableArray *)loadedArray;
-//
-//@end
 
 @interface AMZNLoginController : UIViewController
+
 #pragma mark -Data trans
 @property (strong, nonatomic) NSString *param;
 
@@ -37,26 +33,19 @@
 
 #pragma mark -Navigation Item
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
-@property (strong, nonatomic) IBOutlet UITextView *infoField; // alie: page2Data
+@property (strong, nonatomic) IBOutlet UITextView *infoField;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton; // leftBarButton of Nav Item
 
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navigationItem;
-
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+
 #pragma mark -Amazon user profile
 @property (strong) NSDictionary* userProfile;
 
 
-//#pragma mark -Data transformation
-//@property (strong, nonatomic) NSArray *showArray;
-
+#pragma mark -View show helper
 - (void)showLogInPage;
-
 - (void)loadSignedInUser;
-
 - (void)checkIsUserSignedIn;
-
-//#pragma mark -Data delegate
-//@property (nonatomic, weak) id <AMZNLoginDelegate> delegate;
 
 @end
