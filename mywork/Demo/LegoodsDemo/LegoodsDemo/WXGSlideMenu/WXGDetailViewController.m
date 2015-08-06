@@ -22,9 +22,9 @@
 @end
 
 @implementation WXGDetailViewController
-#pragma mark -Data trans
-@synthesize page1Data;
-@synthesize editData;
+//#pragma mark -Data trans
+//@synthesize page1Data;
+//@synthesize editData;
 
 #pragma mark -Login access token
 // transision between parent and sub views
@@ -34,15 +34,15 @@
 #pragma mark -Storyboard handler
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSString *data = page1Data.text;
+//    NSString *data = page1Data.text;
     UIViewController *view = segue.destinationViewController;
-    if ([view respondsToSelector:@selector(setParam:)]) {
-        [view setValue:data forKey:@"param"];
-    }
-    // Note: namiming with lower or upper letter MATTERS here!
-    if ([view respondsToSelector:@selector(setDetailViewController:)]) {
-        [view setValue:self forKey:@"detailViewController"];
-    }
+//    if ([view respondsToSelector:@selector(setParam:)]) {
+//        [view setValue:data forKey:@"param"];
+//    }
+//    // Note: namiming with lower or upper letter MATTERS here!
+//    if ([view respondsToSelector:@selector(setDetailViewController:)]) {
+//        [view setValue:self forKey:@"detailViewController"];
+//    }
     
     // Amazon login access token transision
     NSString *dataAccessToken = parentPageData.text;
@@ -59,7 +59,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    page1Data.text = editData;
+//    page1Data.text = editData;
     
     // Init test 1
 //    parentPageData.text = @"access token";// Test 1 through!

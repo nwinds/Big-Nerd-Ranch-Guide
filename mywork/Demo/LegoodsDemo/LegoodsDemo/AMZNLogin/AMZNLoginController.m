@@ -20,10 +20,10 @@
 
 @implementation AMZNLoginController
 
-#pragma mark -Data trans
-@synthesize param;
-@synthesize page2Data;
-@synthesize detailViewController;
+//#pragma mark -Data trans
+//@synthesize param;
+//@synthesize page2Data;
+//@synthesize detailViewController;
 
 
 #pragma mark -Login access token
@@ -107,7 +107,7 @@ BOOL isUserSignedIn;
     self.infoField.hidden = false;
     
     // test code
-    self.param = [NSString stringWithFormat:@"%@", [userProfile objectForKey:@"name"]];
+//    self.param = [NSString stringWithFormat:@"%@", [userProfile objectForKey:@"name"]];
     self.subPageData.text = [NSString stringWithFormat:@"user: %@", [userProfile objectForKey:@"name"]];
 }
 
@@ -126,8 +126,8 @@ BOOL isUserSignedIn;
     
     
     
-    // test for data trans
-    self.page2Data.text = param;
+//    // test for data trans
+//    self.page2Data.text = param;
     
     // Amazon login data
     self.subPageData.text = paramAccessToken;
@@ -158,12 +158,12 @@ BOOL isUserSignedIn;
 {
     [super viewWillDisappear:animated];
     
-    if ([detailViewController respondsToSelector:@selector(setEditData:)]) {
-        [page2Data endEditing:YES];
-        [detailViewController setValue:page2Data.text forKey:@"editData"];
-    }
+//    if ([detailViewController respondsToSelector:@selector(setEditData:)]) {
+//        [page2Data endEditing:YES];
+//        [detailViewController setValue:page2Data.text forKey:@"editData"];
+//    }
     
-    if ([detailViewController respondsToSelector:@selector(setEditAccessToken:)]) {
+    if ([userLoginController respondsToSelector:@selector(setEditAccessToken:)]) {
         [subPageData endEditing:YES];
         [userLoginController setValue:subPageData.text forKey:@"editAccessToken"];
     }
