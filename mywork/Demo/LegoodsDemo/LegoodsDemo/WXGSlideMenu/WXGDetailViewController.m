@@ -29,7 +29,7 @@
 #pragma mark -Login access token
 // transision between parent and sub views
 @synthesize parentPageData;
-
+@synthesize editAccessToken;
 
 #pragma mark -Storyboard handler
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -49,6 +49,9 @@
     if ([view respondsToSelector:@selector(setParamAccessToken:)]) {
         [view setValue:dataAccessToken forKey:@"paramAccessToken"];
     }
+    if ([view respondsToSelector:@selector(setUserLoginController:)]) {
+        [view setValue:self forKey:@"userLoginController"];
+    }
 }
 
 #pragma mark -View lifecycle
@@ -59,7 +62,8 @@
     page1Data.text = editData;
     
     // Init test 1
-    parentPageData.text = @"access token";// Test 1 through!
+//    parentPageData.text = @"access token";// Test 1 through!
+    parentPageData.text = editAccessToken;
 }
 
 - (void)viewDidLoad {

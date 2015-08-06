@@ -29,7 +29,7 @@
 #pragma mark -Login access token
 @synthesize paramAccessToken;
 @synthesize subPageData;
-
+@synthesize userLoginController;
 
 #pragma mark -Navigation Item
 @synthesize navigationItem, logoutButton, loginButton;
@@ -108,6 +108,7 @@ BOOL isUserSignedIn;
     
     // test code
     self.param = [NSString stringWithFormat:@"%@", [userProfile objectForKey:@"name"]];
+    self.subPageData.text = [NSString stringWithFormat:@"user: %@", [userProfile objectForKey:@"name"]];
 }
 
 - (void)showLogInPage {
@@ -160,6 +161,11 @@ BOOL isUserSignedIn;
     if ([detailViewController respondsToSelector:@selector(setEditData:)]) {
         [page2Data endEditing:YES];
         [detailViewController setValue:page2Data.text forKey:@"editData"];
+    }
+    
+    if ([detailViewController respondsToSelector:@selector(setEditAccessToken:)]) {
+        [subPageData endEditing:YES];
+        [userLoginController setValue:subPageData.text forKey:@"editAccessToken"];
     }
 }
 

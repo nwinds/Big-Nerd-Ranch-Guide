@@ -19,6 +19,7 @@
 
 #pragma mark -Login access token
 @property (strong, nonatomic) IBOutlet UITextField *parentPageData;
+@property (strong, nonatomic) NSString *editAccessToken;
 
 #pragma mark -Button clicked
 

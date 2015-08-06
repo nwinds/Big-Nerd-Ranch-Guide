@@ -30,6 +30,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *subPageData;
 - (IBAction)closeAndReturn:(id)sender;
 
+@property (strong, nonatomic) id userLoginController;
+
+
 
 #pragma mark -Navigation Item
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
