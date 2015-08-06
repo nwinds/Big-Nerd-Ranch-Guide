@@ -26,6 +26,12 @@
 @synthesize page1Data;
 @synthesize editData;
 
+#pragma mark -Login access token
+//transision between parent and sub views
+@synthesize parentPageData;
+
+
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     NSString *data = page1Data.text;
@@ -37,12 +43,22 @@
     if ([view respondsToSelector:@selector(setDetailViewController:)]) {
         [view setValue:self forKey:@"detailViewController"];
     }
+    
+    // Amazon login access token transision
+    NSString *dataAccessToken = parentPageData.text;
+    if ([view respondsToSelector:@selector(setParamAccessToken:)]) {
+        [view setValue:dataAccessToken forKey:@"paramAccessToken"];
+    }
 }
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"viewWillAppear");
+//    NSLog(@"viewWillAppear");
     [super viewWillAppear:animated];
     page1Data.text = editData;
+    
+    // Init test 1
+    parentPageData.text = @"access token";// Test 1 through!
+    
 }
 
 #pragma mark -View liifecycle

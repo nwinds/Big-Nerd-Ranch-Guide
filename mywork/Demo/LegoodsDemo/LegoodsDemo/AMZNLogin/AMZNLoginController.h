@@ -27,10 +27,18 @@
 @property (strong, nonatomic) id detailViewController;
 - (IBAction)closeButton:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UITextField *page2Data;
+
+#pragma mark -Login access token
+@property (strong, nonatomic) NSString *paramAccessToken;
+@property (strong, nonatomic) IBOutlet UITextField *subPageData;
+- (IBAction)closeAndReturn:(id)sender;
+
+
 #pragma mark -Navigation Item
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 @property (strong, nonatomic) IBOutlet UITextView *infoField; // alie: page2Data
-@property (strong, nonatomic) IBOutlet UITextField *page2Data;
+
 @property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navigationItem;
 

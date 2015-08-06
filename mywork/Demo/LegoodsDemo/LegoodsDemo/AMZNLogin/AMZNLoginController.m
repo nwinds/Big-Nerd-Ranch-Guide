@@ -24,7 +24,9 @@
 @synthesize page2Data;
 
 @synthesize detailViewController;
-
+#pragma mark -Login access token
+@synthesize paramAccessToken;
+@synthesize subPageData;
 
 #pragma mark -Navigation Item
 @synthesize infoField; // page2Data
@@ -83,10 +85,6 @@ BOOL isUserSignedIn;
     NSLog(@"Amazon login: AccessToken in delegate: %@", delegate.description);
 }
 
-//- (void)setWebView:
-//{
-
-//}
 
 - (void)loadSignedInUser {
     isUserSignedIn = true;
@@ -112,6 +110,9 @@ BOOL isUserSignedIn;
     
     // test for data trans
     self.page2Data.text = param;
+    
+    // Amazon login data
+    self.subPageData.text = paramAccessToken;
     
     if (isUserSignedIn)
         [self loadSignedInUser];
@@ -143,7 +144,14 @@ BOOL isUserSignedIn;
     }
 }
 
+
+#pragma mark -Sub view close button clicked
 - (IBAction)closeButton:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)closeAndReturn:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }

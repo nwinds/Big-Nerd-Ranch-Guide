@@ -14,6 +14,11 @@
 #pragma mark -Data trans
 @property (strong, nonatomic) IBOutlet UITextField *page1Data;
 @property (strong, nonatomic) NSString *editData;
+
+
+#pragma mark -Login access token
+@property (strong, nonatomic) IBOutlet UITextField *parentPageData;
+
 #pragma mark -Button clicked
 
 @property (nonatomic, strong) WXGMenuItem *item;
