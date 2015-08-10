@@ -78,9 +78,9 @@
     
     // Webview handler
 //    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
-    NSURL *url = [NSURL URLWithString:@"https://www.legoods.com:2443/handle_login.php"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    [self.webView loadRequest:request];
+//    NSURL *url = [NSURL URLWithString:@"https://www.legoods.com:2443/handle_login.php"];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+//    [self.webView loadRequest:request];
 }
 
 #pragma mark -Navigation Item helper

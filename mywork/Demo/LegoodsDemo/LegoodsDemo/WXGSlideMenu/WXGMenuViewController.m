@@ -38,7 +38,7 @@
 // bug need fixed later by zmy 8/6/15
 - (NSArray *)menuItems {
     if (!_menuItems) {
-        NSArray *dicts = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"MenuItems" ofType:@"plist"]];
+        NSArray *dicts = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle]  pathForResource:@"MenuItems" ofType:@"plist"]];
         NSMutableArray *array = @[].mutableCopy;
         for (NSDictionary *dict in dicts) {
             WXGMenuItem *item = [WXGMenuItem itemWithDict:dict];

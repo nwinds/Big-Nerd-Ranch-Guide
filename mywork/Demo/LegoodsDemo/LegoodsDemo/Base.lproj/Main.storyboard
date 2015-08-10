@@ -591,13 +591,10 @@ Internet traffic will be routed through it.</string>
         <scene sceneID="iQK-Gg-hbq">
             <objects>
                 <navigationController id="HmL-nb-sba" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jPy-ma-0or">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="jPy-ma-0or">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="nQ1-6V-jml">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
                     <connections>
                         <segue destination="JZH-YX-WUC" kind="relationship" relationship="rootViewController" id="Nje-bY-SNF"/>
                     </connections>
@@ -610,7 +607,7 @@ Internet traffic will be routed through it.</string>
         <scene sceneID="mRk-uj-lqD">
             <objects>
                 <navigationController id="Q7I-l7-iPz" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7ri-mQ-3HR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="7ri-mQ-3HR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

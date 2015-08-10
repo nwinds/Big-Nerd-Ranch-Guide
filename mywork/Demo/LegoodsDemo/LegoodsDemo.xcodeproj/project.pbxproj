@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		268505421B784761000D37F1 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 268505411B784761000D37F1 /* MenuItems.plist */; };
 		268EBE821B61DAA20052FDCB /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268EBE811B61DAA20052FDCB /* IndexViewController.m */; };
 		26995C331B60DE930000DEED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C321B60DE930000DEED /* main.m */; };
 		26995C361B60DE930000DEED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C351B60DE930000DEED /* AppDelegate.m */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		268505411B784761000D37F1 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MenuItems.plist; path = WXGSlideMenu/MenuItems.plist; sourceTree = "<group>"; };
 		268EBE801B61DAA20052FDCB /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
 		268EBE811B61DAA20052FDCB /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
 		26995C2D1B60DE930000DEED /* LegoodsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoodsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,8 +71,8 @@
 		269BBD321B67470E00D58040 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		269D40991B621914003D63BD /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithAmazon.framework; sourceTree = "<group>"; };
 		269D409B1B6219FD003D63BD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		269D409D1B622A8D003D63BD /* HighchartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HighchartViewController.h; sourceTree = "<group>"; };
-		269D409E1B622A8D003D63BD /* HighchartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HighchartViewController.m; sourceTree = "<group>"; };
+		269D409D1B622A8D003D63BD /* HighchartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighchartViewController.h; path = LegoodsDemo/HighchartViewController.h; sourceTree = "<group>"; };
+		269D409E1B622A8D003D63BD /* HighchartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighchartViewController.m; path = LegoodsDemo/HighchartViewController.m; sourceTree = "<group>"; };
 		26CEAFDD1B68B4A100DA40DD /* ContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextMenuCell.h; sourceTree = "<group>"; };
 		26CEAFDE1B68B4A100DA40DD /* ContextMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextMenuCell.m; sourceTree = "<group>"; };
 		26CEAFDF1B68B4A100DA40DD /* ContextMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContextMenuCell.xib; sourceTree = "<group>"; };
@@ -165,8 +167,6 @@
 				26CE22421B66217B006CC97E /* Amazon Login */,
 				26995C341B60DE930000DEED /* AppDelegate.h */,
 				26995C351B60DE930000DEED /* AppDelegate.m */,
-				269D409D1B622A8D003D63BD /* HighchartViewController.h */,
-				269D409E1B622A8D003D63BD /* HighchartViewController.m */,
 				268EBE801B61DAA20052FDCB /* IndexViewController.h */,
 				268EBE811B61DAA20052FDCB /* IndexViewController.m */,
 				26995C3A1B60DE930000DEED /* Main.storyboard */,
@@ -206,6 +206,8 @@
 		269BBD2F1B673E6000D58040 /* Highcharts */ = {
 			isa = PBXGroup;
 			children = (
+				269D409D1B622A8D003D63BD /* HighchartViewController.h */,
+				269D409E1B622A8D003D63BD /* HighchartViewController.m */,
 				26DFD5611B69D17C008EF478 /* highcharts.js */,
 				26DFD5621B69D17C008EF478 /* HighchartsView.html */,
 				26DFD5631B69D17C008EF478 /* HighchartsWebViewController.h */,
@@ -291,6 +293,7 @@
 		26DFD54C1B69CF8A008EF478 /* WXGSlideMenu */ = {
 			isa = PBXGroup;
 			children = (
+				268505411B784761000D37F1 /* MenuItems.plist */,
 				26DFD56E1B69D2D4008EF478 /* WXGDetailViewController.h */,
 				26DFD56F1B69D2D4008EF478 /* WXGDetailViewController.m */,
 				26DFD5701B69D2D4008EF478 /* WXGMenuCell.h */,
@@ -391,6 +394,7 @@
 				26DFD5681B69D17C008EF478 /* HighchartsView.html in Resources */,
 				26DFD5671B69D17C008EF478 /* highcharts.js in Resources */,
 				26DFD56A1B69D17C008EF478 /* HighchartsWebViewController.xib in Resources */,
+				268505421B784761000D37F1 /* MenuItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
