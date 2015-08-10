@@ -20,12 +20,6 @@
 
 @implementation AMZNLoginController
 
-//#pragma mark -Data trans
-//@synthesize param;
-//@synthesize page2Data;
-//@synthesize detailViewController;
-
-
 #pragma mark -Login access token
 @synthesize paramAccessToken;
 @synthesize subPageData;
@@ -65,7 +59,9 @@ BOOL isUserSignedIn;
     
     // Allows the user to login and, if necessary, authorize the app for the requested scopes.
     [AIMobileLib authorizeUserForScopes:requestScopes delegate:delegate];
-    NSLog(@"Amazon login: user login authorized");
+    NSLog(@"Amazon login: waiting for user to login");
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)logoutButtonClicked:(id)sender
@@ -107,7 +103,6 @@ BOOL isUserSignedIn;
     self.infoField.hidden = false;
     
     // test code
-//    self.param = [NSString stringWithFormat:@"%@", [userProfile objectForKey:@"name"]];
     self.subPageData.text = [NSString stringWithFormat:@"user: %@", [userProfile objectForKey:@"name"]];
 }
 
@@ -124,15 +119,8 @@ BOOL isUserSignedIn;
 - (void)viewDidLoad {
     self.navigationItem.leftBarButtonItem = self.backButton;
     
-    
-    
-//    // test for data trans
-//    self.page2Data.text = param;
-    
     // Amazon login data
     self.subPageData.text = paramAccessToken;
-    
-    
     
     
     if (isUserSignedIn)
@@ -170,14 +158,13 @@ BOOL isUserSignedIn;
 }
 
 
-#pragma mark -Sub view close button clicked
-- (IBAction)closeButton:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+#pragma mark -Sub view button clicked
 
 - (IBAction)closeAndReturn:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+- (IBAction)checkIfLogged:(id)sender {
+    [self checkIsUserSignedIn];
 }
 @end

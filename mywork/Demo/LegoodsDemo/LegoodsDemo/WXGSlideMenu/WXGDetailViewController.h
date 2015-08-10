@@ -6,23 +6,17 @@
 //  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
 
-//  Edite by zmy on 15/8/3
+//  Edited by zmy on 15/8/3
 #import <UIKit/UIKit.h>
 @class WXGMenuItem;
 
 @interface WXGDetailViewController : UIViewController
 
-//#pragma mark -Data trans
-//@property (strong, nonatomic) IBOutlet UITextField *page1Data;
-//@property (strong, nonatomic) NSString *editData;
-//
-
 #pragma mark -Login access token
 @property (strong, nonatomic) IBOutlet UITextField *parentPageData;
 @property (strong, nonatomic) NSString *editAccessToken;
 
-#pragma mark -Button clicked
-
+#pragma mark -Button event
 @property (nonatomic, strong) WXGMenuItem *item;
 
 /**

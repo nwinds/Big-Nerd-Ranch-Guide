@@ -61,6 +61,10 @@ BOOL isUserSignedIn;
     self.infoField.hidden = false;
 }
 
+- (IBAction)closeWindow:(id)sender {
+        [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)showLogInPage {
     isUserSignedIn = false;
     self.loginButton.hidden = false;

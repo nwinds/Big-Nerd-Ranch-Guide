@@ -18,6 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
     return YES;
 }
 
@@ -45,7 +47,6 @@
 
 
 
-
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
@@ -56,8 +57,10 @@
     BOOL isValidRedirectSignInURL =
     [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
     
-    // For tracing
-    NSLog(@"url:%@", url);
+    // url phasing tracing
+    NSLog(@"caller: %@", sourceApplication);
+    NSLog(@"URL is: %@", url);
+    
     if(!isValidRedirectSignInURL)
         return NO;
     

@@ -22,6 +22,7 @@
 
 @property(retain) NSDictionary* userProfile;
 
+- (IBAction)closeWindow:(id)sender;
 - (void)showLogInPage;
 
 - (void)loadSignedInUser;

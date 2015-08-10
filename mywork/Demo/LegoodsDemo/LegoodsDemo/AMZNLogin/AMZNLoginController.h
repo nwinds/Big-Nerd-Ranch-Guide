@@ -17,12 +17,6 @@
 
 @interface AMZNLoginController : UIViewController
 
-//#pragma mark -Data trans
-//@property (strong, nonatomic) NSString *param;
-//@property (strong, nonatomic) id detailViewController;
-//- (IBAction)closeButton:(id)sender;
-//@property (strong, nonatomic) IBOutlet UITextField *page2Data;
-
 #pragma mark -Login access token
 @property (strong, nonatomic) NSString *paramAccessToken;
 @property (strong, nonatomic) IBOutlet UITextField *subPageData;
@@ -31,6 +25,7 @@
 @property (strong, nonatomic) id userLoginController;
 
 
+- (IBAction)checkIfLogged:(id)sender;
 
 #pragma mark -Navigation Item
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
