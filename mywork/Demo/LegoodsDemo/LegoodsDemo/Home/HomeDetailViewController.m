@@ -6,57 +6,25 @@
 //  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
 
-#import "WXGDetailViewController.h"
+#import "HomeDetailViewController.h"
 #import "WXGMenuItem.h"
 
-@interface WXGDetailViewController ()
+@interface HomeDetailViewController ()
+
+//@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 
 #pragma mark -Web HTML5
 @property (assign, nonatomic) IBOutlet UIWebView *webView;
-
-#pragma mark -UIImageView
-//@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 
 @property (nonatomic, weak) UIImageView *leftBarIcon;
 
 @end
 
-@implementation WXGDetailViewController
-
-#pragma mark -Login access token
-// transision between parent and sub views
-@synthesize parentPageData;
-@synthesize editAccessToken;
-
-#pragma mark -Storyboard handler
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    UIViewController *view = segue.destinationViewController;
-    
-    // Amazon login access token transision
-    NSString *dataAccessToken = parentPageData.text;
-    if ([view respondsToSelector:@selector(setParamAccessToken:)]) {
-        [view setValue:dataAccessToken forKey:@"paramAccessToken"];
-    }
-    if ([view respondsToSelector:@selector(setUserLoginController:)]) {
-        [view setValue:self forKey:@"userLoginController"];
-    }
-}
-
-#pragma mark -View lifecycle
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    
-    // Init test 1
-    parentPageData.text = editAccessToken;
-}
+@implementation HomeDetailViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Navigation Item handler
     // 去掉导航条下面的阴影效果的那条线
     self.navigationController.navigationBar.clipsToBounds = YES;
     
@@ -67,23 +35,23 @@
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(leftBarButtonClick)];
     [wrapView addGestureRecognizer:tap];
     
-    // leftBar and rightBar
     UIImageView *leftBarIcon = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Hamburger"]];
     self.leftBarIcon = leftBarIcon;
+    
     [wrapView addSubview:leftBarIcon];
+    
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:wrapView];
     // rightBar code here
     // ...
     
     
     // Webview handler
-//    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
-//    NSURL *url = [NSURL URLWithString:@"https://www.legoods.com:2443/handle_login.php"];
-//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//    [self.webView loadRequest:request];
+    //    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
+    NSURL *url = [NSURL URLWithString:@"https://www.legoods.com:2443/handle_login.php"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [self.webView loadRequest:request];
 }
 
-#pragma mark -Navigation Item helper
 // 顶部按钮点击事件
 - (void)leftBarButtonClick {
     if (self.leftBarButtonDidClick) {
@@ -99,18 +67,12 @@
 
 - (void)setItem:(WXGMenuItem *)item {
     _item = item;
-
-    // Sub view icon
-    // Should thumbnail sized image added later on?
-//    self.detailImage.image = [UIImage imageNamed:item.bigImage];
     
-    // Background color
+//    self.detailImage.image = [UIImage imageNamed:item.bigImage];
     CGFloat r = [item.colors[0] doubleValue];
     CGFloat g = [item.colors[1] doubleValue];
     CGFloat b = [item.colors[2] doubleValue];
     self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
 }
-
-
 
 @end

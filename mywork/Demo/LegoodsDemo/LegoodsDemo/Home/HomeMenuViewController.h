@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class WXGMenuItem;
 
-@interface WXGMenuViewController : UITableViewController
+@interface HomeMenuViewController : UITableViewController
 
 /**
  * 注册菜单视图的点击事件

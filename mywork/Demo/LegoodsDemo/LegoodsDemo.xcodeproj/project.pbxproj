@@ -7,8 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		268505421B784761000D37F1 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 268505411B784761000D37F1 /* MenuItems.plist */; };
-		268EBE821B61DAA20052FDCB /* IndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268EBE811B61DAA20052FDCB /* IndexViewController.m */; };
+		268505651B785350000D37F1 /* HomeContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055B1B785350000D37F1 /* HomeContainerViewController.m */; };
+		268505661B785350000D37F1 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055D1B785350000D37F1 /* HomeDetailViewController.m */; };
+		268505671B785350000D37F1 /* HomeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055F1B785350000D37F1 /* HomeMenuViewController.m */; };
+		268505681B785350000D37F1 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 268505601B785350000D37F1 /* MenuItems.plist */; };
+		268505691B785350000D37F1 /* WXGMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505621B785350000D37F1 /* WXGMenuCell.m */; };
+		2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505641B785350000D37F1 /* WXGMenuItem.m */; };
+		268505781B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */; };
+		268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */; };
+		2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */; };
+		2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505741B78563D000D37F1 /* AMZNLoginController.m */; };
+		2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */; };
 		26995C331B60DE930000DEED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C321B60DE930000DEED /* main.m */; };
 		26995C361B60DE930000DEED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C351B60DE930000DEED /* AppDelegate.m */; };
 		26995C3C1B60DE930000DEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3A1B60DE930000DEED /* Main.storyboard */; };
@@ -18,29 +27,7 @@
 		269BBD331B67470E00D58040 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BBD321B67470E00D58040 /* JavaScriptCore.framework */; };
 		269D409A1B621914003D63BD /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D40991B621914003D63BD /* LoginWithAmazon.framework */; };
 		269D409C1B6219FD003D63BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D409B1B6219FD003D63BD /* Security.framework */; };
-		269D409F1B622A8D003D63BD /* HighchartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 269D409E1B622A8D003D63BD /* HighchartViewController.m */; };
-		26CEAFE01B68B4A100DA40DD /* ContextMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFDE1B68B4A100DA40DD /* ContextMenuCell.m */; };
-		26CEAFE11B68B4A100DA40DD /* ContextMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26CEAFDF1B68B4A100DA40DD /* ContextMenuCell.xib */; };
-		26CEAFEA1B68C3C800DA40DD /* UIView+YALConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFE41B68C3C800DA40DD /* UIView+YALConstraints.m */; };
-		26CEAFEB1B68C3C800DA40DD /* YALContextMenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFE71B68C3C800DA40DD /* YALContextMenuTableView.m */; };
-		26CEAFEC1B68C3C800DA40DD /* YALNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CEAFE91B68C3C800DA40DD /* YALNavigationBar.m */; };
-		26DB64A11B748F8B00ABF838 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DB64A01B748F8B00ABF838 /* Reachability.m */; };
 		26DB64A31B748FBE00ABF838 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */; };
-		26DB64A61B7493C800ABF838 /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DB64A51B7493C800ABF838 /* APLViewController.m */; };
-		26DFD55C1B69D042008EF478 /* AMZNAuthorizeUserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5521B69D042008EF478 /* AMZNAuthorizeUserDelegate.m */; };
-		26DFD55D1B69D042008EF478 /* AMZNGetAccessTokenDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5541B69D042008EF478 /* AMZNGetAccessTokenDelegate.m */; };
-		26DFD55E1B69D042008EF478 /* AMZNGetProfileDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5561B69D042008EF478 /* AMZNGetProfileDelegate.m */; };
-		26DFD55F1B69D042008EF478 /* AMZNLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5581B69D042008EF478 /* AMZNLoginController.m */; };
-		26DFD5601B69D042008EF478 /* AMZNLogoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD55A1B69D042008EF478 /* AMZNLogoutDelegate.m */; };
-		26DFD5671B69D17C008EF478 /* highcharts.js in Resources */ = {isa = PBXBuildFile; fileRef = 26DFD5611B69D17C008EF478 /* highcharts.js */; };
-		26DFD5681B69D17C008EF478 /* HighchartsView.html in Resources */ = {isa = PBXBuildFile; fileRef = 26DFD5621B69D17C008EF478 /* HighchartsView.html */; };
-		26DFD5691B69D17C008EF478 /* HighchartsWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5641B69D17C008EF478 /* HighchartsWebViewController.m */; };
-		26DFD56A1B69D17C008EF478 /* HighchartsWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26DFD5651B69D17C008EF478 /* HighchartsWebViewController.xib */; };
-		26DFD56B1B69D17C008EF478 /* jquery-1.11.0.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 26DFD5661B69D17C008EF478 /* jquery-1.11.0.min.js */; };
-		26DFD5771B69D2D4008EF478 /* WXGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD56F1B69D2D4008EF478 /* WXGDetailViewController.m */; };
-		26DFD5781B69D2D4008EF478 /* WXGMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5711B69D2D4008EF478 /* WXGMenuCell.m */; };
-		26DFD5791B69D2D4008EF478 /* WXGMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5731B69D2D4008EF478 /* WXGMenuItem.m */; };
-		26DFD57A1B69D2D4008EF478 /* WXGMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26DFD5751B69D2D4008EF478 /* WXGMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,9 +41,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		268505411B784761000D37F1 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MenuItems.plist; path = WXGSlideMenu/MenuItems.plist; sourceTree = "<group>"; };
-		268EBE801B61DAA20052FDCB /* IndexViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IndexViewController.h; sourceTree = "<group>"; };
-		268EBE811B61DAA20052FDCB /* IndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IndexViewController.m; sourceTree = "<group>"; };
+		2685055A1B785350000D37F1 /* HomeContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeContainerViewController.h; path = Home/HomeContainerViewController.h; sourceTree = "<group>"; };
+		2685055B1B785350000D37F1 /* HomeContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeContainerViewController.m; path = Home/HomeContainerViewController.m; sourceTree = "<group>"; };
+		2685055C1B785350000D37F1 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeDetailViewController.h; path = Home/HomeDetailViewController.h; sourceTree = "<group>"; };
+		2685055D1B785350000D37F1 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeDetailViewController.m; path = Home/HomeDetailViewController.m; sourceTree = "<group>"; };
+		2685055E1B785350000D37F1 /* HomeMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeMenuViewController.h; path = Home/HomeMenuViewController.h; sourceTree = "<group>"; };
+		2685055F1B785350000D37F1 /* HomeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeMenuViewController.m; path = Home/HomeMenuViewController.m; sourceTree = "<group>"; };
+		268505601B785350000D37F1 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MenuItems.plist; path = Home/MenuItems.plist; sourceTree = "<group>"; };
+		268505611B785350000D37F1 /* WXGMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuCell.h; path = Home/WXGMenuCell.h; sourceTree = "<group>"; };
+		268505621B785350000D37F1 /* WXGMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuCell.m; path = Home/WXGMenuCell.m; sourceTree = "<group>"; };
+		268505631B785350000D37F1 /* WXGMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuItem.h; path = Home/WXGMenuItem.h; sourceTree = "<group>"; };
+		268505641B785350000D37F1 /* WXGMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuItem.m; path = Home/WXGMenuItem.m; sourceTree = "<group>"; };
+		2685056D1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNAuthorizeUserDelegate.h; path = AMZNLogin/AMZNAuthorizeUserDelegate.h; sourceTree = "<group>"; };
+		2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNAuthorizeUserDelegate.m; path = AMZNLogin/AMZNAuthorizeUserDelegate.m; sourceTree = "<group>"; };
+		2685056F1B78563D000D37F1 /* AMZNGetAccessTokenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNGetAccessTokenDelegate.h; path = AMZNLogin/AMZNGetAccessTokenDelegate.h; sourceTree = "<group>"; };
+		268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNGetAccessTokenDelegate.m; path = AMZNLogin/AMZNGetAccessTokenDelegate.m; sourceTree = "<group>"; };
+		268505711B78563D000D37F1 /* AMZNGetProfileDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNGetProfileDelegate.h; path = AMZNLogin/AMZNGetProfileDelegate.h; sourceTree = "<group>"; };
+		268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNGetProfileDelegate.m; path = AMZNLogin/AMZNGetProfileDelegate.m; sourceTree = "<group>"; };
+		268505731B78563D000D37F1 /* AMZNLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLoginController.h; path = AMZNLogin/AMZNLoginController.h; sourceTree = "<group>"; };
+		268505741B78563D000D37F1 /* AMZNLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLoginController.m; path = AMZNLogin/AMZNLoginController.m; sourceTree = "<group>"; };
+		268505751B78563D000D37F1 /* AMZNLogoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLogoutDelegate.h; path = AMZNLogin/AMZNLogoutDelegate.h; sourceTree = "<group>"; };
+		268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLogoutDelegate.m; path = AMZNLogin/AMZNLogoutDelegate.m; sourceTree = "<group>"; };
 		26995C2D1B60DE930000DEED /* LegoodsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoodsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26995C311B60DE930000DEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26995C321B60DE930000DEED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -71,47 +76,7 @@
 		269BBD321B67470E00D58040 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		269D40991B621914003D63BD /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithAmazon.framework; sourceTree = "<group>"; };
 		269D409B1B6219FD003D63BD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		269D409D1B622A8D003D63BD /* HighchartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighchartViewController.h; path = LegoodsDemo/HighchartViewController.h; sourceTree = "<group>"; };
-		269D409E1B622A8D003D63BD /* HighchartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighchartViewController.m; path = LegoodsDemo/HighchartViewController.m; sourceTree = "<group>"; };
-		26CEAFDD1B68B4A100DA40DD /* ContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextMenuCell.h; sourceTree = "<group>"; };
-		26CEAFDE1B68B4A100DA40DD /* ContextMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextMenuCell.m; sourceTree = "<group>"; };
-		26CEAFDF1B68B4A100DA40DD /* ContextMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContextMenuCell.xib; sourceTree = "<group>"; };
-		26CEAFE31B68C3C800DA40DD /* UIView+YALConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+YALConstraints.h"; path = "LegoodsDemo/YALContextMenu/UIView+YALConstraints.h"; sourceTree = "<group>"; };
-		26CEAFE41B68C3C800DA40DD /* UIView+YALConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+YALConstraints.m"; path = "LegoodsDemo/YALContextMenu/UIView+YALConstraints.m"; sourceTree = "<group>"; };
-		26CEAFE51B68C3C800DA40DD /* YALContextMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YALContextMenuCell.h; path = LegoodsDemo/YALContextMenu/YALContextMenuCell.h; sourceTree = "<group>"; };
-		26CEAFE61B68C3C800DA40DD /* YALContextMenuTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YALContextMenuTableView.h; path = LegoodsDemo/YALContextMenu/YALContextMenuTableView.h; sourceTree = "<group>"; };
-		26CEAFE71B68C3C800DA40DD /* YALContextMenuTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YALContextMenuTableView.m; path = LegoodsDemo/YALContextMenu/YALContextMenuTableView.m; sourceTree = "<group>"; };
-		26CEAFE81B68C3C800DA40DD /* YALNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YALNavigationBar.h; path = LegoodsDemo/YALContextMenu/YALNavigationBar.h; sourceTree = "<group>"; };
-		26CEAFE91B68C3C800DA40DD /* YALNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YALNavigationBar.m; path = LegoodsDemo/YALContextMenu/YALNavigationBar.m; sourceTree = "<group>"; };
-		26DB649F1B748F8B00ABF838 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		26DB64A01B748F8B00ABF838 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		26DB64A41B7493C800ABF838 /* APLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APLViewController.h; sourceTree = "<group>"; };
-		26DB64A51B7493C800ABF838 /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APLViewController.m; sourceTree = "<group>"; };
-		26DFD5511B69D042008EF478 /* AMZNAuthorizeUserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNAuthorizeUserDelegate.h; path = AMZNLogin/AMZNAuthorizeUserDelegate.h; sourceTree = "<group>"; };
-		26DFD5521B69D042008EF478 /* AMZNAuthorizeUserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNAuthorizeUserDelegate.m; path = AMZNLogin/AMZNAuthorizeUserDelegate.m; sourceTree = "<group>"; };
-		26DFD5531B69D042008EF478 /* AMZNGetAccessTokenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNGetAccessTokenDelegate.h; path = AMZNLogin/AMZNGetAccessTokenDelegate.h; sourceTree = "<group>"; };
-		26DFD5541B69D042008EF478 /* AMZNGetAccessTokenDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNGetAccessTokenDelegate.m; path = AMZNLogin/AMZNGetAccessTokenDelegate.m; sourceTree = "<group>"; };
-		26DFD5551B69D042008EF478 /* AMZNGetProfileDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNGetProfileDelegate.h; path = AMZNLogin/AMZNGetProfileDelegate.h; sourceTree = "<group>"; };
-		26DFD5561B69D042008EF478 /* AMZNGetProfileDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNGetProfileDelegate.m; path = AMZNLogin/AMZNGetProfileDelegate.m; sourceTree = "<group>"; };
-		26DFD5571B69D042008EF478 /* AMZNLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLoginController.h; path = AMZNLogin/AMZNLoginController.h; sourceTree = "<group>"; };
-		26DFD5581B69D042008EF478 /* AMZNLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLoginController.m; path = AMZNLogin/AMZNLoginController.m; sourceTree = "<group>"; };
-		26DFD5591B69D042008EF478 /* AMZNLogoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLogoutDelegate.h; path = AMZNLogin/AMZNLogoutDelegate.h; sourceTree = "<group>"; };
-		26DFD55A1B69D042008EF478 /* AMZNLogoutDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLogoutDelegate.m; path = AMZNLogin/AMZNLogoutDelegate.m; sourceTree = "<group>"; };
-		26DFD5611B69D17C008EF478 /* highcharts.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = highcharts.js; path = LegoodsDemo/JSInteract/highcharts.js; sourceTree = "<group>"; };
-		26DFD5621B69D17C008EF478 /* HighchartsView.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = HighchartsView.html; path = LegoodsDemo/JSInteract/HighchartsView.html; sourceTree = "<group>"; };
-		26DFD5631B69D17C008EF478 /* HighchartsWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighchartsWebViewController.h; path = LegoodsDemo/JSInteract/HighchartsWebViewController.h; sourceTree = "<group>"; };
-		26DFD5641B69D17C008EF478 /* HighchartsWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighchartsWebViewController.m; path = LegoodsDemo/JSInteract/HighchartsWebViewController.m; sourceTree = "<group>"; };
-		26DFD5651B69D17C008EF478 /* HighchartsWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HighchartsWebViewController.xib; path = LegoodsDemo/JSInteract/HighchartsWebViewController.xib; sourceTree = "<group>"; };
-		26DFD5661B69D17C008EF478 /* jquery-1.11.0.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = "jquery-1.11.0.min.js"; path = "LegoodsDemo/JSInteract/jquery-1.11.0.min.js"; sourceTree = "<group>"; };
-		26DFD56E1B69D2D4008EF478 /* WXGDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGDetailViewController.h; path = WXGSlideMenu/WXGDetailViewController.h; sourceTree = "<group>"; };
-		26DFD56F1B69D2D4008EF478 /* WXGDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGDetailViewController.m; path = WXGSlideMenu/WXGDetailViewController.m; sourceTree = "<group>"; };
-		26DFD5701B69D2D4008EF478 /* WXGMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuCell.h; path = WXGSlideMenu/WXGMenuCell.h; sourceTree = "<group>"; };
-		26DFD5711B69D2D4008EF478 /* WXGMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuCell.m; path = WXGSlideMenu/WXGMenuCell.m; sourceTree = "<group>"; };
-		26DFD5721B69D2D4008EF478 /* WXGMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuItem.h; path = WXGSlideMenu/WXGMenuItem.h; sourceTree = "<group>"; };
-		26DFD5731B69D2D4008EF478 /* WXGMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuItem.m; path = WXGSlideMenu/WXGMenuItem.m; sourceTree = "<group>"; };
-		26DFD5741B69D2D4008EF478 /* WXGMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuViewController.h; path = WXGSlideMenu/WXGMenuViewController.h; sourceTree = "<group>"; };
-		26DFD5751B69D2D4008EF478 /* WXGMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuViewController.m; path = WXGSlideMenu/WXGMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +101,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		268505591B7852B0000D37F1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				268505601B785350000D37F1 /* MenuItems.plist */,
+				2685055A1B785350000D37F1 /* HomeContainerViewController.h */,
+				2685055B1B785350000D37F1 /* HomeContainerViewController.m */,
+				2685055C1B785350000D37F1 /* HomeDetailViewController.h */,
+				2685055D1B785350000D37F1 /* HomeDetailViewController.m */,
+				2685055E1B785350000D37F1 /* HomeMenuViewController.h */,
+				2685055F1B785350000D37F1 /* HomeMenuViewController.m */,
+				268505611B785350000D37F1 /* WXGMenuCell.h */,
+				268505621B785350000D37F1 /* WXGMenuCell.m */,
+				268505631B785350000D37F1 /* WXGMenuItem.h */,
+				268505641B785350000D37F1 /* WXGMenuItem.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		2685057D1B785644000D37F1 /* AMZNLogin */ = {
+			isa = PBXGroup;
+			children = (
+				2685056D1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.h */,
+				2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */,
+				2685056F1B78563D000D37F1 /* AMZNGetAccessTokenDelegate.h */,
+				268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */,
+				268505711B78563D000D37F1 /* AMZNGetProfileDelegate.h */,
+				268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */,
+				268505731B78563D000D37F1 /* AMZNLoginController.h */,
+				268505741B78563D000D37F1 /* AMZNLoginController.m */,
+				268505751B78563D000D37F1 /* AMZNLogoutDelegate.h */,
+				268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */,
+			);
+			name = AMZNLogin;
+			sourceTree = "<group>";
+		};
 		26995C241B60DE930000DEED = {
 			isa = PBXGroup;
 			children = (
@@ -158,17 +158,10 @@
 		26995C2F1B60DE930000DEED /* LegoodsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				26DB64A71B7493E600ABF838 /* AppleReachabilityDemo */,
-				26DB649E1B748F6300ABF838 /* Reachability */,
-				26DFD54C1B69CF8A008EF478 /* WXGSlideMenu */,
-				26CEAFE21B68C3B400DA40DD /* YALContextMenu */,
-				26CEAFDC1B68B45800DA40DD /* ContextMenuCell  */,
-				269BBD2F1B673E6000D58040 /* Highcharts */,
-				26CE22421B66217B006CC97E /* Amazon Login */,
+				2685057D1B785644000D37F1 /* AMZNLogin */,
+				268505591B7852B0000D37F1 /* Home */,
 				26995C341B60DE930000DEED /* AppDelegate.h */,
 				26995C351B60DE930000DEED /* AppDelegate.m */,
-				268EBE801B61DAA20052FDCB /* IndexViewController.h */,
-				268EBE811B61DAA20052FDCB /* IndexViewController.m */,
 				26995C3A1B60DE930000DEED /* Main.storyboard */,
 				26995C3D1B60DE930000DEED /* Images.xcassets */,
 				26995C3F1B60DE930000DEED /* LaunchScreen.xib */,
@@ -203,39 +196,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		269BBD2F1B673E6000D58040 /* Highcharts */ = {
-			isa = PBXGroup;
-			children = (
-				269D409D1B622A8D003D63BD /* HighchartViewController.h */,
-				269D409E1B622A8D003D63BD /* HighchartViewController.m */,
-				26DFD5611B69D17C008EF478 /* highcharts.js */,
-				26DFD5621B69D17C008EF478 /* HighchartsView.html */,
-				26DFD5631B69D17C008EF478 /* HighchartsWebViewController.h */,
-				26DFD5641B69D17C008EF478 /* HighchartsWebViewController.m */,
-				26DFD5651B69D17C008EF478 /* HighchartsWebViewController.xib */,
-				26DFD5661B69D17C008EF478 /* jquery-1.11.0.min.js */,
-			);
-			name = Highcharts;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		26CE22421B66217B006CC97E /* Amazon Login */ = {
-			isa = PBXGroup;
-			children = (
-				26DFD5511B69D042008EF478 /* AMZNAuthorizeUserDelegate.h */,
-				26DFD5521B69D042008EF478 /* AMZNAuthorizeUserDelegate.m */,
-				26DFD5531B69D042008EF478 /* AMZNGetAccessTokenDelegate.h */,
-				26DFD5541B69D042008EF478 /* AMZNGetAccessTokenDelegate.m */,
-				26DFD5551B69D042008EF478 /* AMZNGetProfileDelegate.h */,
-				26DFD5561B69D042008EF478 /* AMZNGetProfileDelegate.m */,
-				26DFD5571B69D042008EF478 /* AMZNLoginController.h */,
-				26DFD5581B69D042008EF478 /* AMZNLoginController.m */,
-				26DFD5591B69D042008EF478 /* AMZNLogoutDelegate.h */,
-				26DFD55A1B69D042008EF478 /* AMZNLogoutDelegate.m */,
-			);
-			name = "Amazon Login";
-			sourceTree = "<group>";
-		};
 		26CE22551B662223006CC97E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,65 +205,6 @@
 				269D40991B621914003D63BD /* LoginWithAmazon.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		26CEAFDC1B68B45800DA40DD /* ContextMenuCell  */ = {
-			isa = PBXGroup;
-			children = (
-				26CEAFDD1B68B4A100DA40DD /* ContextMenuCell.h */,
-				26CEAFDE1B68B4A100DA40DD /* ContextMenuCell.m */,
-				26CEAFDF1B68B4A100DA40DD /* ContextMenuCell.xib */,
-			);
-			name = "ContextMenuCell ";
-			sourceTree = "<group>";
-		};
-		26CEAFE21B68C3B400DA40DD /* YALContextMenu */ = {
-			isa = PBXGroup;
-			children = (
-				26CEAFE31B68C3C800DA40DD /* UIView+YALConstraints.h */,
-				26CEAFE41B68C3C800DA40DD /* UIView+YALConstraints.m */,
-				26CEAFE51B68C3C800DA40DD /* YALContextMenuCell.h */,
-				26CEAFE61B68C3C800DA40DD /* YALContextMenuTableView.h */,
-				26CEAFE71B68C3C800DA40DD /* YALContextMenuTableView.m */,
-				26CEAFE81B68C3C800DA40DD /* YALNavigationBar.h */,
-				26CEAFE91B68C3C800DA40DD /* YALNavigationBar.m */,
-			);
-			name = YALContextMenu;
-			path = ..;
-			sourceTree = "<group>";
-		};
-		26DB649E1B748F6300ABF838 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				26DB649F1B748F8B00ABF838 /* Reachability.h */,
-				26DB64A01B748F8B00ABF838 /* Reachability.m */,
-			);
-			name = Reachability;
-			sourceTree = "<group>";
-		};
-		26DB64A71B7493E600ABF838 /* AppleReachabilityDemo */ = {
-			isa = PBXGroup;
-			children = (
-				26DB64A41B7493C800ABF838 /* APLViewController.h */,
-				26DB64A51B7493C800ABF838 /* APLViewController.m */,
-			);
-			name = AppleReachabilityDemo;
-			sourceTree = "<group>";
-		};
-		26DFD54C1B69CF8A008EF478 /* WXGSlideMenu */ = {
-			isa = PBXGroup;
-			children = (
-				268505411B784761000D37F1 /* MenuItems.plist */,
-				26DFD56E1B69D2D4008EF478 /* WXGDetailViewController.h */,
-				26DFD56F1B69D2D4008EF478 /* WXGDetailViewController.m */,
-				26DFD5701B69D2D4008EF478 /* WXGMenuCell.h */,
-				26DFD5711B69D2D4008EF478 /* WXGMenuCell.m */,
-				26DFD5721B69D2D4008EF478 /* WXGMenuItem.h */,
-				26DFD5731B69D2D4008EF478 /* WXGMenuItem.m */,
-				26DFD5741B69D2D4008EF478 /* WXGMenuViewController.h */,
-				26DFD5751B69D2D4008EF478 /* WXGMenuViewController.m */,
-			);
-			name = WXGSlideMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -386,15 +287,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				268505681B785350000D37F1 /* MenuItems.plist in Resources */,
 				26995C3C1B60DE930000DEED /* Main.storyboard in Resources */,
 				26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */,
-				26CEAFE11B68B4A100DA40DD /* ContextMenuCell.xib in Resources */,
-				26DFD56B1B69D17C008EF478 /* jquery-1.11.0.min.js in Resources */,
 				26995C3E1B60DE930000DEED /* Images.xcassets in Resources */,
-				26DFD5681B69D17C008EF478 /* HighchartsView.html in Resources */,
-				26DFD5671B69D17C008EF478 /* highcharts.js in Resources */,
-				26DFD56A1B69D17C008EF478 /* HighchartsWebViewController.xib in Resources */,
-				268505421B784761000D37F1 /* MenuItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,26 +308,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26DFD57A1B69D2D4008EF478 /* WXGMenuViewController.m in Sources */,
-				26CEAFEC1B68C3C800DA40DD /* YALNavigationBar.m in Sources */,
-				26DFD55C1B69D042008EF478 /* AMZNAuthorizeUserDelegate.m in Sources */,
-				26DFD5601B69D042008EF478 /* AMZNLogoutDelegate.m in Sources */,
-				26CEAFEA1B68C3C800DA40DD /* UIView+YALConstraints.m in Sources */,
-				269D409F1B622A8D003D63BD /* HighchartViewController.m in Sources */,
-				26DB64A61B7493C800ABF838 /* APLViewController.m in Sources */,
-				26DFD5781B69D2D4008EF478 /* WXGMenuCell.m in Sources */,
+				268505781B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m in Sources */,
+				268505661B785350000D37F1 /* HomeDetailViewController.m in Sources */,
+				268505671B785350000D37F1 /* HomeMenuViewController.m in Sources */,
+				2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */,
 				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
-				26DFD55D1B69D042008EF478 /* AMZNGetAccessTokenDelegate.m in Sources */,
-				26CEAFEB1B68C3C800DA40DD /* YALContextMenuTableView.m in Sources */,
-				26DB64A11B748F8B00ABF838 /* Reachability.m in Sources */,
-				26DFD5691B69D17C008EF478 /* HighchartsWebViewController.m in Sources */,
-				26DFD5771B69D2D4008EF478 /* WXGDetailViewController.m in Sources */,
-				26DFD55F1B69D042008EF478 /* AMZNLoginController.m in Sources */,
-				26DFD5791B69D2D4008EF478 /* WXGMenuItem.m in Sources */,
-				26CEAFE01B68B4A100DA40DD /* ContextMenuCell.m in Sources */,
+				268505651B785350000D37F1 /* HomeContainerViewController.m in Sources */,
+				2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */,
+				268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */,
+				2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */,
+				2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */,
 				26995C331B60DE930000DEED /* main.m in Sources */,
-				268EBE821B61DAA20052FDCB /* IndexViewController.m in Sources */,
-				26DFD55E1B69D042008EF478 /* AMZNGetProfileDelegate.m in Sources */,
+				268505691B785350000D37F1 /* WXGMenuCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +455,7 @@
 				INFOPLIST_FILE = LegoodsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -583,7 +471,7 @@
 				INFOPLIST_FILE = LegoodsDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

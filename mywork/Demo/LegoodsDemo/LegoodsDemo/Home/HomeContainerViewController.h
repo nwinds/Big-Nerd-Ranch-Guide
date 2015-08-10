@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WXGContainerViewController : UIViewController
+@interface HomeContainerViewController : UIViewController
 
 @end
