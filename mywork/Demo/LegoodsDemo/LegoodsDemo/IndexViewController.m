@@ -46,12 +46,12 @@ static NSString *const menuCellIdentifier = @"rotationCell";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    // Initialize menu
-    [self initiateMenuOptions];
-    // Set custom nabigation bar with a bigger height
-    [self.navigationController setValue:[[YALNavigationBar alloc] init] forKeyPath:@"navigationBar"];
-    
+//    
+//    // Initialize menu
+//    [self initiateMenuOptions];
+//    // Set custom nabigation bar with a bigger height
+//    [self.navigationController setValue:[[YALNavigationBar alloc] init] forKeyPath:@"navigationBar"];
+//    
  
     // 注册菜单视图的点击事件
     self.menuViewController.menuDidClick = ^(WXGMenuItem *item, BOOL animated) {

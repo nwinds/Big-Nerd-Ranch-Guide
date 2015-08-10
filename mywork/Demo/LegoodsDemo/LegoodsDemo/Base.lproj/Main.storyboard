@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="0UN-Xs-OQZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Qcc-5e-zea">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -267,11 +267,11 @@
                         <viewControllerLayoutGuide type="bottom" id="iJW-eb-ZZg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="36t-Cy-9ro">
-                        <rect key="frame" x="0.0" y="44" width="202" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="202" height="524"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHX-bP-U8w">
-                                <rect key="frame" x="0.0" y="0.0" width="202" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="202" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ae-Oc-92d">
@@ -483,45 +483,45 @@ Internet traffic will be routed through it.</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ME2-Oe-ea1">
-                                <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="574"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gRK-qg-7uV" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="632"/>
                                         <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jh-Ng-eUe" userLabel="Detail Container View">
-                                                <rect key="frame" x="118" y="-62" width="202" height="568"/>
-                                                <connections>
-                                                    <segue destination="Q7I-l7-iPz" kind="embed" id="sto-5N-0rR"/>
-                                                </connections>
-                                            </containerView>
                                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJF-VW-23T" userLabel="Menu Container View">
-                                                <rect key="frame" x="0.0" y="-62" width="119" height="568"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="119" id="MRw-ZN-F3K"/>
-                                                </constraints>
+                                                <rect key="frame" x="0.0" y="2" width="119" height="568"/>
                                                 <connections>
                                                     <segue destination="HmL-nb-sba" kind="embed" id="ZYW-8V-uE0"/>
+                                                </connections>
+                                            </containerView>
+                                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jh-Ng-eUe" userLabel="Detail Container View">
+                                                <rect key="frame" x="118" y="2" width="202" height="568"/>
+                                                <connections>
+                                                    <segue destination="Q7I-l7-iPz" kind="embed" id="sto-5N-0rR"/>
                                                 </connections>
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="eJF-VW-23T" firstAttribute="top" secondItem="gRK-qg-7uV" secondAttribute="top" constant="-62" id="1zY-2g-SgI"/>
-                                            <constraint firstAttribute="trailing" secondItem="7Jh-Ng-eUe" secondAttribute="trailing" id="bke-mg-Et2"/>
-                                            <constraint firstItem="eJF-VW-23T" firstAttribute="top" secondItem="7Jh-Ng-eUe" secondAttribute="top" id="hK3-Hk-qiR"/>
-                                            <constraint firstItem="7Jh-Ng-eUe" firstAttribute="leading" secondItem="gRK-qg-7uV" secondAttribute="leading" constant="118" id="ij8-rh-g9J"/>
-                                            <constraint firstItem="eJF-VW-23T" firstAttribute="leading" secondItem="gRK-qg-7uV" secondAttribute="leading" id="vbV-lJ-jvt"/>
-                                            <constraint firstItem="eJF-VW-23T" firstAttribute="bottom" secondItem="7Jh-Ng-eUe" secondAttribute="bottom" id="xlp-k9-uuL"/>
-                                            <constraint firstAttribute="bottom" secondItem="eJF-VW-23T" secondAttribute="bottom" constant="62" id="ydV-5i-K0B"/>
+                                            <constraint firstItem="eJF-VW-23T" firstAttribute="top" secondItem="gRK-qg-7uV" secondAttribute="top" constant="2" id="MEo-37-F85"/>
+                                            <constraint firstItem="eJF-VW-23T" firstAttribute="top" secondItem="7Jh-Ng-eUe" secondAttribute="top" id="Vlp-Ib-Wtj"/>
+                                            <constraint firstItem="eJF-VW-23T" firstAttribute="leading" secondItem="gRK-qg-7uV" secondAttribute="leading" id="XGE-xR-o5g"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Jh-Ng-eUe" secondAttribute="trailing" id="YX8-ZV-W81"/>
+                                            <constraint firstAttribute="height" secondItem="7Jh-Ng-eUe" secondAttribute="height" constant="64" id="cfr-Ab-OPV"/>
+                                            <constraint firstAttribute="height" secondItem="eJF-VW-23T" secondAttribute="height" constant="64" id="f2c-Af-0zL"/>
+                                            <constraint firstItem="7Jh-Ng-eUe" firstAttribute="leading" secondItem="eJF-VW-23T" secondAttribute="trailing" constant="-1" id="i4a-lm-veD"/>
+                                            <constraint firstItem="7Jh-Ng-eUe" firstAttribute="leading" secondItem="gRK-qg-7uV" secondAttribute="leading" constant="118" id="nil-Hq-Ile"/>
+                                            <constraint firstAttribute="trailing" secondItem="eJF-VW-23T" secondAttribute="trailing" constant="201" id="svY-nA-51M"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="gRK-qg-7uV" firstAttribute="top" secondItem="ME2-Oe-ea1" secondAttribute="top" id="9Uf-r4-ddc"/>
-                                    <constraint firstItem="gRK-qg-7uV" firstAttribute="width" secondItem="ME2-Oe-ea1" secondAttribute="width" id="MwN-ZR-4vU"/>
-                                    <constraint firstAttribute="trailing" secondItem="gRK-qg-7uV" secondAttribute="trailing" id="PBp-9U-cmB"/>
-                                    <constraint firstAttribute="bottom" secondItem="gRK-qg-7uV" secondAttribute="bottom" id="PMG-d5-moS"/>
-                                    <constraint firstItem="gRK-qg-7uV" firstAttribute="leading" secondItem="ME2-Oe-ea1" secondAttribute="leading" id="nWz-d5-hFK"/>
+                                    <constraint firstAttribute="bottom" secondItem="gRK-qg-7uV" secondAttribute="bottom" constant="-58" id="3gH-cR-R59"/>
+                                    <constraint firstAttribute="trailing" secondItem="gRK-qg-7uV" secondAttribute="trailing" id="9ef-AI-p3b"/>
+                                    <constraint firstItem="gRK-qg-7uV" firstAttribute="top" secondItem="ME2-Oe-ea1" secondAttribute="top" id="e6I-lc-EoA"/>
+                                    <constraint firstItem="gRK-qg-7uV" firstAttribute="leading" secondItem="ME2-Oe-ea1" secondAttribute="leading" id="fAv-P5-WzR"/>
+                                    <constraint firstItem="gRK-qg-7uV" firstAttribute="height" secondItem="ME2-Oe-ea1" secondAttribute="height" constant="58" id="gTR-PU-iw9"/>
+                                    <constraint firstItem="gRK-qg-7uV" firstAttribute="width" secondItem="ME2-Oe-ea1" secondAttribute="width" id="jvd-SZ-xs2"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="Qcc-5e-zea" id="cVI-YU-DIR"/>
@@ -530,28 +530,13 @@ Internet traffic will be routed through it.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="ME2-Oe-ea1" firstAttribute="height" secondItem="r4x-Cz-xgR" secondAttribute="height" constant="-113" id="79d-hQ-hKA"/>
-                            <constraint firstItem="gRK-qg-7uV" firstAttribute="width" secondItem="r4x-Cz-xgR" secondAttribute="width" id="EB0-fQ-Ls3"/>
-                            <constraint firstItem="ME2-Oe-ea1" firstAttribute="leading" secondItem="r4x-Cz-xgR" secondAttribute="leading" id="pGo-vs-oD9"/>
-                            <constraint firstItem="ME2-Oe-ea1" firstAttribute="top" secondItem="zuP-2g-W7R" secondAttribute="bottom" id="rBi-lC-qpk"/>
-                            <constraint firstAttribute="trailing" secondItem="ME2-Oe-ea1" secondAttribute="trailing" id="uME-xN-D4l"/>
-                            <constraint firstItem="gRK-qg-7uV" firstAttribute="height" secondItem="r4x-Cz-xgR" secondAttribute="height" id="vAH-D7-pBm"/>
-                            <constraint firstItem="ME2-Oe-ea1" firstAttribute="width" secondItem="r4x-Cz-xgR" secondAttribute="width" id="zGf-N9-AqO"/>
+                            <constraint firstAttribute="width" secondItem="ME2-Oe-ea1" secondAttribute="width" id="DRY-o2-Smp"/>
+                            <constraint firstItem="ME2-Oe-ea1" firstAttribute="leading" secondItem="r4x-Cz-xgR" secondAttribute="leading" id="GO8-gv-k6T"/>
+                            <constraint firstAttribute="height" secondItem="ME2-Oe-ea1" secondAttribute="height" constant="-6" id="jxe-tz-xJC"/>
+                            <constraint firstItem="ME2-Oe-ea1" firstAttribute="top" secondItem="r4x-Cz-xgR" secondAttribute="top" id="mhR-8D-aaw"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" image="Hypno" id="gz1-Mi-kGj"/>
-                    <navigationItem key="navigationItem" id="vnJ-8Z-sq8">
-                        <barButtonItem key="leftBarButtonItem" title="登陆" id="GYo-GP-ciP">
-                            <connections>
-                                <segue destination="6mO-SH-7Ls" kind="modal" identifier="MainToCheck" modalPresentationStyle="currentContext" modalTransitionStyle="flipHorizontal" id="SLO-Or-bd8"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="mdk-l2-sKS">
-                            <connections>
-                                <action selector="presentMenuButtonTapped:" destination="Qcc-5e-zea" id="7Fd-pr-7xQ"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <toolbarItems/>
                     <connections>
                         <outlet property="menuContainerView" destination="eJF-VW-23T" id="7Mp-0f-sY2"/>
                         <outlet property="scrollView" destination="ME2-Oe-ea1" id="x9O-8N-fJE"/>
@@ -561,53 +546,12 @@ Internet traffic will be routed through it.</string>
             </objects>
             <point key="canvasLocation" x="178" y="148"/>
         </scene>
-        <!--Home Navigation Controller-->
-        <scene sceneID="ez0-Ts-TYk">
-            <objects>
-                <navigationController title="homeNav" id="uS3-5D-R0j" userLabel="Home Navigation Controller" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Hypno" id="vHf-nT-pub"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H6b-t3-1Ij">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3fg-Ie-eCV">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="Qcc-5e-zea" kind="relationship" relationship="rootViewController" id="HdE-Yv-0DJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9FK-Us-5K2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-216" y="148"/>
-        </scene>
-        <!--Legoods-->
-        <scene sceneID="ely-fG-YiC">
-            <objects>
-                <tabBarController title="Legoods" automaticallyAdjustsScrollViewInsets="NO" id="0UN-Xs-OQZ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <keyCommands/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="uSA-qB-npO">
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="uS3-5D-R0j" kind="relationship" relationship="viewControllers" id="5Ff-fj-LI9"/>
-                        <segue destination="yBY-m9-Wd9" kind="relationship" relationship="viewControllers" id="hLu-6S-8o9"/>
-                        <segue destination="fge-cV-mvU" kind="relationship" relationship="viewControllers" id="5bI-NB-Xzv"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tp4-1h-wPu" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-665" y="148"/>
-        </scene>
         <!--Menu View Controller-->
         <scene sceneID="wq1-JT-by7">
             <objects>
                 <tableViewController id="JZH-YX-WUC" userLabel="Menu View Controller" customClass="WXGMenuViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="22" sectionFooterHeight="22" id="CFa-2F-fFG">
-                        <rect key="frame" x="0.0" y="44" width="119" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="119" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -646,11 +590,14 @@ Internet traffic will be routed through it.</string>
         <!--Navigation Controller-->
         <scene sceneID="iQK-Gg-hbq">
             <objects>
-                <navigationController navigationBarHidden="YES" id="HmL-nb-sba" sceneMemberID="viewController">
+                <navigationController id="HmL-nb-sba" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="jPy-ma-0or">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="nQ1-6V-jml">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="JZH-YX-WUC" kind="relationship" relationship="rootViewController" id="Nje-bY-SNF"/>
                     </connections>
@@ -662,7 +609,7 @@ Internet traffic will be routed through it.</string>
         <!--Navigation Controller-->
         <scene sceneID="mRk-uj-lqD">
             <objects>
-                <navigationController navigationBarHidden="YES" id="Q7I-l7-iPz" sceneMemberID="viewController">
+                <navigationController id="Q7I-l7-iPz" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="7ri-mQ-3HR">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -685,7 +632,4 @@ Internet traffic will be routed through it.</string>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="LOI-ZM-BS8"/>
-    </inferredMetricsTieBreakers>
 </document>
