@@ -27,6 +27,8 @@
 		269BBD331B67470E00D58040 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BBD321B67470E00D58040 /* JavaScriptCore.framework */; };
 		269D409A1B621914003D63BD /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D40991B621914003D63BD /* LoginWithAmazon.framework */; };
 		269D409C1B6219FD003D63BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D409B1B6219FD003D63BD /* Security.framework */; };
+		26ADE27A1B7B146600385462 /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ADE2771B7B146600385462 /* APLViewController.m */; };
+		26ADE27B1B7B146600385462 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ADE2791B7B146600385462 /* Reachability.m */; };
 		26DB64A31B748FBE00ABF838 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +78,10 @@
 		269BBD321B67470E00D58040 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		269D40991B621914003D63BD /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithAmazon.framework; sourceTree = "<group>"; };
 		269D409B1B6219FD003D63BD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		26ADE2761B7B146600385462 /* APLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APLViewController.h; path = APLReachability/APLViewController.h; sourceTree = "<group>"; };
+		26ADE2771B7B146600385462 /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLViewController.m; path = APLReachability/APLViewController.m; sourceTree = "<group>"; };
+		26ADE2781B7B146600385462 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = APLReachability/Reachability.h; sourceTree = "<group>"; };
+		26ADE2791B7B146600385462 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = APLReachability/Reachability.m; sourceTree = "<group>"; };
 		26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -158,6 +164,7 @@
 		26995C2F1B60DE930000DEED /* LegoodsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				26ADE27C1B7B146A00385462 /* APLReachability */,
 				2685057D1B785644000D37F1 /* AMZNLogin */,
 				268505591B7852B0000D37F1 /* Home */,
 				26995C341B60DE930000DEED /* AppDelegate.h */,
@@ -194,6 +201,17 @@
 				26995C4B1B60DE930000DEED /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26ADE27C1B7B146A00385462 /* APLReachability */ = {
+			isa = PBXGroup;
+			children = (
+				26ADE2761B7B146600385462 /* APLViewController.h */,
+				26ADE2771B7B146600385462 /* APLViewController.m */,
+				26ADE2781B7B146600385462 /* Reachability.h */,
+				26ADE2791B7B146600385462 /* Reachability.m */,
+			);
+			name = APLReachability;
 			sourceTree = "<group>";
 		};
 		26CE22551B662223006CC97E /* Frameworks */ = {
@@ -313,10 +331,12 @@
 				268505671B785350000D37F1 /* HomeMenuViewController.m in Sources */,
 				2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */,
 				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
+				26ADE27A1B7B146600385462 /* APLViewController.m in Sources */,
 				268505651B785350000D37F1 /* HomeContainerViewController.m in Sources */,
 				2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */,
 				268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */,
 				2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */,
+				26ADE27B1B7B146600385462 /* Reachability.m in Sources */,
 				2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */,
 				26995C331B60DE930000DEED /* main.m in Sources */,
 				268505691B785350000D37F1 /* WXGMenuCell.m in Sources */,

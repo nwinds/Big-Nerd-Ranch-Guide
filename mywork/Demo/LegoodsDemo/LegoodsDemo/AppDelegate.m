@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import <LoginWithAmazon/LoginWithAmazon.h>
 @interface AppDelegate ()
 
 @end
@@ -39,6 +39,28 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark -Amazon returned URL
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    // Pass on the url to the SDK to parse authorization code
+    // from the url.
+    BOOL isValidRedirectSignInURL =
+    [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
+    
+    // url phasing tracing
+//    NSLog(@"caller: %@", sourceApplication);
+    NSLog(@"AppDelegate: URL == %@", url);
+    
+    if(!isValidRedirectSignInURL)
+        return NO;
+    
+    // App may also want to handle url
+    return YES;
 }
 
 @end

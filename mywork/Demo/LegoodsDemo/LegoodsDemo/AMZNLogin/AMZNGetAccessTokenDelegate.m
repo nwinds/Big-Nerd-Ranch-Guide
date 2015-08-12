@@ -25,10 +25,16 @@
     return self;
 }
 
-#pragma mark Implementation of getAccessTokenForScopes:withOverrideParams:delegate: delegates.
+#pragma mark -Access Token success
+//Implementation of getAccessTokenForScopes:withOverrideParams:delegate: delegates.
 - (void)requestDidSucceed:(APIResult *)apiResult {
-    NSLog(@"AMZNGetAccessTokenDelegate: requestDidSucceed");
+//    NSLog(@"AMZNGetAccessTokenDelegate: requestDidSucceed");
     // Your code to use access token goes here.
+#pragma mark -On success TODO
+    // TODO
+    NSLog(@"Access token result finally");
+    NSLog(@"AMZNGetAccessTokenDelegate: result == @%@", apiResult.result);
+//    apiResult
 
     // Since the application has authorization for "profile" scope, we can get the user profile.
     AMZNGetProfileDelegate* delegate = [[AMZNGetProfileDelegate alloc] initWithParentController:parentViewController];
@@ -39,6 +45,14 @@
 - (void)requestDidFail:(APIError *)errorResponse {
     NSLog(@"AMZNGetAccessTokenDelegate: requestDidFail");
     // Your code to handle failed retrieval of access token.
+#pragma mark -On failure TODO
+    // TODO
+    
+    
+    
+    
+    
+    
     
     // If error code = kAIApplicationNotAuthorized, allow user to log in again.
     if(errorResponse.error.code == kAIApplicationNotAuthorized) {

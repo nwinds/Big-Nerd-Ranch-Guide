@@ -45,10 +45,10 @@
     
     // Example code provided by Amazon sample project
     // Get profile request succeded. Use the profile information to achieve various use cases like showing a simple welcome message.
-    NSLog(@"Amazon login: getProfile apiRequest succeed");
+//    NSLog(@"Amazon login: getProfile apiRequest succeed");
     parentViewController.userProfile = (NSDictionary*)apiResult.result;
     [parentViewController loadSignedInUser];
-    NSLog(@"Amazon login: signed in user info loaded");
+//    NSLog(@"Amazon login: signed in user info loaded");
     
 
     
