@@ -40,7 +40,6 @@ NSString* userLoggedOutMessage =
 NSString* userLoggedInMessage =
             @"Welcome, %@ \n Your email is %@.";
 
-// public var? should config later
 BOOL isUserSignedIn;
 
 #pragma mark -View show helper
@@ -48,7 +47,6 @@ BOOL isUserSignedIn;
 {
     // Make authorize call to SDK to get authorization from the user. While making the call you can specify the scopes for which the user authorization is needed.
     // Requesting 'profile' scopes for the current user.
-//    [self checkIsUserSignedIn];
     
     NSArray *requestScopes = [NSArray arrayWithObject:@"profile"];
     AMZNAuthorizeUserDelegate* delegate = [[AMZNAuthorizeUserDelegate alloc] initWithParentController:self];
@@ -60,11 +58,6 @@ BOOL isUserSignedIn;
 
 - (IBAction)logoutButtonClicked:(id)sender
 {
-    // For tracing
-//    NSLog(@"Amazon logged checking...");
-//    [self checkIsUserSignedIn];
-//    NSLog(@"Amazon logged check success");
-    
     AMZNLogoutDelegate* delegate = [[AMZNLogoutDelegate alloc] initWithParentController:self];
     
     [AIMobileLib clearAuthorizationState:delegate];
@@ -139,10 +132,6 @@ BOOL isUserSignedIn;
 - (void)loadSignedInUser {
     isUserSignedIn = TRUE;
     self.loginButton.hidden = TRUE;     // hide login button
-//    self.logoutButton.hidden = FALSE;   // show logout button
-    
-    //    self.toolBar.
-    //    self.navigationItem.rightBarButtonItem = self.logoutButton;
     self.infoField.text = [NSString stringWithFormat:@"Welcome, %@ \n Your email is %@.", [userProfile objectForKey:@"name"], [userProfile objectForKey:@"email"]];
     self.infoField.hidden = FALSE;
     
@@ -167,22 +156,12 @@ BOOL isUserSignedIn;
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-//#pragma mark -helper
-//- (void)xorHelper:(BOOL)mask
-//{
-//    isUserSignedIn ^= mask;
-//    self.loginButton.hidden ^= mask;
-//    self.logoutButton.hidden ^= mask;
-//}
-
-- (void)dealloc{
+- (void)dealloc {
     self.toolBar = nil;
     self.infoField = nil;
     self.loginButton = nil;
     self.logoutButton = nil;
     self.userProfile = nil;
-//    [super dealloc];
-    
 }
 
 @end

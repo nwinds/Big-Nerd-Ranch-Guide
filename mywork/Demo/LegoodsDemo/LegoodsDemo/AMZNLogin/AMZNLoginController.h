@@ -20,13 +20,11 @@
 #pragma mark -Login access token
 @property (strong, nonatomic) NSString *paramAccessToken;
 @property (strong, nonatomic) IBOutlet UITextField *subPageData;
-//- (IBAction)closeAndReturn:(id)sender;
 
 @property (strong, nonatomic) id userLoginController;
 
 - (IBAction)closeView:(id)sender;
 
-//- (IBAction)checkIfLogged:(id)sender;
 
 #pragma mark -Navigation Item
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
@@ -34,7 +32,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *logoutButton; // leftBarButton of Nav Item
 
 @property (strong, nonatomic) IBOutlet UIToolbar *toolBar;
-//@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
 
 #pragma mark -Amazon user profile
 @property (strong) NSDictionary* userProfile;
