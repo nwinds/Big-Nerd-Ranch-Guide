@@ -12,5 +12,6 @@
 @interface WXGMenuCell : UITableViewCell
 
 @property (nonatomic, strong) WXGMenuItem *item;
+- (IBAction)iconButtonClicked:(id)sender;
 
 @end
