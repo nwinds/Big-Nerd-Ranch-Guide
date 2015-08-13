@@ -20,6 +20,10 @@
 
 @implementation AMZNLoginController
 
+#pragma mark -Demo
+@synthesize param;
+@synthesize firstViewController;
+
 #pragma mark -Login access token
 @synthesize paramAccessToken;
 @synthesize subPageData;
@@ -84,7 +88,9 @@ BOOL isUserSignedIn;
     [super viewDidLoad];
     
     // Amazon login data
-    self.subPageData.text = paramAccessToken;
+    self.subPageData.text = param;
+//    self.subPageData.text = paramAccessToken;
+    NSLog(@"%@", paramAccessToken);
 
     // Display UIObjects
     if (isUserSignedIn)
@@ -117,15 +123,15 @@ BOOL isUserSignedIn;
 {
     [super viewWillDisappear:animated];
     
-//    if ([detailViewController respondsToSelector:@selector(setEditData:)]) {
-//        [page2Data endEditing:YES];
-//        [detailViewController setValue:page2Data.text forKey:@"editData"];
-//    }
-    
-    if ([parentViewController respondsToSelector:@selector(setEditAccessToken:)]) {
+    if ([firstViewController respondsToSelector:@selector(setEditData:)]) {
         [subPageData endEditing:YES];
-        [parentViewController setValue:paramAccessToken forKey:@"editAccessToken"];
+        [firstViewController setValue:subPageData.text forKey:@"editData"];
     }
+    
+//    if ([parentViewController respondsToSelector:@selector(setEditAccessToken:)]) {
+//        [subPageData endEditing:YES];
+//        [parentViewController setValue:paramAccessToken forKey:@"editAccessToken"];
+//    }
 }
 
 #pragma mark -Amazon user login handler

@@ -20,25 +20,22 @@
 @end
 
 @implementation HomeDetailViewController
+#pragma mark -Demo
+@synthesize editData;
 
 #pragma mark -Interaction with Amazon Login
+@synthesize page1Data;
 
 //@synthesize accessTokenBtn;
 //@synthesize reachableBtn;
 
 //@synthesize editAccessToken;
 
-//-(void)viewWillAppear:(BOOL)animated
-//{
-//    NSLog(@"viewWillAppear: %@", editAccessToken);
-//    [super viewWillAppear:animated];
-//    accessTokenBtn.hidden = FALSE;
-//    reachableBtn.hidden = FALSE;
-//    
-//    
-//
-//    
-//}
+-(void)viewWillAppear:(BOOL)animated{
+    NSLog(@"viewWillAppear");
+    [super viewWillAppear:animated];
+    page1Data.text=editData;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -86,15 +83,18 @@
 }
 
 
-//#pragma mark -Storyboard
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    UIViewController *view = segue.destinationViewController;
-//    if ([view respondsToSelector:@selector(setParentViewController:)]) {
-//        [view setValue:self forKey:@"parentViewController"];
-//    }
-//}
-
+#pragma mark -Storyboard
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSString* data = page1Data.text;
+    UIViewController* view = segue.destinationViewController;
+    if ([view respondsToSelector:@selector(setParam:)]) {
+        [view setValue:data forKey:@"param"];
+    }
+    
+    if ([view respondsToSelector:@selector(setFirstViewController:)]) {
+        [view setValue:self forKey:@"firstViewController"];
+    }
+}
 
 //- (void)setItem:(WXGMenuItem *)item {
 //    _item = item;

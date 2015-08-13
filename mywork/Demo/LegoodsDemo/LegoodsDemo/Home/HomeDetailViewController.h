@@ -10,6 +10,10 @@
 @class WXGMenuItem;
 
 @interface HomeDetailViewController : UIViewController
+#pragma mark -Demo
+@property (strong, nonatomic) IBOutlet UITextField *page1Data;
+@property (strong,nonatomic) NSString* editData;
+// demo end
 
 @property (nonatomic, strong) WXGMenuItem *item;
 

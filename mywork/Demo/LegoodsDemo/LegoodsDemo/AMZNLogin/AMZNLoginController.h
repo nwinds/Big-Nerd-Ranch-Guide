@@ -17,6 +17,10 @@
 
 @interface AMZNLoginController : UIViewController
 
+#pragma mark -Demo
+@property (strong, nonatomic) NSString *param;
+@property (strong,nonatomic) id firstViewController;
+
 #pragma mark -Login access token
 @property (strong, nonatomic) NSString *paramAccessToken;// var
 

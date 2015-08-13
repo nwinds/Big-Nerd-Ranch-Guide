@@ -173,6 +173,11 @@
                                     <segue destination="8Ir-AG-Pvs" kind="modal" id="XFB-1b-zdx"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGi-Es-hnp">
+                                <rect key="frame" x="140" y="131" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -184,6 +189,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z9v-ky-uod"/>
                     <connections>
+                        <outlet property="page1Data" destination="BGi-Es-hnp" id="ud7-ln-eqq"/>
                         <outlet property="webView" destination="lY9-Yr-wnq" id="8uy-cE-MiD"/>
                     </connections>
                 </viewController>
@@ -345,7 +351,7 @@ Internet traffic will be routed through it.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wW7-Tw-dKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1758" y="527"/>
+            <point key="canvasLocation" x="1592" y="1069"/>
         </scene>
         <!--loginViewController-->
         <scene sceneID="Aew-NU-U0H">
@@ -451,7 +457,7 @@ Internet traffic will be routed through it.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufW-hY-Kq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1474" y="-68"/>
+            <point key="canvasLocation" x="1592" y="427"/>
         </scene>
     </scenes>
     <resources>
