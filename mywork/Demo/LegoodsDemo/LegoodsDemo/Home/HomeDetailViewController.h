@@ -13,6 +13,16 @@
 
 @property (nonatomic, strong) WXGMenuItem *item;
 
+@property (strong, nonatomic) IBOutlet UIButton *accessTokenBtn;
+@property (strong, nonatomic) IBOutlet UIButton *reachableBtn;
+
+#pragma mark -Interaction with Amazon Login
+@property (strong, nonatomic) NSString* editAccessToken;
+
+
+//- (IBAction)accessTokenClicked:(id)sender;
+
+#pragma mark -Button handle
 /**
  * 注册顶部按钮的点击事件
  */

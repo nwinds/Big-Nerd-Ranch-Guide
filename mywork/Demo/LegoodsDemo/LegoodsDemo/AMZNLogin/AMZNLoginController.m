@@ -23,7 +23,7 @@
 #pragma mark -Login access token
 @synthesize paramAccessToken;
 @synthesize subPageData;
-@synthesize userLoginController;
+@synthesize parentViewController;
 
 #pragma mark -Navigation Item
 @synthesize toolBar, logoutButton, loginButton;
@@ -76,12 +76,16 @@ BOOL isUserSignedIn;
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
     [self checkIsUserSignedIn];
+    
+
 }
 
 - (void)viewDidLoad {
+    [super viewDidLoad];
+    
     // Amazon login data
     self.subPageData.text = paramAccessToken;
-    
+
     // Display UIObjects
     if (isUserSignedIn)
         [self loadSignedInUser];
@@ -104,6 +108,11 @@ BOOL isUserSignedIn;
     }
 }
 
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
@@ -113,19 +122,17 @@ BOOL isUserSignedIn;
 //        [detailViewController setValue:page2Data.text forKey:@"editData"];
 //    }
     
-    if ([userLoginController respondsToSelector:@selector(setEditAccessToken:)]) {
+    if ([parentViewController respondsToSelector:@selector(setEditAccessToken:)]) {
         [subPageData endEditing:YES];
-        [userLoginController setValue:subPageData.text forKey:@"editAccessToken"];
+        [parentViewController setValue:paramAccessToken forKey:@"editAccessToken"];
     }
 }
 
 #pragma mark -Amazon user login handler
 - (void)checkIsUserSignedIn
 {
-//    NSLog(@"Amazon login: check if user is signed in");
     AMZNGetAccessTokenDelegate* delegate = [[AMZNGetAccessTokenDelegate alloc] initWithParentController:self];
     [AIMobileLib getAccessTokenForScopes:[NSArray arrayWithObject:@"profile"] withOverrideParams:nil delegate:delegate];
-    //    NSLog(@"Amazon login: AccessToken in delegate: %@", delegate.description);
 }
 
 
@@ -134,9 +141,10 @@ BOOL isUserSignedIn;
     self.loginButton.hidden = TRUE;     // hide login button
     self.infoField.text = [NSString stringWithFormat:@"Welcome, %@ \n Your email is %@.", [userProfile objectForKey:@"name"], [userProfile objectForKey:@"email"]];
     self.infoField.hidden = FALSE;
-    
-    // test code
-    self.subPageData.text = [NSString stringWithFormat:@"user: %@", [userProfile objectForKey:@"name"]];
+
+    // DEBUG: update AccessToken
+    self.subPageData.text = paramAccessToken;
+    self.subPageData.hidden = FALSE;
 }
 
 - (void)showLogInPage {
@@ -146,6 +154,12 @@ BOOL isUserSignedIn;
     
     self.infoField.text = userLoggedOutMessage;
     self.infoField.hidden = FALSE;
+    
+    
+    // DEBUG: clear AccessToken
+    self.subPageData.text = paramAccessToken;
+    self.subPageData.hidden = TRUE;
+    
 }
 
 

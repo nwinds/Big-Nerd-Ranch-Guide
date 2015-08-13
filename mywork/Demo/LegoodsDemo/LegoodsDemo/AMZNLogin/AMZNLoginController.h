@@ -18,10 +18,11 @@
 @interface AMZNLoginController : UIViewController
 
 #pragma mark -Login access token
-@property (strong, nonatomic) NSString *paramAccessToken;
-@property (strong, nonatomic) IBOutlet UITextField *subPageData;
+@property (strong, nonatomic) NSString *paramAccessToken;// var
 
-@property (strong, nonatomic) id userLoginController;
+@property (strong, nonatomic) IBOutlet UITextField *subPageData;// page2Data
+
+@property (strong, nonatomic) id parentViewController;
 
 - (IBAction)closeView:(id)sender;
 

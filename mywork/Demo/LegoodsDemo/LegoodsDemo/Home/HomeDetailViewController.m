@@ -17,10 +17,28 @@
 @property (assign, nonatomic) IBOutlet UIWebView *webView;
 
 @property (nonatomic, weak) UIImageView *leftBarIcon;
-
 @end
 
 @implementation HomeDetailViewController
+
+#pragma mark -Interaction with Amazon Login
+
+@synthesize accessTokenBtn;
+@synthesize reachableBtn;
+
+@synthesize editAccessToken;
+
+//-(void)viewWillAppear:(BOOL)animated
+//{
+//    NSLog(@"viewWillAppear: %@", editAccessToken);
+//    [super viewWillAppear:animated];
+//    accessTokenBtn.hidden = FALSE;
+//    reachableBtn.hidden = FALSE;
+//    
+//    
+//
+//    
+//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,7 +65,9 @@
     
     // Webview handler
     //    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
-    NSURL *url = [NSURL URLWithString:@"https://www.legoods.com:2443/handle_login.php"];
+    NSString *url_base = @"https://www.legoods.com:2443/handle_login.php?access_token=";
+    NSURL *url = [NSURL URLWithString:url_base];
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [self.webView loadRequest:request];
 }
@@ -65,6 +85,17 @@
     self.leftBarIcon.transform = CGAffineTransformMakeRotation(angle);
 }
 
+
+#pragma mark -Storyboard
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *view = segue.destinationViewController;
+    if ([view respondsToSelector:@selector(setParentViewController:)]) {
+        [view setValue:self forKey:@"parentViewController"];
+    }
+}
+
+
 //- (void)setItem:(WXGMenuItem *)item {
 //    _item = item;
 //    
@@ -75,5 +106,13 @@
 //    self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
 //    
 //}
+
+
+//#pragma mark -Amazon login
+//
+//- (IBAction)accessTokenClicked:(id)sender {
+//}
+
+
 
 @end

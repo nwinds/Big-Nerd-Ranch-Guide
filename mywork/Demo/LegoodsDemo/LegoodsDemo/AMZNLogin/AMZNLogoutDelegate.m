@@ -41,7 +41,9 @@
  */
 - (void)requestDidSucceed:(APIResult *)apiResult {
     // Your additional logic after the user authorization state is cleared.
+    parentViewController.paramAccessToken = nil;
     
+    // Show login page again
     [parentViewController showLogInPage];
 }
 

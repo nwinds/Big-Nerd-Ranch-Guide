@@ -31,9 +31,9 @@
     // Your code to use access token goes here.
 #pragma mark -On success TODO
     // TODO
-    NSLog(@"Access token result finally");
+//    NSLog(@"Access token result finally");
     NSLog(@"AMZNGetAccessTokenDelegate: result == @%@", apiResult.result);
-
+    parentViewController.paramAccessToken = apiResult.result;
     
 
     // Since the application has authorization for "profile" scope, we can get the user profile.
