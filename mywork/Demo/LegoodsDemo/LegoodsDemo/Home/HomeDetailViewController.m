@@ -23,10 +23,10 @@
 
 #pragma mark -Interaction with Amazon Login
 
-@synthesize accessTokenBtn;
-@synthesize reachableBtn;
+//@synthesize accessTokenBtn;
+//@synthesize reachableBtn;
 
-@synthesize editAccessToken;
+//@synthesize editAccessToken;
 
 //-(void)viewWillAppear:(BOOL)animated
 //{
@@ -86,14 +86,14 @@
 }
 
 
-#pragma mark -Storyboard
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    UIViewController *view = segue.destinationViewController;
-    if ([view respondsToSelector:@selector(setParentViewController:)]) {
-        [view setValue:self forKey:@"parentViewController"];
-    }
-}
+//#pragma mark -Storyboard
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    UIViewController *view = segue.destinationViewController;
+//    if ([view respondsToSelector:@selector(setParentViewController:)]) {
+//        [view setValue:self forKey:@"parentViewController"];
+//    }
+//}
 
 
 //- (void)setItem:(WXGMenuItem *)item {

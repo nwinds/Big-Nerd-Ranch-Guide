@@ -160,7 +160,6 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="accessTokenClicked:" destination="1ae-Ph-Diw" eventType="touchUpInside" id="BHi-cD-Vgx"/>
                                     <segue destination="B3Q-DF-hYL" kind="modal" id="GH1-dz-H8J"/>
                                 </connections>
                             </button>
@@ -185,8 +184,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z9v-ky-uod"/>
                     <connections>
-                        <outlet property="accessTokenBtn" destination="e9J-IG-WzU" id="1om-Wm-UTH"/>
-                        <outlet property="reachableBtn" destination="8xD-Wr-yO8" id="Ikt-gS-Y2v"/>
                         <outlet property="webView" destination="lY9-Yr-wnq" id="8uy-cE-MiD"/>
                     </connections>
                 </viewController>
