@@ -58,6 +58,9 @@
 #pragma mark -Image download
 - (IBAction)downloadImage:(id)sender
 {
+    // UIView controll
+    
+    
 //    BOOL success;
     NSURL* url = [NSURL URLWithString:@"http://developer.yourdeveloper.net/Images/YDLOGO.png"];
     BOOL success = (url != nil);
@@ -68,6 +71,7 @@
     
     // Open stream
     [self.fileStream open];
+    
     
     // Create a request
     NSURLRequest* request = [NSURLRequest requestWithURL:url];
@@ -98,22 +102,15 @@
 }
 
 
-
-
-// Odd(synchrolization?)
-//- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-//{
-//    // Create a static NSSet with mime types your download will support
-//    static NSSet * sSupportedImageTypes;
-//}
-
-//- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-//{
-//    
-//}
-//
-//- (void)connection
-//
+- (NSString *)createFileName
+{
+    // Create a file name based on timestamp
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"ddmmyy-HHmmssSSS"];
+    return [NSTemporaryDirectory() stringByAppendingPathComponent:
+            [NSString stringWithFormat:@"%@.png",
+             [formatter stringFromDate:[NSDate date]]]];
+}
 
 
 #pragma mark -Delegates

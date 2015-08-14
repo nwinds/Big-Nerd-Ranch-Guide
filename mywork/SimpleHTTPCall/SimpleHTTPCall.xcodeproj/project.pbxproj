@@ -13,7 +13,6 @@
 		26B484A71B7D8AAD00542496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26B484A51B7D8AAD00542496 /* Main.storyboard */; };
 		26B484A91B7D8AAD00542496 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26B484A81B7D8AAD00542496 /* Images.xcassets */; };
 		26B484B81B7D8AAD00542496 /* SimpleHTTPCallTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B484B71B7D8AAD00542496 /* SimpleHTTPCallTests.m */; };
-		26B484C31B7D930300542496 /* ImgDownloadVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B484C21B7D930300542496 /* ImgDownloadVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +38,6 @@
 		26B484B11B7D8AAD00542496 /* SimpleHTTPCallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleHTTPCallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		26B484B61B7D8AAD00542496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26B484B71B7D8AAD00542496 /* SimpleHTTPCallTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleHTTPCallTests.m; sourceTree = "<group>"; };
-		26B484C11B7D930300542496 /* ImgDownloadVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImgDownloadVC.h; sourceTree = "<group>"; };
-		26B484C21B7D930300542496 /* ImgDownloadVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImgDownloadVC.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,8 +83,6 @@
 				26B484A01B7D8AAD00542496 /* AppDelegate.m */,
 				26B484A21B7D8AAD00542496 /* HTMLRequestVC.h */,
 				26B484A31B7D8AAD00542496 /* HTMLRequestVC.m */,
-				26B484C11B7D930300542496 /* ImgDownloadVC.h */,
-				26B484C21B7D930300542496 /* ImgDownloadVC.m */,
 				26B484A51B7D8AAD00542496 /* Main.storyboard */,
 				26B484A81B7D8AAD00542496 /* Images.xcassets */,
 				26B4849B1B7D8AAD00542496 /* Supporting Files */,
@@ -220,7 +215,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26B484C31B7D930300542496 /* ImgDownloadVC.m in Sources */,
 				26B484A41B7D8AAD00542496 /* HTMLRequestVC.m in Sources */,
 				26B484A11B7D8AAD00542496 /* AppDelegate.m in Sources */,
 				26B4849E1B7D8AAD00542496 /* main.m in Sources */,
