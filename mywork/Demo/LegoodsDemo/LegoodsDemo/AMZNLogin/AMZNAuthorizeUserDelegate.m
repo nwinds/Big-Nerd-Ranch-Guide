@@ -19,7 +19,7 @@
 
 - (id)initWithParentController:(AMZNLoginController*)aViewController {
     if(self = [super init]) {
-        parentViewController = [aViewController init];
+        parentViewController = [aViewController retain];
     }
     
     return self;
@@ -32,11 +32,16 @@
 - (void)requestDidSucceed:(APIResult *)apiResult {
     // Your code after the user authorizes Application for requested scopes.
     
+
+
+
+
+
+
+    
     // You can now load new view controller with user identifying information as the user is now successfully signed in or simple get the user profile information if the authorization was for "profile" scope.
     
-    AMZNGetProfileDelegate* delegate = [[AMZNGetProfileDelegate alloc] initWithParentController:parentViewController];
-    
-    // Use this method to get the profile of the current authorized user.
+    AMZNGetProfileDelegate* delegate = [[[AMZNGetProfileDelegate alloc] initWithParentController:parentViewController] autorelease];
     [AIMobileLib getProfile:delegate];
 }
 
@@ -46,7 +51,7 @@
 - (void)requestDidFail:(APIError *)errorResponse {
     // Your code when the authorization fails.
     
-    [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"User authorization failed with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] init] show];
+    [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"User authorization failed with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] autorelease] show];
 }
 
 

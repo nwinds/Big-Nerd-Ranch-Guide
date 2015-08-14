@@ -13,11 +13,11 @@
 		268505681B785350000D37F1 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 268505601B785350000D37F1 /* MenuItems.plist */; };
 		268505691B785350000D37F1 /* WXGMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505621B785350000D37F1 /* WXGMenuCell.m */; };
 		2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505641B785350000D37F1 /* WXGMenuItem.m */; };
-		268505781B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */; };
-		268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */; };
-		2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */; };
-		2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505741B78563D000D37F1 /* AMZNLoginController.m */; };
-		2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */; };
+		268505781B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505741B78563D000D37F1 /* AMZNLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26995C331B60DE930000DEED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C321B60DE930000DEED /* main.m */; };
 		26995C361B60DE930000DEED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C351B60DE930000DEED /* AppDelegate.m */; };
 		26995C3C1B60DE930000DEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3A1B60DE930000DEED /* Main.storyboard */; };

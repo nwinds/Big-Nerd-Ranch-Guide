@@ -20,25 +20,30 @@
 
 @implementation AMZNLoginController
 
-#pragma mark -Demo
+#pragma mark -Demo for test
 @synthesize param;
 @synthesize firstViewController;
+
 
 #pragma mark -Login access token
 @synthesize paramAccessToken;
 @synthesize subPageData;
 @synthesize parentViewController;
 
+
 #pragma mark -Navigation Item
 @synthesize toolBar, logoutButton, loginButton;
 
+
 #pragma mark -Text View for user info
 @synthesize infoField;
+
 
 #pragma mark -Amazon user profile
 @synthesize userProfile;
 
 
+#pragma mark -Variables
 NSString* userLoggedOutMessage =
             @"Welcome to Login with Amazon!\nIf this is your first time logging in, you will be asked to give permission for this application to access your profile data.";
 NSString* userLoggedInMessage =
@@ -46,23 +51,27 @@ NSString* userLoggedInMessage =
 
 BOOL isUserSignedIn;
 
-#pragma mark -View show helper
+
+#pragma mark -UIView show helper
 - (IBAction)onLogInButtonClicked:(id)sender
 {
     // Make authorize call to SDK to get authorization from the user. While making the call you can specify the scopes for which the user authorization is needed.
     // Requesting 'profile' scopes for the current user.
     
     NSArray *requestScopes = [NSArray arrayWithObject:@"profile"];
+    
     AMZNAuthorizeUserDelegate* delegate = [[AMZNAuthorizeUserDelegate alloc] initWithParentController:self];
+    
     [AIMobileLib authorizeUserForScopes:requestScopes delegate:delegate];
     
+
     // dissmiss current view (showing the parent view)
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)logoutButtonClicked:(id)sender
 {
-    AMZNLogoutDelegate* delegate = [[AMZNLogoutDelegate alloc] initWithParentController:self];
+    AMZNLogoutDelegate* delegate = [[[AMZNLogoutDelegate alloc] initWithParentController:self] autorelease];
     
     [AIMobileLib clearAuthorizationState:delegate];
 }
@@ -75,13 +84,12 @@ BOOL isUserSignedIn;
 }
 
 
-#pragma mark -View lifecycle
+#pragma mark -UIView lifecycle
 //check if user logged in before user loading the view
-- (void)viewWillAppear:(BOOL)animated{
+- (void)viewWillAppear:(BOOL)animated
+{
     [super viewWillAppear:animated];
     [self checkIsUserSignedIn];
-    
-
 }
 
 - (void)viewDidLoad {
@@ -137,7 +145,7 @@ BOOL isUserSignedIn;
 #pragma mark -Amazon user login handler
 - (void)checkIsUserSignedIn
 {
-    AMZNGetAccessTokenDelegate* delegate = [[AMZNGetAccessTokenDelegate alloc] initWithParentController:self];
+    AMZNGetAccessTokenDelegate* delegate = [[[AMZNGetAccessTokenDelegate alloc] initWithParentController:self] autorelease];
     [AIMobileLib getAccessTokenForScopes:[NSArray arrayWithObject:@"profile"] withOverrideParams:nil delegate:delegate];
 }
 
@@ -182,6 +190,8 @@ BOOL isUserSignedIn;
     self.loginButton = nil;
     self.logoutButton = nil;
     self.userProfile = nil;
+
+    [super dealloc];
 }
 
 @end

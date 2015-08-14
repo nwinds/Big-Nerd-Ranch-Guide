@@ -20,6 +20,6 @@
     AMZNLoginController* parentViewController;
 }
 
-- (id)initWithParentController:(AMZNLoginController*)aViewController;
+- (id)initWithParentController:(AMZNLoginController *)aViewController;
 
 @end

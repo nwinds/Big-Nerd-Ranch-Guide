@@ -17,12 +17,11 @@
 
 - (id)initWithParentController:(AMZNLoginController*)aViewController {
     if(self = [super init]) {
-        parentViewController = [aViewController init];
+        parentViewController = [aViewController retain];
     }
     
     return self;
 }
-
 
 #pragma mark Implementation of getProfile: delegates.
 
@@ -38,6 +37,8 @@
 - (void)requestDidFail:(APIError *)errorResponse {
     // Get Profile request failed for profile scope.
 
+    // Maybe this the key to refresh the page once you authorized by remote authorize server
+
     // If error code = kAIApplicationNotAuthorized, allow user to log in again.
     if(errorResponse.error.code == kAIApplicationNotAuthorized) {
         // Show authorize user button.
@@ -45,10 +46,14 @@
     }
     else {
         // Handle other errors
-        [[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] show];
+        [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] autorelease] show];
     }
 }
 
 
-
+-(void)dealloc {
+    [parentViewController release];
+    [super dealloc];
+    
+}
 @end

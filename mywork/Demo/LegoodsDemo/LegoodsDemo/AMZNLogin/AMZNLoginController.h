@@ -12,39 +12,43 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-@class AMZNLoginController;
+
+
+
+// @class AMZNLoginController;
 
 
 @interface AMZNLoginController : UIViewController
 
-#pragma mark -Demo
-@property (strong, nonatomic) NSString *param;
-@property (strong,nonatomic) id firstViewController;
+#pragma mark -Demo for test
+@property (retain, nonatomic) NSString *param;
+@property (retain, nonatomic) id firstViewController;
+
 
 #pragma mark -Login access token
-@property (strong, nonatomic) NSString *paramAccessToken;// var
-
-@property (strong, nonatomic) IBOutlet UITextField *subPageData;// page2Data
-
-@property (strong, nonatomic) id parentViewController;
+@property (retain, nonatomic) NSString *paramAccessToken;// var
+@property (retain, nonatomic) IBOutlet UITextField *subPageData;// page2Data
+@property (retain, nonatomic) id parentViewController;
 
 - (IBAction)closeView:(id)sender;
 
 
 #pragma mark -Navigation Item
-@property (strong, nonatomic) IBOutlet UIButton *loginButton;
-@property (strong, nonatomic) IBOutlet UITextView *infoField;
-@property (strong, nonatomic) IBOutlet UIButton *logoutButton; // leftBarButton of Nav Item
+@property (retain, nonatomic) IBOutlet UIButton *loginButton;
+@property (retain, nonatomic) IBOutlet UITextView *infoField;
+@property (retain, nonatomic) IBOutlet UIButton *logoutButton; // leftBarButton of Nav Item
+@property (retain, nonatomic) IBOutlet UIToolbar *toolBar;
 
-@property (strong, nonatomic) IBOutlet UIToolbar *toolBar;
 
 #pragma mark -Amazon user profile
-@property (strong) NSDictionary* userProfile;
+@property (retain) NSDictionary* userProfile;
 
 
-#pragma mark -View show helper
+#pragma mark -UIView show helper
 - (void)showLogInPage;
+
 - (void)loadSignedInUser;
+
 - (void)checkIsUserSignedIn;
 
 @end
