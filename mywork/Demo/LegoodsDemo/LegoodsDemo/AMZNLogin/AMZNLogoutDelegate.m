@@ -16,7 +16,7 @@
 
 - (id)initWithParentController:(AMZNLoginController*)aViewController {
     if(self = [super init]) {
-        parentViewController = [aViewController init];
+        parentViewController = [aViewController retain];
     }
     
     return self;
@@ -29,11 +29,12 @@
 - (void)requestDidFail:(APIError *)errorResponse {
     // Your additional logic after the SDK failed to clear the authorization state.
     
-    [[[UIAlertView alloc] initWithTitle:@""
-                                message:[NSString stringWithFormat:@"User Logout failed with message: %@", errorResponse.error.message]
-                               delegate:nil
-                      cancelButtonTitle:@"OK"
-                      otherButtonTitles:nil] show];
+
+    // UIView controll
+    [[[[UIAlertView alloc] initWithTitle:@""
+                                 message:[NSString stringWithFormat:@"User Logout failed with message: %@", errorResponse.error.message]
+                                delegate:nil
+                       cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
 }
 
 /*
@@ -41,12 +42,18 @@
  */
 - (void)requestDidSucceed:(APIResult *)apiResult {
     // Your additional logic after the user authorization state is cleared.
+    parentViewController.paramAccessToken = nil;
     
+    
+    // Show login page again
     [parentViewController showLogInPage];
 }
 
-//- (void)dealloc {
-//    [parentViewController release];
-//    [super dealloc];
-//}
+
+- (void)dealloc 
+{
+    [parentViewController release];
+    [super dealloc];
+}
+
 @end

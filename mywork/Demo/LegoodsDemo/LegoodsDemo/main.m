@@ -1,9 +1,9 @@
 //
 //  main.m
-//  LegoodsDemo
+//  SlideMenu
 //
-//  Created by jyl on 15/7/23.
-//  Copyright (c) 2015年 zmy. All rights reserved.
+//  Created by Nicholas Chow on 15/7/5.
+//  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

@@ -19,26 +19,40 @@
 
 - (id)initWithParentController:(AMZNLoginController*)aViewController {
     if(self = [super init]) {
-        parentViewController = [aViewController init];
+        parentViewController = [aViewController retain];
     }
     
     return self;
 }
 
-#pragma mark Implementation of getAccessTokenForScopes:withOverrideParams:delegate: delegates.
+#pragma mark -getAccessTokenForScopes:withOverrideParams:delegate: delegates.
+#pragma mark -Access Token success
+//Implementation of getAccessTokenForScopes:withOverrideParams:delegate: delegates.
 - (void)requestDidSucceed:(APIResult *)apiResult {
-    NSLog(@"AMZNGetAccessTokenDelegate: requestDidSucceed");
     // Your code to use access token goes here.
+#pragma mark -On success TODO
+    // TODO
+    // NSLog(@"AMZNGetAccessTokenDelegate: result == @%@", apiResult.result);
+    parentViewController.paramAccessToken = apiResult.result;
+    
 
     // Since the application has authorization for "profile" scope, we can get the user profile.
-    AMZNGetProfileDelegate* delegate = [[AMZNGetProfileDelegate alloc] initWithParentController:parentViewController];
+    AMZNGetProfileDelegate* delegate = [[[AMZNGetProfileDelegate alloc] initWithParentController:parentViewController] autorelease];
     
     [AIMobileLib getProfile:delegate];
 }
 
+#pragma mark -Access Token failed
 - (void)requestDidFail:(APIError *)errorResponse {
-    NSLog(@"AMZNGetAccessTokenDelegate: requestDidFail");
     // Your code to handle failed retrieval of access token.
+    #pragma mark -On failed TODO
+    // TODO
+    
+    
+    
+    
+    
+    
     
     // If error code = kAIApplicationNotAuthorized, allow user to log in again.
     if(errorResponse.error.code == kAIApplicationNotAuthorized) {
@@ -47,13 +61,9 @@
     }
     else {
         // Handle other errors
-        [[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] show];
+        [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"Error occured with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK"otherButtonTitles:nil] autorelease] show];
     }
 }
-//
-//- (void)dealloc {
-//    [parentViewController release];
-//    [super dealloc];
-//}
+
 
 @end

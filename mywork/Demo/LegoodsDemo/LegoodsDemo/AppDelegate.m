@@ -1,20 +1,18 @@
 //
 //  AppDelegate.m
-//  LegoodsDemo
+//  SlideMenu
 //
-//  Created by jyl on 15/7/23.
-//  Copyright (c) 2015年 zmy. All rights reserved.
+//  Created by Nicholas Chow on 15/7/5.
+//  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
 
 #import "AppDelegate.h"
 #import <LoginWithAmazon/LoginWithAmazon.h>
-
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -43,9 +41,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-
-
-
+#pragma mark -Amazon returned URL
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
@@ -56,12 +52,14 @@
     BOOL isValidRedirectSignInURL =
     [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
     
-    // For tracing
-    NSLog(@"url:%@", url);
+    // url phasing tracing
+//    NSLog(@"AppDelegate: URL == %@", url);
+    
     if(!isValidRedirectSignInURL)
         return NO;
     
     // App may also want to handle url
     return YES;
 }
+
 @end

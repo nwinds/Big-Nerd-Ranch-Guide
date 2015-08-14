@@ -12,36 +12,40 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
-@class AMZNLoginController;
-
-//@protocol AMZNLoginDelegate <NSObject>
-//
-//- (void)IndexDataViewController:(AMZNLoginController *)controller didFinishLoadData:(NSMutableArray *)loadedArray;
-//
-//@end
 
 @interface AMZNLoginController : UIViewController
+
+#pragma mark -Demo for test
+@property (retain, nonatomic) NSString *param;
+@property (retain, nonatomic) id modalSegueParentVC;// for Storyboard modal relationship's parent-child
+
+
+#pragma mark -Login access token
+@property (retain, nonatomic) NSString *paramAccessToken;// var
+@property (retain, nonatomic) IBOutlet UITextField *subPageData;// page2Data
+
+#pragma mark -Parent View Controller
+@property (retain, nonatomic) id parentViewController;
+
+- (IBAction)closeView:(id)sender;
+
+
 #pragma mark -Navigation Item
-@property (strong, nonatomic) IBOutlet UIButton *loginButton;
-@property (strong, nonatomic) IBOutlet UITextView *infoField;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
-@property (strong, nonatomic) IBOutlet UINavigationItem *navigationItem;
+@property (retain, nonatomic) IBOutlet UIButton *loginButton;
+@property (retain, nonatomic) IBOutlet UITextView *infoField;
+@property (retain, nonatomic) IBOutlet UIButton *logoutButton; // leftBarButton of Nav Item
+@property (retain, nonatomic) IBOutlet UIToolbar *toolBar;
 
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *backButton;
+
 #pragma mark -Amazon user profile
-@property (strong) NSDictionary* userProfile;
+@property (retain) NSDictionary* userProfile;
 
 
-//#pragma mark -Data transformation
-//@property (strong, nonatomic) NSArray *showArray;
-
+#pragma mark -UIView show helper
 - (void)showLogInPage;
 
 - (void)loadSignedInUser;
 
 - (void)checkIsUserSignedIn;
-
-//#pragma mark -Data delegate
-//@property (nonatomic, weak) id <AMZNLoginDelegate> delegate;
 
 @end

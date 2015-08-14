@@ -20,38 +20,58 @@
 
 @implementation AMZNLoginController
 
-@synthesize userProfile, navigationItem, logoutButton, loginButton, infoField;
+#pragma mark -Demo for test
+@synthesize param;
+@synthesize modalSegueParentVC;
 
-NSString* userLoggedOutMessage = @"Welcome to Login with Amazon!\nIf this is your first time logging in, you will be asked to give permission for this application to access your profile data.";
-NSString* userLoggedInMessage = @"Welcome, %@ \n Your email is %@.";
+
+#pragma mark -Login access token
+@synthesize paramAccessToken;
+@synthesize subPageData;
+@synthesize parentViewController;
+
+
+#pragma mark -Navigation Item
+@synthesize toolBar, logoutButton, loginButton;
+
+
+#pragma mark -Text View for user info
+@synthesize infoField;
+
+
+#pragma mark -Amazon user profile
+@synthesize userProfile;
+
+
+#pragma mark -Variables
+NSString* userLoggedOutMessage =
+            @"Welcome to Login with Amazon!\nIf this is your first time logging in, you will be asked to give permission for this application to access your profile data.";
+NSString* userLoggedInMessage =
+            @"Welcome, %@ \n Your email is %@.";
+
 BOOL isUserSignedIn;
 
+
+#pragma mark -UIView show helper
 - (IBAction)onLogInButtonClicked:(id)sender
 {
     // Make authorize call to SDK to get authorization from the user. While making the call you can specify the scopes for which the user authorization is needed.
-    
     // Requesting 'profile' scopes for the current user.
     
-    // research test
-    NSLog(@"Amazon login: login button clicked");
-    
-    NSArray *requestScopes = [NSArray arrayWithObjects:@"profile", @"postal_code", nil];
+    NSArray *requestScopes = [NSArray arrayWithObject:@"profile"];
     
     AMZNAuthorizeUserDelegate* delegate = [[AMZNAuthorizeUserDelegate alloc] initWithParentController:self];
     
-    // Allows the user to login and, if necessary, authorize the app for the requested scopes.
     [AIMobileLib authorizeUserForScopes:requestScopes delegate:delegate];
-    NSLog(@"Amazon login: user login authorized");
+    
+
+    // dissmiss current view (showing the parent view)
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)logoutButtonClicked:(id)sender
 {
-    // For tracing
-    NSLog(@"Amazon logged checking...");
-    [self checkIsUserSignedIn];
-    NSLog(@"Amazon logged check success");
-    
-    AMZNLogoutDelegate* delegate = [[AMZNLogoutDelegate alloc] initWithParentController:self];
+    AMZNLogoutDelegate* delegate = [[[AMZNLogoutDelegate alloc] initWithParentController:self] autorelease];
     
     [AIMobileLib clearAuthorizationState:delegate];
 }
@@ -63,45 +83,32 @@ BOOL isUserSignedIn;
     return NO;
 }
 
-#pragma mark View controller specific functions
-- (void)checkIsUserSignedIn
+
+#pragma mark -UIView lifecycle
+//check if user logged in before user loading the view
+- (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"Amazon login: check if user is login");
-    AMZNGetAccessTokenDelegate* delegate = [[AMZNGetAccessTokenDelegate alloc] initWithParentController:self];
-    
-    NSArray *requestScopes = [NSArray arrayWithObjects:@"profile", @"postal_code", nil];
-    [AIMobileLib getAccessTokenForScopes:requestScopes withOverrideParams:nil delegate:delegate];
-    NSLog(@"Amazon login: AccessToken in delegate: %@", delegate.description);
-}
-
-//- (void)setWebView:
-//{
-
-//}
-
-- (void)loadSignedInUser {
-    isUserSignedIn = true;
-    self.loginButton.hidden = true;
-    self.navigationItem.rightBarButtonItem = self.logoutButton;
-    self.infoField.text = [NSString stringWithFormat:@"Welcome, %@ \n Your email is %@.", [userProfile objectForKey:@"name"], [userProfile objectForKey:@"email"]];
-    self.infoField.hidden = false;
-}
-
-- (void)showLogInPage {
-    isUserSignedIn = false;
-    self.loginButton.hidden = false;
-    self.navigationItem.rightBarButtonItem = nil;
-    self.infoField.text = userLoggedOutMessage;
-    self.infoField.hidden = false;
+    [super viewWillAppear:animated];
+    [self checkIsUserSignedIn];
 }
 
 - (void)viewDidLoad {
-    self.navigationItem.leftBarButtonItem = self.backButton;
+    [super viewDidLoad];
+    
+    // Amazon login data
+    self.subPageData.text = param;
+//    self.subPageData.text = paramAccessToken;
+    NSLog(@"%@", paramAccessToken);
+
+    // Display UIObjects
     if (isUserSignedIn)
         [self loadSignedInUser];
     
-    else
+    else {
         [self showLogInPage];
+    }
+    
+    // iOS version handle
     float systemVersion=[[[UIDevice currentDevice] systemVersion] floatValue];
     if(systemVersion>=7.0f)
     {
@@ -115,25 +122,71 @@ BOOL isUserSignedIn;
     }
 }
 
-//#pragma mark -Data delegate handle
-//- (void)callParentViewControllerData
-//{
-//    [self.delegate IndexDataViewController:self didFinishLoadData:testArray];
-//}
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
 
-//- (IBAction)unwindSegue1:(UIStoryboardSegue *)sender
-//{
-//    NSLog(@"unwindSegue1");
-//}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    if ([modalSegueParentVC respondsToSelector:@selector(setEditData:)]) {
+        [subPageData endEditing:YES];
+        [modalSegueParentVC setValue:subPageData.text forKey:@"editData"];
+    }
+}
 
-//- (void)dealloc {
-//    self.navigationItem = nil;
-//    self.infoField = nil;
-//    self.loginButton = nil;
-//    self.logoutButton = nil;
-//    self.userProfile = nil;
-//    
-//    [super dealloc];
-//}
+#pragma mark -Amazon user login handler
+- (void)checkIsUserSignedIn
+{
+    AMZNGetAccessTokenDelegate* delegate = [[[AMZNGetAccessTokenDelegate alloc] initWithParentController:self] autorelease];
+    [AIMobileLib getAccessTokenForScopes:[NSArray arrayWithObject:@"profile"] withOverrideParams:nil delegate:delegate];
+}
+
+
+- (void)loadSignedInUser {
+    isUserSignedIn = TRUE;
+    self.loginButton.hidden = TRUE;     // hide login button
+    self.infoField.text = [NSString stringWithFormat:@"Welcome, %@ \n Your email is %@.", [userProfile objectForKey:@"name"], [userProfile objectForKey:@"email"]];
+    self.infoField.hidden = FALSE;
+
+    // DEBUG: update AccessToken
+    self.subPageData.text = paramAccessToken;
+    self.subPageData.hidden = FALSE;
+}
+
+- (void)showLogInPage {
+    isUserSignedIn = FALSE;
+    self.loginButton.hidden = FALSE;    // show login button
+    self.logoutButton.hidden = TRUE;    // hide logout button
+    
+    self.infoField.text = userLoggedOutMessage;
+    self.infoField.hidden = FALSE;
+    
+    
+    // DEBUG: clear AccessToken
+    self.subPageData.text = paramAccessToken;
+    self.subPageData.hidden = TRUE;
+    
+}
+
+
+#pragma mark -Sub view button clicked
+
+- (IBAction)closeView:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)dealloc {
+    self.toolBar = nil;
+    self.infoField = nil;
+    self.loginButton = nil;
+    self.logoutButton = nil;
+    self.userProfile = nil;
+
+    [super dealloc];
+}
 
 @end
