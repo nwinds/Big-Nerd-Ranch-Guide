@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--RequestVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HTMLRequestVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jkq-cj-Opa">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="Lm2-Y6-kIf"/>
+                                </constraints>
+                                <state key="normal" title="Load HTML"/>
+                                <connections>
+                                    <action selector="loadHTML:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N0d-ma-pQO"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Lorem ipsum dolor sit er elit lamet" translatesAutoresizingMaskIntoConstraints="NO" id="r8G-9e-0aI">
+                                <rect key="frame" x="0.0" y="75" width="320" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCr-iU-DGl">
+                                <rect key="frame" x="0.0" y="183" width="320" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="itR-qf-dpN"/>
+                                </constraints>
+                                <state key="normal" title="Load image"/>
+                                <connections>
+                                    <action selector="downloadImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a9W-oi-629"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmP-QM-gpJ" userLabel="statusLabel">
+                                <rect key="frame" x="64" y="258" width="209" height="21"/>
+                                <accessibility key="accessibilityConfiguration" label="statusLabel"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="tgz-jK-i3u" userLabel="progressView">
+                                <rect key="frame" x="93" y="248" width="150" height="2"/>
+                                <accessibility key="accessibilityConfiguration" label="progressView"/>
+                            </progressView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="e6j-vQ-EPK">
+                                <rect key="frame" x="40" y="287" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="ctF-xJ-kBR"/>
+                                    <constraint firstAttribute="height" constant="240" id="v41-wa-rrV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jkq-cj-Opa" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0fp-By-3gt"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="BmP-QM-gpJ" secondAttribute="trailing" constant="31" id="2rR-gf-nlO"/>
+                            <constraint firstItem="nCr-iU-DGl" firstAttribute="leading" secondItem="r8G-9e-0aI" secondAttribute="leading" id="4cx-MH-uWP"/>
+                            <constraint firstItem="BmP-QM-gpJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="48" id="Cuv-vP-pwF"/>
+                            <constraint firstItem="nCr-iU-DGl" firstAttribute="top" secondItem="r8G-9e-0aI" secondAttribute="bottom" constant="8" symbolic="YES" id="Dv0-2x-Q0e"/>
+                            <constraint firstItem="r8G-9e-0aI" firstAttribute="top" secondItem="Jkq-cj-Opa" secondAttribute="bottom" constant="8" id="XQA-ke-qPt"/>
+                            <constraint firstItem="tgz-jK-i3u" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="YfX-Oc-5oc"/>
+                            <constraint firstItem="e6j-vQ-EPK" firstAttribute="top" secondItem="BmP-QM-gpJ" secondAttribute="bottom" constant="8" symbolic="YES" id="ZXn-On-Dop"/>
+                            <constraint firstItem="BmP-QM-gpJ" firstAttribute="centerX" secondItem="tgz-jK-i3u" secondAttribute="centerX" id="bDf-cG-YfD"/>
+                            <constraint firstAttribute="centerY" secondItem="BmP-QM-gpJ" secondAttribute="centerY" constant="15.5" id="cEl-F1-uTp"/>
+                            <constraint firstItem="Jkq-cj-Opa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="dyz-Mz-PA7"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nCr-iU-DGl" secondAttribute="bottom" constant="318" id="eE4-lM-zGl"/>
+                            <constraint firstItem="Jkq-cj-Opa" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="jq2-WD-94m"/>
+                            <constraint firstItem="BmP-QM-gpJ" firstAttribute="top" secondItem="tgz-jK-i3u" secondAttribute="bottom" constant="8" symbolic="YES" id="kQC-2g-bNn"/>
+                            <constraint firstItem="nCr-iU-DGl" firstAttribute="trailing" secondItem="r8G-9e-0aI" secondAttribute="trailing" id="pYp-aI-NJU"/>
+                            <constraint firstAttribute="trailing" secondItem="r8G-9e-0aI" secondAttribute="trailing" id="q4Z-bX-eLA"/>
+                            <constraint firstItem="r8G-9e-0aI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xXN-6t-ejv"/>
+                            <constraint firstItem="e6j-vQ-EPK" firstAttribute="centerX" secondItem="nCr-iU-DGl" secondAttribute="centerX" id="xgJ-hb-ZKG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="progressView" destination="tgz-jK-i3u" id="CCq-gB-XgI"/>
+                        <outlet property="receivedImage" destination="e6j-vQ-EPK" id="bzq-LK-zdh"/>
+                        <outlet property="responseView" destination="r8G-9e-0aI" id="ddT-1V-sva"/>
+                        <outlet property="statusLabel" destination="BmP-QM-gpJ" id="lRN-o4-3JE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="162" y="440"/>
+        </scene>
+    </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
