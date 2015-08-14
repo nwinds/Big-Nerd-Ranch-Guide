@@ -13,15 +13,17 @@
 
 //@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
 
-#pragma mark -Web HTML5
-@property (assign, nonatomic) IBOutlet UIWebView *webView;
 
+#pragma mark -Button gestures
 @property (nonatomic, weak) UIImageView *leftBarIcon;
 @end
 
 @implementation HomeDetailViewController
 #pragma mark -Demo
 @synthesize editData;
+
+#pragma mark -Web page loading
+@synthesize url_sec;
 
 #pragma mark -Interaction with Amazon Login
 @synthesize page1Data;
@@ -35,6 +37,17 @@
     NSLog(@"viewWillAppear");
     [super viewWillAppear:animated];
     page1Data.text=editData;
+    // handle phasing
+    // resolving url
+    NSURLComponents *components = [NSURLComponents new];
+    components.scheme = @"https";
+    components.host = @"www.legoods.com";
+    components.port = @2443;
+    components.path = @"/handle_login.php";
+    components.query = [@"access_token=" stringByAppendingString:page1Data.text];
+    
+    url_sec = components.URL;
+
 }
 
 - (void)viewDidLoad {
@@ -60,12 +73,28 @@
     // ...
     
     
-    // Webview handler
-    //    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
-    NSString *url_base = @"https://www.legoods.com:2443/handle_login.php?access_token=";
-    NSURL *url = [NSURL URLWithString:url_base];
+    // handle phasing
+    // resolving url
+    NSURLComponents *components = [NSURLComponents new];
+    components.scheme = @"https";
+    components.host = @"www.legoods.com";
+    components.port = @2443;
+    components.path = @"/handle_login.php";
+    components.query = [@"access_token=" stringByAppendingString:page1Data.text];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    url_sec = components.URL;
+    
+    
+    // Webview handler
+//    //    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
+//    NSString *url_base = @"https://www.legoods.com:2443/handle_login.php?access_token=";
+//    NSString *url_str = [page1Data.text stringByAppendingString:<#(NSString *)#>];
+//    
+//    // Debug log
+    
+    NSLog(@"url_sec: %@", url_sec);
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url_sec];
     [self.webView loadRequest:request];
 }
 

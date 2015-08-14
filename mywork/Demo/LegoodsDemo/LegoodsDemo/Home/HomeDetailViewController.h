@@ -13,7 +13,12 @@
 #pragma mark -Demo
 @property (strong, nonatomic) IBOutlet UITextField *page1Data;
 @property (strong,nonatomic) NSString* editData;
-// demo end
+
+#pragma mark -Web page loading
+@property (assign, nonatomic) IBOutlet UIWebView *webView;
+@property (strong) IBOutlet NSURL *url_sec; // atomic!
+
+#pragma mark -Button gestures
 
 @property (nonatomic, strong) WXGMenuItem *item;
 
