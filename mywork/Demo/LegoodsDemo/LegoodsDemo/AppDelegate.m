@@ -53,7 +53,7 @@
     [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
     
     // url phasing tracing
-    NSLog(@"AppDelegate: URL == %@", url);
+//    NSLog(@"AppDelegate: URL == %@", url);
     
     if(!isValidRedirectSignInURL)
         return NO;

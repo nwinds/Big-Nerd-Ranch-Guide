@@ -25,7 +25,7 @@
     return self;
 }
 
-#pragma mark -Implementation of getAccessTokenForScopes:withOverrideParams:delegate: delegates.
+#pragma mark -getAccessTokenForScopes:withOverrideParams:delegate: delegates.
 #pragma mark -Access Token success
 //Implementation of getAccessTokenForScopes:withOverrideParams:delegate: delegates.
 - (void)requestDidSucceed:(APIResult *)apiResult {

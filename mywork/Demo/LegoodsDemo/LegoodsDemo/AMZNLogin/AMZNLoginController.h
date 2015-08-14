@@ -13,21 +13,18 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
-
-
-// @class AMZNLoginController;
-
-
 @interface AMZNLoginController : UIViewController
 
 #pragma mark -Demo for test
 @property (retain, nonatomic) NSString *param;
-@property (retain, nonatomic) id firstViewController;
+@property (retain, nonatomic) id modalSegueParentVC;// for Storyboard modal relationship's parent-child
 
 
 #pragma mark -Login access token
 @property (retain, nonatomic) NSString *paramAccessToken;// var
 @property (retain, nonatomic) IBOutlet UITextField *subPageData;// page2Data
+
+#pragma mark -Parent View Controller
 @property (retain, nonatomic) id parentViewController;
 
 - (IBAction)closeView:(id)sender;

@@ -29,6 +29,8 @@
     // Example code provided by Amazon sample project
     // Get profile request succeded. Use the profile information to achieve various use cases like showing a simple welcome message.
 
+    
+    
     // apiResult returns current user profile
     parentViewController.userProfile = (NSDictionary*)apiResult.result;
     [parentViewController loadSignedInUser];
@@ -37,6 +39,8 @@
 - (void)requestDidFail:(APIError *)errorResponse {
     // Get Profile request failed for profile scope.
 
+    
+    
     // Maybe this the key to refresh the page once you authorized by remote authorize server
 
     // If error code = kAIApplicationNotAuthorized, allow user to log in again.

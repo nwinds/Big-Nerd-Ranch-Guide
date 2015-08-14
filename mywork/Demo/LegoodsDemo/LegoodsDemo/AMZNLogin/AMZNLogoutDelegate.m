@@ -31,13 +31,10 @@
     
 
     // UIView controll
-    [[[[UIAlertView alloc] initWithTitle:@"" message:[NSString stringWithFormat:@"User Logout failed with message: %@", errorResponse.error.message] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
-
-    // [[[UIAlertView alloc] initWithTitle:@""
-    //                             message:[NSString stringWithFormat:@"User Logout failed with message: %@", errorResponse.error.message]
-    //                            delegate:nil
-    //                   cancelButtonTitle:@"OK"
-    //                   otherButtonTitles:nil] show];
+    [[[[UIAlertView alloc] initWithTitle:@""
+                                 message:[NSString stringWithFormat:@"User Logout failed with message: %@", errorResponse.error.message]
+                                delegate:nil
+                       cancelButtonTitle:@"OK" otherButtonTitles:nil] autorelease] show];
 }
 
 /*
@@ -47,9 +44,11 @@
     // Your additional logic after the user authorization state is cleared.
     parentViewController.paramAccessToken = nil;
     
+    
     // Show login page again
     [parentViewController showLogInPage];
 }
+
 
 - (void)dealloc 
 {

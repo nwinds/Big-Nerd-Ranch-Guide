@@ -11,28 +11,26 @@
 
 @interface HomeDetailViewController ()
 
-//@property (weak, nonatomic) IBOutlet UIImageView *detailImage;
-
-
 #pragma mark -Button gestures
 @property (nonatomic, weak) UIImageView *leftBarIcon;
+
 @end
+
 
 @implementation HomeDetailViewController
 #pragma mark -Demo
 @synthesize editData;
 
+
 #pragma mark -Web page loading
 @synthesize url_sec;
+
 
 #pragma mark -Interaction with Amazon Login
 @synthesize page1Data;
 
-//@synthesize accessTokenBtn;
-//@synthesize reachableBtn;
 
-//@synthesize editAccessToken;
-
+#pragma mark -UIView lifecycle
 -(void)viewWillAppear:(BOOL)animated{
     NSLog(@"viewWillAppear");
     [super viewWillAppear:animated];
@@ -120,8 +118,8 @@
         [view setValue:data forKey:@"param"];
     }
     
-    if ([view respondsToSelector:@selector(setFirstViewController:)]) {
-        [view setValue:self forKey:@"firstViewController"];
+    if ([view respondsToSelector:@selector(setModalSegueParentVC:)]) {
+        [view setValue:self forKey:@"modalSegueParentVC"];
     }
 }
 
@@ -135,13 +133,6 @@
 //    self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
 //    
 //}
-
-
-//#pragma mark -Amazon login
-//
-//- (IBAction)accessTokenClicked:(id)sender {
-//}
-
 
 
 @end

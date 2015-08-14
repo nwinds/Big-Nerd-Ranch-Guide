@@ -22,7 +22,7 @@
 
 #pragma mark -Demo for test
 @synthesize param;
-@synthesize firstViewController;
+@synthesize modalSegueParentVC;
 
 
 #pragma mark -Login access token
@@ -131,15 +131,10 @@ BOOL isUserSignedIn;
 {
     [super viewWillDisappear:animated];
     
-    if ([firstViewController respondsToSelector:@selector(setEditData:)]) {
+    if ([modalSegueParentVC respondsToSelector:@selector(setEditData:)]) {
         [subPageData endEditing:YES];
-        [firstViewController setValue:subPageData.text forKey:@"editData"];
+        [modalSegueParentVC setValue:subPageData.text forKey:@"editData"];
     }
-    
-//    if ([parentViewController respondsToSelector:@selector(setEditAccessToken:)]) {
-//        [subPageData endEditing:YES];
-//        [parentViewController setValue:paramAccessToken forKey:@"editAccessToken"];
-//    }
 }
 
 #pragma mark -Amazon user login handler
