@@ -29,6 +29,9 @@
 #pragma mark -Interaction with Amazon Login
 @synthesize page1Data;
 
+#pragma mark -Button gestures
+
+@synthesize title;
 
 #pragma mark -UIView lifecycle
 -(void)viewWillAppear:(BOOL)animated{
@@ -169,8 +172,12 @@
 #pragma mark -Menu Interact
 - (void)setItem:(WXGMenuItem *)item {
     _item = item;
-
-    // Write the control codes here
+    self.title = item.title;
+//    self.detailImage.image = [UIImage imageNamed:item.bigImage];
+//    CGFloat r = [item.colors[0] doubleValue];
+//    CGFloat g = [item.colors[1] doubleValue];
+//    CGFloat b = [item.colors[2] doubleValue];
+//    self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
     
 }
 
