@@ -8,6 +8,7 @@
 
 #import "HomeDetailViewController.h"
 #import "WXGMenuItem.h"
+#import "HTTPHelper.h"
 
 @interface HomeDetailViewController ()
 
@@ -40,23 +41,47 @@
     page1Data.text=editData;
     
     // Webview handler
-    NSString *urlBase = @"https://www.legoods.com:2443/handle_login.php?access_token=";
-    NSString *urlString;
-    urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
-    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [self loadWebView];
     
-    
-    url_sec = [NSURL URLWithString:urlString];
-    
-    NSLog(@"url_sec: %@", url_sec);
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url_sec];
-    [self.webView loadRequest:request];
 
 }
 
 
+- (void)login{
+    NSString *url = @"https://www.legoods.com:2443/handle_login.php";
+//    urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
+//    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString *access_token = [NSString stringWithFormat:@"%@", editData];
+    [access_token stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    //加入参数
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    [params setValue:access_token forKey:@"access_token"];
 
+    //有网络才发送请求
+    if([HttpHelper NetWorkIsOK]){
+        //发送请求，并且得到返回的数据
+        [HttpHelper post:url RequestParams:params FinishBlock:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                //传回来的数据存在，则执行改回调甘薯
+                if(data){
+                    //子线程通知主线程更新UI，selector中是要执行的函数，data是传给这个函数的参数
+                    //login_callBack就处理返回来的消息，这里就简单的输出，登录成功
+                    [self performSelectorOnMainThread:@selector(login_callBack:) withObject:data waitUntilDone:YES];
+                    NSLog(@"%@", response);
+//                    NSString *aStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//                    NSLog(@"data as string = %@", aStr);
+                }
+                else{
+                    NSLog(@"无效的数据");
+                }
+        }];
+    }
+}
+
+//登录的回调函数，首先判断接收的值是不是能登录。若不能，则提示用户。若能登录，则处理segue来跳转界面
+- (void)login_callBack:(id)value{
+    NSLog(@"成功返回结果");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -83,11 +108,17 @@
     
     // Webview handler
 //    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
+    [self loadWebView];
+}
+
+
+- (void)loadWebView
+{
     NSString *urlBase = @"https://www.legoods.com:2443/handle_login.php?access_token=";
     NSString *urlString;
     urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
+    
     
     url_sec = [NSURL URLWithString:urlString];
     
@@ -95,8 +126,13 @@
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url_sec];
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    // Debug
+    [self login];
+    
     [self.webView loadRequest:request];
 }
+
 
 // 顶部按钮点击事件
 - (void)leftBarButtonClick {
