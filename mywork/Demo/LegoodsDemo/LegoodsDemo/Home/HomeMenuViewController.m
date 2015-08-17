@@ -10,6 +10,9 @@
 #import "WXGMenuCell.h"
 #import "WXGMenuItem.h"
 
+// subview controller
+#import "APLViewController.h"
+
 @interface HomeMenuViewController ()
 
 @property (nonatomic, copy) NSArray *menuItems;
@@ -61,8 +64,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.menuDidClick) {
         self.menuDidClick(self.menuItems[indexPath.row], YES);
+//        if (self.menuItems[indexPath.row] ) {
+//            
+////        }
+//            APLViewController *subview = [self.storyboard instantiateViewControllerWithIdentifier:@"SubviewViewController"];
+//            [self addChildViewController: subview];
+//            [subview didMoveToParentViewController:self];
+//            [self.view addSubview:subview.view];
+//        }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+//// 获取两个子控制器
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    if ([segue.identifier isEqualToString:@"MenuViewControllerSegue"]) {
+//        self.menuViewController = (HomeMenuViewController *)[segue.destinationViewController topViewController];
+//    } else if ([segue.identifier isEqualToString:@"DetailViewControllerSegue"]) {
+//        self.detailViewController = (HomeDetailViewController *)[segue.destinationViewController topViewController];
+//    }
+//}
 @end
