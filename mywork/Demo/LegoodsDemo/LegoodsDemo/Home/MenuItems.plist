@@ -3,6 +3,8 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>title</key>
+		<string>t_smile</string>
 		<key>image</key>
 		<string>Smile</string>
 		<key>bigImage</key>
@@ -15,6 +17,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>title</key>
+		<string>t_coffee</string>
 		<key>image</key>
 		<string>Coffee</string>
 		<key>bigImage</key>
@@ -27,6 +31,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>title</key>
+		<string>t_drinks</string>
 		<key>image</key>
 		<string>Drinks</string>
 		<key>bigImage</key>
@@ -39,6 +45,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>title</key>
+		<string>t_thumbsup</string>
 		<key>image</key>
 		<string>ThumbsUp</string>
 		<key>bigImage</key>
@@ -51,6 +59,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>title</key>
+		<string>t_thumbsdown</string>
 		<key>image</key>
 		<string>ThumbsDown</string>
 		<key>bigImage</key>
@@ -63,6 +73,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>title</key>
+		<string>t_raining</string>
 		<key>image</key>
 		<string>Raining</string>
 		<key>bigImage</key>
@@ -75,6 +87,8 @@
 		</array>
 	</dict>
 	<dict>
+		<key>title</key>
+		<string>t_clock</string>
 		<key>image</key>
 		<string>Clock</string>
 		<key>bigImage</key>

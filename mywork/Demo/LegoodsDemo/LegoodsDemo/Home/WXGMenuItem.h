@@ -10,11 +10,18 @@
 
 @interface WXGMenuItem : NSObject
 
+#pragma mark -Item title(as index)
+
+@property (nonatomic, copy) NSString *title;
+
+#pragma mark -Display
 @property (nonatomic, copy) NSString *image;
 
 @property (nonatomic, copy) NSString *bigImage;
 
 @property (nonatomic, copy) NSArray *colors;
+
+
 
 + (instancetype)itemWithDict:(NSDictionary *)dict;
 

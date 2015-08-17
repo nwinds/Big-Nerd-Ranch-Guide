@@ -24,7 +24,7 @@
 
 #pragma mark -Web page loading
 @synthesize url_sec;
-
+@synthesize connection;
 
 #pragma mark -Interaction with Amazon Login
 @synthesize page1Data;
@@ -35,17 +35,28 @@
     NSLog(@"viewWillAppear");
     [super viewWillAppear:animated];
     page1Data.text=editData;
-    // handle phasing
-    // resolving url
-    NSURLComponents *components = [NSURLComponents new];
-    components.scheme = @"https";
-    components.host = @"www.legoods.com";
-    components.port = @2443;
-    components.path = @"/handle_login.php";
-    components.query = [@"access_token=" stringByAppendingString:page1Data.text];
     
-    url_sec = components.URL;
+    // Webview handler
+    NSString *urlBase = @"https://www.legoods.com:2443/handle_login.php?access_token=";
+    NSString *urlString;
+    urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    
+    url_sec = [NSURL URLWithString:urlString];
+    
+    NSLog(@"url_sec: %@", url_sec);
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:url_sec];
+    [self.webView loadRequest:request];
 
+}
+
+
+//helper
+-(NSString *)returnFormatString:(NSString *)str
+{
+    return [str stringByReplacingOccurrencesOfString:@" " withString:@" "];
 }
 
 - (void)viewDidLoad {
@@ -71,28 +82,20 @@
     // ...
     
     
-    // handle phasing
-    // resolving url
-    NSURLComponents *components = [NSURLComponents new];
-    components.scheme = @"https";
-    components.host = @"www.legoods.com";
-    components.port = @2443;
-    components.path = @"/handle_login.php";
-    components.query = [@"access_token=" stringByAppendingString:page1Data.text];
-    
-    url_sec = components.URL;
-    
-    
     // Webview handler
-//    //    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
-//    NSString *url_base = @"https://www.legoods.com:2443/handle_login.php?access_token=";
-//    NSString *url_str = [page1Data.text stringByAppendingString:<#(NSString *)#>];
-//    
-//    // Debug log
+//    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
+    NSString *urlBase = @"https://www.legoods.com:2443/handle_login.php?access_token=";
+    NSString *urlString;
+    urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
+    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+    
+    url_sec = [NSURL URLWithString:urlString];
     
     NSLog(@"url_sec: %@", url_sec);
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:url_sec];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url_sec];
+    connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [self.webView loadRequest:request];
 }
 
@@ -123,16 +126,55 @@
     }
 }
 
-//- (void)setItem:(WXGMenuItem *)item {
-//    _item = item;
-//    
+
+#pragma mark -Connection handle
+#pragma mark -Delegates
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    // HTTP requests
+//    [webData setLength:0];
+    
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    // HTTP requests
+//    [webData appendData:data];
+}
+
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    // HTTP requests
+    UIAlertView *alert = [[UIAlertView alloc]
+                          initWithTitle:@"Error"
+                          message:@"Can't make a connection."
+                          delegate:nil
+                          cancelButtonTitle:@"Ok"
+                          otherButtonTitles:nil, nil];
+    [alert show];
+
+}
+
+
+// important: error handle
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection
+{
+    // HTTP requests
+
+}
+
+
+- (void)setItem:(WXGMenuItem *)item {
+    _item = item;
+//
 ////    self.detailImage.image = [UIImage imageNamed:item.bigImage];
 //    CGFloat r = [item.colors[0] doubleValue];
 //    CGFloat g = [item.colors[1] doubleValue];
 //    CGFloat b = [item.colors[2] doubleValue];
 //    self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
-//    
-//}
+    
+}
 
 
 @end

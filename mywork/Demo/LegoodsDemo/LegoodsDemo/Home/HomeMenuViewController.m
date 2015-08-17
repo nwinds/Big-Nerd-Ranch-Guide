@@ -63,6 +63,7 @@
         self.menuDidClick(self.menuItems[indexPath.row], YES);
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    NSLog(@"height");
 }
 
 @end

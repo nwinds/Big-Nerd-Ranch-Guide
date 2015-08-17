@@ -16,7 +16,8 @@
 
 #pragma mark -Web page loading
 @property (assign, nonatomic) IBOutlet UIWebView *webView;
-@property (strong) IBOutlet NSURL *url_sec; // atomic!
+@property (strong) NSURL *url_sec; // atomic!
+@property (strong) NSURLConnection *connection;
 
 #pragma mark -Button gestures
 
@@ -36,5 +37,8 @@
  * 实现顶部按钮的滚动效果
  */
 - (void)rotateLeftBarButtonWithScale:(CGFloat)scale;
+
+#pragma mark -Menu Interact
+- (void)setItem:(WXGMenuItem *)item;
 
 @end
