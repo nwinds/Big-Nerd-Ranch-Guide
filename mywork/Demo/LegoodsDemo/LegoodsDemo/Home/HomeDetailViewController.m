@@ -53,11 +53,7 @@
 }
 
 
-//helper
--(NSString *)returnFormatString:(NSString *)str
-{
-    return [str stringByReplacingOccurrencesOfString:@" " withString:@" "];
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -164,15 +160,17 @@
 
 }
 
+#pragma mark -Helper
+-(NSString *)returnFormatString:(NSString *)str
+{
+    return [str stringByReplacingOccurrencesOfString:@" " withString:@" "];
+}
 
+#pragma mark -Menu Interact
 - (void)setItem:(WXGMenuItem *)item {
     _item = item;
-//
-////    self.detailImage.image = [UIImage imageNamed:item.bigImage];
-//    CGFloat r = [item.colors[0] doubleValue];
-//    CGFloat g = [item.colors[1] doubleValue];
-//    CGFloat b = [item.colors[2] doubleValue];
-//    self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
+
+    // Write the control codes here
     
 }
 

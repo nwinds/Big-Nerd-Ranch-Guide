@@ -11,7 +11,7 @@
 
 @interface WXGMenuCell ()
 
-//@property (strong, nonatomic) IBOutlet UIButton *menuButton;
+
 @property (weak, nonatomic) IBOutlet UIImageView *menuIcon;
 
 @end
@@ -30,11 +30,7 @@
     // Q: how to remove the edge blank instead of setting the background color same with button?
     // Q: how to avoid clicking btn image => turn into default(which we don't want)
     self.backgroundColor = backgroundColor;
-//    self.menuIcon.hidden = FALSE;
 }
-//
-//- (IBAction)iconButtonClicked:(id)sender
-//{
-//    // get parent view's webview and open xib file.
-//}
+
+
 @end
