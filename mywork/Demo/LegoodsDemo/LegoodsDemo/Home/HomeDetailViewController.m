@@ -9,7 +9,8 @@
 #import "HomeDetailViewController.h"
 #import "WXGMenuItem.h"
 #import "HTTPHelper.h"
-
+#import "APLViewController.h"
+#import "AMZNLoginController.h"
 @interface HomeDetailViewController ()
 
 #pragma mark -Button gestures
@@ -67,7 +68,7 @@
                     //子线程通知主线程更新UI，selector中是要执行的函数，data是传给这个函数的参数
                     //login_callBack就处理返回来的消息，这里就简单的输出，登录成功
                     [self performSelectorOnMainThread:@selector(login_callBack:) withObject:data waitUntilDone:YES];
-                    NSLog(@"%@", response);
+//                    NSLog(@"%@", response);
 //                    NSString *aStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 //                    NSLog(@"data as string = %@", aStr);
                 }
@@ -218,4 +219,27 @@
 }
 
 
+- (IBAction)loginWithAmazon:(id)sender
+{
+    NSLog(@"login with amazon clicked");
+    
+    NSString * viewControllerID = @"loginVC";
+    UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    AMZNLoginController * subviewVC = (AMZNLoginController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+    [self presentViewController:subviewVC animated:YES completion:nil];
+}
+
+- (IBAction)reachabilityCheck:(id)sender
+{
+    NSLog(@"reachabiliy clicked");
+    // Using current storyboard to load subview dynamically
+    // See http://stackoverflow.com/questions/10522957/call-storyboard-scene-programmatically-without-needing-segue for further info.
+    
+    NSString * viewControllerID = @"ReachabilityVC";
+    UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    
+    APLViewController * subviewVC = (APLViewController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+    [self presentViewController:subviewVC animated:YES completion:nil];
+}
 @end

@@ -8,7 +8,7 @@
         <!--Home Container View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeContainerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeContainerVC" id="BYZ-38-t0r" customClass="HomeContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -154,7 +154,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="B3Q-DF-hYL" kind="modal" id="GH1-dz-H8J"/>
+                                    <action selector="loginWithAmazon:" destination="1ae-Ph-Diw" eventType="touchUpInside" id="pKs-Tj-57q"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-Wr-yO8">
@@ -164,7 +164,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="8Ir-AG-Pvs" kind="modal" id="XFB-1b-zdx"/>
+                                    <action selector="reachabilityCheck:" destination="1ae-Ph-Diw" eventType="touchUpInside" id="FhK-Rx-tOU"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGi-Es-hnp">
@@ -210,7 +210,7 @@
         <!--View Controller-->
         <scene sceneID="r2Y-KH-Yar">
             <objects>
-                <viewController storyboardIdentifier="SubviewViewController" id="8Ir-AG-Pvs" customClass="APLViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReachabilityVC" modalPresentationStyle="currentContext" id="8Ir-AG-Pvs" customClass="APLViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N7z-EA-JpY"/>
                         <viewControllerLayoutGuide type="bottom" id="8IR-mR-fPe"/>
@@ -350,7 +350,7 @@ Internet traffic will be routed through it.</string>
         <!--loginViewController-->
         <scene sceneID="Aew-NU-U0H">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" title="loginViewController" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="currentContext" id="B3Q-DF-hYL" customClass="AMZNLoginController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" autoresizesArchivedViewToFullSize="NO" title="loginViewController" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="currentContext" id="B3Q-DF-hYL" customClass="AMZNLoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KW7-kr-bdA"/>
                         <viewControllerLayoutGuide type="bottom" id="QFW-Cg-Fgn"/>

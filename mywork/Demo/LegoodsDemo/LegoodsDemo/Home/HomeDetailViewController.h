@@ -38,6 +38,11 @@
  */
 - (void)rotateLeftBarButtonWithScale:(CGFloat)scale;
 
+
+#pragma mark -Subview loading dynamically
+- (IBAction)loginWithAmazon:(id)sender;
+
+- (IBAction)reachabilityCheck:(id)sender;
 #pragma mark -Menu Interact
 - (void)setItem:(WXGMenuItem *)item;
 
