@@ -42,7 +42,6 @@
 
 #pragma mark -UIView lifecycle
 -(void)viewWillAppear:(BOOL)animated{
-    NSLog(@"viewWillAppear");
     [super viewWillAppear:animated];
     page1Data.text=editData;
     
@@ -113,7 +112,6 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url_sec];
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
-    // Debug
     [self loginHandler];
     
     [self.webView loadRequest:request];
