@@ -8,7 +8,12 @@
 // Edited by zmy
 #import "HomeDetailViewController.h"
 #import "WXGMenuItem.h"
-#import "HTTPHelper.h"
+
+//http requests
+#import "HttpPostDelegate.h"
+#import "HttpPostExecutor.h"
+
+
 #import "APLViewController.h"
 #import "AMZNLoginController.h"
 @interface HomeDetailViewController ()
@@ -57,29 +62,16 @@
     [params setValue:access_token forKey:@"access_token"];
 
     //有网络才发送请求
-    if([HttpHelper NetWorkIsOK]){
-        //发送请求，并且得到返回的数据
-        [HttpHelper post:url RequestParams:params FinishBlock:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
-                //传回来的数据存在，则执行改回调甘薯
-                if(data){
-                    //子线程通知主线程更新UI，selector中是要执行的函数，data是传给这个函数的参数
-                    //login_callBack就处理返回来的消息，这里就简单的输出，登录成功
-                    [self performSelectorOnMainThread:@selector(login_callBack:) withObject:data waitUntilDone:YES];
-                    //NSLog(@"%@", response);
-                    //NSString *aStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-                    //NSLog(@"data as string = %@", aStr);
-                }
-                else{
-                    NSLog(@"无效的数据");
-                }
-        }];
-    }
+    [HttpPostExecutor postExecuteWithUrlStr:url
+                                  Paramters:access_token
+                        FinishCallbackBlock:^(NSString *result){
+                            // 执行post请求完成后的逻辑
+//                            NSLog(@"finish callback block, result: %@", result);
+                        }];
+
 }
 
-//登录的回调函数，首先判断接收的值是不是能登录。若不能，则提示用户。若能登录，则处理segue来跳转界面
-- (void)login_callBack:(id)value{
-    NSLog(@"成功返回结果");
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -207,27 +199,27 @@
     _item = item;
     
     // Debug log
-    NSLog(@"%@", item.title);
-    
+//    NSLog(@"%@", item.title);
+    UIStoryboard * storyboardCurr;
+    NSString * viewControllerID;
     NSString *titleTag = item.title;
     if ([titleTag isEqualToString:@"t_smile"]) {
         return;
     }
     else if ([titleTag isEqualToString:@"t_coffee"]) {
-        NSLog(@"login with amazon clicked");
         NSString * viewControllerID = @"loginVC";
-        UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         AMZNLoginController * subviewVC = (AMZNLoginController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+        [subviewVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
         [self presentViewController:subviewVC animated:YES completion:nil];
     }
     else if ([titleTag isEqualToString:@"t_drinks"]){
-        NSLog(@"reachabiliy clicked");
-     
         NSString * viewControllerID = @"ReachabilityVC";
-        UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         APLViewController * subviewVC = (APLViewController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+        [subviewVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
         [self presentViewController:subviewVC animated:YES completion:nil];
     }
     else if ([titleTag isEqualToString:@"t_thumbsup"]){
