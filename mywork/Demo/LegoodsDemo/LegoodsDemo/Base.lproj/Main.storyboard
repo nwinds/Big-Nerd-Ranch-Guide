@@ -118,13 +118,15 @@
         <!--Navigation Controller-->
         <scene sceneID="oY7-Ze-hc7">
             <objects>
-                <navigationController id="xAT-06-DdM" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="webpageVC" id="xAT-06-DdM" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="N0h-xq-Kic">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="1ae-Ph-Diw" kind="relationship" relationship="rootViewController" id="pdO-Na-OpN"/>
+                        <segue destination="1ae-Ph-Diw" kind="relationship" relationship="rootViewController" id="cbI-Gy-K5k"/>
+                        <segue destination="8Ir-AG-Pvs" kind="push" id="Gcr-l6-1No"/>
+                        <segue destination="B3Q-DF-hYL" kind="push" id="zMI-pA-Dat"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12m-IX-Uip" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5lz-Ys-hAL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="937" y="691"/>
+            <point key="canvasLocation" x="1093" y="334"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Dq4-Kw-Hl7">
@@ -190,11 +192,11 @@
                         <viewControllerLayoutGuide type="bottom" id="8IR-mR-fPe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="VXI-en-waX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIh-xY-yie">
-                                <rect key="frame" x="67" y="425" width="76" height="30"/>
+                                <rect key="frame" x="67" y="381" width="76" height="30"/>
                                 <state key="normal" title="Close View">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -237,7 +239,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remote Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgc-KU-QoD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remote Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgc-KU-QoD">
                                 <rect key="frame" x="16" y="57" width="89" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -247,8 +249,13 @@
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TCP/IP Routing Available" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-hT-8wN">
+                                <rect key="frame" x="16" y="146" width="166" height="30"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6E-EB-JOD">
-                                <rect key="frame" x="16" y="340" width="263" height="65"/>
+                                <rect key="frame" x="16" y="318" width="263" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="cab-Ir-lNb"/>
                                 </constraints>
@@ -258,11 +265,6 @@ Internet traffic will be routed through it.</string>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TCP/IP Routing Available" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-hT-8wN">
-                                <rect key="frame" x="16" y="146" width="166" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -270,10 +272,10 @@ Internet traffic will be routed through it.</string>
                             <constraint firstItem="75g-Gw-SH5" firstAttribute="leading" secondItem="Vgh-g3-nmY" secondAttribute="leading" id="6Xi-Io-qqE"/>
                             <constraint firstItem="96c-L9-hMh" firstAttribute="leading" secondItem="7Yc-PH-9TO" secondAttribute="leading" id="7fA-tV-gx3"/>
                             <constraint firstItem="75g-Gw-SH5" firstAttribute="trailing" secondItem="m0p-xn-c9j" secondAttribute="trailing" id="8SU-lW-upR"/>
-                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="top" secondItem="N7z-EA-JpY" secondAttribute="bottom" constant="95" id="Ebs-U8-6rg"/>
+                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="top" secondItem="N7z-EA-JpY" secondAttribute="bottom" constant="75" id="Ebs-U8-6rg"/>
                             <constraint firstItem="7Yc-PH-9TO" firstAttribute="leading" secondItem="VXI-en-waX" secondAttribute="leadingMargin" id="Ejt-sp-yCA"/>
                             <constraint firstItem="cIh-xY-yie" firstAttribute="leading" secondItem="VXI-en-waX" secondAttribute="leadingMargin" constant="51" id="FD8-oz-NaL"/>
-                            <constraint firstItem="cIh-xY-yie" firstAttribute="top" secondItem="P6E-EB-JOD" secondAttribute="bottom" constant="20" id="HBc-XO-ZhD"/>
+                            <constraint firstItem="cIh-xY-yie" firstAttribute="top" secondItem="P6E-EB-JOD" secondAttribute="bottom" constant="-2" id="HBc-XO-ZhD"/>
                             <constraint firstItem="Vgh-g3-nmY" firstAttribute="leading" secondItem="HeQ-9n-Zlw" secondAttribute="trailing" constant="8" symbolic="YES" id="IVp-bC-1a5"/>
                             <constraint firstItem="96c-L9-hMh" firstAttribute="leading" secondItem="7Yc-PH-9TO" secondAttribute="leading" id="IVy-Gi-jHo"/>
                             <constraint firstItem="HeQ-9n-Zlw" firstAttribute="leading" secondItem="jgc-KU-QoD" secondAttribute="leading" id="Ocm-tY-4Ih"/>
@@ -305,7 +307,7 @@ Internet traffic will be routed through it.</string>
                             <constraint firstItem="P6E-EB-JOD" firstAttribute="leading" secondItem="xfS-Fm-BdE" secondAttribute="leading" id="zhu-l4-89o"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="73g-hM-eaF"/>
+                    <navigationItem key="navigationItem" id="tkZ-pC-8a6"/>
                     <connections>
                         <outlet property="internetConnectionImageView" destination="HeQ-9n-Zlw" id="N2T-Z3-4A5"/>
                         <outlet property="internetConnectionStatusField" destination="Vgh-g3-nmY" id="LQg-eu-94s"/>
@@ -319,18 +321,18 @@ Internet traffic will be routed through it.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wW7-Tw-dKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592" y="1069"/>
+            <point key="canvasLocation" x="1079" y="1016"/>
         </scene>
         <!--loginViewController-->
         <scene sceneID="Aew-NU-U0H">
             <objects>
-                <viewController storyboardIdentifier="loginVC" autoresizesArchivedViewToFullSize="NO" title="loginViewController" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="currentContext" id="B3Q-DF-hYL" customClass="AMZNLoginController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" title="loginViewController" id="B3Q-DF-hYL" customClass="AMZNLoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KW7-kr-bdA"/>
                         <viewControllerLayoutGuide type="bottom" id="QFW-Cg-Fgn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pQb-iA-3cA">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="用户信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-iX-lwG">
@@ -339,7 +341,7 @@ Internet traffic will be routed through it.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BR-pc-2ba">
-                                <rect key="frame" x="94" y="400" width="132" height="36"/>
+                                <rect key="frame" x="94" y="356" width="132" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="DED-w1-5O3"/>
                                 </constraints>
@@ -357,15 +359,15 @@ Internet traffic will be routed through it.</string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-Ju-XSz">
-                                <rect key="frame" x="33" y="362" width="97" height="30"/>
+                                <rect key="frame" x="33" y="318" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="97" id="csn-IC-ltg"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-zP-rLc">
-                                <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="bottom" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u0a-zP-rLc">
+                                <rect key="frame" x="0.0" y="480" width="320" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" id="5Bd-Lm-MfQ">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kg6-Uq-5bC">
@@ -406,15 +408,15 @@ Internet traffic will be routed through it.</string>
                             <constraint firstItem="nGW-s7-nk9" firstAttribute="leading" secondItem="GEb-iX-lwG" secondAttribute="leading" id="X8y-QJ-Jmp"/>
                             <constraint firstItem="nGW-s7-nk9" firstAttribute="centerX" secondItem="1BR-pc-2ba" secondAttribute="centerX" id="YIS-Ll-Hdw"/>
                             <constraint firstItem="nGW-s7-nk9" firstAttribute="leading" secondItem="5DM-Ju-XSz" secondAttribute="leading" id="cAy-jg-MHo"/>
-                            <constraint firstItem="GEb-iX-lwG" firstAttribute="top" secondItem="KW7-kr-bdA" secondAttribute="bottom" constant="122" id="ePZ-eJ-cFP"/>
+                            <constraint firstItem="GEb-iX-lwG" firstAttribute="top" secondItem="KW7-kr-bdA" secondAttribute="bottom" constant="102" id="ePZ-eJ-cFP"/>
                             <constraint firstItem="GEb-iX-lwG" firstAttribute="leading" secondItem="pQb-iA-3cA" secondAttribute="leadingMargin" constant="17" id="ndW-Ep-tzP"/>
                             <constraint firstItem="QFW-Cg-Fgn" firstAttribute="top" secondItem="1BR-pc-2ba" secondAttribute="bottom" constant="132" id="ppe-nT-OLe"/>
                             <constraint firstItem="nGW-s7-nk9" firstAttribute="trailing" secondItem="GEb-iX-lwG" secondAttribute="trailing" id="sSd-7H-z6A"/>
                             <constraint firstItem="5DM-Ju-XSz" firstAttribute="top" secondItem="nGW-s7-nk9" secondAttribute="bottom" constant="71" id="skE-KP-dYG"/>
                         </constraints>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="Z1r-wa-Ifa"/>
                     <connections>
                         <outlet property="infoField" destination="nGW-s7-nk9" id="Ni9-hk-lWH"/>
                         <outlet property="loginButton" destination="1BR-pc-2ba" id="DMH-8l-myE"/>
@@ -425,7 +427,7 @@ Internet traffic will be routed through it.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ufW-hY-Kq3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1592" y="427"/>
+            <point key="canvasLocation" x="1466" y="604"/>
         </scene>
     </scenes>
     <resources>

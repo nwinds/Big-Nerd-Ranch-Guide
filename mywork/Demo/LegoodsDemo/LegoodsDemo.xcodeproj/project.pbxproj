@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		261F30351B81ACFA0078AFEA /* HTTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 261F30341B81ACFA0078AFEA /* HTTPHelper.m */; };
 		268505651B785350000D37F1 /* HomeContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055B1B785350000D37F1 /* HomeContainerViewController.m */; };
 		268505661B785350000D37F1 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055D1B785350000D37F1 /* HomeDetailViewController.m */; };
 		268505671B785350000D37F1 /* HomeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055F1B785350000D37F1 /* HomeMenuViewController.m */; };
@@ -30,6 +29,9 @@
 		269D409C1B6219FD003D63BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D409B1B6219FD003D63BD /* Security.framework */; };
 		26ADE27A1B7B146600385462 /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ADE2771B7B146600385462 /* APLViewController.m */; };
 		26ADE27B1B7B146600385462 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ADE2791B7B146600385462 /* Reachability.m */; };
+		26B2DA901B844DB6003E4D0B /* HttpPostExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA8D1B844DB6003E4D0B /* HttpPostExecutor.m */; };
+		26B2DA911B844DB6003E4D0B /* HttpPostDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */; };
+		26B2DA931B845B29003E4D0B /* AMZNLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B2DA921B845B29003E4D0B /* AMZNLoginController.xib */; };
 		26DB64A31B748FBE00ABF838 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,8 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		261F30331B81ACFA0078AFEA /* HTTPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPHelper.h; sourceTree = "<group>"; };
-		261F30341B81ACFA0078AFEA /* HTTPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPHelper.m; sourceTree = "<group>"; };
 		2685055A1B785350000D37F1 /* HomeContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeContainerViewController.h; path = Home/HomeContainerViewController.h; sourceTree = "<group>"; };
 		2685055B1B785350000D37F1 /* HomeContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeContainerViewController.m; path = Home/HomeContainerViewController.m; sourceTree = "<group>"; };
 		2685055C1B785350000D37F1 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeDetailViewController.h; path = Home/HomeDetailViewController.h; sourceTree = "<group>"; };
@@ -85,6 +85,11 @@
 		26ADE2771B7B146600385462 /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLViewController.m; path = APLReachability/APLViewController.m; sourceTree = "<group>"; };
 		26ADE2781B7B146600385462 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = APLReachability/Reachability.h; sourceTree = "<group>"; };
 		26ADE2791B7B146600385462 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = APLReachability/Reachability.m; sourceTree = "<group>"; };
+		26B2DA8C1B844DB6003E4D0B /* HttpPostExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpPostExecutor.h; sourceTree = "<group>"; };
+		26B2DA8D1B844DB6003E4D0B /* HttpPostExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpPostExecutor.m; sourceTree = "<group>"; };
+		26B2DA8E1B844DB6003E4D0B /* HttpPostDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpPostDelegate.h; sourceTree = "<group>"; };
+		26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpPostDelegate.m; sourceTree = "<group>"; };
+		26B2DA921B845B29003E4D0B /* AMZNLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMZNLoginController.xib; path = AMZNLogin/AMZNLoginController.xib; sourceTree = "<group>"; };
 		26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -110,12 +115,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		261F30321B81ACFA0078AFEA /* HTTPHelper */ = {
+		261F30321B81ACFA0078AFEA /* HTTPSDelegate */ = {
 			isa = PBXGroup;
 			children = (
-				261F30331B81ACFA0078AFEA /* HTTPHelper.h */,
-				261F30341B81ACFA0078AFEA /* HTTPHelper.m */,
+				26B2DA8C1B844DB6003E4D0B /* HttpPostExecutor.h */,
+				26B2DA8D1B844DB6003E4D0B /* HttpPostExecutor.m */,
+				26B2DA8E1B844DB6003E4D0B /* HttpPostDelegate.h */,
+				26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */,
 			);
+			name = HTTPSDelegate;
 			path = HTTPHelper;
 			sourceTree = "<group>";
 		};
@@ -148,6 +156,7 @@
 				268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */,
 				268505731B78563D000D37F1 /* AMZNLoginController.h */,
 				268505741B78563D000D37F1 /* AMZNLoginController.m */,
+				26B2DA921B845B29003E4D0B /* AMZNLoginController.xib */,
 				268505751B78563D000D37F1 /* AMZNLogoutDelegate.h */,
 				268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */,
 			);
@@ -176,7 +185,7 @@
 		26995C2F1B60DE930000DEED /* LegoodsDemo */ = {
 			isa = PBXGroup;
 			children = (
-				261F30321B81ACFA0078AFEA /* HTTPHelper */,
+				261F30321B81ACFA0078AFEA /* HTTPSDelegate */,
 				26ADE27C1B7B146A00385462 /* APLReachability */,
 				2685057D1B785644000D37F1 /* AMZNLogin */,
 				268505591B7852B0000D37F1 /* Home */,
@@ -321,6 +330,7 @@
 				268505681B785350000D37F1 /* MenuItems.plist in Resources */,
 				26995C3C1B60DE930000DEED /* Main.storyboard in Resources */,
 				26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */,
+				26B2DA931B845B29003E4D0B /* AMZNLoginController.xib in Resources */,
 				26995C3E1B60DE930000DEED /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,7 +350,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				268505781B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m in Sources */,
+				26B2DA901B844DB6003E4D0B /* HttpPostExecutor.m in Sources */,
 				268505661B785350000D37F1 /* HomeDetailViewController.m in Sources */,
+				26B2DA911B844DB6003E4D0B /* HttpPostDelegate.m in Sources */,
 				268505671B785350000D37F1 /* HomeMenuViewController.m in Sources */,
 				2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */,
 				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
@@ -351,7 +363,6 @@
 				2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */,
 				26ADE27B1B7B146600385462 /* Reachability.m in Sources */,
 				2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */,
-				261F30351B81ACFA0078AFEA /* HTTPHelper.m in Sources */,
 				26995C331B60DE930000DEED /* main.m in Sources */,
 				268505691B785350000D37F1 /* WXGMenuCell.m in Sources */,
 			);
