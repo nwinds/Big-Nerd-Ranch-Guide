@@ -5,7 +5,7 @@
 //  Created by Nicholas Chow on 15/7/5.
 //  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
-
+// Edited by zmy
 #import <UIKit/UIKit.h>
 @class WXGMenuItem;
 
@@ -39,11 +39,9 @@
 - (void)rotateLeftBarButtonWithScale:(CGFloat)scale;
 
 
-#pragma mark -Subview loading dynamically
-- (IBAction)loginWithAmazon:(id)sender;
 
-- (IBAction)reachabilityCheck:(id)sender;
 #pragma mark -Menu Interact
+// Subview loading dynamically
 - (void)setItem:(WXGMenuItem *)item;
 
 @end

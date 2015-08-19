@@ -5,6 +5,7 @@
 //  Created by Nicholas Chow on 15/7/5.
 //  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
+// Edited by zmy
 
 #import "HomeMenuViewController.h"
 #import "WXGMenuCell.h"
@@ -64,24 +65,10 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (self.menuDidClick) {
         self.menuDidClick(self.menuItems[indexPath.row], YES);
-//        if (self.menuItems[indexPath.row] ) {
-//            
-////        }
-//            APLViewController *subview = [self.storyboard instantiateViewControllerWithIdentifier:@"SubviewViewController"];
-//            [self addChildViewController: subview];
-//            [subview didMoveToParentViewController:self];
-//            [self.view addSubview:subview.view];
-//        }
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
-//// 获取两个子控制器
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([segue.identifier isEqualToString:@"MenuViewControllerSegue"]) {
-//        self.menuViewController = (HomeMenuViewController *)[segue.destinationViewController topViewController];
-//    } else if ([segue.identifier isEqualToString:@"DetailViewControllerSegue"]) {
-//        self.detailViewController = (HomeDetailViewController *)[segue.destinationViewController topViewController];
-//    }
-//}
+
+
 @end

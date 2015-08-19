@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <LoginWithAmazon/LoginWithAmazon.h>
+
 #import "Reachability.h"
 #import "HomeContainerViewController.h"
 
@@ -30,20 +31,10 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     self.window.rootViewController = homeContainerVC;
-    
-    
     [self.window makeKeyAndVisible];
-    
-    
-    
-    
+
     return YES;
 }
-
-
-
-
-
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -67,7 +58,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark -Amazon returned URL
+#pragma mark -Amazon returned URL tracing
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
@@ -77,9 +68,6 @@
     // from the url.
     BOOL isValidRedirectSignInURL =
     [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
-    
-    // url phasing tracing
-//    NSLog(@"AppDelegate: URL == %@", url);
     
     if(!isValidRedirectSignInURL)
         return NO;

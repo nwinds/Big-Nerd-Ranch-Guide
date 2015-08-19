@@ -26,9 +26,6 @@
     CGFloat b = [item.colors[2] doubleValue];
     UIColor *backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
     self.menuIcon.backgroundColor = backgroundColor;
-    
-    // Q: how to remove the edge blank instead of setting the background color same with button?
-    // Q: how to avoid clicking btn image => turn into default(which we don't want)
     self.backgroundColor = backgroundColor;
 }
 

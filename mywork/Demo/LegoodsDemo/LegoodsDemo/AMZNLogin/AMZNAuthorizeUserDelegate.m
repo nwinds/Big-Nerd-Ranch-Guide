@@ -34,10 +34,6 @@
     
 
 
-
-
-
-
     
     // You can now load new view controller with user identifying information as the user is now successfully signed in or simple get the user profile information if the authorization was for "profile" scope.
     

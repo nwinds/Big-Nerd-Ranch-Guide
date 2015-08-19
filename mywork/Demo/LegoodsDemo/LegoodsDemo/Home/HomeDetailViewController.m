@@ -5,7 +5,7 @@
 //  Created by Nicholas Chow on 15/7/5.
 //  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
-
+// Edited by zmy
 #import "HomeDetailViewController.h"
 #import "WXGMenuItem.h"
 #import "HTTPHelper.h"
@@ -43,15 +43,12 @@
     
     // Webview handler
     [self loadWebView];
-    
-
 }
 
 
-- (void)login{
+- (void)loginHandler{
     NSString *url = @"https://www.legoods.com:2443/handle_login.php";
-//    urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
-//    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
     NSString *access_token = [NSString stringWithFormat:@"%@", editData];
     [access_token stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
@@ -68,9 +65,9 @@
                     //子线程通知主线程更新UI，selector中是要执行的函数，data是传给这个函数的参数
                     //login_callBack就处理返回来的消息，这里就简单的输出，登录成功
                     [self performSelectorOnMainThread:@selector(login_callBack:) withObject:data waitUntilDone:YES];
-//                    NSLog(@"%@", response);
-//                    NSString *aStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//                    NSLog(@"data as string = %@", aStr);
+                    //NSLog(@"%@", response);
+                    //NSString *aStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    //NSLog(@"data as string = %@", aStr);
                 }
                 else{
                     NSLog(@"无效的数据");
@@ -108,7 +105,6 @@
     
     
     // Webview handler
-//    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
     [self loadWebView];
 }
 
@@ -120,16 +116,13 @@
     urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    
     url_sec = [NSURL URLWithString:urlString];
-    
-    NSLog(@"url_sec: %@", url_sec);
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url_sec];
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     // Debug
-    [self login];
+    [self loginHandler];
     
     [self.webView loadRequest:request];
 }
@@ -207,39 +200,50 @@
 }
 
 #pragma mark -Menu Interact
+
+// Using current storyboard to load subview dynamically
+// See http://stackoverflow.com/questions/10522957/call-storyboard-scene-programmatically-without-needing-segue for further info.
 - (void)setItem:(WXGMenuItem *)item {
     _item = item;
-    self.title = item.title;
-//    self.detailImage.image = [UIImage imageNamed:item.bigImage];
-//    CGFloat r = [item.colors[0] doubleValue];
-//    CGFloat g = [item.colors[1] doubleValue];
-//    CGFloat b = [item.colors[2] doubleValue];
-//    self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
+    
+    // Debug log
+    NSLog(@"%@", item.title);
+    
+    NSString *titleTag = item.title;
+    if ([titleTag isEqualToString:@"t_smile"]) {
+        return;
+    }
+    else if ([titleTag isEqualToString:@"t_coffee"]) {
+        NSLog(@"login with amazon clicked");
+        NSString * viewControllerID = @"loginVC";
+        UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        AMZNLoginController * subviewVC = (AMZNLoginController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+        [self presentViewController:subviewVC animated:YES completion:nil];
+    }
+    else if ([titleTag isEqualToString:@"t_drinks"]){
+        NSLog(@"reachabiliy clicked");
+     
+        NSString * viewControllerID = @"ReachabilityVC";
+        UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        APLViewController * subviewVC = (APLViewController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+        [self presentViewController:subviewVC animated:YES completion:nil];
+    }
+    else if ([titleTag isEqualToString:@"t_thumbsup"]){
+        
+    }
+    else if ([titleTag isEqualToString:@"t_thumbsdown"]){
+        
+    }
+    else if ([titleTag isEqualToString:@"t_raining"]){
+        
+    }
+    else if ([titleTag isEqualToString:@"t_clock"]){
+        
+    }
     
 }
 
 
-- (IBAction)loginWithAmazon:(id)sender
-{
-    NSLog(@"login with amazon clicked");
-    
-    NSString * viewControllerID = @"loginVC";
-    UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
-    AMZNLoginController * subviewVC = (AMZNLoginController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
-    [self presentViewController:subviewVC animated:YES completion:nil];
-}
-
-- (IBAction)reachabilityCheck:(id)sender
-{
-    NSLog(@"reachabiliy clicked");
-    // Using current storyboard to load subview dynamically
-    // See http://stackoverflow.com/questions/10522957/call-storyboard-scene-programmatically-without-needing-segue for further info.
-    
-    NSString * viewControllerID = @"ReachabilityVC";
-    UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    
-    APLViewController * subviewVC = (APLViewController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
-    [self presentViewController:subviewVC animated:YES completion:nil];
-}
 @end
