@@ -5,10 +5,14 @@
 //  Created by Nicholas Chow on 15/7/5.
 //  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
+// Edited by zmy
 
 #import "HomeMenuViewController.h"
 #import "WXGMenuCell.h"
 #import "WXGMenuItem.h"
+
+// subview controller
+#import "APLViewController.h"
 
 @interface HomeMenuViewController ()
 
@@ -64,5 +68,7 @@
     }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
+
 
 @end

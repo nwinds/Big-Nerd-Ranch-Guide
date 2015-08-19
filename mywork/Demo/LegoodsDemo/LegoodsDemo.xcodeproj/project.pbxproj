@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		261F30351B81ACFA0078AFEA /* HTTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 261F30341B81ACFA0078AFEA /* HTTPHelper.m */; };
 		268505651B785350000D37F1 /* HomeContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055B1B785350000D37F1 /* HomeContainerViewController.m */; };
 		268505661B785350000D37F1 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055D1B785350000D37F1 /* HomeDetailViewController.m */; };
 		268505671B785350000D37F1 /* HomeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055F1B785350000D37F1 /* HomeMenuViewController.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		261F30331B81ACFA0078AFEA /* HTTPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPHelper.h; sourceTree = "<group>"; };
+		261F30341B81ACFA0078AFEA /* HTTPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPHelper.m; sourceTree = "<group>"; };
 		2685055A1B785350000D37F1 /* HomeContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeContainerViewController.h; path = Home/HomeContainerViewController.h; sourceTree = "<group>"; };
 		2685055B1B785350000D37F1 /* HomeContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeContainerViewController.m; path = Home/HomeContainerViewController.m; sourceTree = "<group>"; };
 		2685055C1B785350000D37F1 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeDetailViewController.h; path = Home/HomeDetailViewController.h; sourceTree = "<group>"; };
@@ -107,6 +110,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		261F30321B81ACFA0078AFEA /* HTTPHelper */ = {
+			isa = PBXGroup;
+			children = (
+				261F30331B81ACFA0078AFEA /* HTTPHelper.h */,
+				261F30341B81ACFA0078AFEA /* HTTPHelper.m */,
+			);
+			path = HTTPHelper;
+			sourceTree = "<group>";
+		};
 		268505591B7852B0000D37F1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +176,7 @@
 		26995C2F1B60DE930000DEED /* LegoodsDemo */ = {
 			isa = PBXGroup;
 			children = (
+				261F30321B81ACFA0078AFEA /* HTTPHelper */,
 				26ADE27C1B7B146A00385462 /* APLReachability */,
 				2685057D1B785644000D37F1 /* AMZNLogin */,
 				268505591B7852B0000D37F1 /* Home */,
@@ -338,6 +351,7 @@
 				2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */,
 				26ADE27B1B7B146600385462 /* Reachability.m in Sources */,
 				2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */,
+				261F30351B81ACFA0078AFEA /* HTTPHelper.m in Sources */,
 				26995C331B60DE930000DEED /* main.m in Sources */,
 				268505691B785350000D37F1 /* WXGMenuCell.m in Sources */,
 			);

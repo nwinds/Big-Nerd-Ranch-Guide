@@ -5,10 +5,12 @@
 //  Created by Nicholas Chow on 15/7/5.
 //  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
 //
-
+// Edited by zmy
 #import "HomeDetailViewController.h"
 #import "WXGMenuItem.h"
-
+#import "HTTPHelper.h"
+#import "APLViewController.h"
+#import "AMZNLoginController.h"
 @interface HomeDetailViewController ()
 
 #pragma mark -Button gestures
@@ -40,23 +42,44 @@
     page1Data.text=editData;
     
     // Webview handler
-    NSString *urlBase = @"https://www.legoods.com:2443/handle_login.php?access_token=";
-    NSString *urlString;
-    urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
-    urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    
-    
-    url_sec = [NSURL URLWithString:urlString];
-    
-    NSLog(@"url_sec: %@", url_sec);
-    
-    NSURLRequest *request = [NSURLRequest requestWithURL:url_sec];
-    [self.webView loadRequest:request];
-
+    [self loadWebView];
 }
 
 
+- (void)loginHandler{
+    NSString *url = @"https://www.legoods.com:2443/handle_login.php";
 
+    NSString *access_token = [NSString stringWithFormat:@"%@", editData];
+    [access_token stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    //加入参数
+    NSMutableDictionary *params = [NSMutableDictionary new];
+    [params setValue:access_token forKey:@"access_token"];
+
+    //有网络才发送请求
+    if([HttpHelper NetWorkIsOK]){
+        //发送请求，并且得到返回的数据
+        [HttpHelper post:url RequestParams:params FinishBlock:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+                //传回来的数据存在，则执行改回调甘薯
+                if(data){
+                    //子线程通知主线程更新UI，selector中是要执行的函数，data是传给这个函数的参数
+                    //login_callBack就处理返回来的消息，这里就简单的输出，登录成功
+                    [self performSelectorOnMainThread:@selector(login_callBack:) withObject:data waitUntilDone:YES];
+                    //NSLog(@"%@", response);
+                    //NSString *aStr = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+                    //NSLog(@"data as string = %@", aStr);
+                }
+                else{
+                    NSLog(@"无效的数据");
+                }
+        }];
+    }
+}
+
+//登录的回调函数，首先判断接收的值是不是能登录。若不能，则提示用户。若能登录，则处理segue来跳转界面
+- (void)login_callBack:(id)value{
+    NSLog(@"成功返回结果");
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -82,21 +105,28 @@
     
     
     // Webview handler
-//    NSURL *url = [NSURL URLWithString:@"http://www.legoods.com/mindex"];
+    [self loadWebView];
+}
+
+
+- (void)loadWebView
+{
     NSString *urlBase = @"https://www.legoods.com:2443/handle_login.php?access_token=";
     NSString *urlString;
     urlString = [NSString stringWithFormat:@"%@%@", urlBase, editData];
     urlString = [urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-
     
     url_sec = [NSURL URLWithString:urlString];
     
-    NSLog(@"url_sec: %@", url_sec);
-    
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url_sec];
     connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
+    
+    // Debug
+    [self loginHandler];
+    
     [self.webView loadRequest:request];
 }
+
 
 // 顶部按钮点击事件
 - (void)leftBarButtonClick {
@@ -170,14 +200,48 @@
 }
 
 #pragma mark -Menu Interact
+
+// Using current storyboard to load subview dynamically
+// See http://stackoverflow.com/questions/10522957/call-storyboard-scene-programmatically-without-needing-segue for further info.
 - (void)setItem:(WXGMenuItem *)item {
     _item = item;
-    self.title = item.title;
-//    self.detailImage.image = [UIImage imageNamed:item.bigImage];
-//    CGFloat r = [item.colors[0] doubleValue];
-//    CGFloat g = [item.colors[1] doubleValue];
-//    CGFloat b = [item.colors[2] doubleValue];
-//    self.view.backgroundColor = [UIColor colorWithRed:r / 255.0 green:g / 255.0 blue:b / 255.0 alpha:1];
+    
+    // Debug log
+    NSLog(@"%@", item.title);
+    
+    NSString *titleTag = item.title;
+    if ([titleTag isEqualToString:@"t_smile"]) {
+        return;
+    }
+    else if ([titleTag isEqualToString:@"t_coffee"]) {
+        NSLog(@"login with amazon clicked");
+        NSString * viewControllerID = @"loginVC";
+        UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        AMZNLoginController * subviewVC = (AMZNLoginController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+        [self presentViewController:subviewVC animated:YES completion:nil];
+    }
+    else if ([titleTag isEqualToString:@"t_drinks"]){
+        NSLog(@"reachabiliy clicked");
+     
+        NSString * viewControllerID = @"ReachabilityVC";
+        UIStoryboard * storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        
+        APLViewController * subviewVC = (APLViewController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+        [self presentViewController:subviewVC animated:YES completion:nil];
+    }
+    else if ([titleTag isEqualToString:@"t_thumbsup"]){
+        
+    }
+    else if ([titleTag isEqualToString:@"t_thumbsdown"]){
+        
+    }
+    else if ([titleTag isEqualToString:@"t_raining"]){
+        
+    }
+    else if ([titleTag isEqualToString:@"t_clock"]){
+        
+    }
     
 }
 

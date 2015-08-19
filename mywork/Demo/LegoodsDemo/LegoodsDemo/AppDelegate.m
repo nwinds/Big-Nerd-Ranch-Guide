@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 #import <LoginWithAmazon/LoginWithAmazon.h>
+
+#import "Reachability.h"
+#import "HomeContainerViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -16,6 +20,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    // Enable notifier
+
+    
+    // Control through code instead of story board
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    HomeContainerViewController *homeContainerVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"homeContainerVC"];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = homeContainerVC;
+    [self.window makeKeyAndVisible];
+
     return YES;
 }
 
@@ -41,7 +58,7 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
-#pragma mark -Amazon returned URL
+#pragma mark -Amazon returned URL tracing
 - (BOOL)application:(UIApplication *)application
             openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication
@@ -51,9 +68,6 @@
     // from the url.
     BOOL isValidRedirectSignInURL =
     [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
-    
-    // url phasing tracing
-//    NSLog(@"AppDelegate: URL == %@", url);
     
     if(!isValidRedirectSignInURL)
         return NO;

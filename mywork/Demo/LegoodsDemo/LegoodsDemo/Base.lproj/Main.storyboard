@@ -8,7 +8,7 @@
         <!--Home Container View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeContainerViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homeContainerVC" id="BYZ-38-t0r" customClass="HomeContainerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -147,31 +147,6 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9J-IG-WzU">
-                                <rect key="frame" x="16" y="132" width="109" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="AccessToken">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="B3Q-DF-hYL" kind="modal" id="GH1-dz-H8J"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xD-Wr-yO8">
-                                <rect key="frame" x="16" y="185" width="116" height="30"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Reachability Test">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="8Ir-AG-Pvs" kind="modal" id="XFB-1b-zdx"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BGi-Es-hnp">
-                                <rect key="frame" x="140" y="131" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -183,7 +158,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="Z9v-ky-uod"/>
                     <connections>
-                        <outlet property="page1Data" destination="BGi-Es-hnp" id="ud7-ln-eqq"/>
                         <outlet property="webView" destination="lY9-Yr-wnq" id="8uy-cE-MiD"/>
                     </connections>
                 </viewController>
@@ -210,7 +184,7 @@
         <!--View Controller-->
         <scene sceneID="r2Y-KH-Yar">
             <objects>
-                <viewController id="8Ir-AG-Pvs" customClass="APLViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReachabilityVC" modalPresentationStyle="currentContext" id="8Ir-AG-Pvs" customClass="APLViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N7z-EA-JpY"/>
                         <viewControllerLayoutGuide type="bottom" id="8IR-mR-fPe"/>
@@ -228,14 +202,14 @@
                                     <action selector="closeView:" destination="8Ir-AG-Pvs" eventType="touchUpInside" id="WTk-mS-Wvr"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Yc-PH-9TO">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Yc-PH-9TO">
                                 <rect key="frame" x="16" y="95" width="43" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="43" id="eEe-C2-Zdh"/>
                                     <constraint firstAttribute="height" constant="43" id="yUR-nh-m0x"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HeQ-9n-Zlw">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HeQ-9n-Zlw">
                                 <rect key="frame" x="16" y="184" width="43" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="TID-Mb-x1d"/>
@@ -248,27 +222,27 @@
                                     <constraint firstAttribute="width" constant="43" id="eis-bT-ugf"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0p-xn-c9j">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0p-xn-c9j">
                                 <rect key="frame" x="67" y="102" width="188" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgh-g3-nmY">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgh-g3-nmY">
                                 <rect key="frame" x="67" y="191" width="188" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75g-Gw-SH5">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75g-Gw-SH5">
                                 <rect key="frame" x="67" y="280" width="188" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remote Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgc-KU-QoD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remote Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgc-KU-QoD">
                                 <rect key="frame" x="16" y="57" width="89" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Local WiFi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96c-L9-hMh">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Local WiFi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96c-L9-hMh">
                                 <rect key="frame" x="16" y="235" width="72" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -284,7 +258,7 @@ Internet traffic will be routed through it.</string>
                                 <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TCP/IP Routing Available" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-hT-8wN">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TCP/IP Routing Available" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-hT-8wN">
                                 <rect key="frame" x="16" y="146" width="166" height="30"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -350,7 +324,7 @@ Internet traffic will be routed through it.</string>
         <!--loginViewController-->
         <scene sceneID="Aew-NU-U0H">
             <objects>
-                <viewController autoresizesArchivedViewToFullSize="NO" title="loginViewController" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="currentContext" id="B3Q-DF-hYL" customClass="AMZNLoginController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVC" autoresizesArchivedViewToFullSize="NO" title="loginViewController" providesPresentationContextTransitionStyle="YES" modalPresentationStyle="currentContext" id="B3Q-DF-hYL" customClass="AMZNLoginController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KW7-kr-bdA"/>
                         <viewControllerLayoutGuide type="bottom" id="QFW-Cg-Fgn"/>
@@ -359,7 +333,7 @@ Internet traffic will be routed through it.</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="用户信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-iX-lwG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="用户信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GEb-iX-lwG">
                                 <rect key="frame" x="33" y="122" width="254" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="highlightedColor"/>
@@ -375,7 +349,7 @@ Internet traffic will be routed through it.</string>
                                     <action selector="onLogInButtonClicked:" destination="B3Q-DF-hYL" eventType="touchUpInside" id="2do-bf-oI9"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" scrollEnabled="NO" editable="NO" text="info" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGW-s7-nk9">
+                            <textView clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" misplaced="YES" scrollEnabled="NO" editable="NO" text="info" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGW-s7-nk9">
                                 <rect key="frame" x="33" y="152" width="254" height="139"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
