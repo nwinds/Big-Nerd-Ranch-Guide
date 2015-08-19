@@ -198,29 +198,22 @@
 - (void)setItem:(WXGMenuItem *)item {
     _item = item;
     
-    // Debug log
-//    NSLog(@"%@", item.title);
     UIStoryboard * storyboardCurr;
-    NSString *viewControllerID;
     NSString *titleTag = item.title;
     if ([titleTag isEqualToString:@"t_smile"]) {
         return;
     }
     else if ([titleTag isEqualToString:@"t_coffee"]) {
-        viewControllerID = @"loginVC";
         AMZNLoginVC * subviewVC = [[AMZNLoginVC alloc] initWithNibName:@"AMZNLoginVC" bundle:nil];
 
         storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-//        AMZNLoginVC * subviewVC = (AMZNLoginVC *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+
         [subviewVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
         [self presentViewController:subviewVC animated:YES completion:nil];
     }
     else if ([titleTag isEqualToString:@"t_drinks"]){
-        viewControllerID = @"ReachabilityVC";
+        APLViewController * subviewVC = [[APLViewController alloc] initWithNibName:@"APLViewController" bundle:nil];
         storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        
-        APLViewController * subviewVC = (APLViewController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
         [subviewVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
         [self presentViewController:subviewVC animated:YES completion:nil];
     }

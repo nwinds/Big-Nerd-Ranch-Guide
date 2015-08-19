@@ -22,7 +22,7 @@
 #pragma mark -Button gestures
 
 @property (nonatomic, strong) WXGMenuItem *item;
-//@property (nonatomic, strong) NSString *title;
+
 
 #pragma mark -Interaction with Amazon Login
 

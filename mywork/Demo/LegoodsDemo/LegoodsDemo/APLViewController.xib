@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" customClass="APLViewController">
+            <connections>
+                <outlet property="internetConnectionImageView" destination="myn-Ll-Ld9" id="EBS-xF-Pfx"/>
+                <outlet property="internetConnectionStatusField" destination="Cm5-17-F01" id="fDs-S4-bcF"/>
+                <outlet property="localWiFiConnectionImageView" destination="kSI-qz-ihI" id="Woa-nI-NCr"/>
+                <outlet property="localWiFiConnectionStatusField" destination="sfz-qt-OHg" id="5df-3Y-Lcv"/>
+                <outlet property="remoteHostImageView" destination="Eb0-fW-Ej1" id="Urs-O7-Tl2"/>
+                <outlet property="remoteHostLabel" destination="ApX-cx-gDz" id="hhH-de-aY8"/>
+                <outlet property="remoteHostStatusField" destination="LKj-Te-6g9" id="65g-Br-Oin"/>
+                <outlet property="summaryLabel" destination="dY3-jJ-K91" id="8pK-sV-OxP"/>
+                <outlet property="view" destination="biU-Vs-vQL" id="hMs-dd-idI"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="biU-Vs-vQL">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-Nr-ufc">
+                    <rect key="frame" x="67" y="425" width="76" height="30"/>
+                    <state key="normal" title="Close View">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeView:" destination="-1" eventType="touchUpInside" id="m1H-sK-7as"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-fW-Ej1">
+                    <rect key="frame" x="16" y="95" width="43" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="7NS-nN-5eA"/>
+                        <constraint firstAttribute="width" constant="43" id="TIV-98-lfK"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="myn-Ll-Ld9">
+                    <rect key="frame" x="16" y="184" width="43" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="hu4-Pu-uMk"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kSI-qz-ihI">
+                    <rect key="frame" x="16" y="273" width="43" height="43"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="43" id="BIY-U3-IaD"/>
+                        <constraint firstAttribute="width" constant="43" id="whY-LT-rft"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LKj-Te-6g9">
+                    <rect key="frame" x="67" y="102" width="188" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cm5-17-F01">
+                    <rect key="frame" x="67" y="191" width="188" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sfz-qt-OHg">
+                    <rect key="frame" x="67" y="280" width="188" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remote Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ApX-cx-gDz">
+                    <rect key="frame" x="16" y="57" width="89" height="17"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="17" id="rh2-nG-Dgi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TCP/IP Routing Available" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YID-U6-Yjh">
+                    <rect key="frame" x="16" y="146" width="166" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="ddR-b2-T6X"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dY3-jJ-K91">
+                    <rect key="frame" x="16" y="362" width="263" height="65"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="65" id="TTE-T5-v79"/>
+                    </constraints>
+                    <string key="text">Cellular data network is available.
+Internet traffic will be routed through it.</string>
+                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Local WiFi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qvr-wa-8LN">
+                    <rect key="frame" x="16" y="235" width="72" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="WEG-kS-tmb"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Qvr-wa-8LN" firstAttribute="top" secondItem="myn-Ll-Ld9" secondAttribute="bottom" constant="8" symbolic="YES" id="0Ap-bF-8R4"/>
+                <constraint firstItem="Cm5-17-F01" firstAttribute="leading" secondItem="LKj-Te-6g9" secondAttribute="leading" id="1fg-jX-Asw"/>
+                <constraint firstItem="dY3-jJ-K91" firstAttribute="top" secondItem="kSI-qz-ihI" secondAttribute="bottom" constant="46" id="2qb-YU-JaQ"/>
+                <constraint firstItem="kSI-qz-ihI" firstAttribute="top" secondItem="Qvr-wa-8LN" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ta-gO-kDC"/>
+                <constraint firstItem="YID-U6-Yjh" firstAttribute="top" secondItem="LKj-Te-6g9" secondAttribute="bottom" constant="14" id="7BE-qU-GPI"/>
+                <constraint firstItem="YID-U6-Yjh" firstAttribute="top" secondItem="Eb0-fW-Ej1" secondAttribute="bottom" constant="8" symbolic="YES" id="7sj-SG-9hX"/>
+                <constraint firstItem="Eb0-fW-Ej1" firstAttribute="top" secondItem="ApX-cx-gDz" secondAttribute="bottom" constant="21" id="Bgf-AF-XJ8"/>
+                <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="myn-Ll-Ld9" secondAttribute="leading" id="Db0-sL-7d2"/>
+                <constraint firstItem="Cm5-17-F01" firstAttribute="leading" secondItem="Ko8-Nr-ufc" secondAttribute="leading" id="H1d-hF-PxK"/>
+                <constraint firstAttribute="bottom" secondItem="Ko8-Nr-ufc" secondAttribute="bottom" constant="113" id="IOK-jT-f3R"/>
+                <constraint firstItem="Cm5-17-F01" firstAttribute="leading" secondItem="myn-Ll-Ld9" secondAttribute="trailing" constant="8" symbolic="YES" id="LHC-fk-qYl"/>
+                <constraint firstItem="Cm5-17-F01" firstAttribute="leading" secondItem="sfz-qt-OHg" secondAttribute="leading" id="LlQ-DM-9bP"/>
+                <constraint firstAttribute="trailing" secondItem="dY3-jJ-K91" secondAttribute="trailing" constant="41" id="UFv-Hv-akO"/>
+                <constraint firstItem="myn-Ll-Ld9" firstAttribute="top" secondItem="YID-U6-Yjh" secondAttribute="bottom" constant="8" symbolic="YES" id="UVH-cX-GzU"/>
+                <constraint firstItem="Cm5-17-F01" firstAttribute="trailing" secondItem="LKj-Te-6g9" secondAttribute="trailing" id="Wye-Zp-j6M"/>
+                <constraint firstItem="ApX-cx-gDz" firstAttribute="top" secondItem="biU-Vs-vQL" secondAttribute="top" constant="57" id="Yn1-tq-jhq"/>
+                <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="dY3-jJ-K91" secondAttribute="leading" id="aUa-5D-eCb"/>
+                <constraint firstAttribute="trailing" secondItem="Cm5-17-F01" secondAttribute="trailing" constant="65" id="bCK-Wi-e8W"/>
+                <constraint firstItem="Qvr-wa-8LN" firstAttribute="top" secondItem="Cm5-17-F01" secondAttribute="bottom" constant="14" id="bMJ-Zf-jgN"/>
+                <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="biU-Vs-vQL" secondAttribute="leading" constant="16" id="fB2-60-KOi"/>
+                <constraint firstItem="sfz-qt-OHg" firstAttribute="top" secondItem="Qvr-wa-8LN" secondAttribute="bottom" constant="15" id="gFt-b3-Q6c"/>
+                <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="YID-U6-Yjh" secondAttribute="leading" id="hqk-zA-A3X"/>
+                <constraint firstItem="Cm5-17-F01" firstAttribute="trailing" secondItem="sfz-qt-OHg" secondAttribute="trailing" id="iNN-58-v0b"/>
+                <constraint firstItem="myn-Ll-Ld9" firstAttribute="trailing" secondItem="Eb0-fW-Ej1" secondAttribute="trailing" id="jNC-Bs-3IS"/>
+                <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="Eb0-fW-Ej1" secondAttribute="leading" id="qAj-Hp-Mqc"/>
+                <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="Qvr-wa-8LN" secondAttribute="leading" id="rh2-oJ-uL9"/>
+                <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="kSI-qz-ihI" secondAttribute="leading" id="x9t-uJ-hj0"/>
+            </constraints>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

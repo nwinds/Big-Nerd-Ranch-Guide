@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Home Container View Controller-->
@@ -125,7 +124,6 @@
                     </navigationBar>
                     <connections>
                         <segue destination="1ae-Ph-Diw" kind="relationship" relationship="rootViewController" id="cbI-Gy-K5k"/>
-                        <segue destination="8Ir-AG-Pvs" kind="push" id="Gcr-l6-1No"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="12m-IX-Uip" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -181,146 +179,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dnr-Hh-f21" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="416" y="1.8933333333333333"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="r2Y-KH-Yar">
-            <objects>
-                <viewController storyboardIdentifier="ReachabilityVC" modalPresentationStyle="currentContext" id="8Ir-AG-Pvs" customClass="APLViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N7z-EA-JpY"/>
-                        <viewControllerLayoutGuide type="bottom" id="8IR-mR-fPe"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VXI-en-waX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIh-xY-yie">
-                                <rect key="frame" x="67" y="381" width="76" height="30"/>
-                                <state key="normal" title="Close View">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeView:" destination="8Ir-AG-Pvs" eventType="touchUpInside" id="WTk-mS-Wvr"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Yc-PH-9TO">
-                                <rect key="frame" x="16" y="95" width="43" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="43" id="eEe-C2-Zdh"/>
-                                    <constraint firstAttribute="height" constant="43" id="yUR-nh-m0x"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HeQ-9n-Zlw">
-                                <rect key="frame" x="16" y="184" width="43" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="TID-Mb-x1d"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xfS-Fm-BdE">
-                                <rect key="frame" x="16" y="273" width="43" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="43" id="3Kp-lq-75a"/>
-                                    <constraint firstAttribute="width" constant="43" id="eis-bT-ugf"/>
-                                </constraints>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m0p-xn-c9j">
-                                <rect key="frame" x="67" y="102" width="188" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vgh-g3-nmY">
-                                <rect key="frame" x="67" y="191" width="188" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75g-Gw-SH5">
-                                <rect key="frame" x="67" y="280" width="188" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Remote Host" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jgc-KU-QoD">
-                                <rect key="frame" x="16" y="57" width="89" height="17"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Local WiFi" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="96c-L9-hMh">
-                                <rect key="frame" x="16" y="235" width="72" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TCP/IP Routing Available" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evj-hT-8wN">
-                                <rect key="frame" x="16" y="146" width="166" height="30"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6E-EB-JOD">
-                                <rect key="frame" x="16" y="318" width="263" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="cab-Ir-lNb"/>
-                                </constraints>
-                                <string key="text">Cellular data network is available.
-Internet traffic will be routed through it.</string>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="m0p-xn-c9j" firstAttribute="leading" secondItem="7Yc-PH-9TO" secondAttribute="trailing" constant="8" id="5oP-IH-iuM"/>
-                            <constraint firstItem="75g-Gw-SH5" firstAttribute="leading" secondItem="Vgh-g3-nmY" secondAttribute="leading" id="6Xi-Io-qqE"/>
-                            <constraint firstItem="96c-L9-hMh" firstAttribute="leading" secondItem="7Yc-PH-9TO" secondAttribute="leading" id="7fA-tV-gx3"/>
-                            <constraint firstItem="75g-Gw-SH5" firstAttribute="trailing" secondItem="m0p-xn-c9j" secondAttribute="trailing" id="8SU-lW-upR"/>
-                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="top" secondItem="N7z-EA-JpY" secondAttribute="bottom" constant="95" id="Ebs-U8-6rg"/>
-                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="leading" secondItem="VXI-en-waX" secondAttribute="leadingMargin" id="Ejt-sp-yCA"/>
-                            <constraint firstItem="cIh-xY-yie" firstAttribute="leading" secondItem="VXI-en-waX" secondAttribute="leadingMargin" constant="51" id="FD8-oz-NaL"/>
-                            <constraint firstItem="cIh-xY-yie" firstAttribute="top" secondItem="P6E-EB-JOD" secondAttribute="bottom" constant="-2" id="HBc-XO-ZhD"/>
-                            <constraint firstItem="Vgh-g3-nmY" firstAttribute="leading" secondItem="HeQ-9n-Zlw" secondAttribute="trailing" constant="8" symbolic="YES" id="IVp-bC-1a5"/>
-                            <constraint firstItem="96c-L9-hMh" firstAttribute="leading" secondItem="7Yc-PH-9TO" secondAttribute="leading" id="IVy-Gi-jHo"/>
-                            <constraint firstItem="HeQ-9n-Zlw" firstAttribute="leading" secondItem="jgc-KU-QoD" secondAttribute="leading" id="Ocm-tY-4Ih"/>
-                            <constraint firstItem="HeQ-9n-Zlw" firstAttribute="leading" secondItem="xfS-Fm-BdE" secondAttribute="leading" id="P1K-mv-VTI"/>
-                            <constraint firstItem="75g-Gw-SH5" firstAttribute="top" secondItem="Vgh-g3-nmY" secondAttribute="bottom" constant="59" id="Ph4-a2-SPx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="75g-Gw-SH5" secondAttribute="trailing" constant="49" id="QAc-eg-uXn"/>
-                            <constraint firstItem="HeQ-9n-Zlw" firstAttribute="top" secondItem="7Yc-PH-9TO" secondAttribute="bottom" constant="46" id="SRa-AL-IGi"/>
-                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="leading" secondItem="HeQ-9n-Zlw" secondAttribute="leading" id="SaZ-UC-B1v"/>
-                            <constraint firstItem="HeQ-9n-Zlw" firstAttribute="trailing" secondItem="7Yc-PH-9TO" secondAttribute="trailing" id="Td2-Gh-H2F"/>
-                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="leading" secondItem="VXI-en-waX" secondAttribute="leadingMargin" id="Ts9-9j-eQw"/>
-                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="leading" secondItem="jgc-KU-QoD" secondAttribute="leading" id="UjZ-tl-ufV"/>
-                            <constraint firstItem="Evj-hT-8wN" firstAttribute="top" secondItem="7Yc-PH-9TO" secondAttribute="bottom" constant="8" id="Wdb-iN-mMW"/>
-                            <constraint firstItem="xfS-Fm-BdE" firstAttribute="top" secondItem="VXI-en-waX" secondAttribute="top" constant="273" id="ZHD-HH-Yr0"/>
-                            <constraint firstItem="m0p-xn-c9j" firstAttribute="centerY" secondItem="7Yc-PH-9TO" secondAttribute="centerY" constant="0.5" id="Zeb-lY-6bi"/>
-                            <constraint firstItem="HeQ-9n-Zlw" firstAttribute="top" secondItem="Evj-hT-8wN" secondAttribute="bottom" constant="8" symbolic="YES" id="bCB-LT-xSN"/>
-                            <constraint firstItem="HeQ-9n-Zlw" firstAttribute="leading" secondItem="7Yc-PH-9TO" secondAttribute="leading" id="cC0-OA-acD"/>
-                            <constraint firstItem="96c-L9-hMh" firstAttribute="top" secondItem="Vgh-g3-nmY" secondAttribute="bottom" constant="14" id="cpt-Oz-6Ln"/>
-                            <constraint firstItem="75g-Gw-SH5" firstAttribute="trailing" secondItem="Vgh-g3-nmY" secondAttribute="trailing" id="gCc-fy-L5G"/>
-                            <constraint firstItem="xfS-Fm-BdE" firstAttribute="top" secondItem="96c-L9-hMh" secondAttribute="bottom" constant="8" symbolic="YES" id="gNJ-OD-q7h"/>
-                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="leading" secondItem="xfS-Fm-BdE" secondAttribute="leading" id="jqq-B5-Obd"/>
-                            <constraint firstItem="7Yc-PH-9TO" firstAttribute="leading" secondItem="Evj-hT-8wN" secondAttribute="leading" id="o4A-L7-xCb"/>
-                            <constraint firstItem="xfS-Fm-BdE" firstAttribute="leading" secondItem="7Yc-PH-9TO" secondAttribute="leading" id="s44-x9-K5T"/>
-                            <constraint firstItem="HeQ-9n-Zlw" firstAttribute="leading" secondItem="96c-L9-hMh" secondAttribute="leading" id="sb2-OQ-cgD"/>
-                            <constraint firstItem="HeQ-9n-Zlw" firstAttribute="leading" secondItem="Evj-hT-8wN" secondAttribute="leading" id="t3n-po-lWO"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="P6E-EB-JOD" secondAttribute="trailing" constant="25" id="tzv-j6-SzT"/>
-                            <constraint firstItem="8IR-mR-fPe" firstAttribute="top" secondItem="cIh-xY-yie" secondAttribute="bottom" constant="113" id="v1K-Ra-hcH"/>
-                            <constraint firstItem="96c-L9-hMh" firstAttribute="top" secondItem="HeQ-9n-Zlw" secondAttribute="bottom" constant="8" symbolic="YES" id="wI6-0a-Bdg"/>
-                            <constraint firstItem="jgc-KU-QoD" firstAttribute="top" secondItem="N7z-EA-JpY" secondAttribute="bottom" constant="57" id="xI7-TM-sGD"/>
-                            <constraint firstItem="P6E-EB-JOD" firstAttribute="leading" secondItem="xfS-Fm-BdE" secondAttribute="leading" id="zhu-l4-89o"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="tkZ-pC-8a6"/>
-                    <connections>
-                        <outlet property="internetConnectionImageView" destination="HeQ-9n-Zlw" id="N2T-Z3-4A5"/>
-                        <outlet property="internetConnectionStatusField" destination="Vgh-g3-nmY" id="LQg-eu-94s"/>
-                        <outlet property="localWiFiConnectionImageView" destination="xfS-Fm-BdE" id="lNi-hS-UF7"/>
-                        <outlet property="localWiFiConnectionStatusField" destination="75g-Gw-SH5" id="gWJ-FL-s5C"/>
-                        <outlet property="remoteHostImageView" destination="7Yc-PH-9TO" id="kh6-WW-tRX"/>
-                        <outlet property="remoteHostLabel" destination="jgc-KU-QoD" id="uTx-Jx-gSW"/>
-                        <outlet property="remoteHostStatusField" destination="m0p-xn-c9j" id="Ser-pP-DbG"/>
-                        <outlet property="summaryLabel" destination="P6E-EB-JOD" id="UIa-Ue-C23"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wW7-Tw-dKO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1079" y="1016"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

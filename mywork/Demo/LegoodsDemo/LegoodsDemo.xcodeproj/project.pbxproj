@@ -32,6 +32,7 @@
 		26B2DA911B844DB6003E4D0B /* HttpPostDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */; };
 		26B2DA9B1B846E24003E4D0B /* AMZNLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA991B846E24003E4D0B /* AMZNLoginVC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26B2DA9C1B846E24003E4D0B /* AMZNLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B2DA9A1B846E24003E4D0B /* AMZNLoginVC.xib */; };
+		26B2DA9E1B847342003E4D0B /* APLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B2DA9D1B847342003E4D0B /* APLViewController.xib */; };
 		26DB64A31B748FBE00ABF838 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		26B2DA981B846E24003E4D0B /* AMZNLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLoginVC.h; path = AMZNLogin/AMZNLoginVC.h; sourceTree = "<group>"; };
 		26B2DA991B846E24003E4D0B /* AMZNLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLoginVC.m; path = AMZNLogin/AMZNLoginVC.m; sourceTree = "<group>"; };
 		26B2DA9A1B846E24003E4D0B /* AMZNLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMZNLoginVC.xib; path = AMZNLogin/AMZNLoginVC.xib; sourceTree = "<group>"; };
+		26B2DA9D1B847342003E4D0B /* APLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APLViewController.xib; sourceTree = "<group>"; };
 		26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -230,6 +232,7 @@
 			children = (
 				26ADE2761B7B146600385462 /* APLViewController.h */,
 				26ADE2771B7B146600385462 /* APLViewController.m */,
+				26B2DA9D1B847342003E4D0B /* APLViewController.xib */,
 				26ADE2781B7B146600385462 /* Reachability.h */,
 				26ADE2791B7B146600385462 /* Reachability.m */,
 			);
@@ -329,6 +332,7 @@
 			files = (
 				268505681B785350000D37F1 /* MenuItems.plist in Resources */,
 				26995C3C1B60DE930000DEED /* Main.storyboard in Resources */,
+				26B2DA9E1B847342003E4D0B /* APLViewController.xib in Resources */,
 				26B2DA9C1B846E24003E4D0B /* AMZNLoginVC.xib in Resources */,
 				26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */,
 				26995C3E1B60DE930000DEED /* Images.xcassets in Resources */,
