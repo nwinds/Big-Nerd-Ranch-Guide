@@ -13,13 +13,13 @@
 #import <Foundation/Foundation.h>
 #import <LoginWithAmazon/LoginWithAmazon.h>
 
-#import "AMZNLoginController.h"
+#import "AMZNLoginVC.h"
 
 @interface AMZNLogoutDelegate : NSObject<AIAuthenticationDelegate>
 {
-    AMZNLoginController* parentViewController;
+    AMZNLoginVC* parentViewController;
 }
 
-- (id)initWithParentController:(AMZNLoginController *)aViewController;
+- (id)initWithParentController:(AMZNLoginVC *)aViewController;
 
 @end

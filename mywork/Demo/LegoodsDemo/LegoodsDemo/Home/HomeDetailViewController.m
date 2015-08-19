@@ -15,7 +15,7 @@
 
 
 #import "APLViewController.h"
-#import "AMZNLoginController.h"
+#import "AMZNLoginVC.h"
 @interface HomeDetailViewController ()
 
 #pragma mark -Button gestures
@@ -201,21 +201,23 @@
     // Debug log
 //    NSLog(@"%@", item.title);
     UIStoryboard * storyboardCurr;
-    NSString * viewControllerID;
+    NSString *viewControllerID;
     NSString *titleTag = item.title;
     if ([titleTag isEqualToString:@"t_smile"]) {
         return;
     }
     else if ([titleTag isEqualToString:@"t_coffee"]) {
-        NSString * viewControllerID = @"loginVC";
+        viewControllerID = @"loginVC";
+        AMZNLoginVC * subviewVC = [[AMZNLoginVC alloc] initWithNibName:@"AMZNLoginVC" bundle:nil];
+
         storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
-        AMZNLoginController * subviewVC = (AMZNLoginController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
+//        AMZNLoginVC * subviewVC = (AMZNLoginVC *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];
         [subviewVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
         [self presentViewController:subviewVC animated:YES completion:nil];
     }
     else if ([titleTag isEqualToString:@"t_drinks"]){
-        NSString * viewControllerID = @"ReachabilityVC";
+        viewControllerID = @"ReachabilityVC";
         storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         
         APLViewController * subviewVC = (APLViewController *)[storyboardCurr instantiateViewControllerWithIdentifier:viewControllerID];

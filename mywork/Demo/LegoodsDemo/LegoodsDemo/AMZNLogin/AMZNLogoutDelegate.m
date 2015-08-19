@@ -14,7 +14,7 @@
 
 @implementation AMZNLogoutDelegate
 
-- (id)initWithParentController:(AMZNLoginController*)aViewController {
+- (id)initWithParentController:(AMZNLoginVC *)aViewController {
     if(self = [super init]) {
         parentViewController = [aViewController retain];
     }

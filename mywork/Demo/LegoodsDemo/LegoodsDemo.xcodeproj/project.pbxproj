@@ -16,7 +16,6 @@
 		268505781B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505741B78563D000D37F1 /* AMZNLoginController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		26995C331B60DE930000DEED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C321B60DE930000DEED /* main.m */; };
 		26995C361B60DE930000DEED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C351B60DE930000DEED /* AppDelegate.m */; };
@@ -31,7 +30,8 @@
 		26ADE27B1B7B146600385462 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ADE2791B7B146600385462 /* Reachability.m */; };
 		26B2DA901B844DB6003E4D0B /* HttpPostExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA8D1B844DB6003E4D0B /* HttpPostExecutor.m */; };
 		26B2DA911B844DB6003E4D0B /* HttpPostDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */; };
-		26B2DA931B845B29003E4D0B /* AMZNLoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B2DA921B845B29003E4D0B /* AMZNLoginController.xib */; };
+		26B2DA9B1B846E24003E4D0B /* AMZNLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA991B846E24003E4D0B /* AMZNLoginVC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26B2DA9C1B846E24003E4D0B /* AMZNLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B2DA9A1B846E24003E4D0B /* AMZNLoginVC.xib */; };
 		26DB64A31B748FBE00ABF838 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,8 +63,6 @@
 		268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNGetAccessTokenDelegate.m; path = AMZNLogin/AMZNGetAccessTokenDelegate.m; sourceTree = "<group>"; };
 		268505711B78563D000D37F1 /* AMZNGetProfileDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNGetProfileDelegate.h; path = AMZNLogin/AMZNGetProfileDelegate.h; sourceTree = "<group>"; };
 		268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNGetProfileDelegate.m; path = AMZNLogin/AMZNGetProfileDelegate.m; sourceTree = "<group>"; };
-		268505731B78563D000D37F1 /* AMZNLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLoginController.h; path = AMZNLogin/AMZNLoginController.h; sourceTree = "<group>"; };
-		268505741B78563D000D37F1 /* AMZNLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLoginController.m; path = AMZNLogin/AMZNLoginController.m; sourceTree = "<group>"; };
 		268505751B78563D000D37F1 /* AMZNLogoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLogoutDelegate.h; path = AMZNLogin/AMZNLogoutDelegate.h; sourceTree = "<group>"; };
 		268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLogoutDelegate.m; path = AMZNLogin/AMZNLogoutDelegate.m; sourceTree = "<group>"; };
 		26995C2D1B60DE930000DEED /* LegoodsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoodsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +87,9 @@
 		26B2DA8D1B844DB6003E4D0B /* HttpPostExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpPostExecutor.m; sourceTree = "<group>"; };
 		26B2DA8E1B844DB6003E4D0B /* HttpPostDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpPostDelegate.h; sourceTree = "<group>"; };
 		26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpPostDelegate.m; sourceTree = "<group>"; };
-		26B2DA921B845B29003E4D0B /* AMZNLoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMZNLoginController.xib; path = AMZNLogin/AMZNLoginController.xib; sourceTree = "<group>"; };
+		26B2DA981B846E24003E4D0B /* AMZNLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLoginVC.h; path = AMZNLogin/AMZNLoginVC.h; sourceTree = "<group>"; };
+		26B2DA991B846E24003E4D0B /* AMZNLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLoginVC.m; path = AMZNLogin/AMZNLoginVC.m; sourceTree = "<group>"; };
+		26B2DA9A1B846E24003E4D0B /* AMZNLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMZNLoginVC.xib; path = AMZNLogin/AMZNLoginVC.xib; sourceTree = "<group>"; };
 		26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -154,9 +154,9 @@
 				268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */,
 				268505711B78563D000D37F1 /* AMZNGetProfileDelegate.h */,
 				268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */,
-				268505731B78563D000D37F1 /* AMZNLoginController.h */,
-				268505741B78563D000D37F1 /* AMZNLoginController.m */,
-				26B2DA921B845B29003E4D0B /* AMZNLoginController.xib */,
+				26B2DA981B846E24003E4D0B /* AMZNLoginVC.h */,
+				26B2DA991B846E24003E4D0B /* AMZNLoginVC.m */,
+				26B2DA9A1B846E24003E4D0B /* AMZNLoginVC.xib */,
 				268505751B78563D000D37F1 /* AMZNLogoutDelegate.h */,
 				268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */,
 			);
@@ -329,8 +329,8 @@
 			files = (
 				268505681B785350000D37F1 /* MenuItems.plist in Resources */,
 				26995C3C1B60DE930000DEED /* Main.storyboard in Resources */,
+				26B2DA9C1B846E24003E4D0B /* AMZNLoginVC.xib in Resources */,
 				26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */,
-				26B2DA931B845B29003E4D0B /* AMZNLoginController.xib in Resources */,
 				26995C3E1B60DE930000DEED /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,10 +357,10 @@
 				2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */,
 				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
 				26ADE27A1B7B146600385462 /* APLViewController.m in Sources */,
+				26B2DA9B1B846E24003E4D0B /* AMZNLoginVC.m in Sources */,
 				268505651B785350000D37F1 /* HomeContainerViewController.m in Sources */,
 				2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */,
 				268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */,
-				2685057B1B78563D000D37F1 /* AMZNLoginController.m in Sources */,
 				26ADE27B1B7B146600385462 /* Reachability.m in Sources */,
 				2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */,
 				26995C331B60DE930000DEED /* main.m in Sources */,

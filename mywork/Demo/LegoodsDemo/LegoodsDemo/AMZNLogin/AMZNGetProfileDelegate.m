@@ -12,10 +12,11 @@
 
 #import "AMZNGetProfileDelegate.h"
 #import <LoginWithAmazon/LoginWithAmazon.h>
+#import "AMZNLoginVC.h"
 
 @implementation AMZNGetProfileDelegate
 
-- (id)initWithParentController:(AMZNLoginController*)aViewController {
+- (id)initWithParentController:(AMZNLoginVC *)aViewController {
     if(self = [super init]) {
         parentViewController = [aViewController retain];
     }
