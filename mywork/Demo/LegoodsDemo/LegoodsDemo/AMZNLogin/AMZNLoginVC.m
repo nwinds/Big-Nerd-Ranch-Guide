@@ -165,6 +165,8 @@ BOOL isUserSignedIn;
     // DEBUG: update AccessToken
     self.subPageData.text = paramAccessToken;
     self.subPageData.hidden = FALSE;
+    
+    NSLog(@"access token: %@", paramAccessToken);
 }
 
 - (void)showLogInPage {

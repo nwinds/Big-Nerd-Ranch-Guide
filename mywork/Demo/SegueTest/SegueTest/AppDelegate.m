@@ -1,16 +1,12 @@
 //
 //  AppDelegate.m
-//  SlideMenu
+//  SegueTest
 //
-//  Created by Nicholas Chow on 15/7/5.
-//  Copyright (c) 2015年 Nicholas Chow. All rights reserved.
+//  Created by jyl on 15/8/20.
+//  Copyright (c) 2015年 zmy. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import <LoginWithAmazon/LoginWithAmazon.h>
-
-#import "Reachability.h"
-#import "HomeContainerViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,21 +14,9 @@
 
 @implementation AppDelegate
 
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
-    // Enable notifier
-
-    
-    // Control through code instead of story board
-    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    HomeContainerViewController *homeContainerVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"homeContainerVC"];
-    
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    self.window.rootViewController = homeContainerVC;
-    [self.window makeKeyAndVisible];
-
     return YES;
 }
 
@@ -56,24 +40,6 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-}
-
-#pragma mark -Amazon returned URL tracing
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    // Pass on the url to the SDK to parse authorization code
-    // from the url.
-    BOOL isValidRedirectSignInURL =
-    [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
-    NSLog(@"redirect_url = ", url);
-    if(!isValidRedirectSignInURL)
-        return NO;
-    
-    // App may also want to handle url
-    return YES;
 }
 
 @end
