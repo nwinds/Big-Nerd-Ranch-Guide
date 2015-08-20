@@ -206,13 +206,13 @@
 
         storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 
-        [subviewVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+        [subviewVC setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
         [self presentViewController:subviewVC animated:YES completion:nil];
     }
     else if ([titleTag isEqualToString:@"t_drinks"]){
         APLViewController * subviewVC = [[APLViewController alloc] initWithNibName:@"APLViewController" bundle:nil];
         storyboardCurr = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        [subviewVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+        [subviewVC setModalTransitionStyle:UIModalTransitionStyleCrossDissolve];
         [self presentViewController:subviewVC animated:YES completion:nil];
     }
     else if ([titleTag isEqualToString:@"t_thumbsup"]){
