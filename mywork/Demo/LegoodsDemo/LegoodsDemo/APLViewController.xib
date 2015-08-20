@@ -22,15 +22,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ko8-Nr-ufc">
-                    <rect key="frame" x="67" y="425" width="76" height="30"/>
-                    <state key="normal" title="Close View">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="closeView:" destination="-1" eventType="touchUpInside" id="m1H-sK-7as"/>
-                    </connections>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eb0-fW-Ej1">
                     <rect key="frame" x="16" y="95" width="43" height="43"/>
                     <constraints>
@@ -101,21 +92,49 @@ Internet traffic will be routed through it.</string>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="RJw-bk-HbX">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="wrR-Le-AeD"/>
+                    </constraints>
+                    <items>
+                        <barButtonItem style="plain" id="t8O-GN-HqJ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Ko8-Nr-ufc">
+                                <rect key="frame" x="16" y="7" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="返回">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeView:" destination="-1" eventType="touchUpInside" id="m1H-sK-7as"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </items>
+                </toolbar>
+                <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-16-gRj">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <items>
+                        <navigationItem id="4T9-wj-bGp"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="Qvr-wa-8LN" firstAttribute="top" secondItem="myn-Ll-Ld9" secondAttribute="bottom" constant="8" symbolic="YES" id="0Ap-bF-8R4"/>
                 <constraint firstItem="Cm5-17-F01" firstAttribute="leading" secondItem="LKj-Te-6g9" secondAttribute="leading" id="1fg-jX-Asw"/>
                 <constraint firstItem="dY3-jJ-K91" firstAttribute="top" secondItem="kSI-qz-ihI" secondAttribute="bottom" constant="46" id="2qb-YU-JaQ"/>
+                <constraint firstItem="Pk7-16-gRj" firstAttribute="top" secondItem="biU-Vs-vQL" secondAttribute="top" id="3MY-H0-G50"/>
                 <constraint firstItem="kSI-qz-ihI" firstAttribute="top" secondItem="Qvr-wa-8LN" secondAttribute="bottom" constant="8" symbolic="YES" id="3Ta-gO-kDC"/>
+                <constraint firstAttribute="trailing" secondItem="Pk7-16-gRj" secondAttribute="trailing" id="4WD-6f-NCx"/>
                 <constraint firstItem="YID-U6-Yjh" firstAttribute="top" secondItem="LKj-Te-6g9" secondAttribute="bottom" constant="14" id="7BE-qU-GPI"/>
                 <constraint firstItem="YID-U6-Yjh" firstAttribute="top" secondItem="Eb0-fW-Ej1" secondAttribute="bottom" constant="8" symbolic="YES" id="7sj-SG-9hX"/>
                 <constraint firstItem="Eb0-fW-Ej1" firstAttribute="top" secondItem="ApX-cx-gDz" secondAttribute="bottom" constant="21" id="Bgf-AF-XJ8"/>
                 <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="myn-Ll-Ld9" secondAttribute="leading" id="Db0-sL-7d2"/>
-                <constraint firstItem="Cm5-17-F01" firstAttribute="leading" secondItem="Ko8-Nr-ufc" secondAttribute="leading" id="H1d-hF-PxK"/>
-                <constraint firstAttribute="bottom" secondItem="Ko8-Nr-ufc" secondAttribute="bottom" constant="113" id="IOK-jT-f3R"/>
+                <constraint firstItem="RJw-bk-HbX" firstAttribute="leading" secondItem="biU-Vs-vQL" secondAttribute="leading" id="JvK-be-1ub"/>
                 <constraint firstItem="Cm5-17-F01" firstAttribute="leading" secondItem="myn-Ll-Ld9" secondAttribute="trailing" constant="8" symbolic="YES" id="LHC-fk-qYl"/>
                 <constraint firstItem="Cm5-17-F01" firstAttribute="leading" secondItem="sfz-qt-OHg" secondAttribute="leading" id="LlQ-DM-9bP"/>
+                <constraint firstAttribute="trailing" secondItem="RJw-bk-HbX" secondAttribute="trailing" id="MGL-RL-UPt"/>
                 <constraint firstAttribute="trailing" secondItem="dY3-jJ-K91" secondAttribute="trailing" constant="41" id="UFv-Hv-akO"/>
                 <constraint firstItem="myn-Ll-Ld9" firstAttribute="top" secondItem="YID-U6-Yjh" secondAttribute="bottom" constant="8" symbolic="YES" id="UVH-cX-GzU"/>
                 <constraint firstItem="Cm5-17-F01" firstAttribute="trailing" secondItem="LKj-Te-6g9" secondAttribute="trailing" id="Wye-Zp-j6M"/>
@@ -125,11 +144,13 @@ Internet traffic will be routed through it.</string>
                 <constraint firstItem="Qvr-wa-8LN" firstAttribute="top" secondItem="Cm5-17-F01" secondAttribute="bottom" constant="14" id="bMJ-Zf-jgN"/>
                 <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="biU-Vs-vQL" secondAttribute="leading" constant="16" id="fB2-60-KOi"/>
                 <constraint firstItem="sfz-qt-OHg" firstAttribute="top" secondItem="Qvr-wa-8LN" secondAttribute="bottom" constant="15" id="gFt-b3-Q6c"/>
+                <constraint firstAttribute="bottom" secondItem="RJw-bk-HbX" secondAttribute="bottom" id="gd7-l8-PGF"/>
                 <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="YID-U6-Yjh" secondAttribute="leading" id="hqk-zA-A3X"/>
                 <constraint firstItem="Cm5-17-F01" firstAttribute="trailing" secondItem="sfz-qt-OHg" secondAttribute="trailing" id="iNN-58-v0b"/>
                 <constraint firstItem="myn-Ll-Ld9" firstAttribute="trailing" secondItem="Eb0-fW-Ej1" secondAttribute="trailing" id="jNC-Bs-3IS"/>
                 <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="Eb0-fW-Ej1" secondAttribute="leading" id="qAj-Hp-Mqc"/>
                 <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="Qvr-wa-8LN" secondAttribute="leading" id="rh2-oJ-uL9"/>
+                <constraint firstItem="Pk7-16-gRj" firstAttribute="leading" secondItem="biU-Vs-vQL" secondAttribute="leading" id="u6U-60-u1a"/>
                 <constraint firstItem="ApX-cx-gDz" firstAttribute="leading" secondItem="kSI-qz-ihI" secondAttribute="leading" id="x9t-uJ-hj0"/>
             </constraints>
         </view>

@@ -109,7 +109,8 @@ BOOL isUserSignedIn;
     // Amazon login data
     self.subPageData.text = param;
     //    self.subPageData.text = paramAccessToken;
-    NSLog(@"%@", paramAccessToken);
+//    NSLog(@"%@", paramAccessToken);
+    [self checkIsUserSignedIn];
     
     // Display UIObjects
     if (isUserSignedIn)
@@ -166,7 +167,7 @@ BOOL isUserSignedIn;
     self.subPageData.text = paramAccessToken;
     self.subPageData.hidden = FALSE;
     
-    NSLog(@"access token: %@", paramAccessToken);
+//    NSLog(@"access token: %@", paramAccessToken);
 }
 
 - (void)showLogInPage {

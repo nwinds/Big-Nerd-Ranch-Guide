@@ -68,7 +68,7 @@
     // from the url.
     BOOL isValidRedirectSignInURL =
     [AIMobileLib handleOpenURL:url sourceApplication:sourceApplication];
-    NSLog(@"redirect_url = ", url);
+    NSLog(@"redirect_url = %@", url);
     if(!isValidRedirectSignInURL)
         return NO;
     
