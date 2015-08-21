@@ -75,7 +75,7 @@ NSString *DEFAULT_CALLBACK_SELECTOR = @"postDefaultFinishCallBack:"; // 默认�
         
         NSDictionary *dictionary = [resp allHeaderFields];
         
-//        NSLog(@"[network]allHeaderFields:%@",[dictionary description]);
+        [dictionary description];
     }
     
 }

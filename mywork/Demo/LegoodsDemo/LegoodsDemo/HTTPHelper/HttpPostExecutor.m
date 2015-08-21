@@ -66,7 +66,7 @@
         
         NSDictionary *dictionary = [resp allHeaderFields];
         
-//        NSLog(@"[network]allHeaderFields:%@",[dictionary description]);
+        [dictionary description];
     }
     
 }
