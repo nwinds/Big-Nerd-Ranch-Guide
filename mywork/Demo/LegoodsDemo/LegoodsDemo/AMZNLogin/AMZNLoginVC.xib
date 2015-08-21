@@ -65,7 +65,7 @@
                 <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="7qs-2T-9Jo">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <items>
-                        <navigationItem id="thx-WA-fdv"/>
+                        <navigationItem title="Amazon账号登陆" id="thx-WA-fdv"/>
                     </items>
                 </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wal-UJ-ckq">

@@ -130,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="554.66666666666663" y="691.06666666666661"/>
         </scene>
-        <!--Home Detail View Controller-->
+        <!--Legoods-->
         <scene sceneID="mL1-xw-Az1">
             <objects>
                 <viewController id="1ae-Ph-Diw" customClass="HomeDetailViewController" sceneMemberID="viewController">
@@ -155,7 +155,7 @@
                             <constraint firstItem="lY9-Yr-wnq" firstAttribute="top" secondItem="qhd-lc-U5m" secondAttribute="bottom" id="Y3X-xC-slH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Z9v-ky-uod"/>
+                    <navigationItem key="navigationItem" title="Legoods" id="Z9v-ky-uod"/>
                     <connections>
                         <outlet property="webView" destination="lY9-Yr-wnq" id="8uy-cE-MiD"/>
                     </connections>

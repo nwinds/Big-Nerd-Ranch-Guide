@@ -115,7 +115,7 @@ Internet traffic will be routed through it.</string>
                 <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="Pk7-16-gRj">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <items>
-                        <navigationItem id="4T9-wj-bGp"/>
+                        <navigationItem title="网络连接状态" id="4T9-wj-bGp"/>
                     </items>
                 </navigationBar>
             </subviews>
