@@ -1,6 +1,6 @@
 //
-//  WebviewDemoTests.m
-//  WebviewDemoTests
+//  SlideMenuDemo_V_0_9Tests.m
+//  SlideMenuDemo_V_0_9Tests
 //
 //  Created by jyl on 15/8/24.
 //  Copyright (c) 2015年 yourName. All rights reserved.
@@ -9,11 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface WebviewDemoTests : XCTestCase
+@interface SlideMenuDemo_V_0_9Tests : XCTestCase
 
 @end
 
-@implementation WebviewDemoTests
+@implementation SlideMenuDemo_V_0_9Tests
 
 - (void)setUp {
     [super setUp];
