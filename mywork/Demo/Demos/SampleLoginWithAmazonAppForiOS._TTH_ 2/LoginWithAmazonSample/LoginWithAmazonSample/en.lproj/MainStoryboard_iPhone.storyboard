@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="tmK-mt-tga">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="XQZ-Fv-ajk">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="IpX-6b-3IA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nji-mW-exX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BdM-wy-66D" kind="relationship" relationship="rootViewController" id="8gN-pF-7St"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bYn-fo-px9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2733" y="-1021"/>
+        </scene>
+        <!--Login Controller-->
+        <scene sceneID="twO-9y-epN">
+            <objects>
+                <viewController storyboardIdentifier="loginController" id="BdM-wy-66D" customClass="AMZNLoginController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PUg-5J-tor"/>
+                        <viewControllerLayoutGuide type="bottom" id="Deb-Pm-ctA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Qs-Cp-cgb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qoe-6j-iDy">
+                                <rect key="frame" x="81" y="353" width="155" height="34"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="btnLWA_gold_157x36.png" backgroundImage="btnLWA_gold_157x36.png">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="btnLWA_gold_157x36_pressed.png">
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLogInButtonClicked:" destination="BdM-wy-66D" eventType="touchUpInside" id="JOI-Ud-ct9"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="MaC-dy-XLe">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="Qxr-n1-nI6">
+                                        <barButtonItem key="rightBarButtonItem" title="Logout" id="7Rp-G1-ULv">
+                                            <connections>
+                                                <action selector="logoutButtonClicked:" destination="BdM-wy-66D" id="YjP-3r-bZ9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Sample Login with Amazon App" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzo-OW-KYr">
+                                <rect key="frame" x="20" y="8" width="216" height="27"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.72299367049999996" blue="0.1590426486" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RkZ-gk-grB">
+                                <rect key="frame" x="40" y="176" width="240" height="107"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="q2W-v3-XIS">
+                                <rect key="frame" x="0.0" y="436" width="320" height="44"/>
+                                <items>
+                                    <barButtonItem title="Close" id="bWk-V3-aVJ">
+                                        <connections>
+                                            <action selector="closeView:" destination="BdM-wy-66D" id="E9y-45-cuR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Deb-Pm-ctA" firstAttribute="top" secondItem="q2W-v3-XIS" secondAttribute="bottom" id="CvG-mz-NvA"/>
+                            <constraint firstItem="q2W-v3-XIS" firstAttribute="leading" secondItem="5Qs-Cp-cgb" secondAttribute="leadingMargin" constant="-16" id="evS-L6-SkE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="q2W-v3-XIS" secondAttribute="trailing" constant="-16" id="xIZ-6C-jxh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="W93-Ax-iSw"/>
+                    <connections>
+                        <outlet property="infoField" destination="RkZ-gk-grB" id="jce-z0-N8N"/>
+                        <outlet property="loginButton" destination="Qoe-6j-iDy" id="g5A-G9-ven"/>
+                        <outlet property="logoutButton" destination="7Rp-G1-ULv" id="PxS-Kx-36T"/>
+                        <outlet property="navigationItem" destination="Qxr-n1-nI6" id="YbS-xg-bkm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6CE-VA-yDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2333" y="-1021"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="plr-D7-mOd">
+            <objects>
+                <viewController id="tmK-mt-tga" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q5S-i5-1Ox"/>
+                        <viewControllerLayoutGuide type="bottom" id="u7w-DW-RIZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6xi-oC-VwW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="initial view" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NJ4-mj-TOf">
+                                <rect key="frame" x="104" y="129" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UoS-GJ-EJE">
+                                <rect key="frame" x="104" y="185" width="131" height="30"/>
+                                <state key="normal" title="Login with Amazon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IpX-6b-3IA" kind="modal" modalPresentationStyle="currentContext" modalTransitionStyle="crossDissolve" id="ccr-Ub-XFh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6K7-Xa-r4t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3121" y="-1021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btnLWA_gold_157x36.png" width="157" height="36"/>
+        <image name="btnLWA_gold_157x36_pressed.png" width="157" height="36"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>
