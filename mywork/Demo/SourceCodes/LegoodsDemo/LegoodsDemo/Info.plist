@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.LegoodsDemo</string>
+	<key>APIKey</key>
+	<string>eyJhbGciOiJSU0EtU0hBMjU2IiwidmVyIjoiMSJ9.eyJ2ZXIiOiIzIiwiZW5kcG9pbnRzIjp7ImF1dGh6IjoiaHR0cHM6Ly93d3cuYW1hem9uLmNvbS9hcC9vYSIsInRva2VuRXhjaGFuZ2UiOiJodHRwczovL2FwaS5hbWF6b24uY29tL2F1dGgvbzIvdG9rZW4ifSwiY2xpZW50SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1vYTItY2xpZW50LjUwYjliODlmYTg4YTRmNmE4YzBjMjkwMzM1Yzk1YjE0IiwiYXBwRmFtaWx5SWQiOiJhbXpuMS5hcHBsaWNhdGlvbi41MDRkZGJlNDY4YmU0YmNhYTBjZWYzNGM1ZWYzZjkyYiIsImJ1bmRsZVNlZWRJZCI6ImNvbS5MZWdvb2RzRGVtbyIsImJ1bmRsZUlkIjoiY29tLkxlZ29vZHNEZW1vIiwiaXNzIjoiQW1hem9uIiwidHlwZSI6IkFQSUtleSIsImFwcFZhcmlhbnRJZCI6ImFtem4xLmFwcGxpY2F0aW9uLWNsaWVudC45NjMyYTQ1YjllYjk0YTdmYjhkNDU2NGNmMDBmY2Y4NyIsInRydXN0UG9vbCI6bnVsbCwiYXBwSWQiOiJhbXpuMS5hcHBsaWNhdGlvbi1jbGllbnQuOTYzMmE0NWI5ZWI5NGE3ZmI4ZDQ1NjRjZjAwZmNmODciLCJpZCI6IjVmNzVlNzY5LTM0M2QtMTFlNS04MmVkLTQ5OGUzNGZkNzZmNCIsImlhdCI6IjE0Mzc5ODczOTA0MTUifQ==.Jw0tLKOZqgRbJ6LIj1Jzjln5E+wgGYdasEiaKnkBJVKI/+AiWlslnh517mdSXSetYHnhvnLBU6s+0t1sZwCWKY9xZ7eAhWSFVizfJ6OE56bi4ixW0n22Bhygw51UkM7I1WdUipJsOsKVKT/emsdktvOzkF1IwMuxTMO+pn2tUedBszOH4mZk0fmoOSzA0KP5Y5rMflNDQFZUERYmNBPDtUBZBlJ7G/E9SsMqPY/HPUf6Id1idp1lyMV6lgoAuE/brKcDEW01s/tJwvSGuZDoq/B4IRNX5UKqT1EwrUIT7M8y7KiOJusuoGfx5xhLguMv8L4AI7sSiA2ZVpBqR6A84A==</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UILaunchImageFile~iphone</key>
+	<string></string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>com.$(PRODUCT_NAME:rfc1034identifier)</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>amzn-com.$(PRODUCT_NAME:rfc1034identifier)</string>
+			</array>
+		</dict>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+</dict>
+</plist>

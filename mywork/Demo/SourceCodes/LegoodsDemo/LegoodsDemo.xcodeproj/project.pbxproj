@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		268505651B785350000D37F1 /* HomeContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055B1B785350000D37F1 /* HomeContainerViewController.m */; };
+		268505661B785350000D37F1 /* HomeDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055D1B785350000D37F1 /* HomeDetailViewController.m */; };
+		268505671B785350000D37F1 /* HomeMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685055F1B785350000D37F1 /* HomeMenuViewController.m */; };
+		268505681B785350000D37F1 /* MenuItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = 268505601B785350000D37F1 /* MenuItems.plist */; };
+		268505691B785350000D37F1 /* WXGMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505621B785350000D37F1 /* WXGMenuCell.m */; };
+		2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505641B785350000D37F1 /* WXGMenuItem.m */; };
+		268505781B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26995C331B60DE930000DEED /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C321B60DE930000DEED /* main.m */; };
+		26995C361B60DE930000DEED /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C351B60DE930000DEED /* AppDelegate.m */; };
+		26995C3C1B60DE930000DEED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3A1B60DE930000DEED /* Main.storyboard */; };
+		26995C3E1B60DE930000DEED /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3D1B60DE930000DEED /* Images.xcassets */; };
+		26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26995C3F1B60DE930000DEED /* LaunchScreen.xib */; };
+		26995C4D1B60DE930000DEED /* LegoodsDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 26995C4C1B60DE930000DEED /* LegoodsDemoTests.m */; };
+		269BBD331B67470E00D58040 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269BBD321B67470E00D58040 /* JavaScriptCore.framework */; };
+		269D409A1B621914003D63BD /* LoginWithAmazon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D40991B621914003D63BD /* LoginWithAmazon.framework */; };
+		269D409C1B6219FD003D63BD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 269D409B1B6219FD003D63BD /* Security.framework */; };
+		26ADE27A1B7B146600385462 /* APLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ADE2771B7B146600385462 /* APLViewController.m */; };
+		26ADE27B1B7B146600385462 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 26ADE2791B7B146600385462 /* Reachability.m */; };
+		26B2DA901B844DB6003E4D0B /* HttpPostExecutor.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA8D1B844DB6003E4D0B /* HttpPostExecutor.m */; };
+		26B2DA911B844DB6003E4D0B /* HttpPostDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */; };
+		26B2DA9B1B846E24003E4D0B /* AMZNLoginVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 26B2DA991B846E24003E4D0B /* AMZNLoginVC.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		26B2DA9C1B846E24003E4D0B /* AMZNLoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B2DA9A1B846E24003E4D0B /* AMZNLoginVC.xib */; };
+		26B2DA9E1B847342003E4D0B /* APLViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 26B2DA9D1B847342003E4D0B /* APLViewController.xib */; };
+		26DB64A31B748FBE00ABF838 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		26995C471B60DE930000DEED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 26995C251B60DE930000DEED /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 26995C2C1B60DE930000DEED;
+			remoteInfo = LegoodsDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2685055A1B785350000D37F1 /* HomeContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeContainerViewController.h; path = Home/HomeContainerViewController.h; sourceTree = "<group>"; };
+		2685055B1B785350000D37F1 /* HomeContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeContainerViewController.m; path = Home/HomeContainerViewController.m; sourceTree = "<group>"; };
+		2685055C1B785350000D37F1 /* HomeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeDetailViewController.h; path = Home/HomeDetailViewController.h; sourceTree = "<group>"; };
+		2685055D1B785350000D37F1 /* HomeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeDetailViewController.m; path = Home/HomeDetailViewController.m; sourceTree = "<group>"; };
+		2685055E1B785350000D37F1 /* HomeMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeMenuViewController.h; path = Home/HomeMenuViewController.h; sourceTree = "<group>"; };
+		2685055F1B785350000D37F1 /* HomeMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeMenuViewController.m; path = Home/HomeMenuViewController.m; sourceTree = "<group>"; };
+		268505601B785350000D37F1 /* MenuItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MenuItems.plist; path = Home/MenuItems.plist; sourceTree = "<group>"; };
+		268505611B785350000D37F1 /* WXGMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuCell.h; path = Home/WXGMenuCell.h; sourceTree = "<group>"; };
+		268505621B785350000D37F1 /* WXGMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuCell.m; path = Home/WXGMenuCell.m; sourceTree = "<group>"; };
+		268505631B785350000D37F1 /* WXGMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WXGMenuItem.h; path = Home/WXGMenuItem.h; sourceTree = "<group>"; };
+		268505641B785350000D37F1 /* WXGMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WXGMenuItem.m; path = Home/WXGMenuItem.m; sourceTree = "<group>"; };
+		2685056D1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNAuthorizeUserDelegate.h; path = AMZNLogin/AMZNAuthorizeUserDelegate.h; sourceTree = "<group>"; };
+		2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNAuthorizeUserDelegate.m; path = AMZNLogin/AMZNAuthorizeUserDelegate.m; sourceTree = "<group>"; };
+		2685056F1B78563D000D37F1 /* AMZNGetAccessTokenDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNGetAccessTokenDelegate.h; path = AMZNLogin/AMZNGetAccessTokenDelegate.h; sourceTree = "<group>"; };
+		268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNGetAccessTokenDelegate.m; path = AMZNLogin/AMZNGetAccessTokenDelegate.m; sourceTree = "<group>"; };
+		268505711B78563D000D37F1 /* AMZNGetProfileDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNGetProfileDelegate.h; path = AMZNLogin/AMZNGetProfileDelegate.h; sourceTree = "<group>"; };
+		268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNGetProfileDelegate.m; path = AMZNLogin/AMZNGetProfileDelegate.m; sourceTree = "<group>"; };
+		268505751B78563D000D37F1 /* AMZNLogoutDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLogoutDelegate.h; path = AMZNLogin/AMZNLogoutDelegate.h; sourceTree = "<group>"; };
+		268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLogoutDelegate.m; path = AMZNLogin/AMZNLogoutDelegate.m; sourceTree = "<group>"; };
+		26995C2D1B60DE930000DEED /* LegoodsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegoodsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		26995C311B60DE930000DEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26995C321B60DE930000DEED /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		26995C341B60DE930000DEED /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		26995C351B60DE930000DEED /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		26995C3B1B60DE930000DEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		26995C3D1B60DE930000DEED /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		26995C401B60DE930000DEED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		26995C461B60DE930000DEED /* LegoodsDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LegoodsDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		26995C4B1B60DE930000DEED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		26995C4C1B60DE930000DEED /* LegoodsDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LegoodsDemoTests.m; sourceTree = "<group>"; };
+		269BBD321B67470E00D58040 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		269D40991B621914003D63BD /* LoginWithAmazon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = LoginWithAmazon.framework; sourceTree = "<group>"; };
+		269D409B1B6219FD003D63BD /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		26ADE2761B7B146600385462 /* APLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = APLViewController.h; path = APLReachability/APLViewController.h; sourceTree = "<group>"; };
+		26ADE2771B7B146600385462 /* APLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = APLViewController.m; path = APLReachability/APLViewController.m; sourceTree = "<group>"; };
+		26ADE2781B7B146600385462 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = APLReachability/Reachability.h; sourceTree = "<group>"; };
+		26ADE2791B7B146600385462 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = APLReachability/Reachability.m; sourceTree = "<group>"; };
+		26B2DA8C1B844DB6003E4D0B /* HttpPostExecutor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpPostExecutor.h; sourceTree = "<group>"; };
+		26B2DA8D1B844DB6003E4D0B /* HttpPostExecutor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpPostExecutor.m; sourceTree = "<group>"; };
+		26B2DA8E1B844DB6003E4D0B /* HttpPostDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpPostDelegate.h; sourceTree = "<group>"; };
+		26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpPostDelegate.m; sourceTree = "<group>"; };
+		26B2DA981B846E24003E4D0B /* AMZNLoginVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMZNLoginVC.h; path = AMZNLogin/AMZNLoginVC.h; sourceTree = "<group>"; };
+		26B2DA991B846E24003E4D0B /* AMZNLoginVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMZNLoginVC.m; path = AMZNLogin/AMZNLoginVC.m; sourceTree = "<group>"; };
+		26B2DA9A1B846E24003E4D0B /* AMZNLoginVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMZNLoginVC.xib; path = AMZNLogin/AMZNLoginVC.xib; sourceTree = "<group>"; };
+		26B2DA9D1B847342003E4D0B /* APLViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = APLViewController.xib; sourceTree = "<group>"; };
+		26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		26995C2A1B60DE930000DEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26DB64A31B748FBE00ABF838 /* SystemConfiguration.framework in Frameworks */,
+				269BBD331B67470E00D58040 /* JavaScriptCore.framework in Frameworks */,
+				269D409C1B6219FD003D63BD /* Security.framework in Frameworks */,
+				269D409A1B621914003D63BD /* LoginWithAmazon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26995C431B60DE930000DEED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		261F30321B81ACFA0078AFEA /* HTTPSDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				26B2DA8C1B844DB6003E4D0B /* HttpPostExecutor.h */,
+				26B2DA8D1B844DB6003E4D0B /* HttpPostExecutor.m */,
+				26B2DA8E1B844DB6003E4D0B /* HttpPostDelegate.h */,
+				26B2DA8F1B844DB6003E4D0B /* HttpPostDelegate.m */,
+			);
+			name = HTTPSDelegate;
+			path = HTTPHelper;
+			sourceTree = "<group>";
+		};
+		268505591B7852B0000D37F1 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				268505601B785350000D37F1 /* MenuItems.plist */,
+				2685055A1B785350000D37F1 /* HomeContainerViewController.h */,
+				2685055B1B785350000D37F1 /* HomeContainerViewController.m */,
+				2685055C1B785350000D37F1 /* HomeDetailViewController.h */,
+				2685055D1B785350000D37F1 /* HomeDetailViewController.m */,
+				2685055E1B785350000D37F1 /* HomeMenuViewController.h */,
+				2685055F1B785350000D37F1 /* HomeMenuViewController.m */,
+				268505611B785350000D37F1 /* WXGMenuCell.h */,
+				268505621B785350000D37F1 /* WXGMenuCell.m */,
+				268505631B785350000D37F1 /* WXGMenuItem.h */,
+				268505641B785350000D37F1 /* WXGMenuItem.m */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		2685057D1B785644000D37F1 /* AMZNLogin */ = {
+			isa = PBXGroup;
+			children = (
+				2685056D1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.h */,
+				2685056E1B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m */,
+				2685056F1B78563D000D37F1 /* AMZNGetAccessTokenDelegate.h */,
+				268505701B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m */,
+				268505711B78563D000D37F1 /* AMZNGetProfileDelegate.h */,
+				268505721B78563D000D37F1 /* AMZNGetProfileDelegate.m */,
+				26B2DA981B846E24003E4D0B /* AMZNLoginVC.h */,
+				26B2DA991B846E24003E4D0B /* AMZNLoginVC.m */,
+				26B2DA9A1B846E24003E4D0B /* AMZNLoginVC.xib */,
+				268505751B78563D000D37F1 /* AMZNLogoutDelegate.h */,
+				268505761B78563D000D37F1 /* AMZNLogoutDelegate.m */,
+			);
+			name = AMZNLogin;
+			sourceTree = "<group>";
+		};
+		26995C241B60DE930000DEED = {
+			isa = PBXGroup;
+			children = (
+				26995C2F1B60DE930000DEED /* LegoodsDemo */,
+				26995C491B60DE930000DEED /* LegoodsDemoTests */,
+				26CE22551B662223006CC97E /* Frameworks */,
+				26995C2E1B60DE930000DEED /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		26995C2E1B60DE930000DEED /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				26995C2D1B60DE930000DEED /* LegoodsDemo.app */,
+				26995C461B60DE930000DEED /* LegoodsDemoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		26995C2F1B60DE930000DEED /* LegoodsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				261F30321B81ACFA0078AFEA /* HTTPSDelegate */,
+				26ADE27C1B7B146A00385462 /* APLReachability */,
+				2685057D1B785644000D37F1 /* AMZNLogin */,
+				268505591B7852B0000D37F1 /* Home */,
+				26995C341B60DE930000DEED /* AppDelegate.h */,
+				26995C351B60DE930000DEED /* AppDelegate.m */,
+				26995C3A1B60DE930000DEED /* Main.storyboard */,
+				26995C3D1B60DE930000DEED /* Images.xcassets */,
+				26995C3F1B60DE930000DEED /* LaunchScreen.xib */,
+				26995C301B60DE930000DEED /* Supporting Files */,
+			);
+			path = LegoodsDemo;
+			sourceTree = "<group>";
+		};
+		26995C301B60DE930000DEED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26995C311B60DE930000DEED /* Info.plist */,
+				26995C321B60DE930000DEED /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26995C491B60DE930000DEED /* LegoodsDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				26995C4C1B60DE930000DEED /* LegoodsDemoTests.m */,
+				26995C4A1B60DE930000DEED /* Supporting Files */,
+			);
+			path = LegoodsDemoTests;
+			sourceTree = "<group>";
+		};
+		26995C4A1B60DE930000DEED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				26995C4B1B60DE930000DEED /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		26ADE27C1B7B146A00385462 /* APLReachability */ = {
+			isa = PBXGroup;
+			children = (
+				26ADE2761B7B146600385462 /* APLViewController.h */,
+				26ADE2771B7B146600385462 /* APLViewController.m */,
+				26B2DA9D1B847342003E4D0B /* APLViewController.xib */,
+				26ADE2781B7B146600385462 /* Reachability.h */,
+				26ADE2791B7B146600385462 /* Reachability.m */,
+			);
+			name = APLReachability;
+			sourceTree = "<group>";
+		};
+		26CE22551B662223006CC97E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				26DB64A21B748FBE00ABF838 /* SystemConfiguration.framework */,
+				269BBD321B67470E00D58040 /* JavaScriptCore.framework */,
+				269D409B1B6219FD003D63BD /* Security.framework */,
+				269D40991B621914003D63BD /* LoginWithAmazon.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		26995C2C1B60DE930000DEED /* LegoodsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26995C501B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemo" */;
+			buildPhases = (
+				26995C291B60DE930000DEED /* Sources */,
+				26995C2A1B60DE930000DEED /* Frameworks */,
+				26995C2B1B60DE930000DEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LegoodsDemo;
+			productName = LegoodsDemo;
+			productReference = 26995C2D1B60DE930000DEED /* LegoodsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		26995C451B60DE930000DEED /* LegoodsDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 26995C531B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemoTests" */;
+			buildPhases = (
+				26995C421B60DE930000DEED /* Sources */,
+				26995C431B60DE930000DEED /* Frameworks */,
+				26995C441B60DE930000DEED /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				26995C481B60DE930000DEED /* PBXTargetDependency */,
+			);
+			name = LegoodsDemoTests;
+			productName = LegoodsDemoTests;
+			productReference = 26995C461B60DE930000DEED /* LegoodsDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		26995C251B60DE930000DEED /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = zmy;
+				TargetAttributes = {
+					26995C2C1B60DE930000DEED = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					26995C451B60DE930000DEED = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 26995C2C1B60DE930000DEED;
+					};
+				};
+			};
+			buildConfigurationList = 26995C281B60DE930000DEED /* Build configuration list for PBXProject "LegoodsDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 26995C241B60DE930000DEED;
+			productRefGroup = 26995C2E1B60DE930000DEED /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				26995C2C1B60DE930000DEED /* LegoodsDemo */,
+				26995C451B60DE930000DEED /* LegoodsDemoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		26995C2B1B60DE930000DEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268505681B785350000D37F1 /* MenuItems.plist in Resources */,
+				26995C3C1B60DE930000DEED /* Main.storyboard in Resources */,
+				26B2DA9E1B847342003E4D0B /* APLViewController.xib in Resources */,
+				26B2DA9C1B846E24003E4D0B /* AMZNLoginVC.xib in Resources */,
+				26995C411B60DE930000DEED /* LaunchScreen.xib in Resources */,
+				26995C3E1B60DE930000DEED /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26995C441B60DE930000DEED /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		26995C291B60DE930000DEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268505781B78563D000D37F1 /* AMZNAuthorizeUserDelegate.m in Sources */,
+				26B2DA901B844DB6003E4D0B /* HttpPostExecutor.m in Sources */,
+				268505661B785350000D37F1 /* HomeDetailViewController.m in Sources */,
+				26B2DA911B844DB6003E4D0B /* HttpPostDelegate.m in Sources */,
+				268505671B785350000D37F1 /* HomeMenuViewController.m in Sources */,
+				2685057A1B78563D000D37F1 /* AMZNGetProfileDelegate.m in Sources */,
+				26995C361B60DE930000DEED /* AppDelegate.m in Sources */,
+				26ADE27A1B7B146600385462 /* APLViewController.m in Sources */,
+				26B2DA9B1B846E24003E4D0B /* AMZNLoginVC.m in Sources */,
+				268505651B785350000D37F1 /* HomeContainerViewController.m in Sources */,
+				2685057C1B78563D000D37F1 /* AMZNLogoutDelegate.m in Sources */,
+				268505791B78563D000D37F1 /* AMZNGetAccessTokenDelegate.m in Sources */,
+				26ADE27B1B7B146600385462 /* Reachability.m in Sources */,
+				2685056A1B785350000D37F1 /* WXGMenuItem.m in Sources */,
+				26995C331B60DE930000DEED /* main.m in Sources */,
+				268505691B785350000D37F1 /* WXGMenuCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26995C421B60DE930000DEED /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26995C4D1B60DE930000DEED /* LegoodsDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		26995C481B60DE930000DEED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 26995C2C1B60DE930000DEED /* LegoodsDemo */;
+			targetProxy = 26995C471B60DE930000DEED /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		26995C3A1B60DE930000DEED /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26995C3B1B60DE930000DEED /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		26995C3F1B60DE930000DEED /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				26995C401B60DE930000DEED /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		26995C4E1B60DE930000DEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26995C4F1B60DE930000DEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26995C511B60DE930000DEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LegoodsDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		26995C521B60DE930000DEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = LegoodsDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		26995C541B60DE930000DEED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LegoodsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LegoodsDemo.app/LegoodsDemo";
+			};
+			name = Debug;
+		};
+		26995C551B60DE930000DEED /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = LegoodsDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LegoodsDemo.app/LegoodsDemo";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		26995C281B60DE930000DEED /* Build configuration list for PBXProject "LegoodsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26995C4E1B60DE930000DEED /* Debug */,
+				26995C4F1B60DE930000DEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26995C501B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26995C511B60DE930000DEED /* Debug */,
+				26995C521B60DE930000DEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		26995C531B60DE930000DEED /* Build configuration list for PBXNativeTarget "LegoodsDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				26995C541B60DE930000DEED /* Debug */,
+				26995C551B60DE930000DEED /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 26995C251B60DE930000DEED /* Project object */;
+}
